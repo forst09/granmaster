@@ -1,0 +1,19 @@
+html {
+    @media(min-width:668px) {
+        font-size: 1.497005988023952vw;
+    }
+
+    @media(min-width:1024px) {
+        font-size: 0.9765625vw;
+    }
+}
+
+.title {
+
+    &::before,
+    &::after {
+        @media(min-width:668px) {
+            display: inline;
+        }
+    }
+}
