@@ -36,8 +36,10 @@
     }
 
     .title {
+        margin: 0 auto 3.2rem;
         font-size: 2rem;
         line-height: 3.2rem;
+        max-width: 39.5rem;
 
         &::before,
         &::after {
@@ -54,7 +56,7 @@
         line-height: 2.2rem;
     }
 
-    //начало стилей секции "Главная"
+    /*начало стилей секции "Главная"*/
     .main {
         .btn-wrapper {
             text-align: left;
@@ -66,9 +68,9 @@
         max-width: 51.5rem;
     }
 
-    //конец стилей секции "Главная"
+    /*конец стилей секции "Главная"*/
 
-    //начало стилей секции "О компании"
+    /*начало стилей секции "О компании"*/
     .about__wrapper {
         margin-top: 3.2rem;
         flex-direction: row;
@@ -106,9 +108,9 @@
         line-clamp: 3;
     }
 
-    //конец стилей секции "О компании"
+    /*конец стилей секции "О компании"*/
 
-    //начало стилей секции "Из чего состоят линии гранулирования"
+    /*начало стилей секции "Из чего состоят линии гранулирования"*/
     .granulation {
         .text {
             max-width: 31.6rem;
@@ -120,6 +122,7 @@
     }
 
     .granulation__wrapper {
+        margin-top: 0;
         padding: 0 2.4rem;
     }
 
@@ -132,9 +135,9 @@
         }
     }
 
-    //конец стилей секции "Из чего состоят линии гранулирования"
+    /*конец стилей секции "Из чего состоят линии гранулирования"*/
 
-    // начало стилей секции "Каталог"
+    /* начало стилей секции "Каталог"*/
     .catalog {
         .text {
             margin: 0 auto;
@@ -148,15 +151,25 @@
         flex-direction: row;
     }
 
-    .catalog__item {
+    .catalog__link {
         margin-right: 1.15rem;
         margin-bottom: 0;
-        max-width: 19.9rem;
     }
 
-    // конец стилей секции "Каталог"
+    .catalog__item {
+        margin-bottom: 0;
+        max-width: 19.9rem;
+        max-height: 8rem;
+    }
 
-    // начало стилей секции "Самое востребованное на рынке"
+    .catalog__item-title {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    /* конец стилей секции "Каталог"*/
+
+    /* начало стилей секции "Самое востребованное на рынке"*/
     .demanded {
         .title {
             margin: 0 auto 1.6rem;
@@ -175,9 +188,9 @@
         padding: 0 2.4rem;
     }
 
-    // начало стилей секции "Самое востребованное на рынке"
+    /* начало стилей секции "Самое востребованное на рынке"*/
 
-    // начало стилей секции "Уже несколько лет мы строим..."
+    /* начало стилей секции "Уже несколько лет мы строим..."*/
     .years {
         .title {
             margin: 0 auto 3.2rem;
@@ -192,6 +205,7 @@
     }
 
     .years__item-text {
+        margin-left: 1.4rem;
         justify-content: flex-start;
         max-width: 40.9rem;
     }
@@ -220,12 +234,14 @@
     .years__pagination-item {
         display: flex;
         align-items: center;
+        max-width: 18.861rem;
     }
 
     .years__pagination-image {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
         width: 4.661rem;
         height: 4.8rem;
         border-radius: 0.8rem;
@@ -245,9 +261,9 @@
         line-clamp: 3;
     }
 
-    // конец стилей секции "Уже несколько лет мы строим..."
+    /* конец стилей секции "Уже несколько лет мы строим..."*/
 
-    //начало стилей секции "Как заказать?"
+    /*начало стилей секции "Как заказать?"*/
     .order__container {
         flex-direction: row;
         justify-content: space-between;
@@ -276,9 +292,9 @@
         bottom: -3rem;
     }
 
-    //конец стилей секции "Как заказать?"
+    /*конец стилей секции "Как заказать?"*/
 
-    //начало стилей секции "Нужна наша консультация?"
+    /*начало стилей секции "Нужна наша консультация?"*/
     .consultation {
         .btn-wrapper {
             margin-top: 0;
@@ -306,9 +322,9 @@
         margin: auto;
     }
 
-    //конец стилей секции "Нужна наша консультация?"
+    /*конец стилей секции "Нужна наша консультация?"*/
 
-    //начало стилей секции "Контакты"
+    /*начало стилей секции "Контакты"*/
     .contacts {
         padding-top: 5.7rem;
 
@@ -319,9 +335,25 @@
 
     .contacts__address {
         margin-bottom: 1.6rem;
+        max-width: 26.1rem;
+    }
+
+    .contacts__mail {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 11.1rem;
+            height: 0.5px;
+            background-color: #3E4A61;
+            bottom: -0.3rem;
+            left: 2.3rem;
+        }
     }
 
     .contacts__map-btn {
+        margin-top: 3.4rem;
         display: block;
     }
 
@@ -346,10 +378,307 @@
         }
     }
 
+    .contacts__image {
+        display: block;
+        margin-top: -16.5rem;
+        position: relative;
+        width: 28.6rem;
+        height: auto;
+        margin-left: auto;
+        z-index: 2;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 34rem;
+            height: 29.5rem;
+            background-image: url("../img/contacts/lines.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 41rem 28rem;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+
+    .contacts__map {
+        display: none;
+    }
+
+    /*конец стилей секции "Контакты*/
+
+    /*начало стилей секции "Подвал" */
+    .footer {
+        top: 0;
+        padding: 3.2rem 0;
+    }
+
+    .footer__item {
+        &:first-of-type {
+            margin-right: 8.9rem;
+        }
+
+        &:nth-of-type(2) {
+            margin-right: 1.1rem;
+        }
+
+        &:nth-last-of-type(1) {
+            align-self: flex-end;
+        }
+    }
+
+    .footer__container-first {
+        margin-bottom: 3.2rem;
+        display: flex;
+        // justify-content: space-between;
+    }
+
+    .footer__nav {
+        width: 19.8rem;
+    }
+
+    .footer__nav-item {
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__container-second {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__work {
+        margin-top: 0;
+    }
+
+    /*Конец стилей секции "Подвал"*/
 }
 
 @media(min-width:1024px) {
     html {
         font-size: 0.9765625vw;
     }
+
+    section {
+        padding: 6.4rem 0;
+    }
+
+    .wrapper {
+        padding: 0 9.4rem;
+    }
+
+    .wrapper-fluid {
+        padding-left: 9.4rem;
+    }
+
+    .title {
+        margin-bottom: 4.8rem;
+        font-size: 2.6rem;
+        line-height: 3.6rem;
+    }
+
+    .title-mini {
+        margin-bottom: 1.6rem;
+    }
+
+    .btn-wrapper {
+        margin-top: 4.8rem;
+    }
+
+    /*начало стилей секции "О компании" */
+    .about__item {
+        margin-right: 2.5rem;
+        max-width: 14.7rem;
+    }
+
+    .about__item-image {
+        width: 14.7rem;
+        height: 12rem;
+    }
+
+    /*конец стилей секции "О компании" */
+
+    /*начало стилей секции "Из чего состоят линии гранулирования?" */
+    .granulation .text {
+        max-width: 41.3rem;
+    }
+
+    .granulation__image {
+        margin: 0 auto;
+        width: 83.6rem;
+    }
+
+    /*конец стилей секции "Из чего состоят линии гранулирования?" */
+
+    /*начало стилей секции "Каталог" */
+    .catalog {
+        .text {
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+            max-width: 64.5rem;
+        }
+    }
+
+    .catalog__wrapper {
+        margin-top: 4.8rem;
+    }
+
+    .catalog__item {
+        padding: 3.8rem 2.4rem;
+        max-width: 26.7rem;
+        max-height: 12.8rem;
+    }
+
+    .catalog__item-title {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    /*конец стилей секции "Каталог" */
+
+    /*начало стилей секции "Самое востребованное на рынке" */
+    .demanded .title {
+        max-width: 50.6rem;
+    }
+
+    .demanded .text {
+        max-width: 65.4rem;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+
+    .demanded__container {
+        padding: 0 4.8rem;
+    }
+
+    .demanded__item {
+        margin-right: 1.8rem;
+        padding: 2.4rem;
+    }
+
+    .demanded__item-image {
+        width: 18.6rem;
+        height: 15.3rem;
+    }
+
+    .demanded__item-power {
+        margin: 0.8rem 0;
+        font-size: 1.2rem;
+    }
+
+    .demanded__item-name {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        max-width: none;
+    }
+
+    /*конец стилей секции "Самое востребованное на рынке" */
+
+    /*начало стилей секции "Уже несколько лет мы строим..." */
+    .years {
+        .title {
+            margin: 0 auto 4.8rem;
+            max-width: 50.6rem;
+        }
+    }
+
+    .years__item {
+        margin-bottom: 3.2rem;
+    }
+
+    .years__item-image {
+        width: 24.5rem;
+        height: 17.7rem;
+    }
+
+    .years__item-name {
+        margin-bottom: 0.8rem;
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+
+    .years__item-text {
+        max-width: 48.2rem;
+    }
+
+    .years__pagination {
+        padding: 0 9.4rem;
+    }
+
+    .years__pagination-item {
+        padding: 0.8rem 1.6rem;
+        max-width: 25.455rem;
+    }
+
+    .years__pagination-image {
+        width: 7.855rem;
+        height: 5.4rem;
+    }
+
+    /*конец стилей секции "Уже несколько лет мы строим..." */
+
+    /*начало стилей секции "Как заказать?" */
+    .order__item {
+        width: 15.6rem;
+        height: 11rem;
+    }
+
+    .order__item-text {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        max-width: 12.4rem;
+    }
+
+    .order__item-number {
+        bottom: -4rem;
+    }
+
+    /*конец стилей секции "Как заказать?" */
+
+    /*начало стилей секции "Нужна наша консультация?" */
+    .consultation__form-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .consultation__form-input {
+        width: 41.2rem;
+    }
+
+    /*конец стилей секции "Нужна наша консультация?" */
+
+    /*начало стилей секции "Контакты" */
+    .contacts .socials {
+        margin: 2.5rem 0 2.4rem;
+    }
+
+    .contacts__address {
+        margin-bottom: 1.2rem;
+        max-width: 28.1rem;
+    }
+
+    .contacts__mail::after {
+        width: 6.5rem;
+        left: 2.3rem;
+    }
+
+    .contacts__map-btn {
+        margin-top: 3.9rem;
+    }
+
+    /*конец стилей секции "Контакты" */
+
+    /*начало стилей секции "Подвал" */
+    .footer {
+        padding: 6.4rem 0;
+    }
+
+    .footer__link {
+        line-height: 1.8rem;
+    }
+
+    /*конец стилей секции "Подвал" */
 }

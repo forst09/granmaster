@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: Formular;
   font-size: 10px;
@@ -23,21 +24,6 @@ section {
   font-size: 1.6rem;
   line-height: 2.4rem;
   text-align: center;
-}
-.title::before {
-  left: 0;
-}
-.title::after {
-  right: 0;
-}
-.title::before, .title::after {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 0;
-  height: 1px;
-  width: 15.3rem;
-  background-color: #7EB8E2;
 }
 
 .title-mini {
@@ -77,6 +63,26 @@ section {
   color: #FF6D1A;
 }
 
+.socials {
+  margin: 1.6rem 0 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials__item {
+  margin-right: 1.6rem;
+}
+
+.socials__item-img {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+/*начало стилей секции "Шапка"*/
 .header__call-text-span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -100,7 +106,9 @@ section {
   background-repeat: no-repeat;
 }
 
+/*начало стилей секции "Главная"*/
 .main {
+  padding-bottom: 7.3rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, #FFFFFF), color-stop(53.78%, rgba(255, 255, 255, 0))), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: -o-linear-gradient(top, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), -o-radial-gradient(88% 50.58%, 17.66% 52.14%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: linear-gradient(180deg, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
@@ -123,10 +131,12 @@ section {
 }
 
 .main__image {
-  margin: 3.2rem auto;
+  margin: 3.2rem auto 0;
   max-width: 23.9rem;
 }
 
+/*конец стилей секции "Главная"*/
+/*начало стилей секции "О компании"*/
 .about__wrapper {
   margin-top: 2.4rem;
   display: -webkit-box;
@@ -199,11 +209,14 @@ section {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 28.13%, #FFFFFF 100%);
 }
 
+/*конец стилей секции "О компании"*/
+/* начало стилей секции "Из чего состоят линии гранулирования?"*/
 .granulation {
   overflow: hidden;
 }
 
 .granulation__wrapper {
+  margin-top: 2.4rem;
   padding: 0 1.5rem;
   overflow: scroll;
 }
@@ -213,6 +226,8 @@ section {
   width: 68.9rem;
 }
 
+/* конец стилей секции "Из чего состоят линии гранулирования?"*/
+/* начало стилей секции "Каталог"*/
 .catalog__wrapper {
   margin-top: 3.2rem;
   display: -webkit-box;
@@ -224,8 +239,11 @@ section {
           flex-direction: column;
 }
 
-.catalog__item {
+.catalog__link {
   margin-bottom: 0.8rem;
+}
+
+.catalog__item {
   padding: 1.6rem 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,6 +299,8 @@ section {
   margin-bottom: -3rem;
 }
 
+/* конец стилей секции "Каталог"*/
+/*начало стилей секции "Самое востребованное на рынке"*/
 .demanded__container {
   margin-top: 3.2rem;
   display: -webkit-box;
@@ -346,6 +366,8 @@ section {
   box-orient: vertical;
 }
 
+/*начало стилей секции "Самое востребованное на рынке"*/
+/*начало стилей секции "Уже несколько лет мы строим..."*/
 .years {
   padding-bottom: 4.8rem;
 }
@@ -444,9 +466,6 @@ section {
   padding: 0 1.5rem;
   overflow: scroll;
 }
-.years__pagination::-webkit-scrollbar {
-  width: 0;
-}
 
 .years__pagination-item {
   margin-right: 0.6rem;
@@ -455,6 +474,10 @@ section {
   background: -o-linear-gradient(right, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 100%), #FFFFFF;
   background: linear-gradient(270deg, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 100%), #FFFFFF;
   border-radius: 0.8rem;
+}
+
+.years__pagination-image {
+  display: none;
 }
 
 .years__pagination-text {
@@ -476,13 +499,16 @@ section {
   box-orient: vertical;
 }
 
+/*начало стилей секции "Уже несколько лет мы строим..."*/
 .background {
+  /*фон для секций "Как заказать?" и "Нужна наша консультация?"*/
   background: -webkit-gradient(linear, left top, left bottom, from(#ECF2F9), color-stop(73.53%, rgba(236, 242, 249, 0)));
   background: -o-linear-gradient(top, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
   background: linear-gradient(180deg, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
   border-radius: 1.6rem 1.6rem 0 0;
 }
 
+/*начало стилей секции "Как заказать?"*/
 .order {
   padding-top: 2.4rem;
 }
@@ -560,6 +586,8 @@ section {
   opacity: 0.14;
 }
 
+/*конец стилей секции "Как заказать?"*/
+/*начало стилей секции "Нужна наша консультация?"*/
 .consultation__input-wrapper {
   margin-bottom: 0.8rem;
   position: relative;
@@ -700,6 +728,8 @@ section {
   background-repeat: no-repeat;
 }
 
+/*конец стилей секции "Нужна наша консультация?"*/
+/*начало стилей секции "Контакты"*/
 .contacts {
   padding-bottom: 0;
 }
@@ -708,9 +738,10 @@ section {
 }
 
 .contacts__phone {
+  display: inline-block;
   font-family: Formular-Bold;
   font-size: 1.4rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   color: #FF6D1A;
 }
 
@@ -733,25 +764,6 @@ section {
 .contacts__map img {
   width: 100%;
   height: auto;
-}
-
-.socials {
-  margin: 1.6rem 0 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.socials__item {
-  margin-right: 1.6rem;
-}
-
-.socials__item-img {
-  width: 2.6rem;
-  height: 2.6rem;
 }
 
 .contacts__address,
@@ -803,32 +815,15 @@ section {
 }
 
 .contacts__image {
-  position: relative;
   display: none;
-  width: 34.5rem;
-  height: auto;
-  margin-left: auto;
-  z-index: 2;
-}
-.contacts__image::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 41rem;
-  height: 28rem;
-  background-image: url("../img/contacts/lines.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 41rem 28rem;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
 }
 
 .contacts__map {
   margin-top: 3.2rem;
 }
 
+/*конец стилей секции "Контакты"*/
+/* начало стилей секции "Подвал"*/
 .footer {
   position: relative;
   top: -1.5rem;
@@ -914,6 +909,11 @@ section {
   background-size: 1.2rem 1.2rem;
 }
 
+.footer__work-days,
+.footer__work-hours {
+  line-height: 1.4rem;
+}
+
 .footer__work-days {
   margin-right: 1.6rem;
 }
@@ -981,3 +981,5 @@ section {
   width: 3.8rem;
   background-color: #FF6D1A;
 }
+
+/* конец стилей секции "Подвал"*/
