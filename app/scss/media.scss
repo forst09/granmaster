@@ -1,19 +1,355 @@
-html {
-    @media(min-width:668px) {
+// html {
+//     @media(min-width:668px) {
+//         font-size: 1.497005988023952vw;
+//     }
+
+//     @media(min-width:1024px) {
+//         font-size: 0.9765625vw;
+//     }
+// }
+
+// .title {
+
+//     &::before,
+//     &::after {
+//         @media(min-width:668px) {
+//             display: inline;
+//         }
+//     }
+// }
+
+@media(min-width:668px) {
+    html {
         font-size: 1.497005988023952vw;
     }
 
-    @media(min-width:1024px) {
-        font-size: 0.9765625vw;
+    section {
+        padding: 4.8rem 0;
     }
-}
 
-.title {
+    .wrapper {
+        padding: 0 2.4rem;
+    }
 
-    &::before,
-    &::after {
-        @media(min-width:668px) {
+    .wrapper-fluid {
+        padding-left: 2.4rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        line-height: 3.2rem;
+
+        &::before,
+        &::after {
             display: inline;
         }
+    }
+
+    .title-mini {
+        margin-bottom: 1.6rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+
+    //начало стилей секции "Главная"
+    .main {
+        .btn-wrapper {
+            text-align: left;
+        }
+    }
+
+    .main__title {
+        font-size: 2rem;
+        max-width: 51.5rem;
+    }
+
+    //конец стилей секции "Главная"
+
+    //начало стилей секции "О компании"
+    .about__wrapper {
+        margin-top: 3.2rem;
+        flex-direction: row;
+    }
+
+    .about__item {
+        margin-right: 0.8rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 11.7rem;
+    }
+
+    .about__item-image {
+        margin-bottom: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        width: 11.7rem;
+        height: 11.7rem;
+        max-width: none;
+        max-height: none;
+
+        img {
+            height: 100%;
+            max-width: none;
+        }
+    }
+
+    .about__item-title {
+        font-size: 1rem;
+        text-align: center;
+        -ms-line-clamp: 3;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    //конец стилей секции "О компании"
+
+    //начало стилей секции "Из чего состоят линии гранулирования"
+    .granulation {
+        .text {
+            max-width: 31.6rem;
+        }
+
+        .wrapper-fluid {
+            margin-top: 0;
+        }
+    }
+
+    .granulation__wrapper {
+        padding: 0 2.4rem;
+    }
+
+    .granulation__image {
+        margin-bottom: 1.6rem;
+        width: 89.6rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    //конец стилей секции "Из чего состоят линии гранулирования"
+
+    // начало стилей секции "Каталог"
+    .catalog {
+        .text {
+            margin: 0 auto;
+            max-width: 43.4rem;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+    }
+
+    .catalog__wrapper {
+        flex-direction: row;
+    }
+
+    .catalog__item {
+        margin-right: 1.15rem;
+        margin-bottom: 0;
+        max-width: 19.9rem;
+    }
+
+    // конец стилей секции "Каталог"
+
+    // начало стилей секции "Самое востребованное на рынке"
+    .demanded {
+        .title {
+            margin: 0 auto 1.6rem;
+            max-width: 27.5rem;
+        }
+
+        .text {
+            margin: 0 auto;
+            max-width: 47.4rem;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+    }
+
+    .demanded__container {
+        padding: 0 2.4rem;
+    }
+
+    // начало стилей секции "Самое востребованное на рынке"
+
+    // начало стилей секции "Уже несколько лет мы строим..."
+    .years {
+        .title {
+            margin: 0 auto 3.2rem;
+            max-width: 39.5rem;
+        }
+    }
+
+    .years__item-image {
+        width: 19.7em;
+        height: 14rem;
+        border-radius: 1.6rem;
+    }
+
+    .years__item-text {
+        justify-content: flex-start;
+        max-width: 40.9rem;
+    }
+
+    .years__item-desc {
+        display: block;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        color: #537791;
+    }
+
+    .years__item-name {
+        margin-bottom: 0.8rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .years__item-btn {
+        margin-top: auto;
+    }
+
+    .years__pagination {
+        padding: 0 2.4rem;
+    }
+
+    .years__pagination-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .years__pagination-image {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.661rem;
+        height: 4.8rem;
+        border-radius: 0.8rem;
+        overflow: hidden;
+
+        img {
+            width: auto;
+            height: 100%;
+            max-width: none;
+        }
+    }
+
+    .years__pagination-text {
+        margin-left: 1.6rem;
+        -ms-line-clamp: 3;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    // конец стилей секции "Уже несколько лет мы строим..."
+
+    //начало стилей секции "Как заказать?"
+    .order__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .order__item {
+        align-items: flex-start;
+        padding: 1.6rem;
+        width: 11.6rem;
+        height: 13.3rem;
+
+        &::after {
+            box-shadow: 0px 92px 34px -5px rgb(255 255 255 / 62%) inset;
+        }
+    }
+
+    .order__item-text {
+        font-size: 1rem;
+        max-width: 8.4rem;
+        -ms-line-clamp: 3;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+    }
+
+    .order__item-number {
+        bottom: -3rem;
+    }
+
+    //конец стилей секции "Как заказать?"
+
+    //начало стилей секции "Нужна наша консультация?"
+    .consultation {
+        .btn-wrapper {
+            margin-top: 0;
+            margin-bottom: 4.1rem;
+        }
+    }
+
+    .consultation__form {
+        margin: 0 auto;
+        max-width: 43.4rem;
+    }
+
+    .consultation__buttons {
+        margin-top: 3.2rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .consultation__agreement {
+        margin: 0 0 0 1.4rem;
+        text-align: left;
+    }
+
+    .consultation__btn-download-wrapper {
+        margin: auto;
+    }
+
+    //конец стилей секции "Нужна наша консультация?"
+
+    //начало стилей секции "Контакты"
+    .contacts {
+        padding-top: 5.7rem;
+
+        .socials {
+            margin: 1.7rem 0 1.6rem;
+        }
+    }
+
+    .contacts__address {
+        margin-bottom: 1.6rem;
+    }
+
+    .contacts__map-btn {
+        display: block;
+    }
+
+    .contacts__map-btn-span {
+        position: relative;
+        padding-right: 1.6rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: #FF6D1A;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0.6rem;
+            height: 0.6rem;
+            border-top: 1px solid #FF6D1A;
+            border-right: 1px solid #FF6D1A;
+            transform: rotate(135deg);
+            right: 0;
+            top: calc(50% - 0.3rem);
+        }
+    }
+
+}
+
+@media(min-width:1024px) {
+    html {
+        font-size: 0.9765625vw;
     }
 }
