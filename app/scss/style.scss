@@ -89,8 +89,18 @@ section {
     align-items: center;
 }
 
+.socials__item-wrapper {
+    padding: 0.8rem;
+}
+
 .socials__item {
     margin-right: 1.6rem;
+    display: inline-block;
+
+    svg {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
 }
 
 .socials__item-img {
@@ -98,7 +108,21 @@ section {
     height: 2.6rem;
 }
 
+
+
 /*начало стилей секции "Шапка"*/
+.header {
+    padding-top: 1.6rem;
+}
+
+.header__call-text {
+    transition: 0.2s ease;
+
+    &:hover {
+        border-bottom: 0.5px solid #FF6D1A;
+    }
+}
+
 .header__call-text-span {
     display: inline-flex;
     align-items: center;
@@ -251,21 +275,23 @@ section {
     align-items: center;
     border-radius: 1.6rem;
     position: relative;
+    background: linear-gradient(to top, rgba(126, 184, 226, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    transition: background 2s linear;
     // background: linear-gradient(0deg, rgba(233, 243, 250, 1) 0%, rgba(255, 255, 255, 1) 100%);
     // &:hover {
 
     // }
-    &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: transparent;
-        background-image: linear-gradient(to top, rgba(126, 184, 226, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
-    }
+    // &::after {
+    //     content: "";
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     background: transparent;
+    //     background-image: linear-gradient(to top, rgba(126, 184, 226, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    // }
 }
 
 .catalog__item-title {
@@ -290,8 +316,16 @@ section {
 
 .catalog__item-image {
     width: 15.4rem;
-    margin-right: -5rem;
+    height: 15.4rem;
+    margin-right: -6.5rem;
     margin-bottom: -3rem;
+
+    img {
+        max-width: none;
+        height: 100%;
+        width: auto;
+        opacity: 0.5;
+    }
 }
 
 /* конец стилей секции "Каталог"*/
@@ -423,13 +457,18 @@ section {
     display: none;
 }
 
-.years__item-btn {
+// .years__item-btn {
+//     padding-bottom: 0.2rem;
+// }
+
+.years__item-btn-span {
+
     position: relative;
+
+    line-height: 2.6rem;
     font-family: Formular-Bold;
     font-size: 1.4rem;
-    line-height: 2.6rem;
     color: #FF6D1A;
-    padding-bottom: 0.2rem;
 
     &::after {
         content: '';
@@ -437,7 +476,7 @@ section {
         height: 1px;
         width: 4.1rem;
         background-color: #FF6D1A;
-        bottom: 0;
+        bottom: -0.2rem;
         left: 0;
     }
 }
@@ -492,9 +531,9 @@ section {
 }
 
 /*начало стилей секции "Как заказать?"*/
-.order {
-    padding-top: 2.4rem;
-}
+// .order {
+//     padding-top: 2.4rem;
+// }
 
 .order__container {
     display: flex;
@@ -582,6 +621,7 @@ section {
     color: #537791;
     border: 1px solid rgba(126, 184, 226, 0.2);
     border-radius: 0.8rem;
+    font-family: Formular;
 
     &::placeholder {
         color: #537791;
@@ -592,7 +632,6 @@ section {
 .consultation__form-textarea {
     resize: none;
     height: 10.1rem;
-    font-family: Formular;
 }
 
 
@@ -677,10 +716,17 @@ section {
 
 /*начало стилей секции "Контакты"*/
 .contacts {
-    padding-bottom: 0;
+    // padding-bottom: 0;
 
     .socials {
         margin: 1.7rem 0 1.2rem;
+    }
+}
+
+.contacts-socials__item {
+    svg {
+        width: 2.6rem;
+        height: 2.6rem;
     }
 }
 
@@ -798,8 +844,8 @@ section {
 
 /* начало стилей секции "Подвал"*/
 .footer {
-    position: relative;
-    top: -1.5rem;
+    // position: relative;
+    // top: -1.5rem;
     padding: 2.4rem 0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -813,11 +859,16 @@ section {
     height: auto;
 }
 
-.footer__phone {
+.phone {
     font-family: Formular-Bold;
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #FF6D1A;
+    transition: 0.2s ease;
+
+    &:hover {
+        color: #FF995F;
+    }
 }
 
 .footer__logo-image {
@@ -835,6 +886,11 @@ section {
 .footer__link {
     color: #3E4A61;
     line-height: 1.6rem;
+    transition: 0.2s ease;
+
+    &:hover {
+        color: #FF6D1A;
+    }
 }
 
 .footer__address,
@@ -845,19 +901,39 @@ section {
 }
 
 .footer__mail {
-    position: relative;
+    padding-left: 2.8rem;
+    // position: relative;
 
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 6.5rem;
-        height: 0.5px;
-        background-color: #3E4A61;
-        bottom: -0.3rem;
-        left: 2.8rem;
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     width: 6.5rem;
+    //     height: 0.5px;
+    //     background-color: #3E4A61;
+    //     bottom: -0.2rem;
+    //     left: 2.8rem;
+    //     transition: 0.2s ease;
+    // }
+
+    &:hover {
+        .footer__mail-span::after {
+            width: 100%;
+        }
     }
+
+    // .contacts__mail {
+
+    //     &::after {
+    //         width: 6.5rem;
+    //         left: 2.3rem;
+    //     }
+
+
+    //     }
 }
+
+
 
 .footer__work {
     margin-top: 2.4rem;
@@ -911,20 +987,37 @@ section {
     }
 }
 
+
+
 .footer__mail-span {
     position: relative;
-    padding-left: 2.8rem;
+    line-height: 1.4rem;
+    display: inline-block;
 
     &::before {
         content: '';
         position: absolute;
         display: block;
+        left: -2.8rem;
         width: 1.2rem;
         height: 1.2rem;
         background-image: url("../img/mail.svg");
         background-size: 1.2rem 1.2rem;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 6.5rem;
+        height: 0.5px;
+        background-color: #3E4A61;
+        bottom: -0.2rem;
+        left: 0;
+        -webkit-transition: 0.2s ease;
+        -o-transition: 0.2s ease;
+        transition: 0.2s ease;
     }
 }
 
