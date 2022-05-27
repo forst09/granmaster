@@ -96,41 +96,9 @@ section {
   padding-top: 1.6rem;
 }
 
-.header__call-text {
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.header__call-text:hover {
-  border-bottom: 0.5px solid #FF6D1A;
-}
-
-.header__call-text-span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  padding-left: 1.6rem;
-}
-.header__call-text-span::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0.8rem;
-  height: 0.8rem;
-  left: 0;
-  background-image: url(../img/phone.svg);
-  background-size: 0.8rem 0.8rem;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /*начало стилей секции "Главная"*/
 .main {
-  padding-bottom: 7.3rem;
+  padding-bottom: 3.6rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, #FFFFFF), color-stop(53.78%, rgba(255, 255, 255, 0))), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: -o-linear-gradient(top, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), -o-radial-gradient(88% 50.58%, 17.66% 52.14%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: linear-gradient(180deg, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
@@ -747,6 +715,9 @@ section {
 
 /*конец стилей секции "Нужна наша консультация?"*/
 /*начало стилей секции "Контакты"*/
+.contacts {
+  padding-bottom: 0;
+}
 .contacts .socials {
   margin: 1.7rem 0 1.2rem;
 }
@@ -844,11 +815,13 @@ section {
 /*конец стилей секции "Контакты"*/
 /* начало стилей секции "Подвал"*/
 .footer {
+  position: relative;
+  top: -1.8rem;
   padding: 2.4rem 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, rgba(255, 255, 255, 0)), color-stop(53.78%, #FFFFFF)), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
-  border-radius: 16px 16px 0px 0px;
+  border-radius: 1.6rem 1.6rem 0 0;
 }
 
 .footer__logo {
@@ -862,9 +835,9 @@ section {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #FF6D1A;
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .phone:hover {
   color: #FF995F;
@@ -885,9 +858,9 @@ section {
 .footer__link {
   color: #3E4A61;
   line-height: 1.6rem;
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .footer__link:hover {
   color: #FF6D1A;
@@ -986,9 +959,9 @@ section {
   background-color: #3E4A61;
   bottom: -0.2rem;
   left: 0;
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .footer__upfly {

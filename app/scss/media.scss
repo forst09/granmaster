@@ -38,14 +38,31 @@
 
     /*начало стилей секции "Главная"*/
     .main {
+        padding-bottom: 4.8rem;
+
         .btn-wrapper {
             text-align: left;
         }
     }
 
+    .main__slide {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .main__title {
+        margin-bottom: 0.8rem;
         font-size: 2rem;
         max-width: 51.5rem;
+        line-height: 3.2rem;
+    }
+
+    .main__image {
+        position: relative;
+        bottom: -4rem;
+        margin: 0;
+        width: 23.9rem;
+        height: 19rem;
     }
 
     /*конец стилей секции "Главная"*/
@@ -224,7 +241,7 @@
 
                 &::after {
 
-                    transition: 0.2s ease;
+                    transition: 0.3s ease;
                     width: 100%;
                 }
             }
@@ -324,7 +341,7 @@
     }
 
     .consultation__agreement-link {
-        transition: 0.2s ease;
+        transition: 0.3s ease;
 
         &:hover {
             color: #FF6D1A;
@@ -523,7 +540,7 @@
     }
 
     .btn {
-        transition: 0.2s ease;
+        transition: 0.3s ease;
 
         &:hover {
             transform: scale(1.105);
@@ -531,7 +548,25 @@
     }
 
     /*начало стилей секции "Шапка" */
+    .header {
+        .socials__item {
+            margin-right: 1.772rem;
+
+            &:nth-last-of-type(1) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .header__item {
+        &:nth-last-of-type(1) {
+            margin-left: auto;
+        }
+    }
+
+
     .header__container {
+        padding-bottom: 4.6rem;
         display: flex;
         align-items: center;
     }
@@ -560,16 +595,19 @@
     .header__input-label {
         position: absolute;
         right: 0;
-        bottom: 0.4rem;
+        bottom: 0.3rem;
     }
 
     .header__work {
+        margin-right: 7.971rem;
         display: flex;
     }
 
     .header__item-phone {
+        margin-left: auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .header__menu-nav {
@@ -579,8 +617,13 @@
     }
 
     .header__menu-link {
-        display: flex;
-        align-items: center;
+        line-height: 1.8rem;
+        color: #3E4A61;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: #FF6D1A;
+        }
     }
 
     .header__menu-burger-wrapper {
@@ -613,12 +656,95 @@
         width: 1.4rem;
         height: 1px;
         background-color: #FF6D1A;
+    }
 
 
+
+    .header__work-days {
+        margin-right: 0.8rem;
+        padding-left: 2.8rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 1.2rem;
+            height: 1.2rem;
+            left: 0;
+            background-image: url(../img/clock.svg);
+            background-size: 1.2rem 1.2rem;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
     }
 
+    .header__call-text {
+        margin-top: 0.8rem;
+
+        &:hover {
+            .header__call-text-span::after {
+                transition: 0.3s ease;
+                width: 100%;
+            }
+        }
+    }
+
+    .header__call-text-span {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        padding-left: 1.6rem;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        color: #FF6D1A;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0.8rem;
+            height: 0.8rem;
+            left: 0;
+            background-image: url(../img/phone.svg);
+            background-size: 0.8rem 0.8rem;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0rem;
+            height: 0.5px;
+            left: 0;
+            bottom: -0.1rem;
+            background-color: #FF6D1A;
+        }
+    }
+
     /*конец стилей секции "Шапка" */
+
+    /*начало стилей секции "Главная" */
+    .main {
+        padding: 4.3rem 0 5rem;
+    }
+
+    .main__image {
+        position: static;
+        width: 33.7rem;
+        height: 26.8rem;
+        max-width: none;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    /*конец стилей секции "Главная" */
 
     /*начало стилей секции "О компании" */
     .about__item {
@@ -936,7 +1062,7 @@
         &::after {
             width: 6.5rem;
             left: 2.3rem;
-            transition: 0.2s ease;
+            transition: 0.3s ease;
         }
 
         &:hover {
@@ -958,7 +1084,7 @@
         &:hover {
             .contacts__map-btn-span::before {
                 width: 100%;
-                // transition: 0.2s ease;
+                // transition: 0.3s ease;
                 // border-bottom: 1px solid #FF6D1A;
             }
         }
@@ -969,7 +1095,7 @@
 
 
         &::before {
-            transition: 0.2s ease;
+            transition: 0.3s ease;
             content: '';
             position: absolute;
             width: 0;
@@ -989,7 +1115,12 @@
 
     .footer__container {
         display: flex;
+        justify-content: space-between;
     }
+
+    // .footer__item {
+    //     width: 100%;
+    // }
 
     .footer__container-first .footer__item:first-of-type {
         margin-right: 4.2rem;
@@ -1016,6 +1147,10 @@
         width: 21.5rem;
     }
 
+    .footer__nav-item {
+        margin-bottom: 0.4rem;
+    }
+
     .footer__link {
         line-height: 1.8rem;
     }
@@ -1026,6 +1161,10 @@
                 width: 100%;
             }
         }
+    }
+
+    .footer__address {
+        max-width: 18.9rem;
     }
 
     .footer__upfly {

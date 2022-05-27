@@ -115,37 +115,9 @@ section {
     padding-top: 1.6rem;
 }
 
-.header__call-text {
-    transition: 0.2s ease;
-
-    &:hover {
-        border-bottom: 0.5px solid #FF6D1A;
-    }
-}
-
-.header__call-text-span {
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    padding-left: 1.6rem;
-
-    &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 0.8rem;
-        height: 0.8rem;
-        left: 0;
-        background-image: url(../img/phone.svg);
-        background-size: 0.8rem 0.8rem;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
 /*начало стилей секции "Главная"*/
 .main {
-    padding-bottom: 7.3rem;
+    padding-bottom: 3.6rem;
     background: linear-gradient(180deg, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
@@ -716,7 +688,7 @@ section {
 
 /*начало стилей секции "Контакты"*/
 .contacts {
-    // padding-bottom: 0;
+    padding-bottom: 0;
 
     .socials {
         margin: 1.7rem 0 1.2rem;
@@ -844,13 +816,13 @@ section {
 
 /* начало стилей секции "Подвал"*/
 .footer {
-    // position: relative;
-    // top: -1.5rem;
+    position: relative;
+    top: -1.8rem;
     padding: 2.4rem 0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , #E5F1F9;
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 1.6rem 1.6rem 0 0;
 }
 
 .footer__logo {
@@ -864,7 +836,7 @@ section {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #FF6D1A;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
 
     &:hover {
         color: #FF995F;
@@ -886,7 +858,7 @@ section {
 .footer__link {
     color: #3E4A61;
     line-height: 1.6rem;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
 
     &:hover {
         color: #FF6D1A;
@@ -913,7 +885,7 @@ section {
     //     background-color: #3E4A61;
     //     bottom: -0.2rem;
     //     left: 2.8rem;
-    //     transition: 0.2s ease;
+    //     transition: 0.3s ease;
     // }
 
     &:hover {
@@ -1015,9 +987,7 @@ section {
         background-color: #3E4A61;
         bottom: -0.2rem;
         left: 0;
-        -webkit-transition: 0.2s ease;
-        -o-transition: 0.2s ease;
-        transition: 0.2s ease;
+        transition: 0.3s ease;
     }
 }
 

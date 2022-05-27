@@ -36,13 +36,35 @@
   }
 
   /*начало стилей секции "Главная"*/
+  .main {
+    padding-bottom: 4.8rem;
+  }
   .main .btn-wrapper {
     text-align: left;
   }
 
+  .main__slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .main__title {
+    margin-bottom: 0.8rem;
     font-size: 2rem;
     max-width: 51.5rem;
+    line-height: 3.2rem;
+  }
+
+  .main__image {
+    position: relative;
+    bottom: -4rem;
+    margin: 0;
+    width: 23.9rem;
+    height: 19rem;
   }
 
   /*конец стилей секции "Главная"*/
@@ -220,9 +242,9 @@
     margin-top: auto;
   }
   .years__item-btn:hover .years__item-btn-span::after {
-    -webkit-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
-    transition: 0.2s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
     width: 100%;
   }
 
@@ -336,9 +358,9 @@
   }
 
   .consultation__agreement-link {
-    -webkit-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
-    transition: 0.2s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   .consultation__agreement-link:hover {
     color: #FF6D1A;
@@ -516,9 +538,9 @@
   }
 
   .btn {
-    -webkit-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
-    transition: 0.2s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   .btn:hover {
     -webkit-transform: scale(1.105);
@@ -527,7 +549,19 @@
   }
 
   /*начало стилей секции "Шапка" */
+  .header .socials__item {
+    margin-right: 1.772rem;
+  }
+  .header .socials__item:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+
+  .header__item:nth-last-of-type(1) {
+    margin-left: auto;
+  }
+
   .header__container {
+    padding-bottom: 4.6rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -560,16 +594,18 @@
   .header__input-label {
     position: absolute;
     right: 0;
-    bottom: 0.4rem;
+    bottom: 0.3rem;
   }
 
   .header__work {
+    margin-right: 7.971rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
   .header__item-phone {
+    margin-left: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -577,6 +613,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .header__menu-nav {
@@ -590,12 +629,14 @@
   }
 
   .header__menu-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    line-height: 1.8rem;
+    color: #3E4A61;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .header__menu-link:hover {
+    color: #FF6D1A;
   }
 
   .header__menu-burger-wrapper {
@@ -630,7 +671,88 @@
     background-color: #FF6D1A;
   }
 
+  .header__work-days {
+    margin-right: 0.8rem;
+    padding-left: 2.8rem;
+    position: relative;
+  }
+  .header__work-days::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    left: 0;
+    background-image: url(../img/clock.svg);
+    background-size: 1.2rem 1.2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header__call-text {
+    margin-top: 0.8rem;
+  }
+  .header__call-text:hover .header__call-text-span::after {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    width: 100%;
+  }
+
+  .header__call-text-span {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    padding-left: 1.6rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #FF6D1A;
+  }
+  .header__call-text-span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    left: 0;
+    background-image: url(../img/phone.svg);
+    background-size: 0.8rem 0.8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .header__call-text-span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0rem;
+    height: 0.5px;
+    left: 0;
+    bottom: -0.1rem;
+    background-color: #FF6D1A;
+  }
+
   /*конец стилей секции "Шапка" */
+  /*начало стилей секции "Главная" */
+  .main {
+    padding: 4.3rem 0 5rem;
+  }
+
+  .main__image {
+    position: static;
+    width: 33.7rem;
+    height: 26.8rem;
+    max-width: none;
+  }
+  .main__image img {
+    height: 100%;
+    width: auto;
+  }
+
+  /*конец стилей секции "Главная" */
   /*начало стилей секции "О компании" */
   .about__item {
     margin-right: 2.5rem;
@@ -898,9 +1020,9 @@
   .contacts__mail::after {
     width: 6.5rem;
     left: 2.3rem;
-    -webkit-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
-    transition: 0.2s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   .contacts__mail:hover::after {
     width: 13rem;
@@ -922,9 +1044,9 @@
     position: relative;
   }
   .contacts__map-btn-span::before {
-    -webkit-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
-    transition: 0.2s ease;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
     content: "";
     position: absolute;
     width: 0;
@@ -944,6 +1066,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .footer__container-first .footer__item:first-of-type {
@@ -976,12 +1101,20 @@
     width: 21.5rem;
   }
 
+  .footer__nav-item {
+    margin-bottom: 0.4rem;
+  }
+
   .footer__link {
     line-height: 1.8rem;
   }
 
   .footer__mail:hover::before {
     width: 100%;
+  }
+
+  .footer__address {
+    max-width: 18.9rem;
   }
 
   .footer__upfly {
