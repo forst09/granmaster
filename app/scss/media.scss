@@ -3,6 +3,10 @@
         font-size: 1.497005988023952vw;
     }
 
+    body {
+        padding-bottom: 7.1rem;
+    }
+
     section {
         padding: 4.8rem 0;
     }
@@ -16,7 +20,6 @@
     }
 
     .title {
-        margin: 0 auto 3.2rem;
         font-size: 2rem;
         line-height: 3.2rem;
         max-width: 39.5rem;
@@ -27,7 +30,16 @@
         }
     }
 
-    .title-mini {
+    .title-span {
+        display: block;
+        width: 10rem;
+    }
+
+    .title-container {
+        margin-bottom: 3.2rem;
+    }
+
+    .title-container-mini {
         margin-bottom: 1.6rem;
     }
 
@@ -36,8 +48,57 @@
         line-height: 2.2rem;
     }
 
+    .text-other {
+        line-height: 2rem;
+    }
+
+    /*начало стилей секции "Шапка"*/
+    .header {
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+
+    .header__container {
+        align-items: end;
+    }
+
+    .header__item-logo {
+        margin-left: 0;
+    }
+
+    .header__logo {
+        margin-left: 3.2rem;
+        width: 8.4rem;
+        height: 2.4rem;
+    }
+
+
+    .header__form-search-wrapper {
+        width: auto;
+        height: auto;
+    }
+
+    .header__input-search {
+        display: block;
+        width: 25.3rem;
+        border: none;
+        border-bottom: 1px solid #7EB8E2;
+        opacity: 0.5;
+    }
+
+    .header__input-label {
+        position: absolute;
+        right: 0;
+        bottom: 0.3rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    /*конец стилей секции "Шапка"*/
+
     /*начало стилей секции "Главная"*/
     .main {
+        padding-top: 5.6rem;
         padding-bottom: 4.8rem;
 
         .btn-wrapper {
@@ -68,10 +129,20 @@
     /*конец стилей секции "Главная"*/
 
     /*начало стилей секции "О компании"*/
+    .about {
+        .text {
+            text-align: center;
+        }
+    }
+
     .about__wrapper {
         margin-top: 3.2rem;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .about__btn-hide {
+        display: none;
     }
 
     .about__item {
@@ -143,8 +214,6 @@
         .text {
             margin: 0 auto;
             max-width: 43.4rem;
-            font-size: 1rem;
-            line-height: 2rem;
         }
     }
 
@@ -182,15 +251,16 @@
     /* начало стилей секции "Самое востребованное на рынке"*/
     .demanded {
         .title {
-            margin: 0 auto 1.6rem;
             max-width: 27.5rem;
+        }
+
+        .title-container-mini {
+            margin-bottom: 1.6rem;
         }
 
         .text {
             margin: 0 auto;
             max-width: 47.4rem;
-            font-size: 1rem;
-            line-height: 2rem;
         }
     }
 
@@ -203,8 +273,11 @@
     /* начало стилей секции "Уже несколько лет мы строим..."*/
     .years {
         .title {
-            margin: 0 auto 3.2rem;
             max-width: 39.5rem;
+        }
+
+        .title-container {
+            margin-bottom: 3.2rem;
         }
     }
 
@@ -387,7 +460,6 @@
 
     .contacts__map-btn {
         margin-top: 3.4rem;
-        padding-right: 1.7rem;
         display: block;
     }
 
@@ -454,6 +526,10 @@
         z-index: 3;
     }
 
+    .footer__container {
+        display: block;
+    }
+
     .footer__container-first {
         .footer__item {
             &:first-of-type {
@@ -483,6 +559,11 @@
     .footer__container-first {
         margin-bottom: 3.2rem;
         display: flex;
+
+        .footer__item {
+            min-width: 0;
+        }
+
         // justify-content: space-between;
     }
 
@@ -506,11 +587,30 @@
     }
 
     /*Конец стилей секции "Подвал"*/
+
+    /*начало стилей секции "Нижнее меню на телефоны/планшеты" */
+    .buttom-menu {
+        max-height: 7.1rem;
+        padding: 0.8rem 6.15rem 1rem;
+    }
+
+    .buttom-menu__span {
+        display: inline-block;
+        margin-top: 0.4rem;
+        line-height: 14px;
+        color: #537791;
+    }
+
+    /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
 }
 
 @media(min-width:1024px) {
     html {
         font-size: 0.9765625vw;
+    }
+
+    body {
+        padding-bottom: 0;
     }
 
     section {
@@ -525,14 +625,26 @@
         padding-left: 9.4rem;
     }
 
+    .content {
+        min-height: none;
+    }
+
     .title {
-        margin-bottom: 4.8rem;
         font-size: 2.6rem;
         line-height: 3.6rem;
     }
 
-    .title-mini {
+    .title-container {
+        margin-bottom: 4.8rem;
+    }
+
+    .title-container-mini {
         margin-bottom: 1.6rem;
+    }
+
+    .text-other {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
     }
 
     .btn-wrapper {
@@ -558,22 +670,26 @@
         }
     }
 
-    .header__item {
-        &:nth-last-of-type(1) {
-            margin-left: auto;
-        }
-    }
-
 
     .header__container {
-        padding-bottom: 4.6rem;
-        display: flex;
         align-items: center;
+        padding-bottom: 4.6rem;
+    }
+
+    .header__burger {
+        display: none;
     }
 
     .header__logo {
+        margin-left: 0;
         width: 9.5rem;
         height: 2.6rem;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: none;
+        }
     }
 
     .header__form-search-wrapper {
@@ -583,19 +699,16 @@
 
     .header__input-search {
         width: 18.5rem;
-        border: none;
-        border-bottom: 1px solid #7EB8E2;
-        opacity: 0.5;
-    }
-
-    .header__input-btn {
-        display: none;
     }
 
     .header__input-label {
-        position: absolute;
-        right: 0;
-        bottom: 0.3rem;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .header__item-search {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .header__work {
@@ -603,20 +716,30 @@
         display: flex;
     }
 
+    .header__item-socials {
+        display: block;
+    }
+
     .header__item-phone {
-        margin-left: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    .header__item-mobile {
+        margin-left: auto;
+    }
+
     .header__menu-nav {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 1.2rem;
     }
 
     .header__menu-link {
+        display: flex;
+        align-items: center;
         line-height: 1.8rem;
         color: #3E4A61;
         transition: 0.3s ease;
@@ -656,6 +779,41 @@
         width: 1.4rem;
         height: 1px;
         background-color: #FF6D1A;
+
+        // position: relative;
+
+        // &::before {
+
+        // }
+    }
+
+    .header__menu-span-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 1.4rem;
+        height: 1.4rem;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 1.4rem;
+            background-color: #FF6D1A;
+        }
+
+        &::after {
+            top: 3px;
+        }
+
+        &::before {
+            bottom: 3px;
+        }
+    }
+
+    .header__menu-burger-text {
+        margin-left: 1.6rem;
     }
 
 
@@ -722,6 +880,27 @@
             left: 0;
             bottom: -0.1rem;
             background-color: #FF6D1A;
+        }
+    }
+
+    .header__mobile-phone {
+        display: none;
+    }
+
+    .header__menu {
+        display: block;
+    }
+
+    .header__work-hours {
+        position: relative;
+
+        sup {
+            position: absolute;
+            top: 5px;
+        }
+
+        span {
+            margin-right: 0.8rem;
         }
     }
 
@@ -914,8 +1093,11 @@
     /*начало стилей секции "Уже несколько лет мы строим..." */
     .years {
         .title {
-            margin: 0 auto 4.8rem;
             max-width: 50.6rem;
+        }
+
+        .title-container {
+            margin-bottom: 4.8rem;
         }
     }
 
@@ -1045,12 +1227,14 @@
         }
     }
 
-    // .socials__item {
-    //     &:hover {
-    //         box-shadow: 0px 4px 9px rgba(38, 38, 40, 0.08);
-    //         border-radius: 6px;
-    //     }
-    // }
+    .socials__item {
+        &:hover {
+            path {
+                transition: 0.3s ease;
+                stroke: #FF995F;
+            }
+        }
+    }
 
     .contacts__address {
         margin-bottom: 1.2rem;
@@ -1070,6 +1254,21 @@
                 width: 13rem;
             }
         }
+    }
+
+
+    .contacts__phone {
+        &:hover {
+            color: #FF995F;
+
+            svg {
+                path {
+                    transition: 0.3s ease;
+                    fill: #FF995F;
+                }
+            }
+        }
+
     }
 
     .contacts__image {
@@ -1116,6 +1315,12 @@
     .footer__container {
         display: flex;
         justify-content: space-between;
+    }
+
+    .footer__logo {
+        width: 100%;
+        height: auto;
+        max-width: none;
     }
 
     // .footer__item {
@@ -1167,9 +1372,29 @@
         max-width: 18.9rem;
     }
 
+    .footer__work-hours {
+        position: relative;
+
+        sup {
+            position: absolute;
+            top: 5px;
+        }
+
+        span {
+            margin-right: 0.8rem;
+        }
+    }
+
     .footer__upfly {
         margin-top: 5.5rem;
     }
 
     /*конец стилей секции "Подвал" */
+
+    /*начало стилей секции "Нижнее меню на телефоны/планшеты" */
+    .buttom-menu {
+        display: none;
+    }
+
+    /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
 }

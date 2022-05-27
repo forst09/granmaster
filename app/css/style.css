@@ -4,6 +4,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  padding-bottom: 5.44rem;
+}
+
 section {
   padding: 3.6rem 0;
 }
@@ -18,7 +22,7 @@ section {
 }
 
 .title {
-  margin-bottom: 3.2rem;
+  margin: 0 auto;
   position: relative;
   font-family: "Formular-Black";
   font-size: 1.6rem;
@@ -26,8 +30,30 @@ section {
   text-align: center;
 }
 
-.title-mini {
-  margin-bottom: 0.8rem;
+.title-container {
+  margin-bottom: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title-span {
+  display: none;
+  height: 1px;
+  width: 15.3rem;
+  background-image: -o-linear-gradient(45deg, rgba(225, 225, 225, 0) 0%, rgb(126, 184, 226) 100%);
+  background-image: linear-gradient(45deg, rgba(225, 225, 225, 0) 0%, rgb(126, 184, 226) 100%);
+  position: relative;
+  left: 0;
+}
+.title-span:nth-of-type(2) {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  right: 0;
 }
 
 .text {
@@ -35,6 +61,10 @@ section {
   color: #537791;
   line-height: 1.8rem;
   text-align: center;
+}
+
+.text-other {
+  font-size: 1.2rem;
 }
 
 .text-left {
@@ -80,6 +110,9 @@ section {
 .socials__item {
   margin-right: 1.6rem;
   display: inline-block;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .socials__item svg {
   width: 2.2rem;
@@ -93,11 +126,123 @@ section {
 
 /*начало стилей секции "Шапка"*/
 .header {
-  padding-top: 1.6rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.7rem;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__burger-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__burger-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.header__burger-wrapper::before, .header__burger-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 1.5px;
+  width: 2.4rem;
+  background-color: #7EB8E2;
+}
+.header__burger-wrapper::before {
+  top: 0.4rem;
+}
+.header__burger-wrapper::after {
+  bottom: 0.4rem;
+}
+
+.header__burger-span {
+  display: block;
+  width: 2.4rem;
+  height: 1.5px;
+  background-color: #7EB8E2;
+}
+
+.header__logo {
+  width: 11.2rem;
+  height: 3.2rem;
+}
+.header__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.header__item-logo {
+  margin-left: auto;
+}
+
+.header__item-search {
+  margin-left: auto;
+  margin-right: 1.6rem;
+}
+
+.header__work {
+  display: none;
+}
+
+.header__item-socials {
+  display: none;
+}
+
+.header__input-btn {
+  display: none;
+}
+
+.header__form-search-wrapper {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.header__input-search {
+  display: none;
+}
+
+.header__input-label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.header__item-phone {
+  display: none;
+}
+
+.header__mobile-phone-link {
+  display: inline-block;
+}
+
+.header__menu {
+  display: none;
 }
 
 /*начало стилей секции "Главная"*/
 .main {
+  padding-top: 2.4rem;
   padding-bottom: 3.6rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, #FFFFFF), color-stop(53.78%, rgba(255, 255, 255, 0))), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: -o-linear-gradient(top, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), -o-radial-gradient(88% 50.58%, 17.66% 52.14%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
@@ -127,6 +272,10 @@ section {
 
 /*конец стилей секции "Главная"*/
 /*начало стилей секции "О компании"*/
+.about .text {
+  text-align: left;
+}
+
 .about__wrapper {
   margin-top: 2.4rem;
   display: -webkit-box;
@@ -138,14 +287,36 @@ section {
           flex-direction: column;
 }
 
+.about__btn-hide-span {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #FF6D1A;
+}
+.about__btn-hide-span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 1px solid #FF6D1A;
+  border-right: 1px solid #FF6D1A;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  right: -1.6rem;
+  top: calc(50% - 0.3rem);
+}
+
 .about__item {
   margin-bottom: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -161,7 +332,6 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.8rem;
-  max-width: 19rem;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -227,6 +397,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .catalog__link {
@@ -251,9 +424,7 @@ section {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(126, 184, 226, 0.5)), to(rgba(255, 255, 255, 0.5)));
   background: -o-linear-gradient(bottom, rgba(126, 184, 226, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
   background: linear-gradient(to top, rgba(126, 184, 226, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
-  -webkit-transition: background 2s linear;
-  -o-transition: background 2s linear;
-  transition: background 2s linear;
+  width: 29rem;
 }
 
 .catalog__item-title {
@@ -728,27 +899,23 @@ section {
 }
 
 .contacts__phone {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Formular-Bold;
   font-size: 1.4rem;
   line-height: 2rem;
   color: #FF6D1A;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .contacts__phone-span {
-  position: relative;
-  padding-left: 2.8rem;
-}
-.contacts__phone-span::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  background-image: url("../img/phone.svg");
-  background-size: 2rem 2rem;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-left: 0.8rem;
 }
 
 .contacts__map img {
@@ -824,10 +991,29 @@ section {
   border-radius: 1.6rem 1.6rem 0 0;
 }
 
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__container-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer__container-first .footer__item {
+  min-width: 20rem;
+}
+
 .footer__logo {
   margin-bottom: 1.6rem;
   width: 10.1rem;
-  height: auto;
+  height: 2.8rem;
 }
 
 .phone {
@@ -993,3 +1179,49 @@ section {
 }
 
 /* конец стилей секции "Подвал"*/
+/*начало стилей секции "Нижнее меню на телефоны/планшеты" */
+.buttom-menu {
+  display: block;
+  position: fixed;
+  padding: 1.2rem 3.2rem 1.6rem;
+  bottom: 0;
+  width: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 8px rgba(62, 74, 97, 0.06);
+          box-shadow: 0px 0px 8px rgba(62, 74, 97, 0.06);
+  border-radius: 12px 12px 0px 0px;
+  z-index: 20;
+}
+
+.buttom-menu__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.buttom-menu__span {
+  display: none;
+}
+
+.buttom-menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 8.2rem;
+  text-align: center;
+}
+
+/*конец стилей секции "Нижнее меню на телефоны/планшеты" */
