@@ -40,6 +40,10 @@ section {
           align-items: center;
 }
 
+.title-container-mini {
+  margin-bottom: 0.8rem;
+}
+
 .title-span {
   display: none;
   height: 1px;
@@ -189,6 +193,12 @@ section {
   height: auto;
 }
 
+.header__logo-link {
+  display: inline-block;
+  width: 11.2rem;
+  height: 3.2rem;
+}
+
 .header__item-logo {
   margin-left: auto;
 }
@@ -287,6 +297,11 @@ section {
           flex-direction: column;
 }
 
+.about__btn-hide {
+  display: block;
+  text-align: center;
+}
+
 .about__btn-hide-span {
   position: relative;
   display: inline-block;
@@ -368,6 +383,10 @@ section {
   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 28.13%, #FFFFFF 100%);
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 28.13%, #FFFFFF 100%);
 }
+.about__item-image img {
+  width: 100%;
+  height: auto;
+}
 
 /*конец стилей секции "О компании"*/
 /* начало стилей секции "Из чего состоят линии гранулирования?"*/
@@ -384,6 +403,7 @@ section {
 .granulation__image {
   margin-bottom: 0.8rem;
   width: 68.9rem;
+  height: 24.8rem;
 }
 
 /* конец стилей секции "Из чего состоят линии гранулирования?"*/
@@ -529,10 +549,6 @@ section {
 
 /*начало стилей секции "Самое востребованное на рынке"*/
 /*начало стилей секции "Уже несколько лет мы строим..."*/
-.years {
-  padding-bottom: 4.8rem;
-}
-
 .years__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,8 +615,13 @@ section {
   display: none;
 }
 
+.years__item-btn {
+  display: inline-block;
+}
+
 .years__item-btn-span {
   position: relative;
+  display: inline-block;
   line-height: 2.6rem;
   font-family: Formular-Bold;
   font-size: 1.4rem;
@@ -614,6 +635,9 @@ section {
   background-color: #FF6D1A;
   bottom: -0.2rem;
   left: 0;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .years__pagination {
@@ -691,7 +715,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.7rem 0 1.7rem 1.6rem;
+  padding: 1.7rem 1rem 1.7rem 1.6rem;
   background-color: #fff;
   border-radius: 1.6rem;
   height: 6.6rem;
@@ -708,6 +732,9 @@ section {
   background: transparent;
   -webkit-box-shadow: 0px 32px 28px -5px rgba(255, 255, 255, 0.62) inset;
           box-shadow: 0px 32px 28px -5px rgba(255, 255, 255, 0.62) inset;
+}
+.order__item:nth-last-of-type(1) {
+  margin-bottom: 0;
 }
 
 .order__item-text {
@@ -773,22 +800,32 @@ section {
   font-family: Formular;
 }
 .consultation__form-input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  line-height: 2rem;
   color: #537791;
   opacity: 0.8;
 }
 .consultation__form-input::-moz-placeholder {
+  font-size: 1.2rem;
+  line-height: 2rem;
   color: #537791;
   opacity: 0.8;
 }
 .consultation__form-input:-ms-input-placeholder {
+  font-size: 1.2rem;
+  line-height: 2rem;
   color: #537791;
   opacity: 0.8;
 }
 .consultation__form-input::-ms-input-placeholder {
+  font-size: 1.2rem;
+  line-height: 2rem;
   color: #537791;
   opacity: 0.8;
 }
 .consultation__form-input::placeholder {
+  font-size: 1.2rem;
+  line-height: 2rem;
   color: #537791;
   opacity: 0.8;
 }
@@ -821,7 +858,7 @@ section {
 
 .consultation__label-textarea {
   background-image: url("../img/consultation/comment.svg");
-  top: 1.28rem;
+  top: 1.2rem;
 }
 
 .consultation__buttons {
@@ -882,11 +919,15 @@ section {
   background-size: 6rem 6rem;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 /*конец стилей секции "Нужна наша консультация?"*/
 /*начало стилей секции "Контакты"*/
 .contacts {
+  padding-top: 4.5rem;
   padding-bottom: 0;
 }
 .contacts .socials {
@@ -907,7 +948,7 @@ section {
           align-items: center;
   font-family: Formular-Bold;
   font-size: 1.4rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
   color: #FF6D1A;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -984,7 +1025,7 @@ section {
 .footer {
   position: relative;
   top: -1.8rem;
-  padding: 2.4rem 0;
+  padding: 2.4rem 0 4.3rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, rgba(255, 255, 255, 0)), color-stop(53.78%, #FFFFFF)), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
@@ -1015,6 +1056,16 @@ section {
   width: 10.1rem;
   height: 2.8rem;
 }
+.footer__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.footer__logo-link {
+  display: inline-block;
+  width: 10.1rem;
+  height: 2.8rem;
+}
 
 .phone {
   font-family: Formular-Bold;
@@ -1029,12 +1080,12 @@ section {
   color: #FF995F;
 }
 
-.footer__logo-image {
-  width: 100%;
-}
-
 .footer__socials {
   margin-bottom: 2.4rem;
+}
+
+.footer__nav-second .footer__nav-item:nth-last-of-type(1) {
+  margin-bottom: 0;
 }
 
 .footer__nav-item {
@@ -1061,6 +1112,7 @@ section {
 
 .footer__mail {
   padding-left: 2.8rem;
+  display: inline-block;
 }
 .footer__mail:hover .footer__mail-span::after {
   width: 100%;
@@ -1158,6 +1210,16 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__upfly-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.footer__upfly-icon img {
+  max-width: none;
+  height: 100%;
+  width: auto;
 }
 
 .footer__upfly-text {
