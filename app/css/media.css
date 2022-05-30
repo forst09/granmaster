@@ -1307,7 +1307,7 @@
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
-    fill: #FF995F;
+    stroke: #FF995F;
   }
 
   .contacts__image {

@@ -913,6 +913,11 @@ section {
     color: #FF6D1A;
     transition: 0.3s ease;
 
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
 }
 
 .contacts__phone-span {

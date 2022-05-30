@@ -954,6 +954,10 @@ section {
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+.contacts__phone svg {
+  width: 2rem;
+  height: 2rem;
+}
 
 .contacts__phone-span {
   margin-left: 0.8rem;
