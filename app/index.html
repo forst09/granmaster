@@ -137,25 +137,29 @@
     <!-- конец блока "Шапка" -->
 
     <main class="main">
-        <div class="wrapper">
-            <div class="main__container">
-                <div class="main__slide">
-                    <div class="main__slide-item">
-                        <h2 class="main__title">Производство <span class="title__span">линий гранулирования</span>
-                            комбикормов от 0,1 до 15 т/ч!</h2>
-                        <div class="main__desc">«Под ключ» от завода-производителя!</div>
-                        <div class="btn-wrapper">
-                            <a href="#" class="btn">Заказать</a>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="wrapper">
+                    <div class="swiper-slide main__slide">
+                        <div class="main__slide-item">
+                            <h2 class="main__title">Производство <span class="title__span">линий гранулирования</span>
+                                комбикормов от 0,1 до 15 т/ч!</h2>
+                            <div class="main__desc">«Под ключ» от завода-производителя!</div>
+                            <div class="btn-wrapper">
+                                <a href="#" class="btn">Заказать</a>
+                            </div>
+                        </div>
+                        <div class="main__slide-item">
+                            <div class="main__image">
+                                <img src="img/main/main_img1.png" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="main__slide-item">
-                        <div class="main__image">
-                            <img src="img/main/main_img1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="main__pagination"></div>
                 </div>
+                <div class="main__pagination"></div>
             </div>
+
         </div>
     </main>
 
@@ -167,14 +171,17 @@
                 <h3 class="title">О компании</h3>
                 <span class="title-span"></span>
             </div>
-            <div class="text">ООО «ГранМастер» — поставщик оборудования для производства рассыпного, гранулированного
+            <div class="text about__text">ООО «ГранМастер» — поставщик оборудования для производства рассыпного,
+                гранулированного
                 комбикорма и гранулирования древесных отходов. Основным потребителем нашей продукции являются: частные
                 предприятия и фермерские хозяйства, а так же свинокомплексы и птицефабрики с большим объемом потребления
                 комбикормов. Наша компания действует на рынке с 2014 года в г. Н. Новгород. Завод выпускает более
                 100
                 моделей комбикормового и зерно транспортного оборудования.
             </div>
-            <a href="#" class="about__btn-hide"><span class="about__btn-hide-span">Показать полностью</span></a>
+            <a class="about__btn"><span class="about__btn-span about__btn-show-span">Показать
+                    полностью</span><span class="about__btn-span about__btn-hide-span">Скрыть</span></a>
+            <!-- <a class="about__btn about__btn-hide"></a> -->
             <div class="about__wrapper">
                 <div class="about__item">
                     <div class="about__item-image">
@@ -527,16 +534,25 @@
             <div class="contacts__address">Нижний Новгород, переулок Союзный, д. 45, 4-й этаж, офис 12</div>
             <a href="mailto:promgrann@yandex.ru" class="contacts__mail" rel="nofollow"><span
                     class="contacts__mail-span">promgrann@yandex.ru</span></a>
-            <a href="#" class="contacts__map-btn"><span class="contacts__map-btn-span">Посмотреть на карте</span></a>
+            <div class="contacts__map">
+                <a class="contacts__map-btn"><span class="contacts__map-btn-span contacts__map-btn-span-show">Посмотреть
+                        на
+                        карте</span><span class="contacts__map-btn-span contacts__map-btn-span-hide">Скрыть</span></a>
+            </div>
         </div>
         <div class="contacts__image">
             <img src="img/contacts/img.png" alt="">
         </div>
-        <div class="contacts__map">
+    </section>
+    <!-- конец секции "Контакты" -->
+
+    <!-- начало секции "Карта" -->
+    <section id="map" class="map">
+        <div class="map__image">
             <img src="img/contacts/map.png" alt="">
         </div>
     </section>
-    <!-- конец секции "Контакты" -->
+    <!-- конец секции "Карта" -->
 
     <!-- начало секции "Подвал" -->
     <footer class="footer">
@@ -665,6 +681,7 @@
     </section>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/full-main.js"></script>
 </body>
 

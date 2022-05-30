@@ -110,6 +110,7 @@
     }
 
     .main__slide {
+        position: relative;
         display: flex;
         justify-content: space-between;
     }
@@ -122,8 +123,9 @@
     }
 
     .main__image {
-        position: relative;
-        bottom: -4rem;
+        position: absolute;
+        right: 0;
+        bottom: -6rem;
         margin: 0;
         width: 23.9rem;
         height: 19rem;
@@ -144,7 +146,12 @@
         justify-content: space-between;
     }
 
-    .about__btn-hide {
+    .about__text {
+        max-height: 100%;
+        overflow: visible;
+    }
+
+    .about__btn {
         display: none;
     }
 
@@ -200,13 +207,14 @@
 
     .granulation__image {
         margin-bottom: 1.6rem;
-        width: 83.6rem;
+        width: 87.7rem;
         height: 32.3rem;
         margin-top: -0.7rem;
 
         img {
-            height: 100%;
-            width: auto;
+            max-width: none;
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -439,9 +447,10 @@
 
     /*начало стилей секции "Контакты"*/
     .contacts {
-        padding-bottom: 0;
+        position: relative;
         padding-top: 5.7rem;
-        overflow: hidden;
+        padding-bottom: 5.8rem;
+        overflow-x: clip;
 
         .socials {
             margin: 1.6rem 0;
@@ -470,7 +479,26 @@
 
     .contacts__map-btn {
         margin-top: 3.4rem;
-        display: block;
+        display: inline-block;
+
+        .contacts__map-btn-span-show {
+            display: inline-block;
+        }
+
+        .contacts__map-btn-span-hide {
+            display: none;
+        }
+    }
+
+    .contacts__map-btn.active {
+
+        .contacts__map-btn-span-show {
+            display: none;
+        }
+
+        .contacts__map-btn-span-hide {
+            display: inline-block;
+        }
     }
 
     .contacts__map-btn-span {
@@ -493,29 +521,48 @@
         }
     }
 
+    .contacts__map-btn-span-hide {
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
     .contacts__image {
         display: flex;
-        margin-top: -15.5rem;
-        position: relative;
-        /* bottom: -1rem; */
+        position: absolute;
+        right: 0;
+        bottom: -4rem;
         width: 28.6rem;
         height: 23.9rem;
         margin-left: auto;
         z-index: 2;
 
         &::after {
+            // content: "";
+            // position: absolute;
+            // display: block;
+            // width: 61.5rem;
+            // height: 61.5rem;
+            // background-image: url(../img/contacts/lines.svg);
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: 61.5rem 61.5rem;
+            // bottom: -36.2rem;
+            // right: -26.5rem;
+            // z-index: -1;
             content: "";
             position: absolute;
             display: block;
-            width: 61.5rem;
-            height: 61.5rem;
+            overflow: hidden;
+            width: 50.5rem;
+            height: 50.5rem;
             background-image: url(../img/contacts/lines.svg);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 61.5rem 61.5rem;
-            bottom: -36.2rem;
-            right: -26.5rem;
+            bottom: -24.2rem;
+            right: -17.5rem;
             z-index: -1;
+            background-size: contain;
         }
 
         img {
@@ -524,15 +571,31 @@
         }
     }
 
-    .contacts__map {
+    /*конец стилей секции "Контакты*/
+
+    /* начало стилей секции "Карта"*/
+    .map {
         display: none;
     }
 
-    /*конец стилей секции "Контакты*/
+    .map.active {
+        display: block;
+        padding-top: 1rem;
+    }
+
+    .map__image {
+        img {
+            width: 100%;
+            height: 32.6rem;
+            object-fit: cover;
+        }
+    }
+
+    /* конец стилей секции "Карта"*/
 
     /*начало стилей секции "Подвал" */
     .footer {
-        top: 0;
+        top: -1rem;
         padding: 3.2rem 0;
         z-index: 3;
     }
@@ -609,6 +672,13 @@
 
     .footer__upfly {
         margin-top: 0;
+
+        &:hover {
+            .footer__upfly-text {
+                color: #FF6D1A;
+                transition: 0.3s ease;
+            }
+        }
     }
 
     /*Конец стилей секции "Подвал"*/
@@ -659,7 +729,12 @@
         padding: 6.4rem 0;
     }
 
+    // .swiper {
+    //     overflow: visible;
+    // }
+
     .wrapper {
+        width: 100%;
         padding: 0 9.4rem;
     }
 
@@ -952,7 +1027,7 @@
 
         sup {
             position: absolute;
-            top: 6px;
+            top: 0.6rem;
         }
 
         span {
@@ -1212,16 +1287,7 @@
 
     .years__item-btn-span {
         font-size: 1.6rem;
-
-        &::after {
-            content: '';
-            position: absolute;
-            height: 1px;
-            width: 4.1rem;
-            background-color: #FF6D1A;
-            bottom: -0.4rem;
-            left: 0;
-        }
+        padding-bottom: 0.4rem;
     }
 
     .years__pagination {
@@ -1308,7 +1374,7 @@
     }
 
     .consultation__agreement {
-        margin: 0 5.5rem 0 3.7rem;
+        margin: 0 5.5rem 0 6.5rem;
         text-align: left;
     }
 
@@ -1395,8 +1461,14 @@
     }
 
     .contacts__image {
-        margin-top: -16rem;
+        width: 30.6rem;
+        height: 25.9rem;
         bottom: -2rem;
+
+        &::after {
+            width: 52.5rem;
+            height: 52.5rem;
+        }
     }
 
     .contacts__map-btn {
@@ -1404,6 +1476,8 @@
         // position: relative;
 
         &:hover {
+            cursor: pointer;
+
             .contacts__map-btn-span::before {
                 width: 100%;
                 // transition: 0.3s ease;
@@ -1429,6 +1503,16 @@
     }
 
     /*конец стилей секции "Контакты" */
+
+    /* начало стилей секции "Карта"*/
+
+    .map__image {
+        img {
+            height: 38.5rem;
+        }
+    }
+
+    /* конец стилей секции "Карта"*/
 
     /*начало стилей секции "Подвал" */
     .footer {
@@ -1502,12 +1586,12 @@
     }
 
     .footer__work-hours {
-        position: relative;
+        // position: relative;
 
-        sup {
-            position: absolute;
-            top: 5px;
-        }
+        // sup {
+        //     position: absolute;
+        //     top: 5px;
+        // }
 
         span {
             margin-right: 0.8rem;

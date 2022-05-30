@@ -5,9 +5,9 @@ html {
     font-size: 10px;
 }
 
-body {
-    padding-bottom: 5.44rem;
-}
+// body {
+//     padding-bottom: 5.44rem;
+// }
 
 section {
     padding: 3.6rem 0;
@@ -358,12 +358,39 @@ section {
     flex-direction: column;
 }
 
-.about__btn-hide {
-    display: block;
-    text-align: center;
+.about__text {
+    max-height: 5.4rem;
+    overflow: hidden;
+    transition: 0.3s ease;
 }
 
-.about__btn-hide-span {
+.about__text.active {
+    max-height: fit-content;
+    overflow: visible;
+    transition: 0.3s ease;
+}
+
+.about__btn {
+    .about__btn-show-span {
+        display: inline-block;
+    }
+
+    .about__btn-hide-span {
+        display: none;
+    }
+}
+
+.about__btn.active {
+    .about__btn-show-span {
+        display: none;
+    }
+
+    .about__btn-hide-span {
+        display: inline-block;
+    }
+}
+
+.about__btn-span {
     position: relative;
     display: inline-block;
     font-size: 1.2rem;
@@ -378,13 +405,38 @@ section {
         height: 0.6rem;
         border-top: 1px solid #FF6D1A;
         border-right: 1px solid #FF6D1A;
-        transform: rotate(135deg);
         right: -1.6rem;
         top: calc(50% - 0.3rem);
-
     }
 }
 
+// .about__btn-show-span {
+//     display: inline-block;
+// }
+
+// .about__btn-show-span.active {
+//     display: none;
+// }
+
+// .about__btn-hide-span {
+//     display: none;
+// }
+
+// .about__btn-hide-span.active {
+//     display: inline-block;
+// }
+
+.about__btn-show-span {
+    &::after {
+        transform: rotate(135deg);
+    }
+}
+
+.about__btn-hide-span {
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
 
 .about__item {
     margin-bottom: 1.6rem;
@@ -690,6 +742,7 @@ section {
 .years__item-btn-span {
     position: relative;
     display: inline-block;
+    padding-bottom: 0.2rem;
     line-height: 2.6rem;
     font-family: Formular-Bold;
     font-size: 1.4rem;
@@ -701,7 +754,7 @@ section {
         height: 1px;
         width: 4.1rem;
         background-color: #FF6D1A;
-        bottom: -0.2rem;
+        bottom: 0;
         left: 0;
         transition: 0.3s ease;
     }
@@ -950,7 +1003,7 @@ section {
 /*начало стилей секции "Контакты"*/
 .contacts {
     padding-top: 4.5rem;
-    padding-bottom: 0;
+    padding-bottom: 3.2rem;
 
     .socials {
         margin: 1.7rem 0 1.2rem;
@@ -1096,11 +1149,26 @@ section {
     display: none;
 }
 
-.contacts__map {
-    margin-top: 3.2rem;
-}
+
 
 /*конец стилей секции "Контакты"*/
+
+/* начало стилей секции "Карта"*/
+.map {
+    position: relative;
+    padding: 0;
+    z-index: 3;
+}
+
+.map__image {
+    img {
+        width: 100%;
+        height: 21.3rem;
+        object-fit: cover;
+    }
+}
+
+/* конец стилей секции "Карта"*/
 
 /* начало стилей секции "Подвал"*/
 .footer {
@@ -1111,6 +1179,7 @@ section {
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , #E5F1F9;
     border-radius: 1.6rem 1.6rem 0 0;
+    z-index: 3;
 }
 
 .footer__container {
@@ -1262,6 +1331,19 @@ section {
     margin-right: 1.6rem;
 }
 
+.footer__work-hours {
+    position: relative;
+
+    span {
+        margin-right: 0.8rem;
+    }
+
+    sup {
+        position: absolute;
+        top: 0.4rem;
+    }
+}
+
 .footer__address {
     margin: 1.2rem 0;
     position: relative;
@@ -1340,15 +1422,15 @@ section {
     color: #3E4A61;
     width: 7.7rem;
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -0.4rem;
-        left: 0;
-        height: 0.5px;
-        width: 3.8rem;
-        background-color: #FF6D1A;
-    }
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: -0.4rem;
+    //     left: 0;
+    //     height: 0.5px;
+    //     width: 3.8rem;
+    //     background-color: #FF6D1A;
+    // }
 }
 
 /* конец стилей секции "Подвал"*/
@@ -1387,3 +1469,47 @@ section {
 
 
 /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
+
+
+// .about__text {
+//     transition: max-height 0.2s;
+//     overflow: hidden;
+// }
+
+// .about__text[aria-hidden="true"] {
+//     max-height: 5.4rem;
+// }
+
+// // 4. Задаем для высоты значение пользовательского свойства
+// .about__text[aria-hidden="false"] {
+//     max-height: var(--containerHeight, 1000px);
+// }
+
+// .about__btn-hide[aria-hidden="true"] {
+//     .about__btn-hide-span {
+
+//         &::after {
+//             transition: 0.3s ease;
+//             transform: rotate(-45deg);
+//         }
+//     }
+// }
+
+// .about__btn-hide[aria-hidden="false"] {
+//     .about__btn-hide-span {
+
+//         &::after {
+//             transition: 0.3s ease;
+//         }
+//     }
+// }
+
+// @keyframes opacityAnimation {
+//     0% {
+//         opacity: 0;
+//     }
+
+//     100% {
+//         opacity: 1;
+//     }
+// }
