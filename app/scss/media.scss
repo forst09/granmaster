@@ -56,6 +56,7 @@
     .header {
         padding-top: 2rem;
         padding-bottom: 0;
+        border-radius: 0px 0px 1.6rem 1.6rem;
     }
 
     .header__container {
@@ -699,6 +700,7 @@
     /*начало стилей секции "Шапка" */
     .header {
         padding-top: 1.6rem;
+        border-radius: 0;
 
         .socials__item {
             margin-right: 1.6rem;
@@ -816,6 +818,12 @@
         &:hover {
             color: #FF6D1A;
         }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            color: #FF5C00;
+        }
     }
 
     .header__menu-burger-wrapper {
@@ -905,18 +913,18 @@
         line-height: 1.2rem;
         color: #FF6D1A;
 
-        &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 0.8rem;
-            height: 0.8rem;
-            left: 0;
-            background-image: url(../img/phone.svg);
-            background-size: 0.8rem 0.8rem;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     display: block;
+        //     width: 0.8rem;
+        //     height: 0.8rem;
+        //     left: 0;
+        //     background-image: url(../img/phone.svg);
+        //     background-size: 0.8rem 0.8rem;
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        // }
 
         &::after {
             content: "";
@@ -1312,6 +1320,14 @@
                 transform: scale(1.3);
             }
         }
+
+        &:active,
+        &:focus,
+        &:focus-within {
+            .consultation__btn-download::before {
+                transform: scale(1);
+            }
+        }
     }
 
     /*конец стилей секции "Нужна наша консультация?" */
@@ -1366,6 +1382,12 @@
                 path {
                     transition: 0.3s ease;
                     stroke: #FF995F;
+                }
+
+                path {
+                    &:nth-of-type(1) {
+                        fill: #FF995F;
+                    }
                 }
             }
         }

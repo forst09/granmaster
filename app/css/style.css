@@ -92,6 +92,9 @@ section {
   font-size: 1.4rem;
   line-height: 2rem;
 }
+.btn:active, .btn:focus, .btn:focus-within {
+  background: #FF5300;
+}
 
 .title__span {
   color: #FF6D1A;
@@ -118,6 +121,9 @@ section {
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+.socials__item:active svg path, .socials__item:focus svg path, .socials__item:focus-within svg path {
+  stroke: #FF5C00;
+}
 .socials__item svg {
   width: 2.2rem;
   height: 2.2rem;
@@ -132,6 +138,7 @@ section {
 .header {
   padding-top: 0.9rem;
   padding-bottom: 0.7rem;
+  border-radius: 0px 0px 1.2rem 1.2rem;
 }
 
 .header__container {
@@ -248,6 +255,28 @@ section {
 
 .header__menu {
   display: none;
+}
+
+.header__call-text {
+  position: relative;
+}
+.header__call-text svg {
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  left: 0;
+  top: calc(50% - 0.4rem);
+}
+.header__call-text:active .header__call-text-span, .header__call-text:focus .header__call-text-span, .header__call-text:focus-within .header__call-text-span {
+  color: #FF5C00;
+}
+.header__call-text:active svg path, .header__call-text:focus svg path, .header__call-text:focus-within svg path {
+  stroke: #FF5C00;
+}
+.header__call-text:active svg path:nth-of-type(1), .header__call-text:focus svg path:nth-of-type(1), .header__call-text:focus-within svg path:nth-of-type(1) {
+  fill: #FF5C00;
+  stroke: none;
 }
 
 /*начало стилей секции "Главная"*/
@@ -618,6 +647,9 @@ section {
 .years__item-btn {
   display: inline-block;
 }
+.years__item-btn:active .years__item-btn-span::after, .years__item-btn:focus .years__item-btn-span::after, .years__item-btn:focus-within .years__item-btn-span::after {
+  width: 0rem;
+}
 
 .years__item-btn-span {
   position: relative;
@@ -958,6 +990,16 @@ section {
   width: 2rem;
   height: 2rem;
 }
+.contacts__phone:active .contacts__phone-span, .contacts__phone:focus .contacts__phone-span, .contacts__phone:focus-within .contacts__phone-span {
+  color: #FF5C00;
+}
+.contacts__phone:active svg path, .contacts__phone:focus svg path, .contacts__phone:focus-within svg path {
+  stroke: #FF5C00;
+}
+.contacts__phone:active svg path:nth-of-type(1), .contacts__phone:focus svg path:nth-of-type(1), .contacts__phone:focus-within svg path:nth-of-type(1) {
+  fill: #FF5C00;
+  stroke: none;
+}
 
 .contacts__phone-span {
   margin-left: 0.8rem;
@@ -1029,7 +1071,7 @@ section {
 .footer {
   position: relative;
   top: -1.8rem;
-  padding: 2.4rem 0 4.3rem;
+  padding: 2.4rem 0 3.9rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, rgba(255, 255, 255, 0)), color-stop(53.78%, #FFFFFF)), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
@@ -1082,6 +1124,9 @@ section {
 }
 .phone:hover {
   color: #FF995F;
+}
+.phone:active, .phone:focus, .phone:focus-within {
+  color: #FF5C00;
 }
 
 .footer__socials {

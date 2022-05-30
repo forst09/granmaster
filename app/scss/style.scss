@@ -109,6 +109,12 @@ section {
     font-family: 'Formular-Bold';
     font-size: 1.4rem;
     line-height: 2rem;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        background: #FF5300;
+    }
 }
 
 .title__span {
@@ -130,6 +136,16 @@ section {
     display: inline-block;
     transition: 0.3s ease;
 
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg {
+            path {
+                stroke: #FF5C00;
+            }
+        }
+    }
+
     svg {
         width: 2.2rem;
         height: 2.2rem;
@@ -147,6 +163,7 @@ section {
 .header {
     padding-top: 0.9rem;
     padding-bottom: 0.7rem;
+    border-radius: 0px 0px 1.2rem 1.2rem;
 }
 
 .header__container {
@@ -260,6 +277,38 @@ section {
 
 .header__menu {
     display: none;
+}
+
+.header__call-text {
+    position: relative;
+
+    svg {
+        position: absolute;
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        left: 0;
+        top: calc(50% - 0.4rem);
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        .header__call-text-span {
+            color: #FF5C00;
+        }
+
+        svg {
+            path {
+                stroke: #FF5C00;
+
+                &:nth-of-type(1) {
+                    fill: #FF5C00;
+                    stroke: none;
+                }
+            }
+        }
+    }
 }
 
 /*начало стилей секции "Главная"*/
@@ -625,6 +674,17 @@ section {
 
 .years__item-btn {
     display: inline-block;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        .years__item-btn-span {
+
+            &::after {
+                width: 0rem;
+            }
+        }
+    }
 }
 
 .years__item-btn-span {
@@ -918,6 +978,25 @@ section {
         height: 2rem;
     }
 
+    &:active,
+    &:focus,
+    &:focus-within {
+        .contacts__phone-span {
+            color: #FF5C00;
+        }
+
+        svg {
+            path {
+                stroke: #FF5C00;
+
+                &:nth-of-type(1) {
+                    fill: #FF5C00;
+                    stroke: none;
+                }
+            }
+        }
+    }
+
 }
 
 .contacts__phone-span {
@@ -1027,7 +1106,7 @@ section {
 .footer {
     position: relative;
     top: -1.8rem;
-    padding: 2.4rem 0 4.3rem;
+    padding: 2.4rem 0 3.9rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , #E5F1F9;
@@ -1074,6 +1153,12 @@ section {
 
     &:hover {
         color: #FF995F;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        color: #FF5C00;
     }
 }
 
