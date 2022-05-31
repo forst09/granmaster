@@ -606,8 +606,11 @@ section {
 }
 
 .demanded__item {
+    display: block;
     margin-right: 1.6rem;
     padding: 2.4rem 1.6rem;
+    width: 14.5rem;
+    min-height: 20.5rem;
     background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
     border-radius: 1.6rem;
 
@@ -641,6 +644,9 @@ section {
     -webkit-box-orient: vertical;
     box-orient: vertical;
 
+    sup {
+        top: 0.2em;
+    }
 }
 
 .demanded__item-name {
@@ -772,8 +778,10 @@ section {
 }
 
 .years__pagination-item {
-    margin-right: 0.6rem;
+    display: block;
+    // margin-right: 0.6rem;
     padding: 0.8rem;
+    width: 15rem;
     background: linear-gradient(270deg, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 100%), #FFFFFF;
     border-radius: 0.8rem;
 }
@@ -1471,38 +1479,38 @@ section {
 /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
 
 
-// .about__text {
-//     transition: max-height 0.2s;
-//     overflow: hidden;
+
+
+
+
+
+// .swiper {
+//     padding: 0 1.5rem;
 // }
 
-// .about__text[aria-hidden="true"] {
-//     max-height: 5.4rem;
-// }
+.swiper-years {
+    padding: 0;
+    padding-left: 1.5rem;
+}
 
-// // 4. Задаем для высоты значение пользовательского свойства
-// .about__text[aria-hidden="false"] {
-//     max-height: var(--containerHeight, 1000px);
-// }
+.swiper-slide {
+    flex-shrink: none;
+}
 
-// .about__btn-hide[aria-hidden="true"] {
-//     .about__btn-hide-span {
+.swiper-slide-thumb-active {
+    .years__pagination-text {
+        color: #FF6D1A;
+    }
+}
 
-//         &::after {
-//             transition: 0.3s ease;
-//             transform: rotate(-45deg);
-//         }
-//     }
-// }
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+}
 
-// .about__btn-hide[aria-hidden="false"] {
-//     .about__btn-hide-span {
-
-//         &::after {
-//             transition: 0.3s ease;
-//         }
-//     }
-// }
+.swiper-pagination {
+    text-align: left;
+}
 
 // @keyframes opacityAnimation {
 //     0% {

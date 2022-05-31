@@ -553,8 +553,11 @@ section {
 }
 
 .demanded__item {
+  display: block;
   margin-right: 1.6rem;
   padding: 2.4rem 1.6rem;
+  width: 14.5rem;
+  min-height: 20.5rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
   background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
   background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
@@ -588,6 +591,9 @@ section {
   word-wrap: break-word;
   -webkit-box-orient: vertical;
   box-orient: vertical;
+}
+.demanded__item-power sup {
+  top: 0.2em;
 }
 
 .demanded__item-name {
@@ -717,8 +723,9 @@ section {
 }
 
 .years__pagination-item {
-  margin-right: 0.6rem;
+  display: block;
   padding: 0.8rem;
+  width: 15rem;
   background: -webkit-gradient(linear, right top, left top, color-stop(-0.17%, rgba(236, 242, 249, 0)), to(#ECF2F9)), #FFFFFF;
   background: -o-linear-gradient(right, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 100%), #FFFFFF;
   background: linear-gradient(270deg, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 100%), #FFFFFF;
@@ -1383,3 +1390,25 @@ section {
 }
 
 /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
+.swiper-years {
+  padding: 0;
+  padding-left: 1.5rem;
+}
+
+.swiper-slide {
+  -ms-flex-negative: none;
+      flex-shrink: none;
+}
+
+.swiper-slide-thumb-active .years__pagination-text {
+  color: #FF6D1A;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-pagination {
+  text-align: left;
+}

@@ -1,10 +1,3 @@
-// $(".about__btn").click(function () {
-//     $(".about__btn-show").toggleClass("active");
-//     $(".about__btn-hide").toggleClass("active");
-//     $(".about__text").toggleClass("active");
-// });
-
-
 $(document).on('click', ".about__btn", function () {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -20,80 +13,94 @@ $(document).on('click', ".about__btn", function () {
 $(document).on('click', ".contacts__map-btn", function () {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
-        // $(".map").removeClass('active');
         $("#map").slideUp();
     }
     else {
         $(this).addClass('active');
-        // $(".map").addClass('active');
         $("#map").slideDown();
     }
 
 });
 
-const swiper = new Swiper('.swiper', {
-    speed: 400,
+
+$(document).on('mouseenter', "#swiperDemanded", function () {
+    $(this).addClass('active');
+});
+
+$(document).on('mouseleave', "#swiperDemanded", function () {
+    $(this).removeClass('active');
+});
+
+$(document).on('mouseenter', "#swiperYearsThumbs", function () {
+    $(this).addClass('active');
+});
+
+$(document).on('mouseleave', "#swiperYearsThumbs", function () {
+    $(this).removeClass('active');
 });
 
 
 
+const swiperMain = new Swiper('.main-swiper', {
+    speed: 700,
+    slidesPerView: 1,
+    allowTouchMove: true,   //УБРАТЬ
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+});
 
+const swiperDemanded = new Swiper('.swiper-demanded', {
+    speed: 700,
+    breakpoints: {
+        // when window width is >= 640px
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+        },
+        668: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+        },
+        1024: {
+            spaceBetween: 18,
+            slidesPerView: 3.35,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        }
+    }
+});
 
+const swiperYearsThumbs = new Swiper('.swiper-years-thumbs', {
+    speed: 700,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 6,
+        },
+        668: {
+            slidesPerView: 3.15,
+            spaceBetween: 8,
+        },
+        1024: {
+            slidesPerView: 3.15,
+            spaceBetween: 16,
+        }
+    }
+});
 
-
-// // Получаем контейнер
-// const container = document.querySelector(".container");
-// // Получаем контент:
-// const content = document.querySelector(".content");
-// // 1. Получаем высоту контента, который мы хотим показать/скрыть
-// const heightOfContent = content.getBoundingClientRect().height;
-// // Получаем кнопку
-// const btn = document.querySelector(".trigger");
-
-// // 2. Задаем пользовательские свойства CSS с высотой контента
-// container.style.setProperty("--containerHeight", `${heightOfContent}px`);
-
-// // Когда высота задана
-// setTimeout(e => {
-//     document.documentElement.classList.add("height-is-set");
-//     3. content.setAttribute("aria-hidden", "true");
-// }, 0);
-
-// btn.addEventListener("click", function(e) {
-//     container.setAttribute("data-drawer-showing", container.getAttribute("data-drawer-showing") === "true" ? "false" : "true");
-//     // 5. Переключаем значение aria-hidden
-//     content.setAttribute("aria-hidden", content.getAttribute("aria-hidden") === "true" ? "false" : "true");
-// })
-
-
-
-
-
-
-
-
-// // Получаем контент:
-// const content = document.querySelector(".about__text");
-// // 1. Получаем высоту контента, который мы хотим показать/скрыть
-// const heightOfContent = content.getBoundingClientRect().height;
-// // Получаем кнопку
-// const btn = document.querySelector(".about__btn-hide");
-
-// const span = document.querySelector(".about__btn-hide-span");
-// const spanText = span.textContent;
-// console.log(spanText);
-
-// // 2. Задаем пользовательские свойства CSS с высотой контента
-// content.style.setProperty("--containerHeight", `${heightOfContent}px`);
-
-// // Когда высота задана
-// setTimeout(e => {
-//     document.documentElement.classList.add("height-is-set");
-//     content.setAttribute("aria-hidden", "true");
-// }, 0);
-
-// btn.addEventListener("click", function (e) {
-//     // 5. Переключаем значение aria-hidden
-//     content.setAttribute("aria-hidden", content.getAttribute("aria-hidden") === "true" ? "false" : "true");
-//     btn.setAttribute("aria-hidden", content.getAttribute("aria-hidden") === "true" ? "false" : "true");
-// });
+const swiperYears = new Swiper('.swiper-years', {
+    speed: 700,
+    slidesPerView: 1,
+    thumbs: {
+        swiper: swiperYearsThumbs,
+    },
+    allowTouchMove: false
+});
