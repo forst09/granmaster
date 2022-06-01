@@ -41,14 +41,18 @@ $(document).on('mouseleave', "#swiperYearsThumbs", function () {
 
 
 
-const swiperMain = new Swiper('.main-swiper', {
+const swiperMain = new Swiper('.swiper-main', {
     speed: 700,
     slidesPerView: 1,
-    allowTouchMove: true,   //УБРАТЬ
+    loop: true,
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
     },
+    navigation: {
+        nextEl: '.main-button-next',
+        prevEl: '.main-button-prev',
+    }
 });
 
 const swiperDemanded = new Swiper('.swiper-demanded', {
@@ -65,10 +69,10 @@ const swiperDemanded = new Swiper('.swiper-demanded', {
         },
         1024: {
             spaceBetween: 18,
-            slidesPerView: 3.35,
+            slidesPerView: 3.7,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.demanded-button-next',
+                prevEl: '.demanded-button-prev',
             },
         }
     }
@@ -77,8 +81,8 @@ const swiperDemanded = new Swiper('.swiper-demanded', {
 const swiperYearsThumbs = new Swiper('.swiper-years-thumbs', {
     speed: 700,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.years-button-next',
+        prevEl: '.years-button-prev',
     },
     breakpoints: {
         320: {
@@ -86,11 +90,11 @@ const swiperYearsThumbs = new Swiper('.swiper-years-thumbs', {
             spaceBetween: 6,
         },
         668: {
-            slidesPerView: 3.15,
+            slidesPerView: 3.3,
             spaceBetween: 8,
         },
         1024: {
-            slidesPerView: 3.15,
+            slidesPerView: 3.5,
             spaceBetween: 16,
         }
     }

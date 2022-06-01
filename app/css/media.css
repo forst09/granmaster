@@ -69,6 +69,12 @@
   }
 
   .header__logo {
+    display: inline-block;
+    width: 8.4rem;
+    height: 2.4rem;
+  }
+
+  .header__logo-link {
     width: 8.4rem;
     height: 2.4rem;
   }
@@ -101,10 +107,11 @@
   /*конец стилей секции "Шапка"*/
   /*начало стилей секции "Главная"*/
   .main {
-    padding-top: 5.6rem;
+    padding-top: 3.6rem;
     padding-bottom: 4.8rem;
   }
   .main .btn-wrapper {
+    margin-bottom: 6.4rem;
     text-align: left;
   }
 
@@ -127,8 +134,8 @@
 
   .main__image {
     position: absolute;
-    right: 0;
-    bottom: -6rem;
+    right: 2.4rem;
+    bottom: 0;
     margin: 0;
     width: 23.9rem;
     height: 19rem;
@@ -664,7 +671,7 @@
   .buttom-menu__span {
     display: inline-block;
     margin-top: 0.4rem;
-    line-height: 14px;
+    line-height: 1.4rem;
     color: #537791;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -681,7 +688,18 @@
   }
 
   /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
-  .swiper-years {
+  .main__slide {
+    padding: 0 2.4rem;
+  }
+
+  .swiper-main .swiper-pagination {
+    padding-left: 2.4rem;
+    text-align: left;
+  }
+
+  .swiper-years,
+.swiper-years-thumbs,
+.swiper-demanded {
     padding: 0;
     padding-left: 2.4rem;
   }
@@ -1506,7 +1524,36 @@
   }
 
   /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
-  .swiper-years {
+  .main-button-next,
+.main-button-prev {
+    display: block;
+    width: 9.3rem;
+    height: 100%;
+    top: -1%;
+    bottom: -1%;
+  }
+  .main-button-next::after,
+.main-button-prev::after {
+    content: "";
+  }
+
+  .main-button-next {
+    right: 0;
+  }
+  .main-button-next:hover {
+    cursor: url("../img/cursor-next.svg"), pointer;
+  }
+
+  .main-button-prev {
+    left: 0;
+  }
+  .main-button-prev:hover {
+    cursor: url("../img/cursor-prev.svg"), pointer;
+  }
+
+  .swiper-years,
+.swiper-years-thumbs,
+.swiper-demanded {
     padding: 0;
     padding-left: 9.4rem;
   }
@@ -1544,14 +1591,18 @@
     opacity: 1;
   }
 
-  .swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
+  .years-button-prev.swiper-button-disabled,
+.years-button-next.swiper-button-disabled,
+.demanded-button-prev.swiper-button-disabled,
+.demanded-button-next.swiper-button-disabled {
     opacity: 0;
     z-index: -1;
   }
 
-  .swiper-button-next,
-.swiper-button-prev {
+  .years-button-next,
+.years-button-prev,
+.demanded-button-next,
+.demanded-button-prev {
     width: 4.2rem;
     height: 4.2rem;
     background-color: #fff;
@@ -1568,8 +1619,10 @@
             justify-content: center;
     z-index: 30;
   }
-  .swiper-button-next::after,
-.swiper-button-prev::after {
+  .years-button-next::after,
+.years-button-prev::after,
+.demanded-button-next::after,
+.demanded-button-prev::after {
     content: "";
     border-top: 2px solid #FF6D1A;
     border-right: 2px solid #FF6D1A;
@@ -1579,14 +1632,24 @@
     top: calc(50% - 0.7rem);
   }
 
-  .swiper-button-next::after {
+  .demanded-button-next,
+.years-button-next {
+    right: 5rem;
+  }
+  .demanded-button-next::after,
+.years-button-next::after {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     left: calc(50% - 1rem);
   }
 
-  .swiper-button-prev::after {
+  .demanded-button-prev,
+.years-button-prev {
+    left: 5rem;
+  }
+  .demanded-button-prev::after,
+.years-button-prev::after {
     -webkit-transform: rotate(225deg);
         -ms-transform: rotate(225deg);
             transform: rotate(225deg);
@@ -1597,7 +1660,7 @@
     padding: 0 9.4rem;
   }
 
-  .swiper-pagination {
+  .swiper-main .swiper-pagination {
     padding-left: 9.4rem;
   }
 }

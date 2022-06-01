@@ -68,6 +68,12 @@
     }
 
     .header__logo {
+        display: inline-block;
+        width: 8.4rem;
+        height: 2.4rem;
+    }
+
+    .header__logo-link {
         width: 8.4rem;
         height: 2.4rem;
     }
@@ -101,10 +107,11 @@
 
     /*начало стилей секции "Главная"*/
     .main {
-        padding-top: 5.6rem;
+        padding-top: 3.6rem;
         padding-bottom: 4.8rem;
 
         .btn-wrapper {
+            margin-bottom: 6.4rem;
             text-align: left;
         }
     }
@@ -124,8 +131,8 @@
 
     .main__image {
         position: absolute;
-        right: 0;
-        bottom: -6rem;
+        right: 2.4rem;
+        bottom: 0;
         margin: 0;
         width: 23.9rem;
         height: 19rem;
@@ -696,7 +703,7 @@
     .buttom-menu__span {
         display: inline-block;
         margin-top: 0.4rem;
-        line-height: 14px;
+        line-height: 1.4rem;
         color: #537791;
         -ms-text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
@@ -719,7 +726,18 @@
     //     padding: 0 2.4rem;
     // }
 
-    .swiper-years {
+    .main__slide {
+        padding: 0 2.4rem;
+    }
+
+    .swiper-main .swiper-pagination {
+        padding-left: 2.4rem;
+        text-align: left;
+    }
+
+    .swiper-years,
+    .swiper-years-thumbs,
+    .swiper-demanded {
         padding: 0;
         padding-left: 2.4rem;
     }
@@ -1652,7 +1670,40 @@
     //     padding: 0 9.4rem;
     // }
 
-    .swiper-years {
+    .main-button-next,
+    .main-button-prev {
+        display: block;
+        width: 9.3rem;
+        height: 100%;
+        top: -1%;
+        bottom: -1%;
+
+        // display: inline-grid;
+        // align-items: center;
+        &::after {
+            content: '';
+        }
+    }
+
+    .main-button-next {
+        right: 0;
+
+        &:hover {
+            cursor: url("../img/cursor-next.svg"), pointer;
+        }
+    }
+
+    .main-button-prev {
+        left: 0;
+
+        &:hover {
+            cursor: url("../img/cursor-prev.svg"), pointer;
+        }
+    }
+
+    .swiper-years,
+    .swiper-years-thumbs,
+    .swiper-demanded {
         padding: 0;
         padding-left: 9.4rem;
     }
@@ -1693,14 +1744,18 @@
         }
     }
 
-    .swiper-button-prev.swiper-button-disabled,
-    .swiper-button-next.swiper-button-disabled {
+    .years-button-prev.swiper-button-disabled,
+    .years-button-next.swiper-button-disabled,
+    .demanded-button-prev.swiper-button-disabled,
+    .demanded-button-next.swiper-button-disabled {
         opacity: 0;
         z-index: -1;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
+    .years-button-next,
+    .years-button-prev,
+    .demanded-button-next,
+    .demanded-button-prev {
         width: 4.2rem;
         height: 4.2rem;
         background-color: #fff;
@@ -1722,14 +1777,20 @@
         }
     }
 
-    .swiper-button-next {
+    .demanded-button-next,
+    .years-button-next {
+        right: 5rem;
+
         &::after {
             transform: rotate(45deg);
             left: calc(50% - 1rem);
         }
     }
 
-    .swiper-button-prev {
+    .demanded-button-prev,
+    .years-button-prev {
+        left: 5rem;
+
         &::after {
             transform: rotate(225deg);
             right: calc(50% - 1rem);
@@ -1740,7 +1801,7 @@
         padding: 0 9.4rem;
     }
 
-    .swiper-pagination {
+    .swiper-main .swiper-pagination {
         padding-left: 9.4rem;
     }
 }

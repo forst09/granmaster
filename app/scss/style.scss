@@ -339,7 +339,7 @@ section {
 }
 
 .main__image {
-    margin: 3.2rem auto 0;
+    margin: 3.2rem auto 3.7rem;
     max-width: 23.9rem;
 }
 
@@ -1488,7 +1488,9 @@ section {
 //     padding: 0 1.5rem;
 // }
 
-.swiper-years {
+.swiper-years,
+.swiper-years-thumbs,
+.swiper-demanded {
     padding: 0;
     padding-left: 1.5rem;
 }
@@ -1508,8 +1510,28 @@ section {
     display: none;
 }
 
-.swiper-pagination {
-    text-align: left;
+.main__slide {
+    padding: 0 1.5rem;
+}
+
+.swiper-main .swiper-pagination {
+    bottom: 0;
+}
+
+.main-pagination .swiper-pagination-bullet,
+.main-pagination .swiper-pagination-bullet-active {
+    height: 2px;
+    background-color: #7EB8E2;
+}
+
+.main-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    width: 0.4rem;
+}
+
+.main-pagination .swiper-pagination-bullet-active {
+    width: 3.7rem;
+    border-radius: 1rem;
 }
 
 // @keyframes opacityAnimation {
