@@ -130,6 +130,53 @@ section {
   height: 2.6rem;
 }
 
+/*начало стилей для кастомизации свайпера*/
+.swiper-years,
+.swiper-years-thumbs,
+.swiper-demanded {
+  padding: 0;
+  padding-left: 1.5rem;
+}
+
+.swiper-slide {
+  -ms-flex-negative: none;
+      flex-shrink: none;
+}
+
+.swiper-slide-thumb-active .years__pagination-text {
+  color: #FF6D1A;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.main__slide {
+  padding: 0 1.5rem;
+}
+
+.swiper-main .swiper-pagination {
+  bottom: 0;
+}
+
+.main-pagination .swiper-pagination-bullet,
+.main-pagination .swiper-pagination-bullet-active {
+  height: 2px;
+  background-color: #7EB8E2;
+}
+
+.main-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  width: 0.4rem;
+}
+
+.main-pagination .swiper-pagination-bullet-active {
+  width: 3.7rem;
+  border-radius: 1rem;
+}
+
+/*конец стилей для кастомизации свайпера*/
 /*начало стилей секции "Шапка"*/
 .header {
   padding-top: 0.9rem;
@@ -323,7 +370,7 @@ section {
 }
 
 .about__text {
-  max-height: 5.4rem;
+  max-height: 9rem;
   overflow: hidden;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -492,7 +539,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 7.2rem;
+  height: 7.2rem;
   overflow: hidden;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -539,6 +586,8 @@ section {
   height: 100%;
   width: auto;
   opacity: 0.5;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 /* конец стилей секции "Каталог"*/
@@ -1390,47 +1439,200 @@ section {
 }
 
 /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
-.swiper-years,
-.swiper-years-thumbs,
-.swiper-demanded {
-  padding: 0;
-  padding-left: 1.5rem;
+/*##############################################################################################################################*/
+/*каталог первого уровня*/
+/*начало стилей секции "Навигация" 320*/
+.navigation {
+  padding-top: 2.4rem;
+  padding-bottom: 3.2rem;
 }
 
-.swiper-slide {
-  -ms-flex-negative: none;
-      flex-shrink: none;
-}
-
-.swiper-slide-thumb-active .years__pagination-text {
-  color: #FF6D1A;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
+.navigation__nav {
   display: none;
 }
 
-.main__slide {
-  padding: 0 1.5rem;
+.navigation__back {
+  display: inline-block;
 }
 
-.swiper-main .swiper-pagination {
-  bottom: 0;
+.navigation__back-span {
+  position: relative;
+  padding-left: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #7EB8E2;
+}
+.navigation__back-span::before {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  top: calc(50% - 0.4rem);
+  left: 0.15rem;
+  border-top: 1px solid #7EB8E2;
+  border-right: 1px solid #7EB8E2;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  opacity: 0.5;
 }
 
-.main-pagination .swiper-pagination-bullet,
-.main-pagination .swiper-pagination-bullet-active {
-  height: 2px;
-  background-color: #7EB8E2;
+/*конец стилей секции "Навигация" 320*/
+/*начало стилей секции "Каталог" 320*/
+.catalog-1lvl {
+  padding-top: 0;
 }
 
-.main-pagination .swiper-pagination-bullet {
-  opacity: 1;
-  width: 0.4rem;
+.title-big {
+  margin-bottom: 0.8rem;
+  font-family: Formular-Black;
+  font-size: 1.8rem;
+  line-height: 3.6rem;
 }
 
-.main-pagination .swiper-pagination-bullet-active {
-  width: 3.7rem;
-  border-radius: 1rem;
+.catalog__item-granulation {
+  margin: auto;
+  position: relative;
+  height: 8rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(17, 17, 17, 0.1)), to(rgba(17, 17, 17, 0.1))), radial-gradient(43.25% 102.15% at 65.49% 81.9%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(83.61% 224.57% at 0% 0%, rgba(54, 87, 151, 0.5) 0%, rgba(51, 80, 134, 0) 100%), #3E4A61;
+  background: -o-linear-gradient(bottom, rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0.1)), -o-radial-gradient(65.49% 81.9%, 43.25% 102.15%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), -o-radial-gradient(0% 0%, 83.61% 224.57%, rgba(54, 87, 151, 0.5) 0%, rgba(51, 80, 134, 0) 100%), #3E4A61;
+  background: linear-gradient(0deg, rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0.1)), radial-gradient(43.25% 102.15% at 65.49% 81.9%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(83.61% 224.57% at 0% 0%, rgba(54, 87, 151, 0.5) 0%, rgba(51, 80, 134, 0) 100%), #3E4A61;
 }
+.catalog__item-granulation .catalog__item-title {
+  font-size: 1.6rem;
+  color: #fff;
+}
+.catalog__item-granulation .catalog__item-image {
+  position: absolute;
+  right: 3.8rem;
+  bottom: 2rem;
+  width: 26.9rem;
+  height: 7.2rem;
+}
+
+/*конец стилей секции "Каталог" 320*/
+/*начало стилей секции "Этапы изготовления гранул" 320*/
+.stages .text {
+  max-height: 9rem;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.stages .text.active {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow: visible;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.stages h4 {
+  margin: 2.4rem 0;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 3.4rem;
+  color: #262628;
+}
+
+.stages__btn-wrapper {
+  text-align: center;
+}
+
+.stages__btn .stages__btn-show-span {
+  display: inline-block;
+}
+.stages__btn .stages__btn-hide-span {
+  display: none;
+}
+
+.stages__btn.active .stages__btn-show-span {
+  display: none;
+}
+.stages__btn.active .stages__btn-hide-span {
+  display: inline-block;
+}
+
+.stages__btn-span {
+  position: relative;
+  display: inline-block;
+  padding-right: 1.7rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #FF6D1A;
+}
+.stages__btn-span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 1px solid #FF6D1A;
+  border-right: 1px solid #FF6D1A;
+  right: 0.1rem;
+  top: calc(50% - 0.3rem);
+}
+
+.stages__btn-show-span::after {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.stages__btn-hide-span::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/*конец стилей секции "Этапы изготовления гранул" 320*/
+/*начало стилей секции "Вы интересовались" 320*/
+.interested__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.8rem;
+  width: 27.7rem;
+  height: 12rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
+  background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+  background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+  border-radius: 1.6rem;
+}
+
+.interested__card-image {
+  margin-right: 1.6rem;
+  width: 8.6rem;
+  height: 10.4rem;
+  border-radius: 1.6rem;
+}
+.interested__card-image img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.interested__card-text {
+  max-width: 15.9rem;
+}
+
+.interested__card-name {
+  margin-bottom: 0.8rem;
+  font-family: Formular-Bold;
+  line-height: 1.6rem;
+  color: #262628;
+}
+
+.interested__card-performance {
+  font-family: Formular-Medium;
+  line-height: 1.2rem;
+  color: #537791;
+}
+
+.interested__card-dash {
+  display: none;
+}
+
+/*конец стилей секции "Вы интересовались" 320*/

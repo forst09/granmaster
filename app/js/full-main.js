@@ -10,6 +10,18 @@ $(document).on('click', ".about__btn", function () {
 
 });
 
+$(document).on('click', ".stages__btn", function () {
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+        $(this).parents('.stages').find(".text").removeClass('active');
+    }
+    else {
+        $(this).addClass('active');
+        $(this).parents('.stages').find(".text").addClass('active');
+    }
+
+});
+
 $(document).on('click', ".contacts__map-btn", function () {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');

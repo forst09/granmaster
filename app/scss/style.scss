@@ -1,4 +1,4 @@
-@import "index/header";
+// @import "index/header";
 
 html {
     font-family: Formular;
@@ -157,7 +157,55 @@ section {
     height: 2.6rem;
 }
 
+/*начало стилей для кастомизации свайпера*/
 
+.swiper-years,
+.swiper-years-thumbs,
+.swiper-demanded {
+    padding: 0;
+    padding-left: 1.5rem;
+}
+
+.swiper-slide {
+    flex-shrink: none;
+}
+
+.swiper-slide-thumb-active {
+    .years__pagination-text {
+        color: #FF6D1A;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+}
+
+.main__slide {
+    padding: 0 1.5rem;
+}
+
+.swiper-main .swiper-pagination {
+    bottom: 0;
+}
+
+.main-pagination .swiper-pagination-bullet,
+.main-pagination .swiper-pagination-bullet-active {
+    height: 2px;
+    background-color: #7EB8E2;
+}
+
+.main-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    width: 0.4rem;
+}
+
+.main-pagination .swiper-pagination-bullet-active {
+    width: 3.7rem;
+    border-radius: 1rem;
+}
+
+/*конец стилей для кастомизации свайпера*/
 
 /*начало стилей секции "Шапка"*/
 .header {
@@ -223,6 +271,12 @@ section {
         height: auto;
     }
 }
+
+// .header__menu-span-wrapper {
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
 
 .header__logo-link {
     display: inline-block;
@@ -359,7 +413,7 @@ section {
 }
 
 .about__text {
-    max-height: 5.4rem;
+    max-height: 9rem;
     overflow: hidden;
     transition: 0.3s ease;
 }
@@ -531,7 +585,7 @@ section {
 .catalog__item {
     padding: 1.6rem 2.4rem;
     display: flex;
-    max-height: 7.2rem;
+    height: 7.2rem;
     overflow: hidden;
     justify-content: space-between;
     align-items: center;
@@ -588,6 +642,7 @@ section {
         height: 100%;
         width: auto;
         opacity: 0.5;
+        filter: grayscale(1);
     }
 }
 
@@ -1479,67 +1534,211 @@ section {
 /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
 
 
+/*##############################################################################################################################*/
+/*каталог первого уровня*/
 
-
-
-
-
-// .swiper {
-//     padding: 0 1.5rem;
-// }
-
-.swiper-years,
-.swiper-years-thumbs,
-.swiper-demanded {
-    padding: 0;
-    padding-left: 1.5rem;
+/*начало стилей секции "Навигация" 320*/
+.navigation {
+    padding-top: 2.4rem;
+    padding-bottom: 3.2rem;
 }
 
-.swiper-slide {
-    flex-shrink: none;
-}
-
-.swiper-slide-thumb-active {
-    .years__pagination-text {
-        color: #FF6D1A;
-    }
-}
-
-.swiper-button-next,
-.swiper-button-prev {
+.navigation__nav {
     display: none;
 }
 
-.main__slide {
-    padding: 0 1.5rem;
+.navigation__back {
+    display: inline-block;
 }
 
-.swiper-main .swiper-pagination {
-    bottom: 0;
+.navigation__back-span {
+    position: relative;
+    padding-left: 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #7EB8E2;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0.8rem;
+        height: 0.8rem;
+        top: calc(50% - 0.4rem);
+        left: 0.15rem;
+        border-top: 1px solid #7EB8E2;
+        border-right: 1px solid #7EB8E2;
+        transform: rotate(-135deg);
+        opacity: 0.5;
+    }
 }
 
-.main-pagination .swiper-pagination-bullet,
-.main-pagination .swiper-pagination-bullet-active {
-    height: 2px;
-    background-color: #7EB8E2;
+/*конец стилей секции "Навигация" 320*/
+
+/*начало стилей секции "Каталог" 320*/
+
+.catalog-1lvl {
+    padding-top: 0;
 }
 
-.main-pagination .swiper-pagination-bullet {
-    opacity: 1;
-    width: 0.4rem;
+.title-big {
+    margin-bottom: 0.8rem;
+    font-family: Formular-Black;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
 }
 
-.main-pagination .swiper-pagination-bullet-active {
-    width: 3.7rem;
-    border-radius: 1rem;
+.catalog__item-granulation {
+    margin: auto;
+    position: relative;
+    height: 8rem;
+    background: linear-gradient(0deg, rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0.1)), radial-gradient(43.25% 102.15% at 65.49% 81.9%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(83.61% 224.57% at 0% 0%, rgba(54, 87, 151, 0.5) 0%, rgba(51, 80, 134, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , #3E4A61;
+    // width: 100%;
+    // background-image: url(../img/catalog-1lvl/granulation.png);
+
+    .catalog__item-title {
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    .catalog__item-image {
+        position: absolute;
+        right: 3.8rem;
+        bottom: 2rem;
+        width: 26.9rem;
+        height: 7.2rem;
+    }
 }
 
-// @keyframes opacityAnimation {
-//     0% {
-//         opacity: 0;
-//     }
+/*конец стилей секции "Каталог" 320*/
 
-//     100% {
-//         opacity: 1;
-//     }
-// }
+/*начало стилей секции "Этапы изготовления гранул" 320*/
+.stages {
+    .text {
+        max-height: 9rem;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    .text.active {
+        max-height: fit-content;
+        overflow: visible;
+        transition: 0.3s ease;
+    }
+
+    h4 {
+        margin: 2.4rem 0;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 3.4rem;
+        color: #262628;
+    }
+}
+
+.stages__btn-wrapper {
+    text-align: center;
+}
+
+.stages__btn {
+    .stages__btn-show-span {
+        display: inline-block;
+    }
+
+    .stages__btn-hide-span {
+        display: none;
+    }
+}
+
+.stages__btn.active {
+    .stages__btn-show-span {
+        display: none;
+    }
+
+    .stages__btn-hide-span {
+        display: inline-block;
+    }
+}
+
+.stages__btn-span {
+    position: relative;
+    display: inline-block;
+    padding-right: 1.7rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #FF6D1A;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-top: 1px solid #FF6D1A;
+        border-right: 1px solid #FF6D1A;
+        right: 0.1rem;
+        top: calc(50% - 0.3rem);
+    }
+}
+
+.stages__btn-show-span {
+    &::after {
+        transform: rotate(135deg);
+    }
+}
+
+.stages__btn-hide-span {
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+/*конец стилей секции "Этапы изготовления гранул" 320*/
+
+/*начало стилей секции "Вы интересовались" 320*/
+.interested__card {
+    display: flex;
+    padding: 0.8rem;
+    width: 27.7rem;
+    height: 12rem;
+    background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    border-radius: 1.6rem;
+}
+
+.interested__card-image {
+    margin-right: 1.6rem;
+    width: 8.6rem;
+    height: 10.4rem;
+    border-radius: 1.6rem;
+
+    img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+}
+
+.interested__card-text {
+    max-width: 15.9rem;
+}
+
+.interested__card-name {
+    margin-bottom: 0.8rem;
+    font-family: Formular-Bold;
+    line-height: 1.6rem;
+    color: #262628;
+}
+
+.interested__card-performance {
+    font-family: Formular-Medium;
+    line-height: 1.2rem;
+    color: #537791;
+}
+
+.interested__card-dash {
+    display: none;
+}
+
+/*конец стилей секции "Вы интересовались" 320*/

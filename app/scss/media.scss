@@ -52,10 +52,44 @@
         line-height: 2rem;
     }
 
+    /*начало стилей кастомизации свайпера*/
+    .main__slide {
+        padding: 0 2.4rem;
+    }
+
+    .swiper-main .swiper-pagination {
+        padding-left: 2.4rem;
+        text-align: left;
+    }
+
+    .swiper-years,
+    .swiper-years-thumbs,
+    .swiper-demanded {
+        padding: 0;
+        padding-left: 2.4rem;
+    }
+
+    .swiper-slide-thumb-active {
+        .years__pagination-image {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(263.74deg, rgba(255, 83, 0, 0.5) 0%, rgba(255, 120, 0, 0.5) 100%);
+            }
+        }
+    }
+
+    /*конец стилей кастомизации свайпера*/
+
     /*начало стилей секции "Шапка"*/
     .header {
-        padding-top: 2rem;
-        padding-bottom: 0;
+        padding: 2rem 0;
         border-radius: 0px 0px 1.6rem 1.6rem;
     }
 
@@ -250,8 +284,8 @@
 
     .catalog__item {
         margin-bottom: 0;
-        max-width: 19.9rem;
-        max-height: 8rem;
+        width: 19.9rem;
+        height: 8rem;
     }
 
     .catalog__item-title {
@@ -722,41 +756,125 @@
 
     /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
 
-    // .swiper {
-    //     padding: 0 2.4rem;
-    // }
+    /*##############################################################################################################################*/
+    /*каталог первого уровня*/
 
-    .main__slide {
-        padding: 0 2.4rem;
+    /*начало стилей секции "Навигация" 668*/
+    .navigation {
+        padding-top: 2rem;
+        padding-bottom: 4.8rem;
     }
 
-    .swiper-main .swiper-pagination {
-        padding-left: 2.4rem;
-        text-align: left;
+    .navigation__nav {
+        display: inline-block;
     }
 
-    .swiper-years,
-    .swiper-years-thumbs,
-    .swiper-demanded {
-        padding: 0;
-        padding-left: 2.4rem;
+    .navigation__nav-list {
+        display: flex;
+        align-items: center;
     }
 
-    .swiper-slide-thumb-active {
-        .years__pagination-image {
-            position: relative;
+    .navigation__nav-item {
+        margin-right: 3.249rem;
+        line-height: 1.8rem;
+        color: #7EB8E2;
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(263.74deg, rgba(255, 83, 0, 0.5) 0%, rgba(255, 120, 0, 0.5) 100%);
-            }
+        &:nth-last-of-type(1) {
+            margin-right: 0;
         }
     }
+
+    .navigation__nav-link {
+        position: relative;
+        padding-bottom: 0.2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: 0;
+            opacity: 0.5;
+            background-color: #7EB8E2;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 0.6rem;
+            width: 0.6rem;
+            right: -1.8rem;
+            top: calc(50% - 0.3rem);
+            border-top: 1px solid #7EB8E2;
+            border-right: 1px solid #7EB8E2;
+            opacity: 0.5;
+            transform: rotate(45deg);
+        }
+    }
+
+
+    .navigation__back {
+        display: none;
+    }
+
+
+    /*конец стилей секции "Навигация" 668*/
+
+    /*начало стилей секции "Каталог" 668*/
+
+    .catalog-1lvl {
+        .text {
+            font-size: 1rem;
+            line-height: 2rem;
+            max-width: 52.7rem;
+        }
+    }
+
+    .title-big {
+        margin-bottom: 1.6rem;
+        font-size: 2.4rem;
+    }
+
+    .catalog__item-granulation {
+        margin-top: 1.6rem;
+        width: 100%;
+
+        .catalog__item-title {
+            font-size: 2rem;
+            line-height: 2.8rem;
+            -ms-line-clamp: 1;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
+
+        .catalog__item-image {
+            right: 1.8rem;
+            bottom: 0rem;
+            width: 28.9rem;
+            height: 9.2rem;
+        }
+    }
+
+    /*конец стилей секции "Каталог" 668*/
+
+    /*начало стилей секции "Этапы изготовления гранул" 668*/
+    .stages {
+        .text {
+            font-size: 1rem;
+            line-height: 2rem;
+            max-height: 100%;
+            overflow: visible;
+        }
+    }
+
+    .stages__btn {
+        display: none;
+    }
+
+    .stages__subtitle {}
+
+    /*конец стилей секции "Этапы изготовления гранул" 668*/
+
 }
 
 @media(min-width:1024px) {
@@ -815,9 +933,149 @@
         }
     }
 
+    /*начало стилей кастомизации свайпера */
+
+    .main-button-next,
+    .main-button-prev {
+        display: block;
+        width: 9.3rem;
+        height: 100%;
+        top: -1%;
+        bottom: -1%;
+
+        // display: inline-grid;
+        // align-items: center;
+        &::after {
+            content: '';
+        }
+    }
+
+    .main-button-next {
+        right: 0;
+
+        &:hover {
+            cursor: url("../img/cursor-next.svg"), pointer;
+        }
+    }
+
+    .main-button-prev {
+        left: 0;
+
+        &:hover {
+            cursor: url("../img/cursor-prev.svg"), pointer;
+        }
+    }
+
+    .swiper-years,
+    .swiper-years-thumbs,
+    .swiper-demanded {
+        padding: 0;
+        padding-left: 9.4rem;
+    }
+
+
+    .swiper-demanded,
+    .swiper-years-thumbs {
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 15.7rem;
+            height: 100%;
+            background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: 20;
+
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        &::before {
+            left: 0;
+            transform: rotate(180deg);
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+
+    .swiper.active {
+
+        &::before,
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    .years-button-prev.swiper-button-disabled,
+    .years-button-next.swiper-button-disabled,
+    .demanded-button-prev.swiper-button-disabled,
+    .demanded-button-next.swiper-button-disabled {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .years-button-next,
+    .years-button-prev,
+    .demanded-button-next,
+    .demanded-button-prev {
+        width: 4.2rem;
+        height: 4.2rem;
+        background-color: #fff;
+        border-radius: 50%;
+        color: #FF6D1A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 30;
+
+        &::after {
+            content: '';
+            border-top: 2px solid #FF6D1A;
+            border-right: 2px solid #FF6D1A;
+            width: 1.4rem;
+            height: 1.4rem;
+            position: absolute;
+            top: calc(50% - 0.7rem);
+        }
+    }
+
+    .demanded-button-next,
+    .years-button-next {
+        right: 5rem;
+
+        &::after {
+            transform: rotate(45deg);
+            left: calc(50% - 1rem);
+        }
+    }
+
+    .demanded-button-prev,
+    .years-button-prev {
+        left: 5rem;
+
+        &::after {
+            transform: rotate(225deg);
+            right: calc(50% - 1rem);
+        }
+    }
+
+    .main__slide {
+        padding: 0 9.4rem;
+    }
+
+    .swiper-main .swiper-pagination {
+        padding-left: 9.4rem;
+    }
+
+    /*конец стилей кастомизации свайпера */
+
     /*начало стилей секции "Шапка" */
     .header {
         padding-top: 1.6rem;
+        padding-bottom: 0;
         border-radius: 0;
 
         .socials__item {
@@ -926,9 +1184,12 @@
         padding: 0 1.2rem;
     }
 
-    .header__menu-link {
+    .header__menu-catalog {
         display: flex;
         align-items: center;
+    }
+
+    .header__menu-link {
         line-height: 1.8rem;
         color: #3E4A61;
         transition: 0.3s ease;
@@ -1082,7 +1343,7 @@
 
     /*начало стилей секции "Главная" */
     .main {
-        padding: 4.3rem 0 5rem;
+        padding: 5.7rem 0 6.4rem;
 
         .btn-wrapper {
             margin-top: 3.2rem;
@@ -1190,7 +1451,6 @@
         width: 26.7rem;
         height: 12.8rem;
         max-width: none;
-        max-height: none;
 
         &::before {
             position: absolute;
@@ -1666,142 +1926,50 @@
     /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
 
 
-    // .swiper {
-    //     padding: 0 9.4rem;
-    // }
 
-    .main-button-next,
-    .main-button-prev {
-        display: block;
-        width: 9.3rem;
-        height: 100%;
-        top: -1%;
-        bottom: -1%;
+    /*##############################################################################################################################*/
+    /*каталог первого уровня*/
 
-        // display: inline-grid;
-        // align-items: center;
-        &::after {
-            content: '';
+    /*начало стилей секции "Шапка" 1024*/
+    .catalog-header__menu-nav {
+        padding: 0 5.55rem;
+    }
+
+    /*конец стилей секции "Шапка" 1024*/
+
+    .navigation {
+        padding-top: 4.6rem;
+        padding-bottom: 5.4rem;
+    }
+
+    /*начало стилей секции "Каталог" 1024*/
+    .catalog-1lvl {
+        .text {
+            max-width: 58.9rem;
+            font-size: 1.2rem;
+            line-height: 2.2rem;
         }
     }
 
-    .main-button-next {
-        right: 0;
+    .title-big {
+        font-size: 3.2rem;
+    }
 
-        &:hover {
-            cursor: url("../img/cursor-next.svg"), pointer;
+    .catalog__item-granulation {
+        width: 100%;
+
+        .catalog__item-title {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+        }
+
+        .catalog__item-image {
+            right: 11rem;
+            bottom: 2.5rem;
+            width: 32.9rem;
+            height: 13.2rem;
         }
     }
 
-    .main-button-prev {
-        left: 0;
-
-        &:hover {
-            cursor: url("../img/cursor-prev.svg"), pointer;
-        }
-    }
-
-    .swiper-years,
-    .swiper-years-thumbs,
-    .swiper-demanded {
-        padding: 0;
-        padding-left: 9.4rem;
-    }
-
-
-    .swiper-demanded,
-    .swiper-years-thumbs {
-
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 15.7rem;
-            height: 100%;
-            background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-            z-index: 20;
-
-            opacity: 0;
-            transition: 0.3s ease;
-        }
-
-        &::before {
-            left: 0;
-            transform: rotate(180deg);
-        }
-
-        &::after {
-            right: 0;
-        }
-    }
-
-    .swiper.active {
-
-        &::before,
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    .years-button-prev.swiper-button-disabled,
-    .years-button-next.swiper-button-disabled,
-    .demanded-button-prev.swiper-button-disabled,
-    .demanded-button-next.swiper-button-disabled {
-        opacity: 0;
-        z-index: -1;
-    }
-
-    .years-button-next,
-    .years-button-prev,
-    .demanded-button-next,
-    .demanded-button-prev {
-        width: 4.2rem;
-        height: 4.2rem;
-        background-color: #fff;
-        border-radius: 50%;
-        color: #FF6D1A;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 30;
-
-        &::after {
-            content: '';
-            border-top: 2px solid #FF6D1A;
-            border-right: 2px solid #FF6D1A;
-            width: 1.4rem;
-            height: 1.4rem;
-            position: absolute;
-            top: calc(50% - 0.7rem);
-        }
-    }
-
-    .demanded-button-next,
-    .years-button-next {
-        right: 5rem;
-
-        &::after {
-            transform: rotate(45deg);
-            left: calc(50% - 1rem);
-        }
-    }
-
-    .demanded-button-prev,
-    .years-button-prev {
-        left: 5rem;
-
-        &::after {
-            transform: rotate(225deg);
-            right: calc(50% - 1rem);
-        }
-    }
-
-    .main__slide {
-        padding: 0 9.4rem;
-    }
-
-    .swiper-main .swiper-pagination {
-        padding-left: 9.4rem;
-    }
+    /*конец стилей секции "Каталог" 1024*/
 }
