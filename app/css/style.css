@@ -4,6 +4,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  padding-bottom: 5.44rem;
+}
+
 section {
   padding: 3.6rem 0;
 }
@@ -24,6 +28,7 @@ section {
   font-size: 1.6rem;
   line-height: 2.4rem;
   text-align: center;
+  color: #262628;
 }
 
 .title-container {
@@ -513,6 +518,10 @@ section {
   width: 68.9rem;
   height: 24.8rem;
 }
+.granulation__image img {
+  height: 100%;
+  width: auto;
+}
 
 /* конец стилей секции "Из чего состоят линии гранулирования?"*/
 /* начало стилей секции "Каталог"*/
@@ -892,6 +901,10 @@ section {
 
 /*конец стилей секции "Как заказать?"*/
 /*начало стилей секции "Нужна наша консультация?"*/
+.consultation {
+  padding-bottom: 4.5rem;
+}
+
 .consultation__input-wrapper {
   margin-bottom: 0.8rem;
   position: relative;
@@ -1048,7 +1061,6 @@ section {
 /*конец стилей секции "Нужна наша консультация?"*/
 /*начало стилей секции "Контакты"*/
 .contacts {
-  padding-top: 4.5rem;
   padding-bottom: 3.2rem;
 }
 .contacts .socials {
@@ -1159,6 +1171,9 @@ section {
   z-index: 3;
 }
 
+.map__image {
+  margin-bottom: -1.6rem;
+}
 .map__image img {
   width: 100%;
   height: 21.3rem;
@@ -1170,7 +1185,6 @@ section {
 /* начало стилей секции "Подвал"*/
 .footer {
   position: relative;
-  top: -1.8rem;
   padding: 2.4rem 0 3.9rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, rgba(255, 255, 255, 0)), color-stop(53.78%, #FFFFFF)), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
@@ -1488,11 +1502,13 @@ section {
   font-family: Formular-Black;
   font-size: 1.8rem;
   line-height: 3.6rem;
+  color: #262628;
 }
 
 .catalog__item-granulation {
   margin: auto;
   position: relative;
+  padding: 3rem 2.4rem;
   height: 8rem;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(17, 17, 17, 0.1)), to(rgba(17, 17, 17, 0.1))), radial-gradient(43.25% 102.15% at 65.49% 81.9%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(83.61% 224.57% at 0% 0%, rgba(54, 87, 151, 0.5) 0%, rgba(51, 80, 134, 0) 100%), #3E4A61;
   background: -o-linear-gradient(bottom, rgba(17, 17, 17, 0.1), rgba(17, 17, 17, 0.1)), -o-radial-gradient(65.49% 81.9%, 43.25% 102.15%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), -o-radial-gradient(0% 0%, 83.61% 224.57%, rgba(54, 87, 151, 0.5) 0%, rgba(51, 80, 134, 0) 100%), #3E4A61;
@@ -1529,11 +1545,28 @@ section {
   transition: 0.3s ease;
 }
 .stages h4 {
-  margin: 2.4rem 0;
-  text-align: center;
-  font-size: 1.6rem;
-  line-height: 3.4rem;
+  font-weight: 400;
+  margin: 3.2rem 0 1.6rem;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.72rem;
   color: #262628;
+}
+.stages ul {
+  margin-top: 0.8rem;
+}
+.stages li {
+  position: relative;
+  padding-left: 3.6rem;
+}
+.stages li::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 2rem;
+  background-color: #7EB8E2;
+  left: 0;
+  top: 50%;
 }
 
 .stages__btn-wrapper {
@@ -1588,6 +1621,15 @@ section {
 
 /*конец стилей секции "Этапы изготовления гранул" 320*/
 /*начало стилей секции "Вы интересовались" 320*/
+.interested {
+  padding-bottom: 4.8rem;
+}
+
+.swiper-interested {
+  margin-top: 3.2rem;
+  padding: 0 1.5rem;
+}
+
 .interested__card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1599,6 +1641,7 @@ section {
   background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
   background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
   border-radius: 1.6rem;
+  overflow: hidden;
 }
 
 .interested__card-image {
@@ -1606,6 +1649,7 @@ section {
   width: 8.6rem;
   height: 10.4rem;
   border-radius: 1.6rem;
+  overflow: hidden;
 }
 .interested__card-image img {
   height: 100%;
@@ -1616,6 +1660,8 @@ section {
 
 .interested__card-text {
   max-width: 15.9rem;
+  max-height: 10.4rem;
+  overflow: hidden;
 }
 
 .interested__card-name {
@@ -1625,7 +1671,7 @@ section {
   color: #262628;
 }
 
-.interested__card-performance {
+.interested__card-property {
   font-family: Formular-Medium;
   line-height: 1.2rem;
   color: #537791;
@@ -1633,6 +1679,14 @@ section {
 
 .interested__card-dash {
   display: none;
+}
+
+.interested__card-value {
+  margin-bottom: 0.4rem;
+  display: block;
+  font-family: Formular;
+  line-height: 1.8rem;
+  color: #537791;
 }
 
 /*конец стилей секции "Вы интересовались" 320*/

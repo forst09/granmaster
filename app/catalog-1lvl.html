@@ -209,19 +209,85 @@
         </div>
 
         <div class="interested__wrapper">
-            <div class="interested__card">
-                <div class="interested__card-image">
-                    <img src="img/demanded/tovar-1.jpg" alt="">
-                </div>
-                <div class="interested__card-text">
-                    <div class="interested__card-name">Винтовой конвейер (шнековый) КВ-150</div>
-                    <div class="interested__card-performance">Производительность, т/час <span
-                            class="interested__card-dash"></span> <span class="interested__card-value">до 16</span>
+            <div class="swiper swiper-interested">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="interested__card-link" href="#">
+                            <div class="interested__card">
+                                <div class="interested__card-image">
+                                    <img src="img/demanded/tovar-1.jpg" alt="">
+                                </div>
+                                <div class="interested__card-text">
+                                    <div class="interested__card-name">Винтовой конвейер (шнековый) КВ-150</div>
+                                    <div class="interested__card-property">Производительность, т/час <span
+                                            class="interested__card-dash"></span> <span
+                                            class="interested__card-value">до
+                                            16</span>
+                                    </div>
+                                    <div class="interested__card-property">Мощность, кВт <span
+                                            class="interested__card-dash"></span>
+                                        <span class="interested__card-value">до 5,5</span>
+                                    </div>
+                                    <div class="interested__card-property">Длина, м <span
+                                            class="interested__card-dash"></span><span class="interested__card-value">до
+                                            12</span></div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="interested__card-power">Мощность, кВт <span class="interested__card-dash">до 5,5</span>
-                        <span class="interested__card-value"></span></div>
-                    <div class="interested__card-length">Длина, м <span class="interested__card-dash">до 12</span> <span
-                            class="interested__card-value"></span></div>
+                    <div class="swiper-slide">
+                        <a class="interested__card-link" href="#">
+                            <div class="interested__card">
+                                <div class="interested__card-image">
+                                    <img src="img/demanded/tovar-2.jpg" alt="">
+                                </div>
+                                <div class="interested__card-text">
+                                    <div class="interested__card-name">Зерновая нория НЗ (элеватор ковшовый)</div>
+                                    <div class="interested__card-property">Производительность, т/час <span
+                                            class="interested__card-dash"></span> <span
+                                            class="interested__card-value">до
+                                            50</span>
+                                    </div>
+                                    <!-- <div class="interested__card-property">Мощность, кВт <span
+                                        class="interested__card-dash"></span>
+                                    <span class="interested__card-value">до 5,5</span>
+                                </div> -->
+                                    <div class="interested__card-property">Длина, м <span
+                                            class="interested__card-dash"></span><span class="interested__card-value">от
+                                            2
+                                            до 30</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="interested__card-link" href="#">
+                            <div class="interested__card">
+                                <div class="interested__card-image">
+                                    <img src="img/demanded/tovar-3.jpg" alt="">
+                                </div>
+                                <div class="interested__card-text">
+                                    <div class="interested__card-name">Винтовой конвейер (шнековый) КВ-150</div>
+                                    <div class="interested__card-property">Производительность, т/час <span
+                                            class="interested__card-dash"></span> <span
+                                            class="interested__card-value">до
+                                            16</span>
+                                    </div>
+                                    <div class="interested__card-property">Мощность, кВт <span
+                                            class="interested__card-dash"></span>
+                                        <span class="interested__card-value">до 5,5</span>
+                                    </div>
+                                    <div class="interested__card-property">Длина, м <span
+                                            class="interested__card-dash"></span><span class="interested__card-value">до
+                                            12</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="interested__buttons">
+                    <div class="swiper-button-prev interested-button-prev"></div>
+                    <div class="swiper-button-next interested-button-next"></div>
                 </div>
             </div>
         </div>
@@ -310,54 +376,55 @@
             </div>
         </section>
         <!-- конец секции "Этапы изготовления гранул" -->
-    </div>
 
-    <section class="consultation">
-        <div class="wrapper">
-            <div class="title-container">
-                <span class="title-span"></span>
-                <h3 class="title">Нужна наша <span class="title__span">консультация?</span></h3>
-                <span class="title-span"></span>
+
+        <section class="consultation">
+            <div class="wrapper">
+                <div class="title-container">
+                    <span class="title-span"></span>
+                    <h3 class="title">Нужна наша <span class="title__span">консультация?</span></h3>
+                    <span class="title-span"></span>
+                </div>
+                <form class="consultation__form" action="#">
+                    <div class="consultation__form-wrapper">
+                        <div class="consultation__form-wrapper-item">
+                            <div class="consultation__input-wrapper">
+                                <input id="input-name" class="consultation__form-input" type="text"
+                                    placeholder="Фамилия Имя Отчество">
+                                <label class="consultation__label-name" for="input-name"></label>
+                            </div>
+                            <div class="consultation__input-wrapper">
+                                <input id="input-phone" class="consultation__form-input" type="text"
+                                    placeholder="+7 (900) 987-65-43">
+                                <label class="consultation__label-phone" for="input-phone"></label>
+                            </div>
+
+                        </div>
+                        <div class="consultation__form-wrapper-item">
+                            <div class="consultation__textarea-wrapper">
+                                <textarea id="textarea" class="consultation__form-input consultation__form-textarea"
+                                    placeholder="Пожалуйста, введите комментарий"></textarea>
+                                <label class="consultation__label-textarea" for="textarea"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consultation__buttons">
+                        <div class="btn-wrapper">
+                            <button type="submit" class="btn">Отправить</button>
+                        </div>
+                        <div class="consultation__agreement">При отправке данных, вы даете согласие
+                            на обработку <a href="#" class="consultation__agreement-link">персональных
+                                данных</a></div>
+
+                        <div class="consultation__btn-download-wrapper">
+                            <a class="consultation__btn-download" href="#">Скачать прайс-лист</a>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <form class="consultation__form" action="#">
-                <div class="consultation__form-wrapper">
-                    <div class="consultation__form-wrapper-item">
-                        <div class="consultation__input-wrapper">
-                            <input id="input-name" class="consultation__form-input" type="text"
-                                placeholder="Фамилия Имя Отчество">
-                            <label class="consultation__label-name" for="input-name"></label>
-                        </div>
-                        <div class="consultation__input-wrapper">
-                            <input id="input-phone" class="consultation__form-input" type="text"
-                                placeholder="+7 (900) 987-65-43">
-                            <label class="consultation__label-phone" for="input-phone"></label>
-                        </div>
-
-                    </div>
-                    <div class="consultation__form-wrapper-item">
-                        <div class="consultation__textarea-wrapper">
-                            <textarea id="textarea" class="consultation__form-input consultation__form-textarea"
-                                placeholder="Пожалуйста, введите комментарий"></textarea>
-                            <label class="consultation__label-textarea" for="textarea"></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="consultation__buttons">
-                    <div class="btn-wrapper">
-                        <button type="submit" class="btn">Отправить</button>
-                    </div>
-                    <div class="consultation__agreement">При отправке данных, вы даете согласие
-                        на обработку <a href="#" class="consultation__agreement-link">персональных
-                            данных</a></div>
-
-                    <div class="consultation__btn-download-wrapper">
-                        <a class="consultation__btn-download" href="#">Скачать прайс-лист</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- конец секции "Нужна наша консультация?" -->
+        </section>
+        <!-- конец секции "Нужна наша консультация?" -->
+    </div>
 
 
 

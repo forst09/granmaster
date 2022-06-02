@@ -120,3 +120,26 @@ const swiperYears = new Swiper('.swiper-years', {
     },
     allowTouchMove: false
 });
+
+const swiperInterested = new Swiper('.swiper-interested', {
+    speed: 700,
+    navigation: {
+        nextEl: '.interested-button-next',
+        prevEl: '.interested-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.05,
+            spaceBetween: 8,
+        },
+        668: {
+            slidesPerView: 2.01,
+            spaceBetween: 12,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 11,
+            loop: true,
+        }
+    }
+});

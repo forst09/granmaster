@@ -252,11 +252,11 @@
         height: 32.3rem;
         margin-top: -0.7rem;
 
-        img {
-            max-width: none;
-            width: 100%;
-            height: auto;
-        }
+        // img {
+        //     max-width: none;
+        //     width: 100%;
+        //     height: auto;
+        // }
     }
 
     /*конец стилей секции "Из чего состоят линии гранулирования"*/
@@ -283,6 +283,7 @@
     }
 
     .catalog__item {
+        padding: 2.4rem;
         margin-bottom: 0;
         width: 19.9rem;
         height: 8rem;
@@ -447,6 +448,8 @@
 
     /*начало стилей секции "Нужна наша консультация?"*/
     .consultation {
+        padding-bottom: 5.7rem;
+
         .btn-wrapper {
             margin-top: 0;
             // margin-bottom: 4.1rem;
@@ -489,8 +492,8 @@
     /*начало стилей секции "Контакты"*/
     .contacts {
         position: relative;
-        padding-top: 5.7rem;
-        padding-bottom: 5.8rem;
+        // padding-top: 5.7rem;
+        padding-bottom: 4.8rem;
         overflow-x: clip;
 
         .socials {
@@ -572,7 +575,7 @@
         display: flex;
         position: absolute;
         right: 0;
-        bottom: -4rem;
+        bottom: -5rem;
         width: 28.6rem;
         height: 23.9rem;
         margin-left: auto;
@@ -595,13 +598,13 @@
             position: absolute;
             display: block;
             overflow: hidden;
-            width: 50.5rem;
-            height: 50.5rem;
+            width: 61.5rem;
+            height: 61.5rem;
             background-image: url(../img/contacts/lines.svg);
             background-position: center;
             background-repeat: no-repeat;
-            bottom: -24.2rem;
-            right: -17.5rem;
+            bottom: -31.2rem;
+            right: -28.5rem;
             z-index: -1;
             background-size: contain;
         }
@@ -636,9 +639,8 @@
 
     /*начало стилей секции "Подвал" */
     .footer {
-        top: -1rem;
+        top: 0;
         padding: 3.2rem 0;
-        z-index: 3;
     }
 
     .footer__container {
@@ -837,6 +839,7 @@
 
     .catalog__item-granulation {
         margin-top: 1.6rem;
+        padding: 2.6rem 2.4rem;
         width: 100%;
 
         .catalog__item-title {
@@ -857,6 +860,35 @@
 
     /*конец стилей секции "Каталог" 668*/
 
+    /*начало стилей секции "Вы интересовались" 668*/
+    .interested {
+        padding-bottom: 6.4rem;
+
+        .text {
+            margin: auto;
+            max-width: 47.4rem;
+        }
+
+        .title-container-mini {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .swiper-interested {
+        padding: 0 2.4rem;
+    }
+
+    .interested__card {
+        width: 30.4rem;
+    }
+
+    .interested__card-image {
+        width: 11.3rem;
+        height: 10.4rem;
+    }
+
+    /*конец стилей секции "Вы интересовались" 668*/
+
     /*начало стилей секции "Этапы изготовления гранул" 668*/
     .stages {
         .text {
@@ -864,6 +896,17 @@
             line-height: 2rem;
             max-height: 100%;
             overflow: visible;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+            line-height: 3.4rem;
+            margin: 2.4rem 0;
+            text-align: center;
+        }
+
+        ul {
+            margin-top: 1.6rem;
         }
     }
 
@@ -910,6 +953,10 @@
     .title {
         font-size: 2.6rem;
         line-height: 3.6rem;
+    }
+
+    .title-span {
+        width: 15.3rem;
     }
 
     .title-container {
@@ -1645,6 +1692,10 @@
     /*конец стилей секции "Как заказать?" */
 
     /*начало стилей секции "Нужна наша консультация?" */
+    .consultation {
+        padding-bottom: 7.3rem;
+    }
+
     .consultation__form {
         max-width: none;
         width: 100%;
@@ -1713,6 +1764,10 @@
     /*конец стилей секции "Нужна наша консультация?" */
 
     /*начало стилей секции "Контакты" */
+    .contacts {
+        padding-bottom: 6.4rem;
+    }
+
     .contacts .socials {
         margin: 2.4rem 0;
     }
@@ -1775,13 +1830,15 @@
     }
 
     .contacts__image {
-        width: 30.6rem;
-        height: 25.9rem;
-        bottom: -2rem;
+        width: 33.6rem;
+        height: 26.9rem;
+        bottom: -6rem;
 
         &::after {
             width: 52.5rem;
             height: 52.5rem;
+            bottom: -21.2rem;
+            right: -16.5rem;
         }
     }
 
@@ -1831,6 +1888,10 @@
     /*начало стилей секции "Подвал" */
     .footer {
         padding: 6.4rem 0 2.6rem;
+    }
+
+    .footer.active {
+        top: 1rem;
     }
 
     .footer__container {
@@ -1937,10 +1998,176 @@
 
     /*конец стилей секции "Шапка" 1024*/
 
+    /*начало стилей секции "Навигация" 1024*/
     .navigation {
         padding-top: 4.6rem;
         padding-bottom: 5.4rem;
     }
+
+    /*конец стилей секции "Навигация" 1024*/
+
+    /*начало стилей секции "Вы интересовались" 1024*/
+    .interested {
+        .text {
+            margin: auto;
+            max-width: 65.4rem;
+        }
+    }
+
+    .interested__wrapper {
+        padding: 0 9.4rem;
+    }
+
+    .swiper-interested {
+        padding: 0;
+    }
+
+
+    .interested__card-image,
+    .interested__card-text {
+        z-index: 10;
+    }
+
+    .interested__card-link {
+
+        &:hover {
+
+            .interested__card {
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            .interested__card-name,
+            .interested__card-property,
+            .interested__card-value {
+                transition: 0.3s ease;
+                color: #fff;
+            }
+
+            .interested__card-dash {
+                transition: 0.3s ease;
+                background-color: #fff;
+            }
+        }
+    }
+
+    .interested__card {
+        position: relative;
+        padding: 1.6rem;
+        max-width: 41.3rem;
+        width: 100%;
+        height: 14.7rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(263.74deg, #FF5300 0%, #FF7800 100%), linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+    }
+
+    .interested__card-image {
+        width: 14.1rem;
+        height: 11.5rem;
+    }
+
+    .interested__card-text {
+        max-width: 22.4rem;
+        max-height: none;
+    }
+
+    .interested__card-name {
+        margin-bottom: 0.7rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .interested__card-property {
+        display: flex;
+        align-items: center;
+    }
+
+    .interested__card-dash {
+        margin: 0 0.8rem;
+        display: inline-block;
+        width: 0.8rem;
+        height: 1px;
+        opacity: 0.5;
+        background-color: #7EB8E2;
+    }
+
+    .interested__card-value {
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+    .interested__buttons {
+        margin-top: 3.2rem;
+        display: flex;
+        justify-content: center;
+        height: 0.8rem;
+    }
+
+    // .swiper-interested {
+    //     .swiper-button-disabled {
+    //         border-top: 1px solid #7EB8E2;
+    //         border-right: 1px solid #7EB8E2;
+    //     }
+    // }
+
+    .interested-button-next,
+    .interested-button-prev {
+        margin-top: 0;
+        display: block;
+        position: static;
+        width: 0.667rem;
+        height: 0.667rem;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0.667rem;
+            height: 0.667rem;
+            border-top: 1px solid #7EB8E2;
+            border-right: 1px solid #7EB8E2;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            &::after {
+                border-top: 1px solid #537791;
+                border-right: 1px solid #537791;
+            }
+        }
+    }
+
+    // .interested-button-prev.swiper-button-disabled,
+    // .interested-button-next.swiper-button-disabled {
+    //     opacity: 1;
+
+    //     &::after {
+    //         border-top: 1px solid #7EB8E2;
+    //         border-right: 1px solid #7EB8E2;
+    //     }
+    // }
+
+    .interested-button-prev {
+        margin-right: 1.9rem;
+        transform: rotate(-135deg);
+    }
+
+    .interested-button-next {
+        transform: rotate(45deg);
+    }
+
+    /*конец стилей секции "Вы интересовались" 1024*/
 
     /*начало стилей секции "Каталог" 1024*/
     .catalog-1lvl {
@@ -1956,6 +2183,7 @@
     }
 
     .catalog__item-granulation {
+        padding: 5.1rem 2.4rem;
         width: 100%;
 
         .catalog__item-title {
@@ -1972,4 +2200,27 @@
     }
 
     /*конец стилей секции "Каталог" 1024*/
+
+    /*начало стилей секции "Этапы изготовления гранул" 1024*/
+    .stages {
+        .text {
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            line-height: 3.6rem;
+        }
+
+        li {
+            padding-left: 5.6rem;
+
+            &::before {
+                width: 4rem;
+            }
+        }
+    }
+
+    /*конец стилей секции "Этапы изготовления гранул" 1024*/
 }
