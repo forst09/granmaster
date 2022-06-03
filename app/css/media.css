@@ -51,6 +51,10 @@
     line-height: 2rem;
   }
 
+  .scroll {
+    padding: 0 2.4rem;
+  }
+
   /*начало стилей кастомизации свайпера*/
   .main__slide {
     padding: 0 2.4rem;
@@ -59,13 +63,6 @@
   .swiper-main .swiper-pagination {
     padding-left: 2.4rem;
     text-align: left;
-  }
-
-  .swiper-years,
-.swiper-years-thumbs,
-.swiper-demanded {
-    padding: 0;
-    padding-left: 2.4rem;
   }
 
   .swiper-slide-thumb-active .years__pagination-image {
@@ -526,6 +523,7 @@
   .contacts__map-btn {
     margin-top: 3.4rem;
     display: inline-block;
+    padding-right: 1.7rem;
   }
   .contacts__map-btn .contacts__map-btn-span-show {
     display: inline-block;
@@ -780,7 +778,7 @@
 
   /*конец стилей секции "Навигация" 668*/
   /*начало стилей секции "Каталог" 668*/
-  .catalog-1lvl .text {
+  .catalog-text {
     font-size: 1rem;
     line-height: 2rem;
     max-width: 52.7rem;
@@ -789,6 +787,7 @@
   .title-big {
     margin-bottom: 1.6rem;
     font-size: 2.4rem;
+    line-height: 3.6rem;
   }
 
   .catalog__item-granulation {
@@ -859,6 +858,64 @@
   }
 
   /*конец стилей секции "Этапы изготовления гранул" 668*/
+  /*##############################################################################################################################*/
+  /*каталог второго уровня 668*/
+  /*начало стилей секции "Товары" 668*/
+  .products__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .products__item {
+    margin-bottom: 0.8rem;
+    padding: 1.6rem;
+    width: 20.333rem;
+    height: 26.1rem;
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
+    background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    border-radius: 1.6rem;
+  }
+
+  .products__item-image {
+    margin-bottom: 0.8rem;
+    width: 17.133rem;
+    height: 15.3rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+  .products__item-image img {
+    height: 100%;
+    width: auto;
+  }
+
+  .products__item-navigation {
+    display: none;
+  }
+
+  .products__item-power {
+    margin-bottom: 0.8rem;
+    font-family: Formular-Medium;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #FF6D1A;
+  }
+
+  .products__item-name {
+    font-family: Formular-Medium;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 }
 @media (min-width: 1024px) {
   html {
@@ -919,6 +976,10 @@
             transform: scale(1.105);
   }
 
+  .scroll {
+    padding: 0 9.4rem;
+  }
+
   /*начало стилей кастомизации свайпера */
   .main-button-next,
 .main-button-prev {
@@ -945,13 +1006,6 @@
   }
   .main-button-prev:hover {
     cursor: url("../img/cursor-prev.svg"), pointer;
-  }
-
-  .swiper-years,
-.swiper-years-thumbs,
-.swiper-demanded {
-    padding: 0;
-    padding-left: 9.4rem;
   }
 
   .swiper-demanded::before, .swiper-demanded::after,
@@ -981,6 +1035,10 @@
   .swiper-demanded::after,
 .swiper-years-thumbs::after {
     right: 0;
+  }
+
+  .swiper-demanded {
+    display: block;
   }
 
   .swiper.active::before, .swiper.active::after {
@@ -1473,7 +1531,6 @@
   .demanded__item {
     width: 23.4rem;
     min-height: 27.7rem;
-    margin-right: 1.8rem;
     padding: 2.4rem;
   }
 
@@ -1953,6 +2010,11 @@
     height: 0.8rem;
   }
 
+  .swiper-interested .swiper-slide {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+
   .interested-button-next,
 .interested-button-prev {
     margin-top: 0;
@@ -1994,7 +2056,7 @@
 
   /*конец стилей секции "Вы интересовались" 1024*/
   /*начало стилей секции "Каталог" 1024*/
-  .catalog-1lvl .text {
+  .catalog-text {
     max-width: 58.9rem;
     font-size: 1.2rem;
     line-height: 2.2rem;
@@ -2037,4 +2099,56 @@
   }
 
   /*конец стилей секции "Этапы изготовления гранул" 1024*/
+  /*##############################################################################################################################*/
+  /*каталог второго уровня*/
+  /*начало стилей секции "Товары" 1024*/
+  .products__navigation-item {
+    width: 19.9rem;
+    height: 5.6rem;
+  }
+
+  .products__navigation-link {
+    margin-right: 1.6rem;
+    position: relative;
+    display: inline-block;
+  }
+  .products__navigation-link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -o-linear-gradient(186.26deg, #FF5300 0%, #FF7800 100%);
+    background: linear-gradient(263.74deg, #FF5300 0%, #FF7800 100%);
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s linear;
+    -o-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
+  }
+  .products__navigation-link:hover::before {
+    opacity: 1;
+  }
+  .products__navigation-link:hover .products__navigation-text,
+.products__navigation-link:hover .products__navigation-image {
+    z-index: 1;
+  }
+  .products__navigation-link:hover .products__navigation-text {
+    color: #fff;
+  }
+
+  .products__navigation-text {
+    max-width: 13rem;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  .products__navigation-image {
+    right: -1.5rem;
+  }
+
+  .products__btn-more-span {
+    font-family: Formular-Medium;
+  }
 }
