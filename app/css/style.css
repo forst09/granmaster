@@ -652,7 +652,7 @@ section {
   margin-right: 1.6rem;
   padding: 2.4rem 1.6rem;
   width: 14.5rem;
-  min-height: 20.5rem;
+  height: 20.5rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
   background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
   background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;

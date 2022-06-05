@@ -142,7 +142,7 @@ if (pageWidth>=1024) {
     const swiperDemanded = new Swiper('.swiper-demanded', {
         speed: 700,
         spaceBetween: 18,
-        slidesPerView: 3.7,
+        slidesPerView: 3.39,
         navigation: {
             nextEl: '.demanded-button-next',
             prevEl: '.demanded-button-prev',

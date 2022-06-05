@@ -1113,7 +1113,12 @@
     }
 
     .swiper-demanded {
+        padding: 0 9.4rem;
         display: block;
+
+        .swiper-slide {
+            width: 100% !important;
+        }
     }
 
     .swiper.active {
@@ -1643,6 +1648,10 @@
             font-size: 1.4rem;
             line-height: 2.2rem;
         }
+
+        .scroll {
+            padding: 0;
+        }
     }
 
     .demanded__container {
@@ -1651,9 +1660,11 @@
     }
 
     .demanded__item {
-        width: 23.4rem;
-        min-height: 27.7rem;
-        // margin-right: 1.8rem;
+        max-width: 23.4rem;
+        width: 100%;
+        // width: 23.4rem;
+        height: 27.7rem;
+        margin-right: 0;
         padding: 2.4rem;
     }
 
