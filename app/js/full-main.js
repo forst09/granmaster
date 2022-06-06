@@ -1,3 +1,5 @@
+document.getElementById("tabTiles").click();
+
 $(document).on('click', ".about__btn", function () {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -65,11 +67,11 @@ const swiperMain = new Swiper('.swiper-main', {
         nextEl: '.main-button-next',
         prevEl: '.main-button-prev',
     },
-    breakpoints: {
-        1024: {
-            allowTouchMove: false,
-        }
-    }
+    // breakpoints: {
+    //     1024: {
+    //         allowTouchMove: false,
+    //     }
+    // }
 });
 
 const swiperYearsThumbs = new Swiper('.swiper-years-thumbs', {
@@ -86,11 +88,11 @@ const swiperYearsThumbs = new Swiper('.swiper-years-thumbs', {
             spaceBetween: 6,
         },
         668: {
-            slidesPerView: 3.3,
+            slidesPerView: 3.19,
             spaceBetween: 8,
         },
         1024: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.15,
             spaceBetween: 16,
         }
     },
@@ -138,7 +140,7 @@ const swiperYears = new Swiper('.swiper-years', {
 // });
 
 const pageWidth = document.documentElement.scrollWidth;
-if (pageWidth>=1024) {
+if (pageWidth >= 1024) {
     const swiperDemanded = new Swiper('.swiper-demanded', {
         speed: 700,
         spaceBetween: 18,
@@ -150,7 +152,6 @@ if (pageWidth>=1024) {
     });
 
     const swiperInterested = new Swiper('.swiper-interested', {
-   
         breakpoints: {
             1024: {
                 loop: true,
@@ -158,12 +159,18 @@ if (pageWidth>=1024) {
                 spaceBetween: 11,
                 speed: 700,
                 navigation: {
-                nextEl: '.interested-button-next',
-                prevEl: '.interested-button-prev',
+                    nextEl: '.interested-button-next',
+                    prevEl: '.interested-button-prev',
                 },
             }
         }
-        
+
+    });
+
+    const swiperCatalog2lvlNav = new Swiper('.swiper-catalog2lvl-nav', {
+        speed: 700,
+        spaceBetween: 16,
+        slidesPerView: 3.958,
     });
 }
 // if (pageWidth < 1024) {
@@ -186,5 +193,30 @@ if (pageWidth>=1024) {
 
 // console.log(screenWidth, pageWidth);
 // if (screenWidth >= 1024) {
-    
+
 // }
+
+function openTab(evt, tabName) {
+    // Declare all variables
+    let i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("products-tab");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("products__filters-tabs-img");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "flex";
+    evt.currentTarget.className += " active";
+}
+
+if ((pageWidth >= 320) && (pageWidth < 668)) {
+    document.getElementById("tabLines").click();
+}
