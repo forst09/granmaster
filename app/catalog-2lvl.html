@@ -226,8 +226,8 @@
             <div class="products__filters">
                 <a class="products__filters-list"><span class="products__filters-list-span">по мощности</span></a>
                 <div class="products__filters-links">
-                    <div class="products__filters-item">
-                        <a href="#" class="products__filters-item-link">по мощности</a>
+                    <a class="products__filters-item">
+                        <span href="#" class="products__filters-item-link">по мощности</span>
                         <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="9.5" y1="0.5" x2="23.1667" y2="0.5" stroke="#537791" stroke-linecap="round" />
                             <line x1="9.5" y1="4.5" x2="20.5" y2="4.5" stroke="#537791" stroke-linecap="round" />
@@ -235,9 +235,9 @@
                             <path d="M3.72 9.25L6.44 6.53M3.72 9.25L1 6.53M3.72 9.25V0.75" stroke="#537791"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </div>
-                    <div class="products__filters-item">
-                        <a href="#" class="products__filters-item-link">по длине</a>
+                    </a>
+                    <a class="products__filters-item">
+                        <span href="#" class="products__filters-item-link">по длине</span>
                         <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="9.5" y1="0.5" x2="23.1667" y2="0.5" stroke="#537791" stroke-linecap="round" />
                             <line x1="9.5" y1="4.5" x2="20.5" y2="4.5" stroke="#537791" stroke-linecap="round" />
@@ -245,9 +245,9 @@
                             <path d="M3.72 9.25L6.44 6.53M3.72 9.25L1 6.53M3.72 9.25V0.75" stroke="#537791"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </div>
-                    <div class="products__filters-item">
-                        <a href="#" class="products__filters-item-link">по производительности</a>
+                    </a>
+                    <a class="products__filters-item">
+                        <span href="#" class="products__filters-item-link">по производительности</span>
                         <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="9.5" y1="0.5" x2="23.1667" y2="0.5" stroke="#537791" stroke-linecap="round" />
                             <line x1="9.5" y1="4.5" x2="20.5" y2="4.5" stroke="#537791" stroke-linecap="round" />
@@ -255,9 +255,9 @@
                             <path d="M3.72 9.25L6.44 6.53M3.72 9.25L1 6.53M3.72 9.25V0.75" stroke="#537791"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </div>
-                    <div class="products__filters-item">
-                        <a href="#" class="products__filters-item-link">объем смесителя</a>
+                    </a>
+                    <a class="products__filters-item">
+                        <span href="#" class="products__filters-item-link">объем смесителя</span>
                         <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="9.5" y1="0.5" x2="23.1667" y2="0.5" stroke="#537791" stroke-linecap="round" />
                             <line x1="9.5" y1="4.5" x2="20.5" y2="4.5" stroke="#537791" stroke-linecap="round" />
@@ -265,9 +265,9 @@
                             <path d="M3.72 9.25L6.44 6.53M3.72 9.25L1 6.53M3.72 9.25V0.75" stroke="#537791"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </div>
-                    <div class="products__filters-item">
-                        <a href="#" class="products__filters-item-link">по мощности</a>
+                    </a>
+                    <a class="products__filters-item">
+                        <span href="#" class="products__filters-item-link">по мощности</span>
                         <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="9.5" y1="0.5" x2="23.1667" y2="0.5" stroke="#537791" stroke-linecap="round" />
                             <line x1="9.5" y1="4.5" x2="20.5" y2="4.5" stroke="#537791" stroke-linecap="round" />
@@ -275,7 +275,7 @@
                             <path d="M3.72 9.25L6.44 6.53M3.72 9.25L1 6.53M3.72 9.25V0.75" stroke="#537791"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                    </div>
+                    </a>
                 </div>
                 <div class="products__filters-tabs">
                     <a id="tabTiles" class="products__filters-tabs-img" onclick="openTab(event, 'productsTiles')">
@@ -298,84 +298,198 @@
 
         <div class="wrapper">
             <div id="productsTiles" class="products__tiles products-tab">
-                <div class="products__tiles-item">
+                <a class="products__tiles-item">
                     <div class="products__tiles-item-image">
-                        <img src="img/demanded/tovar-1.jpg" alt="">
-                    </div>
-                    <div class="products__tiles-item-navigation">
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
+                        <ul class="products__tiles-col-list">
+                            <li class="products__tiles-col-item active">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-1.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-2.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-3.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-4.jpg" alt="">
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="products__tiles-item-power">До 16 т/час</div>
-                    <div class="products__tiles-item-name">Винтовой конвейер (шнековый) КВ-150</div>
-                </div>
-                <div class="products__tiles-item">
+                    <span class="products__tiles-item-name" href="">Винтовой конвейер (шнековый) КВ-150</span>
+                </a>
+                <a class="products__tiles-item">
                     <div class="products__tiles-item-image">
-                        <img src="img/demanded/tovar-1.jpg" alt="">
-                    </div>
-                    <div class="products__tiles-item-navigation">
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
+                        <ul class="products__tiles-col-list">
+                            <li class="products__tiles-col-item active">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-1.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-2.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-3.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-4.jpg" alt="">
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="products__tiles-item-power">До 16 т/час</div>
-                    <div class="products__tiles-item-name">Винтовой конвейер (шнековый) КВ-150</div>
-                </div>
-                <div class="products__tiles-item">
+                    <span class="products__tiles-item-name" href="">Винтовой конвейер (шнековый) КВ-150</span>
+                </a>
+                <a class="products__tiles-item">
                     <div class="products__tiles-item-image">
-                        <img src="img/demanded/tovar-1.jpg" alt="">
-                    </div>
-                    <div class="products__tiles-item-navigation">
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
+                        <ul class="products__tiles-col-list">
+                            <li class="products__tiles-col-item active">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-1.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-2.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-3.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-4.jpg" alt="">
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="products__tiles-item-power">До 16 т/час</div>
-                    <div class="products__tiles-item-name">Винтовой конвейер (шнековый) КВ-150</div>
-                </div>
-                <div class="products__tiles-item">
+                    <span class="products__tiles-item-name" href="">Винтовой конвейер (шнековый) КВ-150</span>
+                </a>
+                <a class="products__tiles-item">
                     <div class="products__tiles-item-image">
-                        <img src="img/demanded/tovar-1.jpg" alt="">
-                    </div>
-                    <div class="products__tiles-item-navigation">
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
+                        <ul class="products__tiles-col-list">
+                            <li class="products__tiles-col-item active">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-1.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-2.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-3.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-4.jpg" alt="">
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="products__tiles-item-power">До 16 т/час</div>
-                    <div class="products__tiles-item-name">Винтовой конвейер (шнековый) КВ-150</div>
-                </div>
-                <div class="products__tiles-item">
+                    <span class="products__tiles-item-name" href="">Винтовой конвейер (шнековый) КВ-150</span>
+                </a>
+                <a class="products__tiles-item">
                     <div class="products__tiles-item-image">
-                        <img src="img/demanded/tovar-1.jpg" alt="">
-                    </div>
-                    <div class="products__tiles-item-navigation">
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
+                        <ul class="products__tiles-col-list">
+                            <li class="products__tiles-col-item active">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-1.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-2.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-3.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-4.jpg" alt="">
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="products__tiles-item-power">До 16 т/час</div>
-                    <div class="products__tiles-item-name">Винтовой конвейер (шнековый) КВ-150</div>
-                </div>
-                <div class="products__tiles-item">
+                    <span class="products__tiles-item-name" href="">Винтовой конвейер (шнековый) КВ-150</span>
+                </a>
+                <a class="products__tiles-item">
                     <div class="products__tiles-item-image">
-                        <img src="img/demanded/tovar-1.jpg" alt="">
-                    </div>
-                    <div class="products__tiles-item-navigation">
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
-                        <span class="products__tiles-item-navigation-span"></span>
+                        <ul class="products__tiles-col-list">
+                            <li class="products__tiles-col-item active">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-1.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-2.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-3.jpg" alt="">
+                                </span>
+                            </li>
+                            <li class="products__tiles-col-item">
+                                <span class="products__tiles-col-col"></span>
+                                <span class="products__tiles-col-img">
+                                    <img src="img/demanded/tovar-4.jpg" alt="">
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="products__tiles-item-power">До 16 т/час</div>
-                    <div class="products__tiles-item-name">Винтовой конвейер (шнековый) КВ-150</div>
-                </div>
+                    <span class="products__tiles-item-name" href="">Винтовой конвейер (шнековый) КВ-150</span>
+                </a>
             </div>
 
             <div id="productsLines" class="products__lines products-tab">

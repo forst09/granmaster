@@ -97,6 +97,22 @@ section {
   background: #FF5300;
 }
 
+.btn-rect {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: -o-linear-gradient(186.26deg, #FF5300 0%, #FF7800 100%);
+  background: linear-gradient(263.74deg, #FF5300 0%, #FF7800 100%);
+  border-radius: 0.8rem;
+  border: none;
+  color: #fff;
+  font-family: "Formular-Bold";
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.btn-rect:active, .btn-rect:focus, .btn-rect:focus-within {
+  background: #FF5300;
+}
+
 .title__span {
   color: #FF6D1A;
 }
@@ -1254,18 +1270,16 @@ section {
 
 .footer__logo {
   margin-bottom: 1.6rem;
-  width: 10.1rem;
-  height: 2.8rem;
-}
-.footer__logo img {
-  width: 100%;
-  height: auto;
 }
 
 .footer__logo-link {
   display: inline-block;
-  width: 10.1rem;
+  width: 8.3rem;
   height: 2.8rem;
+}
+.footer__logo-link img {
+  width: 100%;
+  height: auto;
 }
 
 .phone {
@@ -2064,3 +2078,126 @@ section {
 }
 
 /*конец стилей секции "Товары" 320*/
+/*##############################################################################################################################*/
+/*карточка товара*/
+/*начало стилей секции "главный экран" 320*/
+.card-main {
+  margin-top: 3.2rem;
+  padding-bottom: 3.6rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, #FFFFFF), color-stop(53.78%, rgba(255, 255, 255, 0))), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
+  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -o-linear-gradient(top, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), -o-radial-gradient(88% 50.58%, 17.66% 52.14%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), -o-radial-gradient(26.68% 29.72%, 32.2% 115.38%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #E5F1F9;
+  border-radius: 0px 0px 2.4rem 2.4rem;
+}
+.card-main .btn-wrapper {
+  margin-top: 2.4rem;
+  text-align: left;
+}
+
+.card-main__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-main__title {
+  font-family: Formular-Black;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #262628;
+}
+
+.card-main__desc {
+  margin: 0.8rem 0;
+  line-height: 1.8rem;
+  color: #537791;
+}
+
+.card-main__cost {
+  display: inline-block;
+  font-family: Formular-Black;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #262628;
+}
+
+.card-main__cost-old {
+  margin-left: 2.4rem;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #537791;
+  opacity: 0.5;
+}
+
+.card-main__image {
+  margin-top: 3.2rem;
+  position: relative;
+  width: 21.1rem;
+  height: 21.1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.card-main__image::before {
+  content: "";
+  position: absolute;
+  width: 29rem;
+  height: 29rem;
+  background: -o-radial-gradient(50% 50%, 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  top: calc(50% - 14.5rem);
+  left: calc(50% - 14.5rem);
+  z-index: -1;
+}
+
+.card-main__icons-container {
+  margin-top: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-main__icons-item {
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-main__icons-item svg {
+  margin-right: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.card-main__icons-item span {
+  font-family: Formular-Medium;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #537791;
+  opacity: 0.8;
+}
+.card-main__icons-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.card-main__icons-dash {
+  margin: 0 0.8rem;
+  width: 0.2rem;
+  height: 1px;
+  background-color: #537791;
+}
+
+/*конец стилей секции "главный экран" 320*/
