@@ -158,7 +158,7 @@
     <section class="products">
         <div class="wrapper">
             <h1 class="title-big">Комбикормовое оборудование</h1>
-            <div class="text text-left catalog-text">Описание раздела. ГранМастер продают различные оборудования для
+            <div class="text left catalog-text">Описание раздела. ГранМастер продают различные оборудования для
                 гранулоирования
                 комбикормов. Бывают разные мощности, дло 100 тонн в час. Максимум 2 строчки.</div>
 
@@ -226,7 +226,7 @@
             <div class="products__filters">
                 <a class="products__filters-list"><span class="products__filters-list-span">по мощности</span></a>
                 <div class="products__filters-links">
-                    <a class="products__filters-item">
+                    <a class="products__filters-item active">
                         <span href="#" class="products__filters-item-link">по мощности</span>
                         <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="9.5" y1="0.5" x2="23.1667" y2="0.5" stroke="#537791" stroke-linecap="round" />
@@ -278,7 +278,7 @@
                     </a>
                 </div>
                 <div class="products__filters-tabs">
-                    <a id="tabTiles" class="products__filters-tabs-img" onclick="openTab(event, 'productsTiles')">
+                    <a id="tabTiles" class="products__filters-tabs-img" data-tab="productsTiles">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.5" y="0.5" width="9.15385" height="9.15385" rx="1.5" stroke="#7EB8E2" />
                             <rect x="12.3457" y="0.5" width="9.15385" height="9.15385" rx="1.5" stroke="#7EB8E2" />
@@ -286,7 +286,7 @@
                             <rect x="0.5" y="12.3457" width="9.15385" height="9.15385" rx="1.5" stroke="#7EB8E2" />
                         </svg>
                     </a>
-                    <a id="tabLines" class="products__filters-tabs-img" onclick="openTab(event, 'productsLines')">
+                    <a id="tabLines" class="products__filters-tabs-img" data-tab="productsLines">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.5" y="12.3457" width="21" height="9.15385" rx="1.5" stroke="#7EB8E2" />
                             <rect x="0.5" y="0.5" width="21" height="9.15385" rx="1.5" stroke="#7EB8E2" />
@@ -297,7 +297,7 @@
         </div>
 
         <div class="wrapper">
-            <div id="productsTiles" class="products__tiles products-tab">
+            <div id="productsTiles" class="products-tab products__tiles">
                 <a class="products__tiles-item">
                     <div class="products__tiles-item-image">
                         <ul class="products__tiles-col-list">
@@ -492,7 +492,7 @@
                 </a>
             </div>
 
-            <div id="productsLines" class="products__lines products-tab">
+            <div id="productsLines" class=" products-tab products__lines">
                 <div class="products__lines-item">
                     <div class="products__lines-content">
                         <div class="products__lines-image">
@@ -523,7 +523,7 @@
                                 становятся прочными, готовыми к транспортировке и длительному хранению.</div>
                         </div>
                     </div>
-                    <a class="products__lines-info-btn">Отправить заявку</a>
+                    <a class="btn-rect">Отправить заявку</a>
                 </div>
                 <div class="products__lines-item">
                     <div class="products__lines-content">
@@ -552,7 +552,7 @@
                                 обогатительных элементов (БМВД, премиксы, мясокостная мука, шрот и т.д.).</div>
                         </div>
                     </div>
-                    <a class="products__lines-info-btn">Отправить заявку</a>
+                    <a class="btn-rect">Отправить заявку</a>
                 </div>
                 <div class="products__lines-item">
                     <div class="products__lines-content">
@@ -581,7 +581,7 @@
                                 мелкокускового сырья: зерна, кукурузы, бобов, шрота, жмыха и т.д.</div>
                         </div>
                     </div>
-                    <a class="products__lines-info-btn">Отправить заявку</a>
+                    <a class="btn-rect">Отправить заявку</a>
                 </div>
                 <div class="products__lines-item">
                     <div class="products__lines-content">
@@ -610,7 +610,7 @@
                                 включено всё оборудование, необходимое для приготовления высококачественного </div>
                         </div>
                     </div>
-                    <a class="products__lines-info-btn">Отправить заявку</a>
+                    <a class="btn-rect">Отправить заявку</a>
                 </div>
             </div>
 
@@ -689,7 +689,7 @@
                     <h3 class="title">Этапы изготовления гранул</h3>
                     <span class="title-span"></span>
                 </div>
-                <div class="text text-left">
+                <div class="text left text-hide stages__text">
                     <p>Переработка производственных отходов во вторичное сырье и грануляция –
                         сравнительно
                         молодая и перспективная сфера предпринимательства в нашей стране. Использование дешевого сырья,
@@ -720,9 +720,9 @@
                     </ul>
                     </p>
                 </div>
-                <div class="stages__btn-wrapper">
-                    <a class="stages__btn"><span class="stages__btn-span stages__btn-show-span">Показать
-                            полностью</span><span class="stages__btn-span stages__btn-hide-span">Скрыть</span></a>
+                <div class="show-btn__wrapper">
+                    <a class="show-btn"><span class="show-btn__span show-btn__show-span">Показать
+                            полностью</span><span class="show-btn__span show-btn__hide-span">Скрыть</span></a>
                 </div>
             </div>
         </section>
@@ -740,22 +740,23 @@
                     <div class="consultation__form-wrapper">
                         <div class="consultation__form-wrapper-item">
                             <div class="consultation__input-wrapper">
-                                <input id="input-name" class="consultation__form-input" type="text"
+                                <input id="catalog2lvl-input-name" class="consultation__form-input" type="text"
                                     placeholder="Фамилия Имя Отчество">
-                                <label class="consultation__label-name" for="input-name"></label>
+                                <label class="consultation__label-name" for="catalog2lvl-input-name"></label>
                             </div>
                             <div class="consultation__input-wrapper">
-                                <input id="input-phone" class="consultation__form-input" type="text"
+                                <input id="catalog2lvl-input-phone" class="consultation__form-input" type="text"
                                     placeholder="+7 (900) 987-65-43">
-                                <label class="consultation__label-phone" for="input-phone"></label>
+                                <label class="consultation__label-phone" for="catalog2lvl-input-phone"></label>
                             </div>
 
                         </div>
                         <div class="consultation__form-wrapper-item">
                             <div class="consultation__textarea-wrapper">
-                                <textarea id="textarea" class="consultation__form-input consultation__form-textarea"
+                                <textarea id="catalog2lvl-textarea"
+                                    class="consultation__form-input consultation__form-textarea"
                                     placeholder="Пожалуйста, введите комментарий"></textarea>
-                                <label class="consultation__label-textarea" for="textarea"></label>
+                                <label class="consultation__label-textarea" for="catalog2lvl-textarea"></label>
                             </div>
                         </div>
                     </div>

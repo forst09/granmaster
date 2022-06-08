@@ -30,26 +30,10 @@ section {
     line-height: 2.4rem;
     text-align: center;
     color: #262628;
+}
 
-
-    // &::before {
-    //     left: 0;
-    // }
-
-    // &::after {
-    //     right: 0;
-    // }
-
-    // &::before,
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     display: none;
-    //     top: 0;
-    //     height: 1px;
-    //     width: 15.3rem;
-    //     background-color: #7EB8E2;
-    // }
+.title-medium {
+    margin-bottom: 1.6rem;
 }
 
 .title-container {
@@ -85,14 +69,55 @@ section {
     color: #537791;
     line-height: 1.8rem;
     text-align: center;
+
+
+
+    h4 {
+        font-weight: 400;
+        margin: 3.2rem 0 1.6rem;
+        text-align: left;
+        font-size: 1.4rem;
+        line-height: 1.72rem;
+        color: #262628;
+    }
+
+    ul {
+        margin-top: 0.8rem;
+    }
+
+    li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        padding-left: 3.6rem;
+        line-height: 1.8rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 2rem;
+            background-color: #7EB8E2;
+            left: 0;
+            top: 50%;
+        }
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.text.active {
+    max-height: fit-content;
+    overflow: visible;
 }
 
 .text-other {
     font-size: 1.2rem;
 }
 
-.text-left {
-    text-align: start;
+.left {
+    text-align: left;
 }
 
 .btn-wrapper {
@@ -460,36 +485,30 @@ section {
     transition: 0.3s ease;
 }
 
-.about__text.active {
-    max-height: fit-content;
-    overflow: visible;
-    transition: 0.3s ease;
-}
-
-.about__btn {
+.show-btn {
     display: inline-block;
     padding-right: 1.7rem;
 
-    .about__btn-show-span {
+    .show-btn__show-span {
         display: inline-block;
     }
 
-    .about__btn-hide-span {
+    .show-btn__hide-span {
         display: none;
     }
 }
 
-.about__btn.active {
-    .about__btn-show-span {
+.show-btn.active {
+    .show-btn__show-span {
         display: none;
     }
 
-    .about__btn-hide-span {
+    .show-btn__hide-span {
         display: inline-block;
     }
 }
 
-.about__btn-span {
+.show-btn__span {
     position: relative;
     display: inline-block;
     font-size: 1.2rem;
@@ -509,29 +528,14 @@ section {
     }
 }
 
-// .about__btn-show-span {
-//     display: inline-block;
-// }
 
-// .about__btn-show-span.active {
-//     display: none;
-// }
-
-// .about__btn-hide-span {
-//     display: none;
-// }
-
-// .about__btn-hide-span.active {
-//     display: inline-block;
-// }
-
-.about__btn-show-span {
+.show-btn__show-span {
     &::after {
         transform: rotate(135deg);
     }
 }
 
-.about__btn-hide-span {
+.show-btn__hide-span {
     &::after {
         transform: rotate(-45deg);
     }
@@ -1611,7 +1615,7 @@ section {
 /*начало стилей секции "Навигация" 320*/
 .navigation {
     padding-top: 2.4rem;
-    padding-bottom: 0;
+    padding-bottom: 3.2rem;
 }
 
 .navigation__nav {
@@ -1690,45 +1694,16 @@ section {
 
 /*начало стилей секции "Этапы изготовления гранул" 320*/
 .stages {
-    .text {
-        max-height: 9rem;
-        overflow: hidden;
-        transition: 0.3s ease;
-    }
 
-    .text.active {
-        max-height: fit-content;
-        overflow: visible;
-        transition: 0.3s ease;
+    .show-btn__wrapper {
+        text-align: center;
     }
+}
 
-    h4 {
-        font-weight: 400;
-        margin: 3.2rem 0 1.6rem;
-        text-align: left;
-        font-size: 1.4rem;
-        line-height: 1.72rem;
-        color: #262628;
-    }
-
-    ul {
-        margin-top: 0.8rem;
-    }
-
-    li {
-        position: relative;
-        padding-left: 3.6rem;
-
-        &::before {
-            content: '';
-            position: absolute;
-            height: 1px;
-            width: 2rem;
-            background-color: #7EB8E2;
-            left: 0;
-            top: 50%;
-        }
-    }
+.stages__text {
+    max-height: 9rem;
+    overflow: hidden;
+    transition: 0.3s ease;
 }
 
 .stages__btn-wrapper {
@@ -1879,14 +1854,22 @@ section {
 
 /*начало стилей секции "Товары" 320*/
 .products {
-    padding-top: 3.2rem;
+    padding-top: 0rem;
 
     .scroll {
         margin-top: 3.2rem;
     }
 
     .btn-wrapper {
-        margin-top: 2.4rem;
+        margin-top: 0.8rem;
+    }
+
+    .btn-rect {
+        margin-top: 1.2rem;
+        padding: 0.8rem;
+        max-width: 27rem;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1957,7 +1940,7 @@ section {
     position: absolute;
     width: 8.4rem;
     height: 8.4rem;
-    right: -4rem;
+    right: -4.1rem;
     bottom: -1.2rem;
 
     img {
@@ -2014,14 +1997,8 @@ section {
     max-width: 29rem;
     margin-bottom: 1.6rem;
     padding: 1rem;
-    // display: flex;
-    // flex-wrap: wrap;
     background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
     border-radius: 1.6rem;
-
-    &:nth-last-of-type(1) {
-        margin-bottom: 0;
-    }
 }
 
 .products__lines-content {
@@ -2085,21 +2062,6 @@ section {
     font-family: Formular;
     color: #537791;
     line-height: 1.4rem;
-}
-
-.products__lines-info-btn {
-    margin-top: 1.2rem;
-    padding: 0.8rem;
-    display: inline-block;
-    width: 27rem;
-    // width: 100%;
-    font-family: Formular-Bold;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    color: #fff;
-    background: linear-gradient(263.74deg, #FF5300 0%, #FF7800 100%);
-    border-radius: 0.8rem;
-    text-align: center;
 }
 
 .products__lines-info-desc {
@@ -2192,7 +2154,6 @@ section {
 
 /*начало стилей секции "главный экран" 320*/
 .card-main {
-    margin-top: 3.2rem;
     padding-bottom: 3.6rem;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FFFFFF 8.32%, rgba(255, 255, 255, 0) 53.78%), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(126, 184, 226, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -2201,28 +2162,23 @@ section {
         , #E5F1F9;
     border-radius: 0px 0px 2.4rem 2.4rem;
 
+    .title-big {
+        line-height: 2.4rem;
+    }
+
     .btn-wrapper {
         margin-top: 2.4rem;
         text-align: left;
+    }
+
+    .text {
+        margin: 0.8rem 0;
     }
 }
 
 .card-main__container {
     display: flex;
     flex-direction: column;
-}
-
-.card-main__title {
-    font-family: Formular-Black;
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    color: #262628;
-}
-
-.card-main__desc {
-    margin: 0.8rem 0;
-    line-height: 1.8rem;
-    color: #537791;
 }
 
 .card-main__cost {
@@ -2257,8 +2213,13 @@ section {
         height: 29rem;
         background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
         top: calc(50% - 14.5rem);
-        left: calc(50% - 14.5rem);
-        z-index: -1;
+        left: calc(50% - 16.5rem);
+        z-index: 0;
+    }
+
+    img {
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -2292,6 +2253,16 @@ section {
     }
 }
 
+.card-main__icons-item-major {
+    span {
+        color: #FF6D1A;
+    }
+
+    .card-main__icons-dash {
+        background-color: #FF6D1A;
+    }
+}
+
 .card-main__icons-dash {
     margin: 0 0.8rem;
     width: 0.2rem;
@@ -2300,3 +2271,160 @@ section {
 }
 
 /*конец стилей секции "главный экран" 320*/
+
+/*начало стилей секции "Описание" 320*/
+.description {
+
+    .btn-wrapper {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .show-btn {
+        display: inline-block;
+
+        span {
+            color: #537791;
+
+            &::after {
+                border-top: 1px solid #537791;
+                border-right: 1px solid #537791;
+            }
+        }
+    }
+}
+
+.description__text {
+    margin-bottom: 0.8rem;
+    max-height: 9rem;
+    overflow: hidden;
+}
+
+.description__subtitle {
+    margin: 1.6rem 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #537791;
+}
+
+.swiper-card-description {
+    display: inline-flex;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+
+    .swiper-slide {
+        margin-right: 0.8rem;
+        flex-shrink: unset;
+    }
+
+}
+
+.description__models-link {
+    padding: 0.8rem;
+    display: inline-block;
+    width: 6.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #262628;
+    border: 1px solid rgba(126, 184, 226, 0.1);
+    border-radius: 0.8rem;
+
+    span {
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -ms-line-clamp: 1;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        display: -webkit-box;
+        display: box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+    }
+}
+
+.description__models-link.active {
+    color: #FF6D1A;
+    border: 1px solid rgba(255, 109, 26, 0.1);
+}
+
+/*конец стилей секции "Описание" 320*/
+
+/*начало стилей секции "Чертежи и 3D схемы" 320*/
+.drawings {
+    span {
+        color: #537791;
+
+        &::after {
+            border-top: 1px solid #537791;
+            border-right: 1px solid #537791;
+        }
+    }
+}
+
+.drawings__text {
+    max-height: 9rem;
+    overflow: hidden;
+}
+
+.drawings__text-wrapper {
+    padding: 0 1.5rem;
+}
+
+.show-btn__wrapper {
+    margin-top: 0.8rem;
+}
+
+.swiper-card-drawings {
+    margin-top: 1.6rem;
+    display: inline-flex;
+    overflow-x: scroll;
+
+    .swiper-slide {
+        margin-right: 1.2rem;
+        flex-shrink: unset;
+    }
+}
+
+.swiper-card-drawings__image {
+    width: 13.9rem;
+    height: 13.9rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.swiper-card-drawings__image-zoom {
+    overflow: hidden;
+
+    img {
+        transform: scale(1.5);
+    }
+}
+
+/*конец стилей секции "Чертежи и 3D схемы" 320*/
+
+/*начало стилей секции "Особенности конструкции" 320*/
+.features {}
+
+/*конец стилей секции "Особенности конструкции" 320*/
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
