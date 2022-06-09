@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     });
 
-    //градиент на свайпер по наведению мыши
+    //градиент на свайпер главной страницы секции "Самое востребованное на рынке" по наведению мыши
     $(document).on('mouseenter', "#swiperDemanded", function () {
         $(this).addClass('active');
     });
@@ -46,11 +46,27 @@ $(document).ready(function () {
         $(this).removeClass('active');
     });
 
-    //градиент на свайпер по наведению мыши
+    //градиент на тумбы свайпера главной страницы секции "Уже несколько лет мы..." по наведению мыши
     $(document).on('mouseenter', "#swiperYearsThumbs", function () {
         $(this).addClass('active');
     });
     $(document).on('mouseleave', "#swiperYearsThumbs", function () {
+        $(this).removeClass('active');
+    });
+
+    //градиент на свайпер карточки товара секции "Чертежи и 3D схемы" по наведению мыши
+    $(document).on('mouseenter', "#swiperCardDrawings", function () {
+        $(this).addClass('active');
+    });
+    $(document).on('mouseleave', "#swiperCardDrawings", function () {
+        $(this).removeClass('active');
+    });
+
+    //градиент на свайпер карточки товара секции "Галерея товара" по наведению мыши
+    $(document).on('mouseenter', "#swiperCardGallery", function () {
+        $(this).addClass('active');
+    });
+    $(document).on('mouseleave', "#swiperCardGallery", function () {
         $(this).removeClass('active');
     });
 
@@ -150,14 +166,25 @@ $(document).ready(function () {
             slidesPerView: 10.8,
         });
 
-        //swiper-card-drawings
+        // карточка товара секция "Чертежи и 3D схемы"
         const swiperCardDrawings = new Swiper('.swiper-card-drawings', {
             speed: 700,
             spaceBetween: 12,
-            slidesPerView: 2.1,
+            slidesPerView: 1.8,
             navigation: {
                 nextEl: '.card-drawings-button-next',
                 prevEl: '.card-drawings-button-prev',
+            },
+        });
+
+        // карточка товара секция "Галерея товара"
+        const swiperCardGallery = new Swiper('.swiper-card-gallery', {
+            speed: 700,
+            spaceBetween: 14,
+            slidesPerView: 5.28,
+            navigation: {
+                nextEl: '.card-gallery-button-next',
+                prevEl: '.card-gallery-button-prev',
             },
         });
     }

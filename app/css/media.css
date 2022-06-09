@@ -58,7 +58,7 @@
   .text ul {
     margin-top: 1.6rem;
   }
-  .text li {
+  .text ul li {
     font-size: 1rem;
   }
 
@@ -1151,7 +1151,7 @@
     line-height: 1.8rem;
   }
 
-  .description__subtitle {
+  .subtitle {
     margin: 2.4rem 0 1.6rem;
   }
 
@@ -1203,8 +1203,149 @@
   }
 
   /*конец стилей секции "Чертежи и 3D схемы" 668*/
-  /*начало стилей секции "Особенности конструкции" 668*/
-  /*конец стилей секции "Особенности конструкции" 668*/
+  /*начало стилей секции "Галерея товара" 668*/
+  .gallery .scroll {
+    padding: 0 2.4rem;
+  }
+
+  .swiper-card-gallery .swiper-slide {
+    margin-right: 1rem;
+  }
+
+  .swiper-card-gallery__image {
+    width: 10.7rem;
+    height: 10.7rem;
+    border-radius: 1.6rem;
+  }
+
+  /*конец стилей секции "Галерея товара" 668*/
+  /*начало стилей секции "Доставка и оплата" 668*/
+  .delivery .text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .delivery .subtitle {
+    margin: 2.4rem 0 0.8rem;
+  }
+  .delivery .btn-wrapper {
+    margin-top: 3.4rem;
+  }
+  .delivery .btn-rect {
+    padding: 1rem 2.1rem;
+    font-size: 1.4rem;
+  }
+
+  .delivery__text {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    overflow: visible;
+  }
+
+  /*конец стилей секции "Доставка и оплата" 668*/
+  /*начало стилей секции "Вариант линии гранулирования с этим товаром" 668*/
+  .option .title {
+    max-width: 39.5rem;
+  }
+  .option .key-btn__wrapper {
+    margin-top: 0;
+  }
+  .option .btn-wrapper {
+    margin-top: 0;
+    margin-right: 2.4rem;
+  }
+
+  .option__cards {
+    margin-bottom: 6.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-item-align: normal;
+        -ms-grid-row-align: normal;
+        align-self: normal;
+  }
+  .option__cards::after {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    bottom: -4.8rem;
+  }
+
+  .option__cards-item {
+    position: relative;
+  }
+  .option__cards-item::after {
+    content: "+";
+    position: absolute;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: #FF6D1A;
+    font-family: Formular-Black;
+    right: -3rem;
+    top: calc(50% - 1.6rem);
+    width: 1.4rem;
+  }
+  .option__cards-item:nth-last-of-type(1)::after {
+    content: "";
+  }
+
+  .option__cards-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 12rem;
+  }
+
+  .option__cards-image {
+    margin-bottom: 0.4rem;
+    width: 10.4rem;
+    height: 8.8rem;
+    border-radius: 1.6rem;
+  }
+
+  .option__cards-text {
+    margin-left: 0;
+  }
+
+  .option__cards-power {
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .option__cards-name {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .option__request {
+    max-width: none;
+  }
+
+  .option__request-name {
+    font-size: 1.8rem;
+  }
+
+  .option__request-buttons {
+    margin-top: 2.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .option__request-image {
+    margin-top: 2.4rem;
+    width: 51.5rem;
+    height: 19.8rem;
+  }
+
+  /*конец стилей секции "Вариант линии гранулирования с этим товаром" 668*/
 }
 @media (min-width: 1024px) {
   html {
@@ -1237,6 +1378,11 @@
     line-height: 3.6rem;
   }
 
+  .subtitle {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
   .title-span {
     width: 15.3rem;
   }
@@ -1253,12 +1399,12 @@
     font-size: 1.8rem;
     line-height: 3.6rem;
   }
-  .text li {
+  .text ul li {
     padding-left: 5.6rem;
     font-size: 1.2rem;
     line-height: 2.2rem;
   }
-  .text li::before {
+  .text ul li::before {
     width: 4rem;
   }
 
@@ -1323,7 +1469,11 @@
 
   .swiper-demanded::before, .swiper-demanded::after,
 .swiper-years-thumbs::before,
-.swiper-years-thumbs::after {
+.swiper-years-thumbs::after,
+.swiper-card-drawings::before,
+.swiper-card-drawings::after,
+.swiper-card-gallery::before,
+.swiper-card-gallery::after {
     content: "";
     position: absolute;
     top: 0;
@@ -1339,14 +1489,18 @@
     transition: 0.3s ease;
   }
   .swiper-demanded::before,
-.swiper-years-thumbs::before {
+.swiper-years-thumbs::before,
+.swiper-card-drawings::before,
+.swiper-card-gallery::before {
     left: 0;
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
   }
   .swiper-demanded::after,
-.swiper-years-thumbs::after {
+.swiper-years-thumbs::after,
+.swiper-card-drawings::after,
+.swiper-card-gallery::after {
     right: 0;
   }
 
@@ -1362,18 +1516,14 @@
     opacity: 1;
   }
 
-  .years-button-prev.swiper-button-disabled,
-.years-button-next.swiper-button-disabled,
-.demanded-button-prev.swiper-button-disabled,
-.demanded-button-next.swiper-button-disabled {
+  .swiper-orange-button-prev.swiper-button-disabled,
+.swiper-orange-button-next.swiper-button-disabled {
     opacity: 0;
     z-index: -1;
   }
 
-  .years-button-next,
-.years-button-prev,
-.demanded-button-next,
-.demanded-button-prev {
+  .swiper-orange-button-next,
+.swiper-orange-button-prev {
     width: 4.2rem;
     height: 4.2rem;
     background-color: #fff;
@@ -1390,10 +1540,8 @@
             justify-content: center;
     z-index: 30;
   }
-  .years-button-next::after,
-.years-button-prev::after,
-.demanded-button-next::after,
-.demanded-button-prev::after {
+  .swiper-orange-button-next::after,
+.swiper-orange-button-prev::after {
     content: "";
     border-top: 2px solid #FF6D1A;
     border-right: 2px solid #FF6D1A;
@@ -1403,24 +1551,20 @@
     top: calc(50% - 0.7rem);
   }
 
-  .demanded-button-next,
-.years-button-next {
+  .swiper-orange-button-next {
     right: 5rem;
   }
-  .demanded-button-next::after,
-.years-button-next::after {
+  .swiper-orange-button-next::after {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     left: calc(50% - 1rem);
   }
 
-  .demanded-button-prev,
-.years-button-prev {
+  .swiper-orange-button-prev {
     left: 5rem;
   }
-  .demanded-button-prev::after,
-.years-button-prev::after {
+  .swiper-orange-button-prev::after {
     -webkit-transform: rotate(225deg);
         -ms-transform: rotate(225deg);
             transform: rotate(225deg);
@@ -2794,7 +2938,7 @@
     padding: 0;
   }
 
-  .description__subtitle {
+  .subtitle {
     margin-top: 3.2rem;
   }
 
@@ -2824,9 +2968,126 @@
     z-index: 2;
   }
 
-  /*конец стилей секции "Описание" 1024*/
-  /*начало стилей секции "Особенности конструкции" 1024*/
-  /*конец стилей секции "Особенности конструкции" 1024*/
+  /*конец стилей секции "Описание" 1024*
+
+  /*начало стилей секции "Чертежи и 3D схемы" 1024*/
+  .drawings .scroll {
+    padding: 0;
+  }
+
+  .drawings__wrapper {
+    padding: 0 9.4rem;
+  }
+
+  .drawings__text-wrapper {
+    max-width: 33.2rem;
+  }
+
+  .drawings__text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .swiper-card-drawings {
+    padding: 0 9.4rem 0 0;
+    display: block;
+    overflow-x: hidden;
+  }
+  .swiper-card-drawings .swiper-slide {
+    width: 100% !important;
+  }
+
+  .swiper-card-drawings__image {
+    width: 22.9rem;
+    height: 22.9rem;
+  }
+
+  /*конец стилей секции "Чертежи и 3D схемы" 1024*/
+  /*начало стилей секции "Галерея товара" 1024*/
+  .gallery .scroll {
+    padding: 0;
+  }
+
+  .swiper-card-gallery {
+    padding: 0 9.4rem;
+    display: block;
+    overflow: hidden;
+  }
+  .swiper-card-gallery .swiper-slide {
+    width: 100% !important;
+  }
+
+  .swiper-card-gallery__image {
+    width: 14.7rem;
+    height: 14.7rem;
+  }
+
+  /*конец стилей секции "Галерея товара" 1024*/
+  /*начало стилей секции "Доставка и оплата" 1024*/
+  .delivery .text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  .delivery .subtitle {
+    margin: 3.2rem 0 1.6rem;
+  }
+  .delivery .btn-wrapper {
+    margin-top: 4.8rem;
+  }
+
+  /*конец стилей секции "Доставка и оплата" 1024*/
+  /*начало стилей секции "Вариант линии гранулирования с этим товаром" 1024*/
+  .option .title {
+    max-width: 50.6rem;
+  }
+
+  .option__cards {
+    margin: 0 auto 8.4rem;
+    max-width: 64.2rem;
+    width: 100%;
+  }
+  .option__cards::after {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    bottom: -5.4rem;
+  }
+
+  .option__cards-item::after {
+    width: 1.8rem;
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    top: calc(50% - 1.8rem);
+    right: -3.6rem;
+  }
+
+  .option__cards-image img {
+    height: 100%;
+    width: auto;
+  }
+
+  .option__request {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .option__request-text {
+    margin-left: 1.6rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .option__request-image {
+    margin-top: 0;
+    width: 47.8rem;
+    height: 18.4rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  /*конец стилей секции "Вариант линии гранулирования с этим товаром" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {
