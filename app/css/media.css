@@ -2924,6 +2924,24 @@
     line-clamp: 4;
   }
 
+  .products__btn-more span {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .products__btn-more span::before {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .products__btn-more:hover span {
+    color: #FF6D1A;
+  }
+  .products__btn-more:hover span::before {
+    border-top: 1px solid #FF6D1A;
+    border-right: 1px solid #FF6D1A;
+  }
+
   .products__btn-more-span {
     font-family: Formular-Medium;
   }
