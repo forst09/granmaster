@@ -3,24 +3,11 @@ $(document).ready(function () {
     $(document).on('click', ".show-btn", function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
-            $(this).parents('section').find(".text-hide").removeClass('active');
+            $(this).parents('.js-hide').find(".text-hide").removeClass('active');
         }
         else {
             $(this).addClass('active');
-            $(this).parents('section').find(".text-hide").addClass('active');
-        }
-
-    });
-
-    //развернуть текст секции "Этапы изготовления гранул"
-    $(document).on('click', ".stages__btn", function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).parents('.stages').find(".text").removeClass('active');
-        }
-        else {
-            $(this).addClass('active');
-            $(this).parents('.stages').find(".text").addClass('active');
+            $(this).parents('.js-hide').find(".text-hide").addClass('active');
         }
 
     });

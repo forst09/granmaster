@@ -66,6 +66,12 @@
     line-height: 2rem;
   }
 
+  .text-max-width {
+    font-size: 1rem;
+    line-height: 2rem;
+    max-width: 52.7rem;
+  }
+
   .scroll {
     padding: 0 2.4rem;
   }
@@ -804,12 +810,6 @@
 
   /*конец стилей секции "Навигация" 668*/
   /*начало стилей секции "Каталог" 668*/
-  .catalog-text {
-    font-size: 1rem;
-    line-height: 2rem;
-    max-width: 52.7rem;
-  }
-
   .title-big {
     margin-bottom: 1.6rem;
     font-size: 2.4rem;
@@ -1346,6 +1346,56 @@
   }
 
   /*конец стилей секции "Вариант линии гранулирования с этим товаром" 668*/
+  /*##############################################################################################################################*/
+  /*Наши услуги*/
+  /*начало стилей секции "Сервис и услуги" 668*/
+  .service .btn-rect {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .service__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .service__item {
+    padding: 0;
+  }
+
+  .service__image {
+    position: relative;
+    display: block;
+    min-height: none;
+    height: 16.8rem;
+    width: 23.4rem;
+  }
+  .service__image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .service__content {
+    margin-left: -4.8rem;
+    max-width: none;
+  }
+
+  .service__content-title {
+    line-height: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .service__content-text {
+    margin: 0.8rem 0 1.6rem;
+    max-height: none;
+    overflow: visible;
+  }
+
+  /*конец стилей секции "Сервис и услуги" 668*/
 }
 @media (min-width: 1024px) {
   html {
@@ -1406,6 +1456,12 @@
   }
   .text ul li::before {
     width: 4rem;
+  }
+
+  .text-max-width {
+    max-width: 58.9rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
   }
 
   .text-other {
@@ -2377,6 +2433,24 @@
     padding-bottom: 5.4rem;
   }
 
+  .navigation__nav-link {
+    cursor: pointer;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .navigation__nav-link::before {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .navigation__nav-link:hover {
+    color: #537791;
+  }
+  .navigation__nav-link:hover::before {
+    width: 0;
+  }
+
   /*конец стилей секции "Навигация" 1024*/
   /*начало стилей секции "Вы интересовались" 1024*/
   .interested .text {
@@ -2537,12 +2611,6 @@
 
   /*конец стилей секции "Вы интересовались" 1024*/
   /*начало стилей секции "Каталог" 1024*/
-  .catalog-text {
-    max-width: 58.9rem;
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-  }
-
   .title-big {
     font-size: 3.2rem;
   }
@@ -2672,12 +2740,19 @@
         -ms-flex-align: center;
             align-items: center;
     opacity: 0.6;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    color: #537791;
   }
   .products__filters-item:hover {
     cursor: pointer;
+    opacity: 1;
   }
   .products__filters-item svg {
     display: none;
+    width: 2.4rem;
+    height: 1rem;
   }
 
   .products__filters-item.active {
@@ -2699,6 +2774,15 @@
 
   .products__filters-tabs-img:hover {
     cursor: pointer;
+  }
+  .products__filters-tabs-img svg rect {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .products__filters-tabs-img:not(.active):hover svg rect {
+    stroke: #537791;
   }
 
   .products__tiles-item {
@@ -2930,6 +3014,9 @@
 
   /*конец стилей секции "главный экран" 1024*/
   /*начало стилей секции "Описание" 1024*/
+  .description {
+    padding-bottom: 2.8rem;
+  }
   .description .text {
     font-size: 1.2rem;
     line-height: 2.2rem;
@@ -2971,6 +3058,9 @@
   /*конец стилей секции "Описание" 1024*
 
   /*начало стилей секции "Чертежи и 3D схемы" 1024*/
+  .drawings {
+    padding: 2.8rem 0;
+  }
   .drawings .scroll {
     padding: 0;
   }
@@ -3003,7 +3093,22 @@
   }
 
   /*конец стилей секции "Чертежи и 3D схемы" 1024*/
+  /*начало стилей секции "Особенности конструкции" 1024*/
+  .features {
+    padding: 2.8rem 0;
+  }
+
+  /*конец стилей секции "Особенности конструкции" 1024*/
+  /*начало стилей секции "Комплектация" 1024*/
+  .equipment {
+    padding: 2.8rem 0;
+  }
+
+  /*конец стилей секции "Комплектация" 1024*/
   /*начало стилей секции "Галерея товара" 1024*/
+  .gallery {
+    padding: 2.8rem 0;
+  }
   .gallery .scroll {
     padding: 0;
   }
@@ -3024,6 +3129,9 @@
 
   /*конец стилей секции "Галерея товара" 1024*/
   /*начало стилей секции "Доставка и оплата" 1024*/
+  .delivery {
+    padding-top: 2.8rem;
+  }
   .delivery .text {
     font-size: 1.2rem;
     line-height: 2.2rem;
@@ -3088,6 +3196,53 @@
   }
 
   /*конец стилей секции "Вариант линии гранулирования с этим товаром" 1024*/
+  /*##############################################################################################################################*/
+  /*Наши услуги*/
+  /*начало стилей секции "Сервис и услуги" 1024*/
+  .service .btn-rect {
+    padding: 1rem 2.55rem;
+    font-size: 1.4rem;
+  }
+  .service .btn-wrapper {
+    display: none;
+  }
+
+  .service__wrapper {
+    margin-top: 4.8rem;
+  }
+
+  .service__item:hover .btn-wrapper {
+    display: block;
+  }
+  .service__item:hover .service__content {
+    -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+    -webkit-transition: height 0.3s ease;
+    -o-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+  }
+
+  .service__image {
+    width: 33rem;
+    height: 23.2rem;
+  }
+
+  .service__content {
+    max-width: 49.4rem;
+  }
+
+  .service__content-title {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .service__content-text {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  /*конец стилей секции "Сервис и услуги" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

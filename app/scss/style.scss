@@ -2598,6 +2598,19 @@ section {
     font-family: Formular-Medium;
     line-height: 1.8rem;
     color: #262628;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
 }
 
 .option__request {
@@ -2608,8 +2621,6 @@ section {
         font-size: 1.4rem;
     }
 }
-
-.option__request-text {}
 
 .option__request-name {
     margin-bottom: 0.8rem;
@@ -2624,14 +2635,6 @@ section {
     line-height: 2rem;
     color: #FF6D1A;
 }
-
-.option__request-buttons {}
-
-.btn-wrapper {}
-
-.btn-rect {}
-
-.key-btn {}
 
 .key-btn__span {
     position: relative;
@@ -2656,6 +2659,115 @@ section {
 }
 
 /*конец стилей секции "Вариант линии гранулирования с этим товаром" 320*/
+
+/*##############################################################################################################################*/
+/*Наши услуги*/
+
+/*начало стилей секции "Сервис и услуги" 320*/
+.service {
+    padding-top: 0;
+
+    .show-btn {
+        span {
+            color: #537791;
+
+            &::after {
+                border-top: 1px solid #537791;
+                border-right: 1px solid #537791;
+            }
+        }
+    }
+
+    .btn-wrapper {
+        margin-top: 1.6rem;
+        text-align: left;
+    }
+
+    .btn-rect {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+}
+
+.service__wrapper {
+    margin-top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service__item {
+    padding: 0.8rem 0;
+    position: relative;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.service__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 17.8rem;
+    height: auto;
+    width: 14.1rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg, #FFFFFF 10.94%, rgba(255, 255, 255, 0) 93.23%);
+
+    }
+}
+
+.service__content {
+    margin-left: 9.2rem;
+    max-width: 19.6rem;
+}
+
+.service__content-title {
+    font-family: Formular-Bold;
+    line-height: 1.6rem;
+    color: #3E4A61;
+}
+
+.service__content-text {
+    margin: 0.8rem 0;
+    line-height: 1.8rem;
+    color: #537791;
+    max-height: 5.4rem;
+    overflow: hidden;
+}
+
+.service__content-text.active {
+    max-height: fit-content;
+    overflow: visible;
+}
+
+/*конец стилей секции "Сервис и услуги" 320*/
 
 @keyframes fadeEffect {
     from {
