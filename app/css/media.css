@@ -1070,15 +1070,19 @@
     box-orient: vertical;
   }
 
-  .products__pages-nav {
+  .pages-nav {
     margin-top: 2.4rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: none;
   }
 
-  .products__pages-nav-numbers {
+  .pages-nav-numbers {
     margin: 0 2.928rem;
   }
 
-  .products__pages-nav-item {
+  .pages-nav-item {
     margin-right: 1.6rem;
   }
 
@@ -1396,6 +1400,43 @@
   }
 
   /*конец стилей секции "Сервис и услуги" 668*/
+  /*##############################################################################################################################*/
+  /*Список акций*/
+  /*начало стилей секции "Список акций" 668*/
+  .stocks__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .stocks__item {
+    max-width: 19.9rem;
+    margin-bottom: 0.8rem;
+  }
+  .stocks__item:nth-last-of-type(1) {
+    margin-bottom: 0.8rem;
+  }
+
+  .stocks__item-link {
+    min-height: 21.6rem;
+  }
+
+  .stocks__item-image {
+    width: 19.9rem;
+    height: 11rem;
+  }
+
+  .stocks__item-text {
+    margin-top: 0.8rem;
+  }
+
+  /*конец стилей секции "Список акций" 668*/
 }
 @media (min-width: 1024px) {
   html {
@@ -1485,6 +1526,16 @@
     -webkit-transform: scale(1.105);
         -ms-transform: scale(1.105);
             transform: scale(1.105);
+  }
+
+  .key-btn__span::after {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .key-btn:hover .key-btn__span::after {
+    width: 0;
   }
 
   .scroll {
@@ -2924,57 +2975,57 @@
     line-clamp: 4;
   }
 
-  .products__btn-more span {
+  .btn-more span {
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
   }
-  .products__btn-more span::before {
+  .btn-more span::before {
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
   }
-  .products__btn-more:hover span {
+  .btn-more:hover span {
     color: #FF6D1A;
   }
-  .products__btn-more:hover span::before {
+  .btn-more:hover span::before {
     border-top: 1px solid #FF6D1A;
     border-right: 1px solid #FF6D1A;
   }
 
-  .products__btn-more-span {
+  .btn-more-span {
     font-family: Formular-Medium;
   }
 
-  .products__pages-nav-arrow {
+  .pages-nav-arrow {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     width: 0.7rem;
     height: 0.7rem;
   }
-  .products__pages-nav-arrow svg {
+  .pages-nav-arrow svg {
     width: 100%;
     height: auto;
   }
-  .products__pages-nav-arrow svg path {
+  .pages-nav-arrow svg path {
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
   }
-  .products__pages-nav-arrow:hover svg path {
+  .pages-nav-arrow:hover svg path {
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
     fill: #FF6D1A;
   }
 
-  .products__pages-nav-item {
+  .pages-nav-item {
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
   }
-  .products__pages-nav-item:hover {
+  .pages-nav-item:hover {
     color: #FF6D1A;
   }
 
@@ -3050,6 +3101,13 @@
   .description__models-link {
     padding: 0.4rem;
     width: 6.8rem;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .description__models-link:not(.active):hover {
+    color: #7EB8E2;
   }
 
   .swiper-card-description {
@@ -3261,6 +3319,51 @@
   }
 
   /*конец стилей секции "Сервис и услуги" 1024*/
+  /*начало стилей секции "Список акций" 1024*/
+  .stocks__item {
+    position: relative;
+    max-width: 27rem;
+    border-radius: 1.6rem;
+  }
+  .stocks__item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
+    background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    opacity: 0;
+    border-radius: 1.6rem;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  .stocks__item:hover::before {
+    opacity: 1;
+  }
+
+  .stocks__item-link {
+    padding: 0.8rem;
+    min-height: 26.4rem;
+  }
+
+  .stocks__item-image {
+    width: 25.4rem;
+    height: 13.4rem;
+  }
+
+  .stocks__item-name {
+    line-height: 2rem;
+  }
+
+  .stocks__item-desc {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  /*конец стилей секции "Список акций" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

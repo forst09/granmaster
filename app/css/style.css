@@ -1996,18 +1996,18 @@ section {
   display: none;
 }
 
-.products__btn-more {
+.btn-more {
   padding-left: 2.3rem;
   display: inline-block;
 }
 
-.products__btn-more-span {
+.btn-more-span {
   position: relative;
   font-size: 1.2rem;
   line-height: 2rem;
   color: #262628;
 }
-.products__btn-more-span::before {
+.btn-more-span::before {
   content: "";
   position: absolute;
   width: 0.638rem;
@@ -2021,32 +2021,33 @@ section {
   left: -2.2rem;
 }
 
-.products__pages-nav {
-  margin-top: 1.6rem;
+.pages-nav {
+  margin: 1.6rem auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 25.2rem;
 }
 
-.products__pages-nav-numbers {
+.pages-nav-numbers {
   margin: 0 1.728rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.products__pages-nav-arrow,
-.products__pages-nav-item {
+.pages-nav-arrow,
+.pages-nav-item {
   display: inline-block;
 }
 
-.products__pages-nav-item {
+.pages-nav-item {
   margin-right: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2061,16 +2062,16 @@ section {
   color: #262628;
   width: 2rem;
 }
-.products__pages-nav-item:nth-last-of-type(1) {
+.pages-nav-item:nth-last-of-type(1) {
   margin-right: 0;
 }
 
-.products__pages-nav-item.active {
+.pages-nav-item.active {
   padding-bottom: 0.2rem;
   position: relative;
   color: #FF6D1A;
 }
-.products__pages-nav-item.active::after {
+.pages-nav-item.active::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -2677,6 +2678,136 @@ section {
 }
 
 /*конец стилей секции "Сервис и услуги" 320*/
+/*##############################################################################################################################*/
+/*Список акций*/
+/*начало стилей секции "Список акций" 320*/
+.stocks {
+  padding-top: 0;
+}
+
+.stocks__wrapper {
+  margin: 3.2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stocks__item {
+  margin-bottom: 2.4rem;
+}
+.stocks__item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.stocks__item-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stocks__item-image {
+  width: 29rem;
+  height: 13rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+.stocks__item-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stocks__item-text {
+  margin-top: 1rem;
+}
+
+.stocks__item-date {
+  line-height: 1.4rem;
+  color: #537791;
+  opacity: 0.8;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.stocks__item-date-flame {
+  position: relative;
+  color: #FF6D1A;
+  padding-left: 1.9rem;
+}
+.stocks__item-date-flame::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.1rem;
+  height: 1.4rem;
+  background-image: url("../img/stocks-list/flame.svg");
+  top: calc(50% - 0.7rem);
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.stocks__item-name {
+  margin-top: 0.4rem;
+  font-family: Formular-Medium;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #262628;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.stocks__item-desc {
+  margin-top: 0.4rem;
+  line-height: 1.6rem;
+  color: #537791;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+/*конец стилей секции "Список акций" 320*/
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;

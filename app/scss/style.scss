@@ -1,4 +1,4 @@
-// @import "index/header";
+@import "variables.scss";
 
 html {
     font-family: Formular;
@@ -29,7 +29,7 @@ section {
     font-size: 1.6rem;
     line-height: 2.4rem;
     text-align: center;
-    color: #262628;
+    color: $black;
 }
 
 .title-medium {
@@ -66,7 +66,7 @@ section {
 
 .text {
     font-family: 'Formular';
-    color: #537791;
+    color: $light-gray;
     line-height: 1.8rem;
     text-align: center;
 
@@ -78,7 +78,7 @@ section {
         text-align: left;
         font-size: 1.4rem;
         line-height: 1.72rem;
-        color: #262628;
+        color: $black;
     }
 
     ul {
@@ -95,7 +95,7 @@ section {
                 position: absolute;
                 height: 1px;
                 width: 2rem;
-                background-color: #7EB8E2;
+                background-color: $blue;
                 left: 0;
                 top: 50%;
             }
@@ -181,7 +181,7 @@ section {
 }
 
 .title__span {
-    color: #FF6D1A;
+    color: $orange;
 }
 
 .socials {
@@ -270,7 +270,7 @@ section {
 
 .swiper-slide-thumb-active {
     .years__pagination-text {
-        color: #FF6D1A;
+        color: $orange;
     }
 }
 
@@ -290,7 +290,7 @@ section {
 .main-pagination .swiper-pagination-bullet,
 .main-pagination .swiper-pagination-bullet-active {
     height: 2px;
-    background-color: #7EB8E2;
+    background-color: $blue;
 }
 
 .main-pagination .swiper-pagination-bullet {
@@ -340,7 +340,7 @@ section {
         position: absolute;
         height: 1.5px;
         width: 2.4rem;
-        background-color: #7EB8E2;
+        background-color: $blue;
     }
 
     &::before {
@@ -356,7 +356,7 @@ section {
     display: block;
     width: 2.4rem;
     height: 1.5px;
-    background-color: #7EB8E2;
+    background-color: $blue;
 }
 
 .header__logo-link {
@@ -459,7 +459,7 @@ section {
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-        , #E5F1F9;
+        , $light-blue;
     border-radius: 0px 0px 24px 24px;
 }
 
@@ -468,14 +468,14 @@ section {
     font-family: Formular-Black;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: #262628;
+    color: $black;
 }
 
 .main__desc {
     font-family: Formular-Medium;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: #537791;
+    color: $light-gray;
 }
 
 .main__image {
@@ -532,7 +532,7 @@ section {
     display: inline-block;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    color: #FF6D1A;
+    color: $orange;
 
     &::after {
         content: '';
@@ -540,8 +540,8 @@ section {
         display: block;
         width: 0.6rem;
         height: 0.6rem;
-        border-top: 1px solid #FF6D1A;
-        border-right: 1px solid #FF6D1A;
+        border-top: 1px solid $orange;
+        border-right: 1px solid $orange;
         right: -1.6rem;
         top: calc(50% - 0.3rem);
     }
@@ -688,7 +688,7 @@ section {
     font-family: Formular-Bold;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: #3E4A61;
+    color: $gray;
     z-index: 10;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -772,7 +772,7 @@ section {
     margin: 0.6rem 0;
     font-family: Formular-Medium;
     line-height: 2rem;
-    color: #FF6D1A;
+    color: $orange;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -842,7 +842,7 @@ section {
     font-family: Formular-Bold;
     font-size: 1.4rem;
     line-height: 2.2rem;
-    color: #3E4A61;
+    color: $gray;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -895,14 +895,14 @@ section {
     line-height: 2.6rem;
     font-family: Formular-Bold;
     font-size: 1.4rem;
-    color: #FF6D1A;
+    color: $orange;
 
     &::after {
         content: '';
         position: absolute;
         height: 1px;
         width: 4.1rem;
-        background-color: #FF6D1A;
+        background-color: $orange;
         bottom: 0;
         left: 0;
         transition: 0.3s ease;
@@ -936,7 +936,7 @@ section {
 .years__pagination-text {
     font-family: Formular-Medium;
     line-height: 1.6rem;
-    color: #3E4A61;
+    color: $gray;
     width: 13.4rem;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -1004,7 +1004,7 @@ section {
     font-family: Formular-Medium;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    color: #FF6D1A;
+    color: $orange;
     max-width: 20rem;
     z-index: 10;
     -ms-text-overflow: ellipsis;
@@ -1028,7 +1028,7 @@ section {
     font-family: Formular-Black;
     font-size: 12.8rem;
     line-height: 12.8rem;
-    color: #7EB8E2;
+    color: $blue;
     opacity: 0.14;
 }
 
@@ -1056,7 +1056,7 @@ section {
     width: 100%;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: #537791;
+    color: $light-gray;
     border: 1px solid rgba(126, 184, 226, 0.2);
     border-radius: 0.8rem;
     font-family: Formular;
@@ -1064,7 +1064,7 @@ section {
     &::placeholder {
         font-size: 1.2rem;
         line-height: 2rem;
-        color: #537791;
+        color: $light-gray;
         opacity: 0.8;
     }
 }
@@ -1109,14 +1109,14 @@ section {
 .consultation__agreement {
     margin: 1.6rem auto 4.1rem;
     line-height: 1.4rem;
-    color: #537791;
+    color: $light-gray;
     opacity: 0.8;
     text-align: center;
     max-width: 21rem;
 }
 
 .consultation__agreement-link {
-    border-bottom: 0.5px solid #537791;
+    border-bottom: 0.5px solid $light-gray;
 }
 
 .consultation__btn-download-wrapper {
@@ -1178,7 +1178,7 @@ section {
     font-family: Formular-Bold;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    color: #FF6D1A;
+    color: $orange;
     transition: 0.3s ease;
 
     svg {
@@ -1254,7 +1254,7 @@ section {
 .contacts__mail {
     font-size: 1.2rem;
     line-height: 1.8rem;
-    color: #3E4A61;
+    color: $gray;
 }
 
 .contacts__address {
@@ -1336,7 +1336,7 @@ section {
     padding: 2.4rem 0 3.9rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 8.32%, #FFFFFF 53.78%), radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-        , #E5F1F9;
+        , $light-blue;
     border-radius: 1.6rem 1.6rem 0 0;
     z-index: 3;
 }
@@ -1374,7 +1374,7 @@ section {
     font-family: Formular-Bold;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    color: #FF6D1A;
+    color: $orange;
     transition: 0.3s ease;
 
     &:hover {
@@ -1405,12 +1405,12 @@ section {
 }
 
 .footer__link {
-    color: #3E4A61;
+    color: $gray;
     line-height: 1.6rem;
     transition: 0.3s ease;
 
     &:hover {
-        color: #FF6D1A;
+        color: $orange;
     }
 }
 
@@ -1418,7 +1418,7 @@ section {
 .footer__mail,
 .footer__work {
     line-height: 1.4rem;
-    color: #3E4A61;
+    color: $gray;
 }
 
 .footer__mail {
@@ -1432,7 +1432,7 @@ section {
     //     position: absolute;
     //     width: 6.5rem;
     //     height: 0.5px;
-    //     background-color: #3E4A61;
+    //     background-color: $gray;
     //     bottom: -0.2rem;
     //     left: 2.8rem;
     //     transition: 0.3s ease;
@@ -1547,7 +1547,7 @@ section {
         position: absolute;
         width: 6.5rem;
         height: 0.5px;
-        background-color: #3E4A61;
+        background-color: $gray;
         bottom: -0.2rem;
         left: 0;
         transition: 0.3s ease;
@@ -1576,7 +1576,7 @@ section {
     position: relative;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    color: #3E4A61;
+    color: $gray;
     width: 7.7rem;
 
     // &::after {
@@ -1586,7 +1586,7 @@ section {
     //     left: 0;
     //     height: 0.5px;
     //     width: 3.8rem;
-    //     background-color: #FF6D1A;
+    //     background-color: $orange;
     // }
 }
 
@@ -1650,7 +1650,7 @@ section {
     padding-left: 2.5rem;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    color: #7EB8E2;
+    color: $blue;
 
     &::before {
         content: '';
@@ -1659,8 +1659,8 @@ section {
         height: 0.8rem;
         top: calc(50% - 0.4rem);
         left: 0.15rem;
-        border-top: 1px solid #7EB8E2;
-        border-right: 1px solid #7EB8E2;
+        border-top: 1px solid $blue;
+        border-right: 1px solid $blue;
         transform: rotate(-135deg);
         opacity: 0.5;
     }
@@ -1679,7 +1679,7 @@ section {
     font-family: Formular-Black;
     font-size: 1.8rem;
     line-height: 2.6rem;
-    color: #262628;
+    color: $black;
 }
 
 .catalog__item-granulation {
@@ -1691,7 +1691,7 @@ section {
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , radial-gradient(83.61% 224.57% at 0% 0%, rgba(54, 87, 151, 0.5) 0%, rgba(51, 80, 134, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-        , #3E4A61;
+        , $gray;
     // width: 100%;
     // background-image: url(../img/catalog-1lvl/granulation.png);
 
@@ -1755,7 +1755,7 @@ section {
     padding-right: 1.7rem;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    color: #FF6D1A;
+    color: $orange;
 
     &::after {
         content: '';
@@ -1763,8 +1763,8 @@ section {
         display: block;
         width: 0.6rem;
         height: 0.6rem;
-        border-top: 1px solid #FF6D1A;
-        border-right: 1px solid #FF6D1A;
+        border-top: 1px solid $orange;
+        border-right: 1px solid $orange;
         right: 0.1rem;
         top: calc(50% - 0.3rem);
     }
@@ -1845,13 +1845,13 @@ section {
     margin-bottom: 0.8rem;
     font-family: Formular-Bold;
     line-height: 1.6rem;
-    color: #262628;
+    color: $black;
 }
 
 .interested__card-property {
     font-family: Formular-Medium;
     line-height: 1.2rem;
-    color: #537791;
+    color: $light-gray;
 }
 
 .interested__card-dash {
@@ -1863,7 +1863,7 @@ section {
     display: block;
     font-family: Formular;
     line-height: 1.8rem;
-    color: #537791;
+    color: $light-gray;
 }
 
 /*конец стилей секции "Вы интересовались" 320*/
@@ -1933,13 +1933,13 @@ section {
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-        , #E5F1F9;
+        , $light-blue;
     border-radius: 0.8rem;
 }
 
 .products__navigation-text {
     font-family: Formular-Bold;
-    color: #3E4A61;
+    color: $gray;
     line-height: 1.6rem;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -1977,7 +1977,7 @@ section {
     display: inline-block;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: #537791;
+    color: $light-gray;
 }
 
 .products__filters-list-span {
@@ -1991,8 +1991,8 @@ section {
         height: 0.6rem;
         right: -2.3rem;
         top: calc(50% - 0.3rem);
-        border-top: 1px solid #537791;
-        border-right: 1px solid #537791;
+        border-top: 1px solid $light-gray;
+        border-right: 1px solid $light-gray;
         transform: rotate(135deg);
     }
 }
@@ -2047,7 +2047,7 @@ section {
     margin-bottom: 0.6rem;
     font-family: Formular-Bold;
     line-height: 1.8rem;
-    color: #262628;
+    color: $black;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -2069,7 +2069,7 @@ section {
     margin-bottom: 0.4rem;
     font-family: Formular-Medium;
     line-height: 1.8rem;
-    color: #537791;
+    color: $light-gray;
 }
 
 .products__lines-info-dash {
@@ -2079,7 +2079,7 @@ section {
 .products__lines-info-value {
     display: block;
     font-family: Formular;
-    color: #537791;
+    color: $light-gray;
     line-height: 1.4rem;
 }
 
@@ -2087,58 +2087,55 @@ section {
     display: none;
 }
 
-.products__btn-more {
+.btn-more {
     padding-left: 2.3rem;
     display: inline-block;
 }
 
-.products__btn-more-span {
+.btn-more-span {
     position: relative;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: #262628;
+    color: $black;
 
     &::before {
         content: '';
         position: absolute;
         width: 0.638rem;
         height: 0.638rem;
-        border-top: 1px solid #262628;
-        border-right: 1px solid #262628;
+        border-top: 1px solid $black;
+        border-right: 1px solid $black;
         transform: rotate(135deg);
         top: calc(50% - 0.319rem);
         left: -2.2rem;
     }
 }
 
-.products__pages-nav {
-    margin-top: 1.6rem;
+.pages-nav {
+    margin: 1.6rem auto 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 25.2rem;
 }
 
-.products__pages-nav-numbers {
+.pages-nav-numbers {
     margin: 0 1.728rem;
     display: flex;
 }
 
-.products__pages-nav-arrow,
-.products__pages-nav-item {
+.pages-nav-arrow,
+.pages-nav-item {
     display: inline-block;
 }
 
-// .products__pages-nav-arrow {
-//     height: 1rem;
-// }
-
-.products__pages-nav-item {
+.pages-nav-item {
     margin-right: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: 1.8rem;
-    color: #262628;
+    color: $black;
     width: 2rem;
 
     &:nth-last-of-type(1) {
@@ -2146,17 +2143,17 @@ section {
     }
 }
 
-.products__pages-nav-item.active {
+.pages-nav-item.active {
     padding-bottom: 0.2rem;
     position: relative;
-    color: #FF6D1A;
+    color: $orange;
 
     &::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 1px;
-        background-color: #FF6D1A;
+        background-color: $orange;
         // bottom: -0.2rem;
         bottom: 0;
         left: 0;
@@ -2178,7 +2175,7 @@ section {
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-        , #E5F1F9;
+        , $light-blue;
     border-radius: 0px 0px 2.4rem 2.4rem;
 
     .title-big {
@@ -2205,7 +2202,7 @@ section {
     font-family: Formular-Black;
     font-size: 1.6rem;
     line-height: 2.6rem;
-    color: #262628;
+    color: $black;
 }
 
 .card-main__cost-old {
@@ -2214,7 +2211,7 @@ section {
     font-size: 1.2rem;
     line-height: 1.8rem;
     text-decoration-line: line-through;
-    color: #537791;
+    color: $light-gray;
     opacity: 0.5;
 }
 
@@ -2265,7 +2262,7 @@ section {
         font-family: Formular-Medium;
         font-size: 1.2rem;
         line-height: 1.4rem;
-        color: #537791;
+        color: $light-gray;
         opacity: 0.8;
     }
 
@@ -2276,11 +2273,11 @@ section {
 
 .card-main__icons-item-major {
     span {
-        color: #FF6D1A;
+        color: $orange;
     }
 
     .card-main__icons-dash {
-        background-color: #FF6D1A;
+        background-color: $orange;
     }
 }
 
@@ -2288,7 +2285,7 @@ section {
     margin: 0 0.8rem;
     width: 0.2rem;
     height: 1px;
-    background-color: #537791;
+    background-color: $light-gray;
 }
 
 /*конец стилей секции "главный экран" 320*/
@@ -2306,11 +2303,11 @@ section {
         display: inline-block;
 
         span {
-            color: #537791;
+            color: $light-gray;
 
             &::after {
-                border-top: 1px solid #537791;
-                border-right: 1px solid #537791;
+                border-top: 1px solid $light-gray;
+                border-right: 1px solid $light-gray;
             }
         }
     }
@@ -2327,7 +2324,7 @@ section {
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.7rem;
-    color: #537791;
+    color: $light-gray;
 }
 
 .swiper-card-description {
@@ -2353,7 +2350,7 @@ section {
     width: 6.4rem;
     line-height: 1.8rem;
     text-align: center;
-    color: #262628;
+    color: $black;
     border: 1px solid rgba(126, 184, 226, 0.1);
     border-radius: 0.8rem;
 
@@ -2374,7 +2371,7 @@ section {
 }
 
 .description__models-link.active {
-    color: #FF6D1A;
+    color: $orange;
     border: 1px solid rgba(255, 109, 26, 0.1);
 }
 
@@ -2385,11 +2382,11 @@ section {
     padding: 1.6rem 0;
 
     span {
-        color: #537791;
+        color: $light-gray;
 
         &::after {
-            border-top: 1px solid #537791;
-            border-right: 1px solid #537791;
+            border-top: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
         }
     }
 }
@@ -2494,16 +2491,16 @@ section {
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
         , radial-gradient(32.2% 115.38% at 26.68% 29.72%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-        , #E5F1F9;
+        , $light-blue;
     border-radius: 0px 0px 2.4rem 2.4rem;
 
     .show-btn {
         span {
-            color: #537791;
+            color: $light-gray;
 
             &::after {
-                border-top: 1px solid #537791;
-                border-right: 1px solid #537791;
+                border-top: 1px solid $light-gray;
+                border-right: 1px solid $light-gray;
             }
         }
 
@@ -2547,7 +2544,7 @@ section {
         font-size: 1.6rem;
         line-height: 2.4rem;
         text-align: center;
-        color: #FF6D1A;
+        color: $orange;
         font-family: Formular-Black;
     }
 }
@@ -2590,14 +2587,14 @@ section {
     margin-bottom: 0.2rem;
     font-family: Formular-Medium;
     line-height: 1.8rem;
-    color: #FF6D1A;
+    color: $orange;
 
 }
 
 .option__cards-name {
     font-family: Formular-Medium;
     line-height: 1.8rem;
-    color: #262628;
+    color: $black;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -2627,20 +2624,20 @@ section {
     font-family: Formular-Black;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: #262628;
+    color: $black;
 }
 
 .option__request-power {
     font-size: 1.2rem;
     line-height: 2rem;
-    color: #FF6D1A;
+    color: $orange;
 }
 
 .key-btn__span {
     position: relative;
     line-height: 1.8rem;
     padding-bottom: 0.2rem;
-    color: #FF6D1A;
+    color: $orange;
     font-family: Formular-Bold;
 
     &::after {
@@ -2648,7 +2645,7 @@ section {
         position: absolute;
         width: 100%;
         height: 1px;
-        background-color: #FF6D1A;
+        background-color: $orange;
         bottom: 0;
         left: 0;
     }
@@ -2669,11 +2666,11 @@ section {
 
     .show-btn {
         span {
-            color: #537791;
+            color: $light-gray;
 
             &::after {
-                border-top: 1px solid #537791;
-                border-right: 1px solid #537791;
+                border-top: 1px solid $light-gray;
+                border-right: 1px solid $light-gray;
             }
         }
     }
@@ -2751,13 +2748,13 @@ section {
 .service__content-title {
     font-family: Formular-Bold;
     line-height: 1.6rem;
-    color: #3E4A61;
+    color: $gray;
 }
 
 .service__content-text {
     margin: 0.8rem 0;
     line-height: 1.8rem;
-    color: #537791;
+    color: $light-gray;
     max-height: 5.4rem;
     overflow: hidden;
 }
@@ -2768,6 +2765,128 @@ section {
 }
 
 /*конец стилей секции "Сервис и услуги" 320*/
+
+/*##############################################################################################################################*/
+/*Список акций*/
+
+/*начало стилей секции "Список акций" 320*/
+.stocks {
+    padding-top: 0;
+}
+
+.stocks__wrapper {
+    margin: 3.2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stocks__item {
+    margin-bottom: 2.4rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.stocks__item-link {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.stocks__item-image {
+    width: 29rem;
+    height: 13rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.stocks__item-text {
+    margin-top: 1rem;
+}
+
+.stocks__item-date {
+    line-height: 1.4rem;
+    color: $light-gray;
+    opacity: 0.8;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.stocks__item-date-flame {
+    position: relative;
+    color: $orange;
+    padding-left: 1.9rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1.1rem;
+        height: 1.4rem;
+        background-image: url('../img/stocks-list/flame.svg');
+        top: calc(50% - 0.7rem);
+        left: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+.stocks__item-name {
+    margin-top: 0.4rem;
+    font-family: Formular-Medium;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: $black;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.stocks__item-desc {
+    margin-top: 0.4rem;
+    line-height: 1.6rem;
+    color: $light-gray;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+/*конец стилей секции "Список акций" 320*/
 
 @keyframes fadeEffect {
     from {
