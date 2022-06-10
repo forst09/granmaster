@@ -1108,12 +1108,12 @@
             flex-direction: row;
   }
 
-  .card-main__cost {
+  .cost {
     font-size: 1.8rem;
     line-height: 2.8rem;
   }
 
-  .card-main__cost-old {
+  .cost-old {
     font-size: 1.4rem;
     line-height: 2rem;
   }
@@ -1124,7 +1124,7 @@
         flex-shrink: 0;
   }
 
-  .card-main__icons-container {
+  .characteristics-icon {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1136,13 +1136,14 @@
             justify-content: space-between;
   }
 
-  .card-main__icons-item {
+  .characteristics-icon__item {
     margin-bottom: 1rem;
+    margin-right: 0;
     -webkit-box-flex: 0;
         -ms-flex: 0 39%;
             flex: 0 39%;
   }
-  .card-main__icons-item svg {
+  .characteristics-icon__item svg {
     margin-right: 0.8rem;
   }
 
@@ -1345,6 +1346,7 @@
     margin-top: 2.4rem;
     width: 51.5rem;
     height: 19.8rem;
+    text-align: center;
   }
 
   /*конец стилей секции "Вариант линии гранулирования с этим товаром" 668*/
@@ -3081,7 +3083,7 @@
     margin-top: 3.2rem;
   }
 
-  .card-main__cost-wrapper {
+  .cost-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3090,12 +3092,12 @@
             align-items: center;
   }
 
-  .card-main__cost {
+  .cost {
     font-size: 2.4rem;
     line-height: 3.6rem;
   }
 
-  .card-main__cost-old {
+  .cost-old {
     font-size: 1.6rem;
     line-height: 3.6rem;
   }
@@ -3106,11 +3108,11 @@
     height: 28rem;
   }
 
-  .card-main__icons-container {
+  .characteristics-icon {
     margin-top: 3.7rem;
   }
 
-  .card-main__icons-item {
+  .characteristics-icon__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 33%;
             flex: 0 33%;
