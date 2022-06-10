@@ -64,6 +64,8 @@
 
   .text-other {
     line-height: 2rem;
+    max-width: 43.4rem;
+    margin: 0 auto;
   }
 
   .text-max-width {
@@ -339,10 +341,6 @@
   }
   .demanded .title-container-mini {
     margin-bottom: 0.8rem;
-  }
-  .demanded .text {
-    margin: 0 auto;
-    max-width: 47.4rem;
   }
 
   .demanded__container {
@@ -1437,6 +1435,48 @@
   }
 
   /*конец стилей секции "Список акций" 668*/
+  /*##############################################################################################################################*/
+  /*Страница акции*/
+  /*начало стилей секции "информация об акции" 668*/
+  .stock-info {
+    padding-bottom: 0.8rem;
+  }
+  .stock-info .text {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .stock-info__banner {
+    margin: 2rem 0;
+    padding: 3.9rem 2.4rem 3.9rem 1.6rem;
+    min-height: 15rem;
+  }
+  .stock-info__banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.8rem;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  }
+
+  .stock-info__title {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    max-width: none;
+  }
+
+  /*конец стилей секции "информация об акции" 668*/
+  /*начало стилей секции "То, что идет по данной акции" 668*/
+  .swiper-stock-cards {
+    margin-top: 4.8rem;
+  }
+
+  /*конец стилей секции "То, что идет по данной акции" 668*/
 }
 @media (min-width: 1024px) {
   html {
@@ -1508,6 +1548,7 @@
   .text-other {
     font-size: 1.4rem;
     line-height: 2.2rem;
+    max-width: 61rem;
   }
 
   .btn-wrapper {
@@ -2096,11 +2137,6 @@
   .demanded .title-container-mini {
     margin-bottom: 0.8rem;
   }
-  .demanded .text {
-    max-width: 61rem;
-    font-size: 1.4rem;
-    line-height: 2.2rem;
-  }
   .demanded .scroll {
     padding: 0;
   }
@@ -2114,7 +2150,6 @@
     max-width: 23.4rem;
     width: 100%;
     height: 27.7rem;
-    margin-right: 0;
     padding: 2.4rem;
   }
 
@@ -3319,6 +3354,8 @@
   }
 
   /*конец стилей секции "Сервис и услуги" 1024*/
+  /*##############################################################################################################################*/
+  /*Список акций*/
   /*начало стилей секции "Список акций" 1024*/
   .stocks__item {
     position: relative;
@@ -3364,6 +3401,43 @@
   }
 
   /*конец стилей секции "Список акций" 1024*/
+  /*##############################################################################################################################*/
+  /*Страница акции*/
+  /*начало стилей секции "информация об акции" 1024*/
+  .stock-info .text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .stock-info__banner {
+    margin: 1.6rem 0 2.4rem;
+    padding: 5.7rem 4.2rem 5.7rem 3.2rem;
+    min-height: 18.5rem;
+  }
+
+  .stock-info__title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+  }
+
+  /*конец стилей секции "информация об акции" 1024*/
+  /*начало стилей секции "То, что идет по данной акции" 1024*/
+  .stock-cards .scroll {
+    padding: 0;
+  }
+
+  .swiper-stock-cards {
+    margin-top: 5.6rem;
+    display: block;
+    padding: 0 9.4rem;
+  }
+  .swiper-stock-cards .swiper-slide {
+    -ms-flex-negative: unset;
+        flex-shrink: unset;
+    width: 100% !important;
+  }
+
+  /*конец стилей секции "То, что идет по данной акции" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

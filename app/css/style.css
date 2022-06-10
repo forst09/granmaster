@@ -714,7 +714,6 @@ section {
 
 .demanded__item {
   display: block;
-  margin-right: 1.6rem;
   padding: 2.4rem 1.6rem;
   width: 14.5rem;
   height: 20.5rem;
@@ -2701,6 +2700,7 @@ section {
 
 .stocks__item {
   margin-bottom: 2.4rem;
+  max-width: 29rem;
 }
 .stocks__item:nth-last-of-type(1) {
   margin-bottom: 0;
@@ -2808,6 +2808,97 @@ section {
 }
 
 /*конец стилей секции "Список акций" 320*/
+/*##############################################################################################################################*/
+/*Страница акции*/
+/*начало стилей секции "информация об акции" 320*/
+.stock-info {
+  padding-top: 0;
+  padding-bottom: 1.2rem;
+}
+
+.stock-info__validity {
+  line-height: 1.4rem;
+  color: #FF6D1A;
+  opacity: 0.8;
+}
+
+.stock-info__banner {
+  margin: 1.6rem 0;
+  padding: 2.4rem 1.6rem;
+  position: relative;
+  border-radius: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  min-height: 14.4rem;
+}
+.stock-info__banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.stock-info__banner-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.stock-info__banner-image img {
+  height: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.stock-info__title {
+  position: relative;
+  z-index: 2;
+  font-family: Formular-Black;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #FFFFFF;
+  max-width: 25.8rem;
+}
+
+/*конец стилей секции "информация об акции" 320*/
+/*начало стилей секции "То, что идет по данной акции" 320*/
+.swiper-stock-cards {
+  margin-top: 3.2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.swiper-stock-cards .swiper-slide {
+  margin-right: 1.6rem;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+/*конец стилей секции "То, что идет по данной акции" 320*/
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;

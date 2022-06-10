@@ -174,6 +174,13 @@ $(document).ready(function () {
                 prevEl: '.card-gallery-button-prev',
             },
         });
+
+        // cтраница акции секция "То, что идет по данной акции"
+        const swiperStockCards = new Swiper('.swiper-stock-cards', {
+            speed: 700,
+            spaceBetween: 18,
+            slidesPerView: 3.39,
+        });
     }
 
     $(document).on('click', ".products__filters-tabs-img", function () {
