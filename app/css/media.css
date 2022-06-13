@@ -1474,6 +1474,10 @@
 
   /*конец стилей секции "информация об акции" 668*/
   /*начало стилей секции "То, что идет по данной акции" 668*/
+  .stock-cards .text {
+    max-width: 43.4rem;
+  }
+
   .swiper-stock-cards {
     margin-top: 4.8rem;
   }
@@ -2909,11 +2913,15 @@
   .products__filters-item.active svg {
     display: block;
   }
+  .products__filters-item.active .products__filters-arrow-top {
+    display: none;
+  }
 
-  .products__filters-item.active.sort svg path {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+  .products__filters-item.active.sort .products__filters-arrow-top {
+    display: block;
+  }
+  .products__filters-item.active.sort .products__filters-arrow-bottom {
+    display: none;
   }
 
   .products__filters-item-link {
@@ -3484,6 +3492,9 @@
 
   /*конец стилей секции "информация об акции" 1024*/
   /*начало стилей секции "То, что идет по данной акции" 1024*/
+  .stock-cards .text {
+    max-width: 61.9rem;
+  }
   .stock-cards .scroll {
     padding: 0;
   }
