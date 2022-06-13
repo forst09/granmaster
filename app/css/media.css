@@ -1481,6 +1481,13 @@
   /*конец стилей секции "То, что идет по данной акции" 668*/
 }
 @media (min-width: 1024px) {
+  .header__menu-catalog-burger {
+    position: relative;
+  }
+  .header__menu-catalog-burger:hover .header__menu-catalog-submenu {
+    display: block;
+  }
+
   html {
     font-size: 0.9765625vw;
   }
@@ -1912,14 +1919,67 @@
     bottom: 0;
   }
 
-  .header__menu-burger {
+  .header__menu-catalog-burger-span {
     display: block;
     width: 1.4rem;
     height: 1px;
     background-color: #FF6D1A;
   }
 
-  .header__menu-span-wrapper {
+  .header__menu-catalog-submenu {
+    padding: 1.2rem;
+    position: absolute;
+    display: none;
+    width: 27.2rem;
+    top: 1.233rem;
+    left: 0;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 9px rgba(38, 38, 40, 0.08);
+            box-shadow: 0px 4px 9px rgba(38, 38, 40, 0.08);
+    border-radius: 0.6rem;
+    z-index: 100;
+    -webkit-animation: fadeEffect 0.3s;
+            animation: fadeEffect 0.3s;
+  }
+
+  .header__menu-catalog-submenu-item {
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    color: #3E4A61;
+    line-height: 1.8rem;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .header__menu-catalog-submenu-item::after {
+    content: "";
+    position: absolute;
+    display: none;
+    right: 0.15rem;
+    width: 0.707rem;
+    height: 0.707rem;
+    top: calc(50% - 0.3535rem);
+    border-top: 1.5px solid #FF6D1A;
+    border-right: 1.5px solid #FF6D1A;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-animation: fadeEffect 0.3s;
+            animation: fadeEffect 0.3s;
+  }
+  .header__menu-catalog-submenu-item:hover {
+    color: #FF6D1A;
+  }
+  .header__menu-catalog-submenu-item:hover::after {
+    display: block;
+  }
+  .header__menu-catalog-submenu-item:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+
+  .header__menu-catalog-burger {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1930,17 +1990,17 @@
     width: 1.4rem;
     height: 1.4rem;
   }
-  .header__menu-span-wrapper::after, .header__menu-span-wrapper::before {
+  .header__menu-catalog-burger::after, .header__menu-catalog-burger::before {
     content: "";
     position: absolute;
     height: 1px;
     width: 1.4rem;
     background-color: #FF6D1A;
   }
-  .header__menu-span-wrapper::after {
+  .header__menu-catalog-burger::after {
     top: 3px;
   }
-  .header__menu-span-wrapper::before {
+  .header__menu-catalog-burger::before {
     bottom: 3px;
   }
 
