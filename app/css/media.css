@@ -37,8 +37,8 @@
     margin-bottom: 2.4rem;
   }
 
-  .title-container {
-    margin-bottom: 3.2rem;
+  .title-max-width {
+    max-width: 39.5rem;
   }
 
   .title-container-mini {
@@ -1136,14 +1136,14 @@
             justify-content: space-between;
   }
 
-  .characteristics-icon__item {
+  .characteristics__item {
     margin-bottom: 1rem;
     margin-right: 0;
     -webkit-box-flex: 0;
-        -ms-flex: 0 39%;
-            flex: 0 39%;
+        -ms-flex: 0 40%;
+            flex: 0 40%;
   }
-  .characteristics-icon__item svg {
+  .characteristics__item svg {
     margin-right: 0.8rem;
   }
 
@@ -1152,6 +1152,9 @@
   .description .text {
     font-size: 1rem;
     line-height: 1.8rem;
+  }
+  .description .show-btn__wrapper {
+    display: block;
   }
 
   .subtitle {
@@ -1247,9 +1250,6 @@
 
   /*конец стилей секции "Доставка и оплата" 668*/
   /*начало стилей секции "Вариант линии гранулирования с этим товаром" 668*/
-  .option .title {
-    max-width: 39.5rem;
-  }
   .option .key-btn__wrapper {
     margin-top: 0;
   }
@@ -1483,6 +1483,154 @@
   }
 
   /*конец стилей секции "То, что идет по данной акции" 668*/
+  /*##############################################################################################################################*/
+  /*Карточка линии гранулирования*/
+  /*начало стилей секции "главный экран" 668*/
+  .granilation-main {
+    padding-bottom: 5.2rem;
+  }
+  .granilation-main .cost-wrapper {
+    margin-top: 0rem;
+  }
+  .granilation-main .btn-wrapper {
+    margin-top: 3.2rem;
+  }
+  .granilation-main .characteristics-icon {
+    margin-top: 4rem;
+  }
+
+  .granulation-main__image {
+    margin: 1.6rem auto;
+    height: 23.7rem;
+  }
+  .granulation-main__image img {
+    height: 100%;
+    width: auto;
+  }
+
+  /*конец стилей секции "главный экран" 668*/
+  /*начало стилей секции "Все характеристики" 668*/
+  .characteristics .characteristics__item {
+    margin-bottom: 0.8rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 34.2%;
+            flex: 0 34.2%;
+  }
+
+  .characteristics__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  /*конец стилей секции "Все характеристики" 668*/
+  /*начало стилей секции "Другие линии гранулирования" 668*/
+  .swiper-other-granulation .swiper-slide {
+    margin-right: 1.6rem;
+  }
+
+  .other-granulation__item {
+    max-width: 34.3rem;
+  }
+
+  .other-granulation__item-image {
+    width: 31.1rem;
+    height: 9.3rem;
+  }
+  .other-granulation__item-image img {
+    width: 31.1rem;
+    height: 9.3rem;
+  }
+
+  .other-granulation__item-productivity {
+    margin: 0.9rem 0;
+  }
+
+  /*конец стилей секции "Другие линии гранулирования" 668*/
+  /*##############################################################################################################################*/
+  /*Реализованные проекты*/
+  /*начало стилей секции "Реализованные проекты" 668*/
+  .projects__selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .projects__tab {
+    margin-top: 0;
+  }
+
+  .projects__tiles {
+    margin-top: 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .projects__tiles-item {
+    margin-bottom: 2.4rem;
+    padding-bottom: 2rem;
+    max-width: 19.9rem;
+    width: 100%;
+  }
+  .projects__tiles-item:nth-last-of-type(1) {
+    margin-bottom: 2.4rem;
+  }
+
+  .projects__tiles-image {
+    width: 18.3rem;
+    height: 11rem;
+  }
+
+  .projects__tiles-location {
+    max-width: 15.4rem;
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+
+  .projects__tiles-region {
+    line-height: 2rem;
+    color: #FFFFFF;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+  }
+
+  .projects__tiles-name {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  /*конец стилей секции "Реализованные проекты" 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -1504,6 +1652,10 @@
     padding: 6.4rem 0;
   }
 
+  .section-padding-mini {
+    padding: 2.8rem 0;
+  }
+
   .wrapper {
     width: 100%;
     padding: 0 9.4rem;
@@ -1520,6 +1672,10 @@
   .title {
     font-size: 2.6rem;
     line-height: 3.6rem;
+  }
+
+  .title-max-width {
+    max-width: 50.6rem;
   }
 
   .subtitle {
@@ -1580,6 +1736,10 @@
     -webkit-transform: scale(1.105);
         -ms-transform: scale(1.105);
             transform: scale(1.105);
+  }
+
+  .btn-rect {
+    font-size: 1.4rem;
   }
 
   .key-btn__span::after {
@@ -3180,7 +3340,7 @@
     margin-top: 3.7rem;
   }
 
-  .characteristics-icon__item {
+  .characteristics__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 33%;
             flex: 0 33%;
@@ -3326,10 +3486,6 @@
 
   /*конец стилей секции "Доставка и оплата" 1024*/
   /*начало стилей секции "Вариант линии гранулирования с этим товаром" 1024*/
-  .option .title {
-    max-width: 50.6rem;
-  }
-
   .option__cards {
     margin: 0 auto 8.4rem;
     max-width: 64.2rem;
@@ -3511,6 +3667,199 @@
   }
 
   /*конец стилей секции "То, что идет по данной акции" 1024*/
+  /*##############################################################################################################################*/
+  /*Карточка линии гранулирования*/
+  /*начало стилей секции "главный экран" 1024*/
+  .granilation-main {
+    padding-bottom: 6.8rem;
+  }
+  .granilation-main .btn-rect {
+    padding: 1rem 2.1rem;
+  }
+  .granilation-main .characteristics-icon {
+    margin-top: 5rem;
+  }
+
+  .granulation-main__image {
+    width: 100%;
+    height: 32.3rem;
+  }
+  .granulation-main__image img {
+    height: 100%;
+    width: auto;
+  }
+
+  /*конец стилей секции "главный экран" 1024*/
+  /*начало стилей секции "Все характеристики" 1024*/
+  .characteristics .characteristics__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 25.2%;
+            flex: 0 25.2%;
+  }
+
+  /*конец стилей секции "Все характеристики" 1024*/
+  /*начало стилей секции "Товары, которые использовались в данном проекте" 1024*/
+  .product-cards .scroll {
+    padding: 0;
+  }
+  .product-cards .title-container {
+    margin-bottom: 1.6rem;
+  }
+  .product-cards .text {
+    margin: 0 auto 4.8rem;
+    display: block;
+    max-width: 64.5rem;
+  }
+
+  .swiper-product-cards {
+    padding: 0 9.4rem;
+    display: block;
+  }
+  .swiper-product-cards .swiper-slide {
+    -ms-flex-negative: unset;
+        flex-shrink: unset;
+    width: 100% !important;
+  }
+
+  /*конец стилей секции "Товары, которые использовались в данном проекте" 1024*/
+  /*начало стилей секции "Другие линии гранулирования" 1024*/
+  .other-granulation .scroll {
+    padding: 0;
+  }
+
+  .swiper-other-granulation {
+    padding: 0 9.4rem;
+    display: block;
+  }
+  .swiper-other-granulation .swiper-slide {
+    width: 100% !important;
+  }
+
+  .other-granulation__item {
+    position: relative;
+    max-width: 41.2rem;
+  }
+  .other-granulation__item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
+    background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    opacity: 0;
+    border-radius: 1.6rem;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  .other-granulation__item:hover::before {
+    opacity: 1;
+  }
+
+  .other-granulation__item-image {
+    margin-bottom: 1.6rem;
+    position: relative;
+    width: 38rem;
+    height: 18.3rem;
+    border-radius: 0;
+  }
+  .other-granulation__item-image img {
+    width: 38rem;
+    height: 16.7rem;
+  }
+
+  .other-granulation__col-list {
+    padding: 0 10rem;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .other-granulation__col-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .other-granulation__col-item.active .other-granulation__col-col::before {
+    opacity: 1;
+  }
+  .other-granulation__col-item.active .other-granulation__col-img {
+    opacity: 1;
+  }
+
+  .other-granulation__col-col {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .other-granulation__col-col::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    height: 1px;
+    width: 3.7rem;
+    background-color: #7EB8E2;
+    opacity: 0.5;
+    left: 1px;
+    right: 1px;
+    margin: auto;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .other-granulation__col-img {
+    position: absolute;
+    width: 100%;
+    height: 16.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: 0;
+    top: 0;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .other-granulation__item-productivity {
+    margin: 1.6rem 0 0.4rem 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .other-granulation__item-dash {
+    opacity: 1;
+  }
+
+  .other-granulation__item-name {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  /*конец стилей секции "Другие линии гранулирования" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

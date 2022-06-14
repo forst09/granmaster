@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //развернуть текст на главной странице секции "о компании"
+    //развернуть текст 
     $(document).on('click', ".show-btn", function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -181,22 +181,37 @@ $(document).ready(function () {
             spaceBetween: 18,
             slidesPerView: 3.39,
         });
+
+        // карточка линии гранулирования секция "Товары, которые использовались в данном проекте"
+        const swiperProductCards = new Swiper('.swiper-product-cards', {
+            speed: 700,
+            spaceBetween: 18,
+            slidesPerView: 3.39,
+        });
+
+        // карточка линии гранулирования секция "Другие линии гранулирования"
+        const swiperOtherGranulation = new Swiper('.swiper-other-granulation', {
+            speed: 700,
+            spaceBetween: 16,
+            slidesPerView: 1.99,
+        });
     }
 
-    $(document).on('click', ".products__filters-tabs-img", function () {
-        $('.products-tab').removeClass('active');
+    // переключение табов
+    $(document).on('click', ".tab", function () {
+        $('.tab-content').removeClass('active');
         $('#' + $(this).attr("data-tab")).addClass('active');
-        $('.products__filters-tabs-img').removeClass('active');
+        $('.tab').removeClass('active');
         $(this).addClass('active');
     });
 
     // табы каталога 2го уровня, на мобилках включать длинные карточки
     if ((pageWidth >= 320) && (pageWidth < 668)) {
-        $("#tabLines").trigger("click");
+        $("#productsTabLines").trigger("click");
     }
     // табы каталога 2го уровня, начиная с планшетов включать плитки
     if (pageWidth >= 668) {
-        $("#tabTiles").trigger("click");
+        $("#productsTabTiles").trigger("click");
     }
 
     //сортировка на каталоге 2го уровня
@@ -221,6 +236,12 @@ $(document).ready(function () {
     //изменение картинки при наведении у карточек каталога 2го уровня
     $(document).on('mouseenter', ".products__tiles-col-item", function () {
         $(this).parents('.products__tiles-item').find(".products__tiles-col-item").removeClass('active');
+        $(this).addClass('active');
+    });
+
+    //изменение картинки при наведении у "карточка линии гранулирования" секция "другие линии гранулирования"
+    $(document).on('mouseenter', ".other-granulation__col-item", function () {
+        $(this).parents('.other-granulation__item').find(".other-granulation__col-item").removeClass('active');
         $(this).addClass('active');
     });
 });

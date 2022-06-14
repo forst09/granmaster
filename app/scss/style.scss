@@ -13,6 +13,10 @@ section {
     padding: 3.6rem 0;
 }
 
+.section-padding-mini {
+    padding: 1.6rem 0;
+}
+
 .wrapper {
     padding: 0 1.5rem;
 }
@@ -1889,7 +1893,7 @@ section {
 }
 
 .products__filters-list {
-    padding-right: 2.3rem;
+    padding-right: 2.4rem;
     display: inline-block;
     font-size: 1.2rem;
     line-height: 2rem;
@@ -2158,7 +2162,7 @@ section {
     flex-wrap: wrap;
 }
 
-.characteristics-icon__item {
+.characteristics__item {
     margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
@@ -2184,7 +2188,7 @@ section {
     }
 }
 
-.characteristics-icon__item-major {
+.characteristics__item-major {
     span {
         color: $orange;
     }
@@ -2292,7 +2296,6 @@ section {
 
 /*начало стилей секции "Чертежи и 3D схемы" 320*/
 .drawings {
-    padding: 1.6rem 0;
 
     span {
         color: $light-gray;
@@ -2348,24 +2351,7 @@ section {
 
 /*конец стилей секции "Чертежи и 3D схемы" 320*/
 
-/*начало стилей секции "Особенности конструкции" 320*/
-.features {
-    padding: 1.6rem 0;
-}
-
-/*конец стилей секции "Особенности конструкции" 320*/
-
-/*начало стилей секции "Комплектация" 320*/
-.equipment {
-    padding: 1.6rem 0;
-}
-
-/*конец стилей секции "Комплектация" 320*/
-
 /*начало стилей секции "Галерея товара" 320*/
-.gallery {
-    padding: 1.6rem 0;
-}
 
 .swiper-card-gallery {
     display: inline-flex;
@@ -2896,6 +2882,10 @@ section {
 
 /*начало стилей секции "главный экран" 320*/
 .granilation-main {
+    padding-bottom: 3.6rem;
+    background: linear-gradient(180deg, #FFFFFF 8.32%, #EEF6FB 53.78%);
+    border-radius: 0px 0px 2.4rem 2.4rem;
+
     .scroll {
         scroll-padding: 1rem;
 
@@ -2918,7 +2908,7 @@ section {
     }
 
     .characteristics-icon {
-        margin-top: 2.4rem;
+        margin-top: 2.8rem;
     }
 }
 
@@ -2934,6 +2924,270 @@ section {
 }
 
 /*конец стилей секции "главный экран" 320*/
+
+/*начало стилей секции "Товары, которые использовались в данном проекте" 320*/
+.product-cards {
+    .text {
+        display: none;
+    }
+}
+
+.swiper-product-cards {
+    display: inline-flex;
+
+    .swiper-slide {
+        margin-right: 1.6rem;
+        flex-shrink: 1;
+    }
+}
+
+/*конец стилей секции "Товары, которые использовались в данном проекте" 320*/
+
+/*начало стилей секции "Другие линии гранулирования" 320*/
+.swiper-other-granulation {
+    display: inline-flex;
+
+    .swiper-slide {
+        margin-right: 0.8rem;
+        flex-shrink: unset;
+    }
+}
+
+.other-granulation__item {
+    display: inline-block;
+    padding: 1.6rem;
+    max-width: 27.4rem;
+    width: 100%;
+}
+
+.other-granulation__item-image {
+    width: 24.4rem;
+    height: 9.3rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.other-granulation__item-productivity {
+    margin: 0.6rem 0;
+    display: inline-flex;
+    align-items: center;
+
+    span {
+        color: $orange;
+        line-height: 1.8rem;
+        font-family: Formular-Medium;
+    }
+
+}
+
+.other-granulation__item-dash {
+    margin: 0 0.8rem;
+    display: inline-block;
+    width: 0.8rem;
+    height: 1px;
+    background-color: $orange;
+    opacity: 0.5;
+}
+
+.other-granulation__item-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: $gray;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+/*конец стилей секции "Другие линии гранулирования" 320*/
+
+/*##############################################################################################################################*/
+/*Реализованные проекты*/
+
+/*начало стилей секции "Реализованные проекты" 320*/
+.projects {
+    padding-top: 0;
+}
+
+.projects__selection {
+    margin-top: 3.2rem;
+}
+
+.projects__select {
+    padding: 1.2rem 1.6rem 1rem;
+    position: relative;
+    max-width: 29rem;
+    width: 100%;
+    border: 1px solid rgba(126, 184, 226, 0.2);
+    border-radius: 0.8rem;
+}
+
+.projects__select-text {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    color: $light-gray;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    opacity: 0.8;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0.873rem;
+        height: 0.873rem;
+        border-top: 1px solid $light-gray;
+        border-right: 1px solid $light-gray;
+        transform: rotate(135deg);
+        right: 0.1rem;
+        top: calc(50% - 0.4365rem);
+    }
+}
+
+.projects__select-menu {
+    position: absolute;
+    display: none;
+    padding: 1.2rem 1.6rem;
+    bottom: -10.4rem;
+    left: 0;
+    width: 100%;
+}
+
+.projects__select-menu.active {
+    display: block;
+}
+
+.projects__select-item {
+    display: block;
+    color: $blue;
+    opacity: 0.8;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.projects__tab {
+    margin-top: 2.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.project__tab-item {
+    margin-right: 0.3rem;
+    padding: 0.95rem 1.6rem;
+    font-family: Formular-Medium;
+    color: $light-gray;
+    line-height: 1.2rem;
+    background: rgba(126, 184, 226, 0.1);
+    border-radius: 0.8rem;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0;
+    }
+}
+
+.project__tab-item.active {
+    background: transparent;
+    color: $orange;
+}
+
+.projects__tiles {
+    margin-top: 3.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects__tiles-item {
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.6rem;
+    display: inline-block;
+    max-width: 29rem;
+    width: 100%;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.projects__tiles-image {
+    margin-bottom: 1.6rem;
+    position: relative;
+    width: 29rem;
+    height: 17.5rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.projects__tiles-location {
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0.913rem;
+    left: 0.913rem;
+    background: rgba(62, 74, 97, 0.8);
+    border-radius: 0.8rem;
+
+    svg {
+        margin-right: 0.4rem;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+}
+
+.projects__tiles-region {
+    line-height: 2rem;
+    color: #FFFFFF;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.projects__tiles-name {
+    font-family: Formular-Bold;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $gray;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+/*конец стилей секции "Реализованные проекты" 320*/
 
 @keyframes fadeEffect {
     from {
