@@ -1,5 +1,8 @@
 $(document).ready(function () {
     //развернуть текст 
+
+
+
     $(document).on('click', ".show-btn", function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
