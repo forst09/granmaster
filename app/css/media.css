@@ -1240,12 +1240,8 @@
     padding: 1rem 2.1rem;
     font-size: 1.4rem;
   }
-
-  .delivery__text {
-    max-height: -webkit-fit-content;
-    max-height: -moz-fit-content;
-    max-height: fit-content;
-    overflow: visible;
+  .delivery .show-btn__wrapper {
+    display: block;
   }
 
   /*конец стилей секции "Доставка и оплата" 668*/
@@ -1630,7 +1626,54 @@
     line-height: 1.8rem;
   }
 
+  .projects__arrow-top {
+    margin-top: -2.5rem;
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: rgb(62, 74, 97);
+    opacity: 0.3;
+    border-radius: 1.1rem;
+  }
+  .projects__arrow-top span {
+    margin-top: 0.7rem;
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-top: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
   /*конец стилей секции "Реализованные проекты" 668*/
+  /*##############################################################################################################################*/
+  /*Оплата и доставка*/
+  /*начало стилей секции "Оплата и доставка" 668*/
+  .payment-delivery .text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .payment-delivery__info {
+    margin-top: 3.2rem;
+  }
+
+  .payment-delivery__requisites {
+    margin-top: 1.6rem;
+  }
+
+  /*конец стилей секции "Оплата и доставка" 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -3693,8 +3736,8 @@
   /*начало стилей секции "Все характеристики" 1024*/
   .characteristics .characteristics__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 25.2%;
-            flex: 0 25.2%;
+        -ms-flex: 0 25.5%;
+            flex: 0 25.5%;
   }
 
   /*конец стилей секции "Все характеристики" 1024*/
@@ -3860,6 +3903,107 @@
   }
 
   /*конец стилей секции "Другие линии гранулирования" 1024*/
+  /*##############################################################################################################################*/
+  /*Реализованные проекты*/
+  /*начало стилей секции "Реализованные проекты" 1024*/
+  .projects {
+    position: relative;
+  }
+
+  .projects__selection {
+    margin: 4.8rem 0 4rem;
+  }
+
+  .projects__tiles-item {
+    margin-bottom: 2.4rem;
+    padding: 0.8rem 0.8rem 2.4rem 0.8rem;
+    position: relative;
+    max-width: 27rem;
+    width: 100%;
+  }
+  .projects__tiles-item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
+    background: -o-linear-gradient(top, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    background: linear-gradient(180deg, rgba(236, 242, 249, 0) 0%, #ECF2F9 73.53%), #FFFFFF;
+    opacity: 0;
+    border-radius: 1.6rem;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  .projects__tiles-item:hover::before {
+    opacity: 1;
+  }
+
+  .projects__tiles-image {
+    width: 25.4rem;
+    height: 15.3rem;
+  }
+
+  .projects__tiles-location {
+    max-width: 23.8rem;
+  }
+
+  .projects__tiles-name {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .projects__arrow-top {
+    position: absolute;
+    right: 9.4rem;
+    bottom: 9.9rem;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .projects__arrow-top:hover {
+    opacity: 1;
+  }
+
+  /*конец стилей секции "Реализованные проекты" 1024*/
+  /*начало стилей секции "Оплата и доставка" 1024*/
+  .payment-delivery .text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  /*конец стилей секции "Оплата и доставка" 1024*/
+  /*##############################################################################################################################*/
+  /*Оплата и доставка*/
+  /*начало стилей секции "Оплата и доставка" 668*/
+  .payment-delivery .title-big {
+    margin-bottom: 1.6rem;
+  }
+  .payment-delivery .text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .payment-delivery__info {
+    margin-top: 4.8rem;
+  }
+
+  .text__subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .payment-delivery__requisites {
+    margin: 2.4rem 0 3.4rem;
+  }
+
+  .payment-delivery__requisites-item {
+    margin-bottom: 1.6rem;
+  }
+
+  /*конец стилей секции "Оплата и доставка" 668*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {
