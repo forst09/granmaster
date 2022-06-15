@@ -64,10 +64,6 @@ section {
     }
 }
 
-// .title-mini {
-//     margin-bottom: 0.8rem;
-// }
-
 .text {
     font-family: 'Formular';
     color: $light-gray;
@@ -205,6 +201,16 @@ section {
 
 .title__span {
     color: $orange;
+}
+
+.background-light {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FFFFFF 8.32%, #E0EEF8 53.78%), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(235, 244, 251, 0.2) 100%), #E5F1F9;
+    border-radius: 0px 0px 2.4rem 2.4rem;
+}
+
+.background {
+    background: linear-gradient(180deg, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
+    border-radius: 1.6rem 1.6rem 0 0;
 }
 
 .socials {
@@ -950,17 +956,6 @@ section {
 }
 
 /*начало стилей секции "Уже несколько лет мы строим..."*/
-
-.background {
-    /*фон для секций "Как заказать?" и "Нужна наша консультация?"*/
-    background: linear-gradient(180deg, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
-    border-radius: 1.6rem 1.6rem 0 0;
-}
-
-/*начало стилей секции "Как заказать?"*/
-// .order {
-//     padding-top: 2.4rem;
-// }
 
 .order__container {
     display: flex;
@@ -3239,6 +3234,196 @@ section {
 }
 
 /*конец стилей секции "Реализованные проекты" 320*/
+
+/*##############################################################################################################################*/
+/*Карточка реализованного проекта*/
+
+/*начало стилей секции "главный экран" 320*/
+.projects-page-main {
+    padding-bottom: 3.6rem;
+
+    .title-big {
+        margin-bottom: 3.2rem;
+    }
+
+    .btn-rect {
+        padding: 1rem 2.4rem;
+        font-size: 1.4rem;
+    }
+
+    .key-btn__wrapper {
+        margin-top: 1.6rem;
+        text-align: center;
+    }
+}
+
+.projects-page-main__location {
+    margin-bottom: 0.2rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.projects-page-main__location-region {
+    margin-left: 0.4rem;
+    line-height: 2rem;
+    color: $light-gray;
+}
+
+.projects-page-main__image {
+    width: 100%;
+    height: 24.8rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*начало стилей секции "Описание проекта" 320*/
+.project-desc__icons {
+    margin-top: 2.8rem;
+}
+
+.project-desc__icons-item {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.project-desc__icons-item-text {
+    margin-left: 0.8rem;
+    font-family: Formular-Medium;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    opacity: 0.8;
+    color: $light-gray;
+
+    span {
+        margin-left: 0.8rem;
+    }
+}
+
+/*конец стилей секции "Описание проекта" 320*/
+
+/*начало стилей секции "Галерея" 320*/
+.project-gallery {
+    .btn-wrapper {
+        display: none;
+    }
+}
+
+.project-gallery__wrapper {
+    display: inline-flex;
+    overflow-x: scroll;
+}
+
+.project-gallery__item {
+    margin-right: 0.8rem;
+    width: 13.9rem;
+    height: 9.2rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &:nth-last-of-type(1) {
+        margin-right: 0;
+    }
+}
+
+/*конец стилей секции "Галерея" 320*/
+
+/*начало стилей секции "Закажите эту линию гранулирования сейчас" 320*/
+.make-order {
+    .btn-wrapper {
+        margin-top: 2.4rem;
+    }
+
+    .btn-rect {
+        padding: 1rem 2.4rem;
+        font-size: 1.4rem;
+    }
+}
+
+.make-order__banner {
+    margin: 0 auto;
+    max-width: 28.2rem;
+    padding: 2.4rem 1.6rem;
+    background: linear-gradient(270deg, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 77.63%);
+    border-radius: 1.6rem;
+}
+
+.make-order__banner-image {
+    display: none;
+}
+
+.make-order__banner-title {
+    margin-bottom: 0.8rem;
+    font-family: Formular-Bold;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    color: $gray;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.make-order__banner-text {
+    line-height: 1.8rem;
+    color: $light-gray;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+/*конец стилей секции "Закажите эту линию гранулирования сейчас" 320*/
+
+/*начало стилей секции "Другие проекты" 320*/
+.swiper-other-project {
+    display: inline-flex;
+
+    .swiper-slide {
+        margin-right: 1.2rem;
+        flex-shrink: unset;
+        width: 100% !important;
+    }
+}
+
+/*конец стилей секции "Другие проекты" 320*/
 
 /*##############################################################################################################################*/
 /*Оплата и доставка*/

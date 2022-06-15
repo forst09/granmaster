@@ -195,6 +195,20 @@ section {
   color: #FF6D1A;
 }
 
+.background-light {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), -webkit-gradient(linear, left top, left bottom, color-stop(8.32%, #FFFFFF), color-stop(53.78%, #E0EEF8)), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(235, 244, 251, 0.2) 100%), #E5F1F9;
+  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), -o-linear-gradient(top, #FFFFFF 8.32%, #E0EEF8 53.78%), -o-radial-gradient(88% 50.58%, 17.66% 52.14%, rgba(126, 184, 226, 0.2) 0%, rgba(235, 244, 251, 0.2) 100%), #E5F1F9;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FFFFFF 8.32%, #E0EEF8 53.78%), radial-gradient(17.66% 52.14% at 88% 50.58%, rgba(126, 184, 226, 0.2) 0%, rgba(235, 244, 251, 0.2) 100%), #E5F1F9;
+  border-radius: 0px 0px 2.4rem 2.4rem;
+}
+
+.background {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ECF2F9), color-stop(73.53%, rgba(236, 242, 249, 0)));
+  background: -o-linear-gradient(top, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
+  background: linear-gradient(180deg, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
+  border-radius: 1.6rem 1.6rem 0 0;
+}
+
 .socials {
   margin: 1.6rem 0 1.2rem;
   display: -webkit-box;
@@ -942,15 +956,6 @@ section {
 }
 
 /*начало стилей секции "Уже несколько лет мы строим..."*/
-.background {
-  /*фон для секций "Как заказать?" и "Нужна наша консультация?"*/
-  background: -webkit-gradient(linear, left top, left bottom, from(#ECF2F9), color-stop(73.53%, rgba(236, 242, 249, 0)));
-  background: -o-linear-gradient(top, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
-  background: linear-gradient(180deg, #ECF2F9 0%, rgba(236, 242, 249, 0) 73.53%);
-  border-radius: 1.6rem 1.6rem 0 0;
-}
-
-/*начало стилей секции "Как заказать?"*/
 .order__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3266,6 +3271,193 @@ section {
 }
 
 /*конец стилей секции "Реализованные проекты" 320*/
+/*##############################################################################################################################*/
+/*Карточка реализованного проекта*/
+/*начало стилей секции "главный экран" 320*/
+.projects-page-main {
+  padding-bottom: 3.6rem;
+}
+.projects-page-main .title-big {
+  margin-bottom: 3.2rem;
+}
+.projects-page-main .btn-rect {
+  padding: 1rem 2.4rem;
+  font-size: 1.4rem;
+}
+.projects-page-main .key-btn__wrapper {
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+.projects-page-main__location {
+  margin-bottom: 0.2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-page-main__location-region {
+  margin-left: 0.4rem;
+  line-height: 2rem;
+  color: #537791;
+}
+
+.projects-page-main__image {
+  width: 100%;
+  height: 24.8rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+.projects-page-main__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*начало стилей секции "Описание проекта" 320*/
+.project-desc__icons {
+  margin-top: 2.8rem;
+}
+
+.project-desc__icons-item {
+  margin-bottom: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.project-desc__icons-item svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.project-desc__icons-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.project-desc__icons-item-text {
+  margin-left: 0.8rem;
+  font-family: Formular-Medium;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  opacity: 0.8;
+  color: #537791;
+}
+.project-desc__icons-item-text span {
+  margin-left: 0.8rem;
+}
+
+/*конец стилей секции "Описание проекта" 320*/
+/*начало стилей секции "Галерея" 320*/
+.project-gallery .btn-wrapper {
+  display: none;
+}
+
+.project-gallery__wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow-x: scroll;
+}
+
+.project-gallery__item {
+  margin-right: 0.8rem;
+  width: 13.9rem;
+  height: 9.2rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.project-gallery__item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-gallery__item:nth-last-of-type(1) {
+  margin-right: 0;
+}
+
+/*конец стилей секции "Галерея" 320*/
+/*начало стилей секции "Закажите эту линию гранулирования сейчас" 320*/
+.make-order .btn-wrapper {
+  margin-top: 2.4rem;
+}
+.make-order .btn-rect {
+  padding: 1rem 2.4rem;
+  font-size: 1.4rem;
+}
+
+.make-order__banner {
+  margin: 0 auto;
+  max-width: 28.2rem;
+  padding: 2.4rem 1.6rem;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-0.17%, rgba(236, 242, 249, 0)), color-stop(77.63%, #ECF2F9));
+  background: -o-linear-gradient(right, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 77.63%);
+  background: linear-gradient(270deg, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 77.63%);
+  border-radius: 1.6rem;
+}
+
+.make-order__banner-image {
+  display: none;
+}
+
+.make-order__banner-title {
+  margin-bottom: 0.8rem;
+  font-family: Formular-Bold;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: #3E4A61;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.make-order__banner-text {
+  line-height: 1.8rem;
+  color: #537791;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+/*конец стилей секции "Закажите эту линию гранулирования сейчас" 320*/
+/*начало стилей секции "Другие проекты" 320*/
+.swiper-other-project {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.swiper-other-project .swiper-slide {
+  margin-right: 1.2rem;
+  -ms-flex-negative: unset;
+      flex-shrink: unset;
+  width: 100% !important;
+}
+
+/*конец стилей секции "Другие проекты" 320*/
 /*##############################################################################################################################*/
 /*Оплата и доставка*/
 /*начало стилей секции "Оплата и доставка" 320*/

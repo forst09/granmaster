@@ -1658,6 +1658,87 @@
 
   /*конец стилей секции "Реализованные проекты" 668*/
   /*##############################################################################################################################*/
+  /*Карточка реализованного проекта*/
+  /*начало стилей секции "главный экран" 668*/
+  .projects-page-main {
+    padding-bottom: 4.8rem;
+  }
+  .projects-page-main .title-big {
+    margin-bottom: 3.2rem;
+  }
+
+  .projects-page-main__location {
+    margin-bottom: 0.4rem;
+  }
+
+  .projects-page-main__image {
+    height: 28.6rem;
+  }
+
+  /*конец стилей секции "главный экран" 668*/
+  /*начало стилей секции "Описание проекта" 668*/
+  .project-desc .title-container {
+    margin-bottom: 2.4rem;
+  }
+  .project-desc .text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .project-desc__icons {
+    margin-top: 2rem;
+  }
+
+  /*конец стилей секции "Описание проекта" 668*/
+  /*начало стилей секции "Галерея" 668*/
+  .project-gallery__item {
+    margin-right: 1.2rem;
+    width: 19.9rem;
+    height: 13.2rem;
+  }
+
+  /*конец стилей секции "Галерея" 668*/
+  /*начало стилей секции "Закажите эту линию гранулирования сейчас" 668*/
+  .make-order .btn-wrapper {
+    margin-top: 3.2rem;
+    text-align: left;
+  }
+
+  .make-order__banner {
+    margin: 0;
+    padding: 2.4rem 3.4rem 1.9rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: none;
+    overflow: hidden;
+  }
+
+  .make-order__banner-image {
+    margin-left: -16rem;
+    margin-right: 3.2rem;
+    display: block;
+    height: 15.8rem;
+    width: 40rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .make-order__banner-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .make-order__banner-text {
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  /*конец стилей секции "Закажите эту линию гранулирования сейчас" 668*/
+  /*##############################################################################################################################*/
   /*Оплата и доставка*/
   /*начало стилей секции "Оплата и доставка" 668*/
   .payment-delivery .text {
@@ -3969,16 +4050,117 @@
   }
 
   /*конец стилей секции "Реализованные проекты" 1024*/
-  /*начало стилей секции "Оплата и доставка" 1024*/
-  .payment-delivery .text {
+  /*##############################################################################################################################*/
+  /*Карточка реализованного проекта*/
+  /*начало стилей секции "главный экран" 1024*/
+  .projects-page-main {
+    padding-bottom: 6.4rem;
+  }
+  .projects-page-main .title-big {
+    margin-bottom: 4.8rem;
+  }
+
+  .projects-page-main__location {
+    margin-bottom: 0.8rem;
+  }
+
+  .projects-page-main__image {
+    height: 32.3rem;
+  }
+
+  /*конец стилей секции "главный экран" 1024*/
+  /*начало стилей секции "Описание проекта" 1024*/
+  .project-desc .title-container {
+    margin-bottom: 4.8rem;
+  }
+  .project-desc .text {
     font-size: 1.2rem;
     line-height: 2.2rem;
   }
 
-  /*конец стилей секции "Оплата и доставка" 1024*/
+  .project-desc__icons {
+    margin-top: 2.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .project-desc__icons-item {
+    margin-bottom: 0;
+  }
+
+  /*конец стилей секции "Описание проекта" 1024*/
+  /*начало стилей секции "Галерея" 1024*/
+  .project-gallery .btn-wrapper {
+    margin-top: 3.2rem;
+    display: block;
+  }
+
+  .project-gallery__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .project-gallery__item {
+    margin-right: 0rem;
+    margin-bottom: 1.6rem;
+    width: 26.8rem;
+    height: 17.8rem;
+  }
+
+  /*конец стилей секции "Галерея" 1024*/
+  /*начало стилей секции "Закажите эту линию гранулирования сейчас" 1024*/
+  .make-order .btn-wrapper {
+    margin-top: 2.4rem;
+  }
+
+  .make-order__banner {
+    padding: 1.5rem 3.4rem 1.4rem 0;
+  }
+
+  .make-order__banner-image {
+    margin-left: -10rem;
+    margin-right: 9.7rem;
+    height: 18.2rem;
+    width: 46.3rem;
+  }
+
+  .make-order__banner-title {
+    font-size: 2.2rem;
+  }
+
+  .make-order__banner-text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  /*конец стилей секции "Закажите эту линию гранулирования сейчас" 1024*/
+  /*начало стилей секции "Другие проекты" 320*/
+  .other-project .scroll {
+    padding: 0;
+  }
+
+  .swiper-other-project {
+    display: block;
+    padding: 0 9.4rem;
+  }
+
+  /*конец стилей секции "Другие проекты" 320*/
   /*##############################################################################################################################*/
   /*Оплата и доставка*/
-  /*начало стилей секции "Оплата и доставка" 668*/
+  /*начало стилей секции "Оплата и доставка" 1024*/
   .payment-delivery .title-big {
     margin-bottom: 1.6rem;
   }
@@ -4003,7 +4185,7 @@
     margin-bottom: 1.6rem;
   }
 
-  /*конец стилей секции "Оплата и доставка" 668*/
+  /*конец стилей секции "Оплата и доставка" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

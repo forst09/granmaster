@@ -242,6 +242,13 @@ $(document).ready(function () {
             spaceBetween: 18,
             slidesPerView: 3.39,
         });
+
+        // карточка реализованного проекта секция "Другие проекты"
+        const swiperOtherProject = new Swiper('.swiper-other-project', {
+            speed: 700,
+            spaceBetween: 13,
+            slidesPerView: 3.015,
+        });
     }
 
     // переключение табов
