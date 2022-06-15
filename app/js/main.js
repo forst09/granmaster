@@ -224,6 +224,24 @@ $(document).ready(function () {
             spaceBetween: 16,
             slidesPerView: 1.99,
         });
+
+        // карточка товара секция "Чертежи и 3D схемы"
+        const swiperCardDrawings2 = new Swiper('#swiperCardDrawings2', {
+            speed: 700,
+            spaceBetween: 12,
+            slidesPerView: 1.8,
+            navigation: {
+                nextEl: '.card-drawings-button-next',
+                prevEl: '.card-drawings-button-prev',
+            },
+        });
+
+        // карточка реализованного проекта секция "Товары, которые использовались в данном проекте"
+        const swiperProductCards2 = new Swiper('#swiper-product-cards2', {
+            speed: 700,
+            spaceBetween: 18,
+            slidesPerView: 3.39,
+        });
     }
 
     // переключение табов
