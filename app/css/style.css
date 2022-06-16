@@ -3490,23 +3490,135 @@ section {
   padding-top: 0;
 }
 
-.text__subtitle {
-  margin-bottom: 1.6rem;
-}
-
-.payment-delivery__requisites {
-  margin: 2.4rem 0;
-}
-
-.payment-delivery__requisites-item {
-  margin-bottom: 0.8rem;
-}
-
-.payment-delivery__info {
-  margin-top: 2.4rem;
-}
-
 /*конец стилей секции "Оплата и доставка" 320*/
+/*##############################################################################################################################*/
+/*О компании*/
+/*начало стилей секции "О компании" 320*/
+.about-company {
+  padding-top: 0;
+}
+.about-company .title {
+  margin-bottom: 3.2rem;
+}
+
+.about-company__video {
+  margin: 3.2rem auto;
+  position: relative;
+  width: 29rem;
+  height: 17.9rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+.about-company__video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-company__video-link {
+  display: block;
+  position: absolute;
+  width: 5.8rem;
+  height: 5.8rem;
+  background: rgba(255, 255, 255, 0.8);
+  top: calc(50% - 2.9rem);
+  left: calc(50% - 2.9rem);
+  border-radius: 50%;
+}
+.about-company__video-link::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/about-company/video-play.svg");
+  width: 2rem;
+  height: 2.454rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: calc(50% - 1.227rem);
+  left: 2.2rem;
+}
+
+/*конец стилей секции "О компании" 320*/
+/*начало стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 320*/
+.swiper-thanks-letters {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.swiper-thanks-letters .swiper-slide {
+  margin-right: 0.8rem;
+  -ms-flex-negative: unset;
+      flex-shrink: unset;
+  width: 100% !important;
+}
+
+.thanks-letters__item {
+  padding: 1.2rem 1.6rem 2rem 1.2rem;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-0.17%, rgba(236, 242, 249, 0)), color-stop(49.39%, rgba(236, 242, 249, 0.6))), #FFFFFF;
+  background: -o-linear-gradient(right, rgba(236, 242, 249, 0) -0.17%, rgba(236, 242, 249, 0.6) 49.39%), #FFFFFF;
+  background: linear-gradient(270deg, rgba(236, 242, 249, 0) -0.17%, rgba(236, 242, 249, 0.6) 49.39%), #FFFFFF;
+  border-radius: 1.6rem;
+  width: 29rem;
+}
+.thanks-letters__item .title-span {
+  margin-top: 0.2rem;
+  display: block;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.thanks-letters__item-image {
+  display: none;
+}
+
+.thanks-letters__item-title {
+  font-family: Formular-Bold;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #262628;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.thanks-letters__item-text {
+  margin: 0.8rem 0 1.9rem;
+  line-height: 1.8rem;
+  color: #537791;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 4;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.thanks-letters__item-author {
+  margin-left: auto;
+  max-width: 15.1rem;
+  line-height: 1.2rem;
+  text-align: right;
+  color: #7EB8E2;
+}
+
+/*конец стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 320*/
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;

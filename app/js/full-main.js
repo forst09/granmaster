@@ -249,6 +249,13 @@ $(document).ready(function () {
             spaceBetween: 13,
             slidesPerView: 3.015,
         });
+
+        // o компании секция "Уже несколько лет мы строим заводы и линии гранулирования"
+        const swiperThanksLetters = new Swiper('.swiper-thanks-letters', {
+            speed: 700,
+            spaceBetween: 24,
+            slidesPerView: 1.415,
+        });
     }
 
     // переключение табов

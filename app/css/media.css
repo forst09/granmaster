@@ -1752,15 +1752,92 @@
     line-height: 1.8rem;
   }
 
-  .payment-delivery__info {
-    margin-top: 3.2rem;
-  }
-
-  .payment-delivery__requisites {
-    margin-top: 1.6rem;
-  }
-
   /*конец стилей секции "Оплата и доставка" 668*/
+  /*##############################################################################################################################*/
+  /*О компании*/
+  /*начало стилей секции "О компании" 668*/
+  .about-company__video {
+    margin: 3.2rem auto 5.6rem;
+    width: 43.4rem;
+    height: 22.7rem;
+  }
+
+  .about-company__video-link {
+    width: 7.8rem;
+    height: 7.8rem;
+    top: calc(50% - 3.9rem);
+    left: calc(50% - 3.9rem);
+  }
+  .about-company__video-link::after {
+    width: 2.6rem;
+    height: 3.3rem;
+    top: calc(50% - 1.65rem);
+    left: 3rem;
+  }
+
+  /*конец стилей секции "О компании" 668*/
+  /*начало стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 668*/
+  .swiper-thanks-letters .swiper-slide {
+    margin-right: 2.4rem;
+  }
+
+  .thanks-letters__item {
+    padding: 1.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 58.3rem;
+  }
+  .thanks-letters__item .title-span {
+    margin-top: 0.4rem;
+  }
+
+  .thanks-letters__item-image {
+    margin-right: 3.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 15rem;
+    height: 21.8rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .thanks-letters__item-image img {
+    width: 100%;
+  }
+
+  .thanks-letters__item-title {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .thanks-letters__item-text {
+    margin: 1.6rem 0;
+    line-height: 1.8rem;
+    overflow-y: auto;
+    display: block;
+    max-height: 12.8rem;
+  }
+  .thanks-letters__item-text::-webkit-scrollbar-thumb {
+    background-color: #ECF2F9;
+  }
+
+  .thanks-letters__item-author {
+    max-width: none;
+    line-height: 1.468rem;
+    font-size: 1.2rem;
+  }
+
+  /*конец стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -4185,23 +4262,68 @@
     line-height: 2.2rem;
   }
 
-  .payment-delivery__info {
-    margin-top: 4.8rem;
-  }
-
-  .text__subtitle {
-    margin-bottom: 2rem;
-  }
-
-  .payment-delivery__requisites {
-    margin: 2.4rem 0 3.4rem;
-  }
-
-  .payment-delivery__requisites-item {
-    margin-bottom: 1.6rem;
-  }
-
   /*конец стилей секции "Оплата и доставка" 1024*/
+  /*##############################################################################################################################*/
+  /*О компании*/
+  /*начало стилей секции "О компании" 1024*/
+  .about-company .title {
+    margin-bottom: 4.8rem;
+  }
+
+  .about-company__wrapper {
+    margin-bottom: 6.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .about-company__video {
+    margin: 0 0 0 7.2rem;
+    width: 34.2rem;
+    height: 22.7rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+
+  .about-company__video-link {
+    width: 7.8rem;
+    height: 7.8rem;
+    top: calc(50% - 3.9rem);
+    left: calc(50% - 3.9rem);
+  }
+  .about-company__video-link::after {
+    width: 2.6rem;
+    height: 3.3rem;
+    top: calc(50% - 1.65rem);
+    left: 3rem;
+  }
+
+  /*конец стилей секции "О компании" 1024*/
+  /*начало стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 1024*/
+  .thanks-letters .scroll {
+    padding: 0;
+  }
+
+  .swiper-thanks-letters {
+    padding: 0 9.4rem;
+    display: block;
+  }
+
+  .thanks-letters__item-text {
+    padding-right: 0.4rem;
+  }
+  .thanks-letters__item-text::-webkit-scrollbar {
+    width: 0.3rem;
+    background-color: transparent;
+  }
+
+  /*конец стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {
