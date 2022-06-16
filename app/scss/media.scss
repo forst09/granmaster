@@ -51,27 +51,31 @@
     .text {
         font-size: 1.2rem;
         line-height: 2.2rem;
-
-        h4 {
-            font-size: 1.6rem;
-            line-height: 3.4rem;
-            margin: 2.4rem 0;
-            text-align: center;
-        }
-
-        ul {
-            margin-top: 1.6rem;
-
-            li {
-                font-size: 1rem;
-            }
-        }
     }
 
     .text-other {
         line-height: 2rem;
         max-width: 43.4rem;
         margin: 0 auto;
+    }
+
+    .text-content {
+
+        h3 {
+            //заголовок с линией
+            margin: 3.2rem 0 1.6rem;
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+        }
+
+        h5 {
+            //Реквизиты для безналичной оплаты:
+            margin: 1.6rem 0 0.8rem;
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+        }
     }
 
     .text-max-width {
@@ -1797,14 +1801,6 @@
         }
     }
 
-    // .payment-delivery__info {
-    //     margin-top: 3.2rem;
-    // }
-
-    // .payment-delivery__requisites {
-    //     margin-top: 1.6rem;
-    // }
-
     /*конец стилей секции "Оплата и доставка" 668*/
 
     /*##############################################################################################################################*/
@@ -1960,7 +1956,28 @@
         margin-bottom: 4.8rem;
     }
 
-    .text {
+    .text-content {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+
+        h3 {
+            //заголовок с линией
+            margin: 4.8rem 0 2rem;
+            font-size: 2.2rem;
+            line-height: 3.6rem;
+        }
+
+        h5 {
+            //Реквизиты для безналичной оплаты:
+            margin: 2.4rem 0 0.8rem;
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+        }
+
+        p {
+            margin-bottom: 1.6rem;
+        }
+
         h4 {
             font-size: 1.8rem;
             line-height: 3.6rem;
@@ -4464,22 +4481,6 @@
             line-height: 2.2rem;
         }
     }
-
-    // .payment-delivery__info {
-    //     margin-top: 4.8rem;
-    // }
-
-    // .text__subtitle {
-    //     margin-bottom: 2rem;
-    // }
-
-    // .payment-delivery__requisites {
-    //     margin: 2.4rem 0 3.4rem;
-    // }
-
-    // .payment-delivery__requisites-item {
-    //     margin-bottom: 1.6rem;
-    // }
 
     /*конец стилей секции "Оплата и доставка" 1024*/
 

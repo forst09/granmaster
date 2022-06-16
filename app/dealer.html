@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <title>Оплата и доставка</title>
+    <title>Дилерам</title>
 </head>
 
 <body>
@@ -163,117 +163,63 @@
     </section>
     <!-- конец секции "Навигация" -->
 
-    <!-- начало секции "Оплата и доставка" -->
-    <section class="payment-delivery">
+    <section class="dealer">
         <div class="wrapper">
-            <h1 class="title title-big left">Оплата и доставка</h1>
-            <div class="text-content">
-                <p>Заказы принимаются круглосуточно в автоматическом режиме.<br>Подтверждаются ежедневно с 9:00 до 18:00
-                </p>
-                <h3>Оплата</h3>
-
-                <p>Предоплата заказа — 30-50%. Остальное — по факту готовности к отгрузке.<br>Оплата производится
-                    наличным расчетом или по реквизитам:</p>
-
-                <h5>Реквизиты для безналичной оплаты:</h5>
-
-                <p>ООО «Наименование организации»</p>
-
-                <p>Юридический адрес:<br>ИНН 1234567890, ОГРН 1234567891234</p>
-                <p>Банковские реквизиты:<br>р/с 40000000000000000000<br>Банк: ОАО АКБ «БАНК» г. Москва, БИК
-                    044000000<br>к/с 30000000000000000000</p>
-
-                <h3>Доставка</h3>
-                <p>Доставка осуществяется по всей России и странам СНГ.<br>Стоимость доставки расчитывается
-                    индивидуально.</p>
+            <h1 class="title title-big left">Дилерам</h1>
+            <div class="text left">
+                <h3>Из чего состоят линии гранулирования?</h3>
+                <span class="title-span"></span>
             </div>
         </div>
     </section>
-    <!-- конец секции "Оплата и доставка" -->
 
-    <div class="background">
-        <!-- начало секции "Как заказать?" -->
-        <section class="order">
-            <div class="wrapper">
-                <div class="title-container">
-                    <span class="title-span"></span>
-                    <h3 class="title">Как заказать?</h3>
-                    <span class="title-span"></span>
-                </div>
-                <div class="order__container">
-                    <div class="order__item">
-                        <div class="order__item-text">Оставляете заявку</div>
-                        <span class="order__item-number">01</span>
-                    </div>
-                    <div class="order__item">
-                        <div class="order__item-text">Получаете коммерческое предложение</div>
-                        <span class="order__item-number">02</span>
-                    </div>
-                    <div class="order__item">
-                        <div class="order__item-text">Подписываете договор</div>
-                        <span class="order__item-number">03</span>
-                    </div>
-                    <div class="order__item">
-                        <div class="order__item-text">Получаете поставку</div>
-                        <span class="order__item-number">04</span>
-                    </div>
-                    <div class="order__item">
-                        <div class="order__item-text">Оплачиваете</div>
-                        <span class="order__item-number">05</span>
-                    </div>
-                </div>
+    <!-- начало секции "Нужна наша консультация?" -->
+    <section class="consultation">
+        <div class="wrapper">
+            <div class="title-container">
+                <span class="title-span"></span>
+                <h3 class="title">Нужна наша <span class="title__span">консультация?</span></h3>
+                <span class="title-span"></span>
             </div>
-        </section>
-        <!-- конец секции "Как заказать?" -->
+            <form class="consultation__form" action="#">
+                <div class="consultation__form-wrapper">
+                    <div class="consultation__form-wrapper-item">
+                        <div class="consultation__input-wrapper">
+                            <input id="dealer-input-name" class="consultation__form-input" type="text"
+                                placeholder="Фамилия Имя Отчество">
+                            <label class="consultation__label-name" for="dealer-input-name"></label>
+                        </div>
+                        <div class="consultation__input-wrapper">
+                            <input id="dealer-input-phone" class="consultation__form-input" type="text"
+                                placeholder="+7 (900) 987-65-43">
+                            <label class="consultation__label-phone" for="dealer-input-phone"></label>
+                        </div>
 
-        <!-- начало секции "Нужна наша консультация?" -->
-        <section class="consultation">
-            <div class="wrapper">
-                <div class="title-container">
-                    <span class="title-span"></span>
-                    <h3 class="title">Нужна наша <span class="title__span">консультация?</span></h3>
-                    <span class="title-span"></span>
+                    </div>
+                    <div class="consultation__form-wrapper-item">
+                        <div class="consultation__textarea-wrapper">
+                            <textarea id="dealer-textarea" class="consultation__form-input consultation__form-textarea"
+                                placeholder="Пожалуйста, введите комментарий"></textarea>
+                            <label class="consultation__label-textarea" for="dealer-textarea"></label>
+                        </div>
+                    </div>
                 </div>
-                <form class="consultation__form" action="#">
-                    <div class="consultation__form-wrapper">
-                        <div class="consultation__form-wrapper-item">
-                            <div class="consultation__input-wrapper">
-                                <input id="payment-delivery-input-name" class="consultation__form-input" type="text"
-                                    placeholder="Фамилия Имя Отчество">
-                                <label class="consultation__label-name" for="payment-delivery-input-name"></label>
-                            </div>
-                            <div class="consultation__input-wrapper">
-                                <input id="payment-delivery-input-phone" class="consultation__form-input" type="text"
-                                    placeholder="+7 (900) 987-65-43">
-                                <label class="consultation__label-phone" for="payment-delivery-input-phone"></label>
-                            </div>
-
-                        </div>
-                        <div class="consultation__form-wrapper-item">
-                            <div class="consultation__textarea-wrapper">
-                                <textarea id="payment-delivery-textarea"
-                                    class="consultation__form-input consultation__form-textarea"
-                                    placeholder="Пожалуйста, введите комментарий"></textarea>
-                                <label class="consultation__label-textarea" for="payment-delivery-textarea"></label>
-                            </div>
-                        </div>
+                <div class="consultation__buttons">
+                    <div class="btn-wrapper">
+                        <button type="submit" class="btn">Отправить</button>
                     </div>
-                    <div class="consultation__buttons">
-                        <div class="btn-wrapper">
-                            <button type="submit" class="btn">Отправить</button>
-                        </div>
-                        <div class="consultation__agreement">При отправке данных, вы даете согласие
-                            на обработку <a href="#" class="consultation__agreement-link">персональных
-                                данных</a></div>
+                    <div class="consultation__agreement">При отправке данных, вы даете согласие
+                        на обработку <a href="#" class="consultation__agreement-link">персональных
+                            данных</a></div>
 
-                        <div class="consultation__btn-download-wrapper">
-                            <a class="consultation__btn-download" href="#">Скачать прайс-лист</a>
-                        </div>
+                    <div class="consultation__btn-download-wrapper">
+                        <a class="consultation__btn-download" href="#">Скачать прайс-лист</a>
                     </div>
-                </form>
-            </div>
-        </section>
-        <!-- конец секции "Нужна наша консультация?" -->
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- конец секции "Нужна наша консультация?" -->
     </div>
 
     <!-- начало секции "Подвал" -->
