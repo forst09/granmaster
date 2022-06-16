@@ -3123,20 +3123,21 @@ section {
           align-items: center;
 }
 
-.project__tab-item {
+.projects__tab-item {
   margin-right: 0.3rem;
   padding: 0.95rem 1.6rem;
+  display: inline-block;
   font-family: Formular-Medium;
   color: #537791;
   line-height: 1.2rem;
   background: rgba(126, 184, 226, 0.1);
   border-radius: 0.8rem;
 }
-.project__tab-item:nth-last-of-type(1) {
+.projects__tab-item:nth-last-of-type(1) {
   margin-right: 0;
 }
 
-.project__tab-item.active {
+.projects__tab-item.active {
   background: transparent;
   color: #FF6D1A;
 }
@@ -3264,6 +3265,9 @@ section {
 }
 .projects__map-item img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .projects__arrow-top {
@@ -3297,6 +3301,10 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.projects-page-main__location svg {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .projects-page-main__location-region {
@@ -3362,7 +3370,6 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  overflow-x: scroll;
 }
 
 .project-gallery__item {
@@ -3394,7 +3401,6 @@ section {
 
 .make-order__banner {
   margin: 0 auto;
-  max-width: 28.2rem;
   padding: 2.4rem 1.6rem;
   background: -webkit-gradient(linear, right top, left top, color-stop(-0.17%, rgba(236, 242, 249, 0)), color-stop(77.63%, #ECF2F9));
   background: -o-linear-gradient(right, rgba(236, 242, 249, 0) -0.17%, #ECF2F9 77.63%);
@@ -3429,6 +3435,7 @@ section {
 .make-order__banner-text {
   line-height: 1.8rem;
   color: #537791;
+  max-width: 42.4rem;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -3455,6 +3462,24 @@ section {
   -ms-flex-negative: unset;
       flex-shrink: unset;
   width: 100% !important;
+}
+
+.other-projects__tiles-item {
+  padding: 0.8rem 0.8rem 1.6rem 0.8rem;
+}
+
+.other-projects__tiles-image {
+  width: 18.3rem;
+  height: 11rem;
+}
+
+.other-projects__tiles-location {
+  max-width: 15.4rem;
+}
+
+.other-projects__tiles-name {
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 /*конец стилей секции "Другие проекты" 320*/

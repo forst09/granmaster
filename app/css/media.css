@@ -1629,9 +1629,9 @@
   .projects__arrow-top {
     margin-top: -2.5rem;
     margin-left: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1738,6 +1738,12 @@
   }
 
   /*конец стилей секции "Закажите эту линию гранулирования сейчас" 668*/
+  /*начало стилей секции "Другие проекты" 668*/
+  .other-projects__tiles-item {
+    padding: 0.8rem 0.8rem 1.6rem 0.8rem;
+  }
+
+  /*конец стилей секции "Другие проекты" 668*/
   /*##############################################################################################################################*/
   /*Оплата и доставка*/
   /*начало стилей секции "Оплата и доставка" 668*/
@@ -3995,6 +4001,16 @@
     margin: 4.8rem 0 4rem;
   }
 
+  .projects__tab-item:not(.active) {
+    background: rgba(126, 184, 226, 0.1);
+    -webkit-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+  }
+  .projects__tab-item:not(.active):hover {
+    background: rgba(126, 184, 226, 0.3);
+  }
+
   .projects__tiles-item {
     margin-bottom: 2.4rem;
     padding: 0.8rem 0.8rem 2.4rem 0.8rem;
@@ -4147,7 +4163,7 @@
   }
 
   /*конец стилей секции "Закажите эту линию гранулирования сейчас" 1024*/
-  /*начало стилей секции "Другие проекты" 320*/
+  /*начало стилей секции "Другие проекты" 1024*/
   .other-project .scroll {
     padding: 0;
   }
@@ -4157,7 +4173,7 @@
     padding: 0 9.4rem;
   }
 
-  /*конец стилей секции "Другие проекты" 320*/
+  /*конец стилей секции "Другие проекты" 1024*/
   /*##############################################################################################################################*/
   /*Оплата и доставка*/
   /*начало стилей секции "Оплата и доставка" 1024*/
