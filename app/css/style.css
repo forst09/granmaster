@@ -3083,6 +3083,16 @@ section {
   width: 100%;
   border: 1px solid rgba(126, 184, 226, 0.2);
   border-radius: 0.8rem;
+  height: 4.2rem;
+}
+
+.projects__select.active {
+  height: auto;
+}
+.projects__select.active .projects__select-text::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .projects__select-text {
@@ -3105,21 +3115,29 @@ section {
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
-  right: 0.1rem;
+  right: 0.15rem;
   top: calc(50% - 0.6rem);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .projects__select-menu {
-  position: absolute;
-  display: none;
-  padding: 1.2rem 1.6rem;
-  bottom: -10.4rem;
-  left: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 1.6rem 0 0.2rem;
   width: 100%;
+  background-color: #fff;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .projects__select-menu.active {
-  display: block;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
 }
 
 .projects__select-item {

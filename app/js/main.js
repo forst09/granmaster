@@ -293,6 +293,24 @@ $(document).ready(function () {
 
     });
 
+    //выпадашка со списком областей в реализованных проектах
+    $(document).on('click', ".projects__select", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('.projects__selection').find('.projects__select-menu').removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).parents('.projects__selection').find('.projects__select-menu').addClass('active');
+        }
+
+    });
+
+    //передача текста в выпадашку с выбранной области
+    $(document).on('click', ".projects__select-item", function () {
+        $(this).parents('.projects__selection').find('.projects__select-text').html($(this).attr('data-text'));
+    });
+
 
     //изменение картинки при наведении у карточек каталога 2го уровня
     $(document).on('mouseenter', ".products__tiles-col-item", function () {
