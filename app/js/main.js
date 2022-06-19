@@ -137,7 +137,7 @@ $(document).ready(function () {
         allowTouchMove: false
     });
 
-    // подключение свайпера в секции на экранах > 1024
+    // подключение свайпера в секции на экранах >= 1024
     const pageWidth = document.documentElement.scrollWidth;
     if (pageWidth >= 1024) {
         // секция "Самое востребованное на рынке"
