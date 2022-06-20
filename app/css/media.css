@@ -1883,6 +1883,13 @@
   /*##############################################################################################################################*/
   /*Контакты*/
   /*начало стилей секции "Контакты" 668*/
+  .contacts-page__work,
+.contacts-page__address,
+.contacts-page__mail {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
   .contacts-page__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1912,7 +1919,7 @@
   }
 
   .contacts-page__address {
-    max-width: 20.5rem;
+    max-width: 22.8rem;
   }
 
   /*конец стилей секции "Контакты" 668*/

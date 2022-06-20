@@ -265,13 +265,14 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
-    // табы каталога 2го уровня, на мобилках включать длинные карточки
+    // табы, на мобилках включать длинные карточки
     if ((pageWidth >= 320) && (pageWidth < 668)) {
         $("#productsTabLines").trigger("click");
+        $("#searchTabLines").trigger("click");
     }
-    // табы каталога 2го уровня, начиная с планшетов включать плитки
+    // табы, начиная с планшетов включать плитки
     if (pageWidth >= 668) {
-        $("#productsTabTiles").trigger("click");
+        $("#searchTabTiles").trigger("click");
     }
 
     //сортировка на каталоге 2го уровня

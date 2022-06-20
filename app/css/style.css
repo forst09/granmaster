@@ -3968,7 +3968,19 @@ section {
      object-fit: cover;
 }
 
-/*конец стилей секции "Контакты" 320*/
+/*##############################################################################################################################*/
+/*Поиск*/
+/*начало стилей секции "Поиск" 320*/
+.search__title-found {
+  margin-left: 1.3rem;
+  font-family: "Formular";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  color: #7EB8E2;
+}
+
+/*конец стилей секции "Поиск" 320*/
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
