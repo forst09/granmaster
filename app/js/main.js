@@ -272,6 +272,7 @@ $(document).ready(function () {
     }
     // табы, начиная с планшетов включать плитки
     if (pageWidth >= 668) {
+        $("#productsTabTiles").trigger("click");
         $("#searchTabTiles").trigger("click");
     }
 
@@ -306,9 +307,28 @@ $(document).ready(function () {
 
     });
 
-    //передача текста в выпадашку с выбранной области
+
+    //передача текста в выпадашку с выбранной области в реализованных проектах
     $(document).on('click', ".projects__select-item", function () {
         $(this).parents('.projects__selection').find('.projects__select-text').html($(this).attr('data-text'));
+    });
+
+    //выпадашка с сортировкой в каталоге 2 уровня и поиске
+    $(document).on('click', ".products__filters-list", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('.products__filters').find('.products__filters-dropdown').removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).parents('.products__filters').find('.products__filters-dropdown').addClass('active');
+        }
+
+    });
+
+    //передача текста в выпадашку с сортировкой в каталоге 2 уровня и поиске
+    $(document).on('click', ".products__filters-dropdown-item", function () {
+        $(this).parents('.products__filters').find('.products__filters-list-span').html($(this).attr('data-text'));
     });
 
 

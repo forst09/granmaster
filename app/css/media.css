@@ -85,7 +85,7 @@
 
   .text-max-width {
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
     max-width: 52.7rem;
   }
 
@@ -1923,6 +1923,31 @@
   }
 
   /*конец стилей секции "Контакты" 668*/
+  /*##############################################################################################################################*/
+  /*Поиск*/
+  /*начало стилей секции "Поиск" 668*/
+  .search__title-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .search__title-wrapper .title-big {
+    margin-bottom: 0;
+  }
+
+  .search__title-found {
+    margin-top: 0;
+    margin-left: 1.6rem;
+  }
+
+  .search__form {
+    margin-bottom: 4.8rem;
+  }
+
+  /*конец стилей секции "Поиск" 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -4456,6 +4481,39 @@
   }
 
   /*конец стилей секции "Контакты" 1024*/
+  /*##############################################################################################################################*/
+  /*Поиск*/
+  /*начало стилей секции "Поиск" 1024*/
+  .search__title-found {
+    line-height: 2rem;
+  }
+
+  .search__form {
+    margin: 4.8rem 0 3.2rem;
+  }
+
+  .search__form-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .search__form-wrapper .btn-wrapper {
+    margin-top: 0;
+    margin-left: 3.9rem;
+  }
+
+  .search__form-input {
+    width: 100%;
+  }
+
+  /*конец стилей секции "Поиск" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

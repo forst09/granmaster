@@ -165,20 +165,33 @@
     <!-- начало секции "Поиск" -->
     <section class="products search">
         <div class="wrapper">
-            <h1 class="title-big">Товары по запросу <span class="search__title-name">“смеситель”</span> <span
-                    class="search__title-found">Найдено:&nbsp;<span class="seacrh__title-found-amount">10</span></span>
-            </h1>
-
-            <form action="#">
-                <input type="text" placeholder="Введите запрос">
-                <button class="btn" type="submit">Найти</button>
+            <div class="search__title-wrapper">
+                <h1 class="title-big">Товары по запросу <span class="search__title-name">“смеситель”</span></h1>
+                <div class="search__title-found">Найдено:&nbsp;<span class="seacrh__title-found-amount">10</span></div>
+            </div>
+            <form class="search__form" action="#">
+                <div class="search__form-wrapper">
+                    <input class="search__form-input" type="text" placeholder="Введите запрос">
+                    <div class="btn-wrapper">
+                        <button class="btn" type="submit">Найти</button>
+                    </div>
+                </div>
             </form>
         </div>
 
         <!-- сортировка -->
         <div class="wrapper">
             <div class="products__filters">
-                <a class="products__filters-list"><span class="products__filters-list-span">по мощности</span></a>
+                <div class="products__filters-list" href="javascript:void(0)"><span
+                        class="products__filters-list-span">по
+                        мощности</span>
+                    <div class="products__filters-dropdown">
+                        <div class="products__filters-dropdown-item" data-text="по мощности">по мощности</div>
+                        <div class="products__filters-dropdown-item" data-text="по длине">по длине</div>
+                        <div class="products__filters-dropdown-item" data-text="по массе">по массе</div>
+                        <div class="products__filters-dropdown-item" data-text="объем смесителя">объем смесителя</div>
+                    </div>
+                </div>
                 <div class="products__filters-links">
                     <a class="products__filters-item active">
                         <span href="#" class="products__filters-item-link">по мощности</span>

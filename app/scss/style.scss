@@ -2075,10 +2075,19 @@ section {
 
 .products__filters-list {
     padding-right: 2.4rem;
+    position: relative;
     display: inline-block;
     font-size: 1.2rem;
     line-height: 2rem;
     color: $light-gray;
+}
+
+.products__filters-list.active {
+    .products__filters-list-span {
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
 }
 
 .products__filters-list-span {
@@ -2095,6 +2104,35 @@ section {
         border-top: 1px solid $light-gray;
         border-right: 1px solid $light-gray;
         transform: rotate(135deg);
+        transition: 0.3s ease;
+    }
+}
+
+.products__filters-dropdown {
+    padding: 0.8rem;
+    position: absolute;
+    width: 12rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 9px rgba(38, 38, 40, 0.08);
+    border-radius: 0.6rem;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.products__filters-dropdown.active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.products__filters-dropdown-item {
+    margin-bottom: 0.4rem;
+    opacity: 0.6;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
     }
 }
 
@@ -3988,12 +4026,47 @@ section {
 
 /*начало стилей секции "Поиск" 320*/
 .search__title-found {
-    margin-left: 1.3rem;
+    margin-top: 1.2rem;
     font-family: 'Formular';
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.8rem;
     color: $blue;
+}
+
+.search__form {
+    margin: 3.2rem 0 4rem;
+}
+
+.search__form-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .btn-wrapper {
+        margin-top: 3.2rem;
+
+        .btn {
+            width: 12.6rem;
+        }
+    }
+}
+
+.search__form-input {
+    padding: 1.2rem 0.8rem 1.2rem 1.6rem;
+    border: 1px solid rgba(126, 184, 226, 0.2);
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: $gray;
+    opacity: 0.8;
+
+    &::placeholder {
+        font-family: Formular;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: $light-gray;
+        opacity: 0.8;
+    }
 }
 
 /*конец стилей секции "Поиск" 320*/
