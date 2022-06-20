@@ -2335,17 +2335,17 @@
         margin-right: 0;
     }
 
-    .header__work {
+    .work {
         margin-right: 8.84rem;
         display: flex;
     }
 
-    .header__work-days,
-    .header__work-hours {
+    .work-days,
+    .work-hours {
         line-height: 1.8rem;
     }
 
-    .header__work-days {
+    .work-days {
         margin-right: 0.8rem;
         padding-left: 2.8rem;
         position: relative;
@@ -2571,19 +2571,6 @@
 
     .header__menu {
         display: block;
-    }
-
-    .header__work-hours {
-        position: relative;
-
-        sup {
-            position: absolute;
-            top: 0.6rem;
-        }
-
-        span {
-            margin-right: 0.8rem;
-        }
     }
 
     /*конец стилей секции "Шапка" */

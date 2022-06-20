@@ -204,7 +204,7 @@ section {
     }
 
     table {
-        margin: 2.4rem auto;
+        margin: 0 auto 1.6rem;
         border: 1px solid $blue;
         border-radius: 1.6rem;
         border-collapse: unset;
@@ -391,6 +391,7 @@ section {
 }
 
 .scroll-table {
+    margin: 2.4rem 0;
     overflow-x: auto;
 }
 
@@ -538,8 +539,21 @@ section {
     margin-right: 1.6rem;
 }
 
-.header__work {
+.work {
     display: none;
+}
+
+.work-hours {
+    position: relative;
+
+    sup {
+        position: absolute;
+        top: 0.6rem;
+    }
+
+    span {
+        margin-right: 0.8rem;
+    }
 }
 
 .header__item-socials {
@@ -3846,6 +3860,33 @@ section {
 }
 
 /*конец стилей секции "Отзывы" 320*/
+
+/*##############################################################################################################################*/
+/*Контакты*/
+
+/*начало стилей секции "Контакты" 320*/
+.contacts-page {
+    padding-top: 0;
+
+    .work {
+        display: flex;
+    }
+}
+
+.contacts-page__wrapper {
+    margin-top: 3.2rem;
+}
+
+.contacts-page__icons-item-title {
+    font-family: Formular-Medium;
+    font-weight: 500;
+}
+
+.contacts-page__map {
+    margin-top: 3.2rem;
+}
+
+/*конец стилей секции "Контакты" 320*/
 
 @keyframes fadeEffect {
     from {

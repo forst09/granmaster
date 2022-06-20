@@ -322,5 +322,9 @@ $(document).ready(function () {
         $(this).parents('.other-granulation__item').find(".other-granulation__col-item").removeClass('active');
         $(this).addClass('active');
     });
+
+    //обернуть таблицы со страницы Дилерам в обертку для скролла
+    $('.text-content table').wrap('<div class="scroll-table" />');
+
 });
 
