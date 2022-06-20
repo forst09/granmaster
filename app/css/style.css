@@ -2188,6 +2188,11 @@ section {
   display: inline-block;
 }
 
+.pages-nav-arrow svg {
+  width: 0.667rem;
+  height: 0.667rem;
+}
+
 .pages-nav-item {
   margin-right: 0.8rem;
   display: -webkit-box;
@@ -3769,6 +3774,76 @@ section {
 }
 
 /*конец стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 320*/
+/*##############################################################################################################################*/
+/*Отзывы*/
+/*начало стилей секции "Отзывы" 320*/
+.reviews {
+  padding-top: 0;
+}
+.reviews .show-btn__span {
+  color: #537791;
+  font-size: 1rem;
+}
+.reviews .show-btn__span::after {
+  border-top: 1px solid #537791;
+  border-right: 1px solid #537791;
+}
+.reviews .thanks-letters__item-info .show-btn__wrapper {
+  margin-top: 0.4rem;
+}
+
+.reviews__wrapper {
+  margin-top: 3.2rem;
+}
+
+.reviews__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.6rem;
+  padding: 1.2rem;
+  width: 100%;
+  height: auto;
+  min-height: 18.8rem;
+  overflow: hidden;
+}
+.reviews__item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.reviews__item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reviews__item-title {
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.reviews__item-text {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  max-height: 5.4rem;
+  display: block;
+}
+
+.reviews__item-text.active {
+  overflow: visible;
+  max-height: 100%;
+}
+
+.reviews__item-author {
+  margin-top: auto;
+}
+
+/*конец стилей секции "Отзывы" 320*/
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;

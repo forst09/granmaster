@@ -1,22 +1,21 @@
 $(document).ready(function () {
     //развернуть текст 
-    let texthide = $('.text-hide');
-    let texthideNumber = texthide.length;
-    // let texthideNumber = $('.text-hide').length;
-    console.log(texthideNumber);
+    // let texthide = $('.text-hide');
+    // let texthideNumber = texthide.length;
+    // console.log(texthideNumber);
 
-    let texthideHeight, texthideInnerHeight;
+    // let texthideHeight, texthideInnerHeight;
 
 
-    texthide.each(function () {
-        texthideHeight = $(this).height();
-        texthideInnerHeight = $(this).innerHeight();
-        console.log(texthideHeight, texthideInnerHeight);
-        if (texthideHeight < texthideInnerHeight) {
-            $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
-            console.log('delete button');
-        }
-    });
+    // texthide.each(function () {
+    //     texthideHeight = $(this).height();
+    //     texthideInnerHeight = $(this).innerHeight();
+    //     console.log(texthideHeight, texthideInnerHeight);
+    //     if (texthideHeight < texthideInnerHeight) {
+    //         $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
+    //         console.log('delete button');
+    //     }
+    // });
 
 
     // for (let i = 0; i < texthideNumber; i++) {

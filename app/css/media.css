@@ -1857,6 +1857,29 @@
   }
 
   /*конец стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 668*/
+  /*##############################################################################################################################*/
+  /*Отзывы*/
+  /*начало стилей секции "Отзывы" 668*/
+  .reviews .thanks-letters__item-info .show-btn__wrapper {
+    margin-top: 0.6rem;
+    display: block;
+  }
+
+  .reviews__item {
+    margin-bottom: 2.4rem;
+    width: 100%;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+  }
+
+  .reviews__item-text {
+    margin: 1.6rem 0 0 0;
+    overflow-y: hidden;
+    max-height: 7.2rem;
+  }
+
+  /*конец стилей секции "Отзывы" 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -4390,6 +4413,19 @@
   }
 
   /*конец стилей секции "Уже несколько лет мы строим заводы и линии гранулирования" 1024*/
+  /*##############################################################################################################################*/
+  /*Отзывы*/
+  /*начало стилей секции "Отзывы" 1024*/
+  .reviews .show-btn__span {
+    font-size: 1.2rem;
+  }
+
+  .reviews__item-text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  /*конец стилей секции "Отзывы" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {
