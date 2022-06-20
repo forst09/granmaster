@@ -1880,6 +1880,42 @@
   }
 
   /*конец стилей секции "Отзывы" 668*/
+  /*##############################################################################################################################*/
+  /*Контакты*/
+  /*начало стилей секции "Контакты" 668*/
+  .contacts-page__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .contacts-page__map {
+    margin: 0;
+    width: 36.8rem;
+    height: 29rem;
+  }
+
+  .contacts-page__icons {
+    margin-top: 2.4rem;
+  }
+
+  .contacts-page__icons-item-title {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .contacts-page__address {
+    max-width: 20.5rem;
+  }
+
+  /*конец стилей секции "Контакты" 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -2268,25 +2304,6 @@
   .work-days,
 .work-hours {
     line-height: 1.8rem;
-  }
-
-  .work-days {
-    margin-right: 0.8rem;
-    padding-left: 2.8rem;
-    position: relative;
-  }
-  .work-days::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 1.2rem;
-    height: 1.2rem;
-    left: 0;
-    top: calc(50% - 0.6rem);
-    background-image: url(../img/clock.svg);
-    background-size: 1.2rem 1.2rem;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   .header__item-socials {
@@ -2985,11 +3002,7 @@
     line-height: 1.8rem;
   }
 
-  .footer__mail:hover::before {
-    width: 100%;
-  }
-
-  .footer__address {
+  .address {
     max-width: 18.9rem;
   }
 
@@ -4415,6 +4428,27 @@
   }
 
   /*конец стилей секции "Отзывы" 1024*/
+  /*##############################################################################################################################*/
+  /*Контакты*/
+  /*начало стилей секции "Контакты" 1024*/
+  .contacts-page__map {
+    width: 47.4rem;
+    height: 37.4rem;
+  }
+
+  .contacts-page__icons {
+    margin-top: 4rem;
+  }
+
+  .contacts-page__icons-item {
+    margin-bottom: 2rem;
+  }
+
+  .contacts-page__address {
+    max-width: 24.6rem;
+  }
+
+  /*конец стилей секции "Контакты" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

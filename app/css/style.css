@@ -503,6 +503,25 @@ section {
   display: none;
 }
 
+.work-days {
+  margin-right: 0.8rem;
+  padding-left: 2.8rem;
+  position: relative;
+}
+.work-days::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  left: 0;
+  top: calc(50% - 0.6rem);
+  background-image: url(../img/clock.svg);
+  background-size: 1.2rem 1.2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .work-hours {
   position: relative;
 }
@@ -511,7 +530,7 @@ section {
   top: 0.6rem;
 }
 .work-hours span {
-  margin-right: 0.8rem;
+  margin-right: 1rem;
 }
 
 .header__item-socials {
@@ -1518,19 +1537,50 @@ section {
   color: #FF6D1A;
 }
 
-.footer__address,
-.footer__mail,
+.address,
+.mail,
 .footer__work {
   line-height: 1.4rem;
   color: #3E4A61;
 }
 
-.footer__mail {
-  padding-left: 2.8rem;
+.mail {
   display: inline-block;
 }
-.footer__mail:hover .footer__mail-span::after {
-  width: 100%;
+.mail:hover .mail-span::after {
+  width: calc(100% - 2.3rem);
+}
+
+.mail-span {
+  padding-left: 2.8rem;
+  padding-bottom: 0.2rem;
+  position: relative;
+  line-height: 1.4rem;
+  display: inline-block;
+}
+.mail-span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-image: url("../img/mail.svg");
+  background-size: 1.2rem 1.2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mail-span::after {
+  content: "";
+  position: absolute;
+  width: 6.5rem;
+  height: 0.5px;
+  background-color: #3E4A61;
+  bottom: 0;
+  left: 2.8rem;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .footer__work {
@@ -1578,13 +1628,13 @@ section {
   top: 0.4rem;
 }
 
-.footer__address {
+.address {
   margin: 1.2rem 0;
   position: relative;
   padding-left: 2.8rem;
   max-width: 19.9rem;
 }
-.footer__address::before {
+.address::before {
   content: "";
   position: absolute;
   display: block;
@@ -1596,36 +1646,6 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1.2rem 1.2rem;
-}
-
-.footer__mail-span {
-  position: relative;
-  line-height: 1.4rem;
-  display: inline-block;
-}
-.footer__mail-span::before {
-  content: "";
-  position: absolute;
-  display: block;
-  left: -2.8rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  background-image: url("../img/mail.svg");
-  background-size: 1.2rem 1.2rem;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.footer__mail-span::after {
-  content: "";
-  position: absolute;
-  width: 6.5rem;
-  height: 0.5px;
-  background-color: #3E4A61;
-  bottom: -0.2rem;
-  left: 0;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 .footer__upfly {
@@ -3862,6 +3882,9 @@ section {
 .contacts-page {
   padding-top: 0;
 }
+.contacts-page .socials {
+  margin: 2.4rem 0 0;
+}
 .contacts-page .work {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3872,13 +3895,77 @@ section {
   margin-top: 3.2rem;
 }
 
+.contacts-page-socials__item:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.contacts-page-socials__item svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.contacts-page__icons {
+  margin-top: 3.2rem;
+}
+
+.contacts-page__address,
+.contacts-page__work,
+.contacts-page__mail {
+  line-height: 1.8rem;
+}
+
+.contacts-page__work .work-hours sup {
+  top: 0.8rem;
+}
+
+.contacts-page__icons-item {
+  margin-bottom: 1.2rem;
+}
+.contacts-page__icons-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
 .contacts-page__icons-item-title {
+  margin-bottom: 0.4rem;
   font-family: Formular-Medium;
   font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.contacts-page__address {
+  margin: 0;
+  padding-left: 2.3rem;
+  max-width: 26.7rem;
+}
+.contacts-page__address::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.5rem 1.5rem;
+}
+
+.contacts-page__mail-span {
+  padding-left: 2.3rem;
+}
+.contacts-page__mail-span::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.5rem 1.5rem;
+}
+.contacts-page__mail-span::after {
+  left: 2.3rem;
 }
 
 .contacts-page__map {
   margin-top: 3.2rem;
+  width: 100%;
+  height: 22.9rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+.contacts-page__map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*конец стилей секции "Контакты" 320*/
