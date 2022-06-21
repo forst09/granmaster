@@ -277,6 +277,7 @@ section {
   font-family: "Formular-Bold";
   font-size: 1.4rem;
   line-height: 2rem;
+  text-align: center;
 }
 .btn:active, .btn:focus, .btn:focus-within {
   background: #FF5300;
@@ -427,6 +428,8 @@ section {
   padding-top: 0.9rem;
   padding-bottom: 0.7rem;
   border-radius: 0px 0px 1.2rem 1.2rem;
+  -webkit-box-shadow: 0px 0px 8px rgba(62, 74, 97, 0.05);
+          box-shadow: 0px 0px 8px rgba(62, 74, 97, 0.05);
 }
 
 .header__container {
@@ -4115,7 +4118,74 @@ section {
   background-color: #FF6D1A;
 }
 
-/*начало стилей секции "Пустой поиск" 320*/
+/*конец стилей секции "Пустой поиск" 320*/
+/*##############################################################################################################################*/
+/*404*/
+/*начало стилей секции "404" 320*/
+.not-found {
+  padding-top: 6.4rem;
+  position: relative;
+  overflow: hidden;
+}
+.not-found .btn-wrapper {
+  margin-top: 2.4rem;
+}
+.not-found::before, .not-found::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.not-found::before {
+  background-image: url("../img/404/404-left.png");
+  height: 8.9rem;
+  width: 29.7rem;
+  background-size: 29.7rem 8.9rem;
+  left: -22rem;
+  top: 7rem;
+}
+.not-found::after {
+  background-image: url("../img/404/404-right.png");
+  height: 7.5rem;
+  width: 25.6rem;
+  background-size: 25.6rem 7.5rem;
+  right: -18.5rem;
+  bottom: 13.5rem;
+}
+
+.not-found__404 {
+  margin-bottom: 2.4rem;
+  font-family: Formular-Black;
+  font-size: 7.2rem;
+  line-height: 8.8rem;
+  color: #262628;
+  text-align: center;
+}
+
+/*конец стилей секции "404" 320*/
+/*##############################################################################################################################*/
+/*Спасибо за заявку!*/
+/*начало стилей секции "Спасибо за заявку!" 320*/
+.thanks {
+  padding-top: 7.4rem;
+}
+.thanks .btn-wrapper {
+  text-align: left;
+}
+.thanks .btn-wrapper .btn {
+  width: 12.6rem;
+}
+
+.thanks__wrapper {
+  padding: 0 1.5rem;
+}
+
+.thanks__image {
+  display: none;
+}
+
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -4124,6 +4194,7 @@ section {
     opacity: 1;
   }
 }
+
 @keyframes fadeEffect {
   from {
     opacity: 0;

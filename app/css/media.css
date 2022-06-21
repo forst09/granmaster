@@ -1975,6 +1975,64 @@
   }
 
   /*конец стилей секции "Поиск" 668*/
+  /*##############################################################################################################################*/
+  /*404*/
+  /*начало стилей секции "404" 668*/
+  .not-found::before {
+    width: 67.7rem;
+    height: 20.4rem;
+    background-size: 67.7rem 20.4rem;
+    left: -50rem;
+    top: 5rem;
+  }
+  .not-found::after {
+    width: 59.6rem;
+    height: 17.5rem;
+    background-size: 59.6rem 17.5rem;
+    right: -43rem;
+    bottom: 11rem;
+  }
+
+  .not-found__404 {
+    font-size: 12rem;
+    line-height: 14.7rem;
+  }
+
+  /*конец стилей секции "404" 668*/
+  /*##############################################################################################################################*/
+  /*Спасибо за заявку!*/
+  /*начало стилей секции "Спасибо за заявку!" 668*/
+  .thanks {
+    padding-top: 8.8rem;
+  }
+
+  .thanks__wrapper {
+    padding: 0 0 0 2.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .thanks__info .text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .thanks__image {
+    margin-top: 7.5rem;
+    display: block;
+    width: 32.3rem;
+    height: 25.5rem;
+  }
+  .thanks__image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /*конец стилей секции "Спасибо за заявку!" 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -2300,6 +2358,8 @@
     padding-top: 1.6rem;
     padding-bottom: 0;
     border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .header .socials__item {
     margin-right: 1.6rem;
@@ -4529,6 +4589,59 @@
   }
 
   /*конец стилей секции "Поиск" 1024*/
+  /*##############################################################################################################################*/
+  /*404*/
+  /*начало стилей секции "404" 1024*/
+  .not-found {
+    padding-top: 5.6rem;
+  }
+  .not-found::before {
+    width: 71.9rem;
+    height: 21.6rem;
+    background-size: 71.9rem 21.6rem;
+    left: -42rem;
+    top: 8rem;
+  }
+  .not-found::after {
+    width: 65rem;
+    height: 19.1rem;
+    background-size: 65rem 19.1rem;
+    right: -35rem;
+    bottom: 14rem;
+  }
+
+  .not-found__404 {
+    margin-bottom: 3.2rem;
+    font-size: 15.2rem;
+    line-height: 18.6rem;
+  }
+
+  /*конец стилей секции "404" 1024*/
+  /*##############################################################################################################################*/
+  /*Спасибо за заявку!*/
+  /*начало стилей секции "Спасибо за заявку!" 1024*/
+  .thanks {
+    padding-top: 12rem;
+  }
+
+  .thanks__wrapper {
+    padding-left: 9.4rem;
+  }
+
+  .thanks__info .text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  .thanks__info .btn-wrapper {
+    margin-top: 4rem;
+  }
+
+  .thanks__image {
+    width: 50.7rem;
+    height: 40rem;
+  }
+
+  /*конец стилей секции "Спасибо за заявку!" 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

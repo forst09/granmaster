@@ -347,5 +347,15 @@ $(document).ready(function () {
     //обернуть таблицы со страницы Дилерам в обертку для скролла
     $('.text-content table').wrap('<div class="scroll-table" />');
 
+    //клик для мобильных меню
+    $(document).on('click', '.header__burger-btn', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+        }
+    });
+
 });
 
