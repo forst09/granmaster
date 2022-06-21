@@ -137,7 +137,7 @@ section {
         margin: 3.2rem 0 1.6rem;
         text-align: left;
         font-size: 1.4rem;
-        line-height: 1.72rem;
+        line-height: 1.7rem;
         color: $black;
     }
 
@@ -3367,8 +3367,8 @@ section {
     color: $orange;
 }
 
-.projects__tiles.active {
-    display: flex;
+.tab-content.active {
+    display: block;
 }
 
 .projects__map.active {
@@ -3380,8 +3380,7 @@ section {
     animation: fadeEffect 0.3s;
 }
 
-.projects__tiles:not(.active),
-.projects__map:not(.active) {
+.tab-content:not(.active) {
     display: none;
 }
 

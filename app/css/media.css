@@ -66,6 +66,12 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
   }
+  .text-content h4 {
+    margin: 2.4rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 3.4rem;
+  }
   .text-content img {
     margin-top: 2.4rem;
     width: 30.4rem;
