@@ -14,3 +14,7 @@
     font-family: Formular-Bold;
     src: url("../fonts/FORMULAR-BOLD.TTF");
 }
+@font-face {
+    font-family: Formular-Light;
+    src: url("../fonts/FORMULAR-LIGHT.TTF");
+}

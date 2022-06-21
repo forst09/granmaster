@@ -357,5 +357,15 @@ $(document).ready(function () {
         }
     });
 
+    //закрытие куков по крестику
+    $(document).on('click', '.cookies__btn-close', function () {
+        $('.cookies').remove();
+    });
+
+    //закрытие куков по кнопке "принимаю"
+    $(document).on('click', '.cookies__btn-accept', function () {
+        $('.cookies').remove();
+    });
+
 });
 
