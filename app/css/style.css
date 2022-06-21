@@ -105,7 +105,6 @@ section {
 }
 .text-content h2,
 .text-content h3,
-.text-content h5,
 .text-content h6 {
   font-family: "Formular-Medium";
   font-weight: 500;
@@ -147,6 +146,7 @@ section {
   font-size: 1.4rem;
   line-height: 1.7rem;
   color: #262628;
+  font-weight: 400;
 }
 .text-content h6 {
   margin: 2.4rem 0 0.8rem;
