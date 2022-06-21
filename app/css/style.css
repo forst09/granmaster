@@ -1960,7 +1960,7 @@ section {
   margin-top: 3.2rem;
 }
 .products .btn-wrapper {
-  margin-top: 0.8rem;
+  margin-top: 2.4rem;
 }
 .products .btn-rect {
   margin-top: 1.2rem;
@@ -3889,6 +3889,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .reviews__item-title {

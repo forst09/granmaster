@@ -3310,7 +3310,7 @@
     padding: 0;
   }
   .products .btn-wrapper {
-    margin-top: 0rem;
+    margin-top: 3.2rem;
   }
   .products .btn-rect {
     padding: 1rem;
@@ -4524,6 +4524,7 @@
   }
 
   .search__form-wrapper .btn-wrapper {
+    margin-top: 0;
     margin-left: 3.9rem;
   }
 
