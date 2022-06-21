@@ -4076,6 +4076,42 @@ section {
 
 /*конец стилей секции "Поиск" 320*/
 
+/*##############################################################################################################################*/
+/*Пустой поиск*/
+
+/*начало стилей секции "Пустой поиск" 320*/
+.search-empty {
+    .search__form {
+        margin-bottom: 4.8rem;
+    }
+}
+
+.to-catalog__wrapper {
+    margin-top: 3.2rem;
+}
+
+.to-catalog {
+    padding-bottom: 0.4rem;
+    position: relative;
+    display: inline-block;
+    font-family: Formular-Bold;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: $orange;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0;
+        height: 1px;
+        width: 4.1rem;
+        background-color: $orange;
+    }
+}
+
+/*начало стилей секции "Пустой поиск" 320*/
+
 @keyframes fadeEffect {
     from {
         opacity: 0;
