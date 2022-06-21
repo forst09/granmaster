@@ -4196,22 +4196,19 @@ section {
 /*конец стилей секции "Спасибо за заявку!" 320*/
 
 /*##############################################################################################################################*/
-/*куки*/
+/*куки 320*/
 
 .cookies {
-    margin: auto;
     padding: 1.6rem;
     position: fixed;
-    left: 0;
-    right: 0;
+    left: 1.5rem;
+    right: 1.5rem;
     z-index: 100;
     bottom: 1.6rem;
     background-color: $light-blue;
-    width: 29rem;
+    width: auto;
     border-radius: 1.6rem;
 }
-
-.cookies__wrapper {}
 
 .cookies__text {
     font-family: Formular-Light;
@@ -4271,7 +4268,7 @@ section {
     }
 }
 
-/*конец куков*/
+/*конец куков 320*/
 
 @keyframes fadeEffect {
     from {
