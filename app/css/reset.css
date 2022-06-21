@@ -322,3 +322,11 @@ input[type="button"] {
 .clearfix {
   zoom: 1;
 }
+
+
+a,
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+}
