@@ -1999,6 +1999,21 @@
         margin-bottom: 4.8rem;
     }
 
+    .search__form-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn-wrapper {
+            margin-top: 0;
+            margin-left: 3.2rem;
+        }
+    }
+
+    .search__form-input {
+        width: 100%;
+    }
+
     /*конец стилей секции "Поиск" 668*/
 }
 
@@ -3409,7 +3424,7 @@
         }
 
         .btn-wrapper {
-            margin-top: 3.2rem;
+            margin-top: 0rem;
         }
 
         .btn-rect {
@@ -4710,18 +4725,10 @@
     }
 
     .search__form-wrapper {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
 
         .btn-wrapper {
-            margin-top: 0;
             margin-left: 3.9rem;
         }
-    }
-
-    .search__form-input {
-        width: 100%;
     }
 
     /*конец стилей секции "Поиск" 1024*/

@@ -34,6 +34,9 @@ section {
   text-align: center;
   color: #262628;
 }
+.title span {
+  color: #FF6D1A;
+}
 
 .title-medium {
   margin-bottom: 1.6rem;
@@ -293,10 +296,6 @@ section {
 }
 .btn-rect:active, .btn-rect:focus, .btn-rect:focus-within {
   background: #FF5300;
-}
-
-.title__span {
-  color: #FF6D1A;
 }
 
 .background-light {
@@ -609,6 +608,9 @@ section {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #262628;
+}
+.main__title span {
+  color: #FF6D1A;
 }
 
 .main__desc {
@@ -2102,6 +2104,7 @@ section {
   opacity: 1;
   visibility: visible;
   z-index: 10;
+  top: calc(100% + 0.4rem);
 }
 
 .products__filters-dropdown-item {
@@ -4039,7 +4042,7 @@ section {
 }
 
 .search__form-input {
-  padding: 1.2rem 0.8rem 1.2rem 1.6rem;
+  padding: 1.2rem 1.2rem 1rem 1.6rem;
   border: 1px solid rgba(126, 184, 226, 0.2);
   border-radius: 0.8rem;
   font-size: 1.2rem;

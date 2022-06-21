@@ -1947,6 +1947,27 @@
     margin-bottom: 4.8rem;
   }
 
+  .search__form-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .search__form-wrapper .btn-wrapper {
+    margin-top: 0;
+    margin-left: 3.2rem;
+  }
+
+  .search__form-input {
+    width: 100%;
+  }
+
   /*конец стилей секции "Поиск" 668*/
 }
 @media (min-width: 1024px) {
@@ -3279,7 +3300,7 @@
     padding: 0;
   }
   .products .btn-wrapper {
-    margin-top: 3.2rem;
+    margin-top: 0rem;
   }
   .products .btn-rect {
     padding: 1rem;
@@ -4492,25 +4513,8 @@
     margin: 4.8rem 0 3.2rem;
   }
 
-  .search__form-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
   .search__form-wrapper .btn-wrapper {
-    margin-top: 0;
     margin-left: 3.9rem;
-  }
-
-  .search__form-input {
-    width: 100%;
   }
 
   /*конец стилей секции "Поиск" 1024*/
