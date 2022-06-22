@@ -431,6 +431,10 @@ section {
   opacity: 1;
 }
 
+.fancybox-bg {
+  background-color: rgba(38, 38, 40, 0.4);
+}
+
 /*начало стилей секции "Шапка"*/
 .header {
   position: relative;
@@ -517,8 +521,11 @@ section {
   content: "";
   position: absolute;
   height: 1.5px;
-  width: 2.4rem;
+  width: 2.2rem;
   background-color: #7EB8E2;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .header__burger-wrapper::before {
   top: 0.4rem;
@@ -529,7 +536,7 @@ section {
 
 .header__burger-span {
   display: block;
-  width: 2.4rem;
+  width: 2.2rem;
   height: 1.5px;
   background-color: #7EB8E2;
 }
@@ -946,7 +953,7 @@ section {
 .granulation__wrapper {
   margin-top: 2.4rem;
   padding: 0 1.5rem;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .granulation__image {
@@ -1037,11 +1044,15 @@ section {
 
 /* конец стилей секции "Каталог"*/
 /*начало стилей секции "Самое востребованное на рынке"*/
+.demanded .scroll {
+  margin-top: 3.2rem;
+}
+
 .swiper-demanded {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  overflow: scroll;
+  overflow: auto;
 }
 .swiper-demanded::-webkit-scrollbar {
   width: 0;
@@ -1063,7 +1074,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   padding: 0 1.2rem;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .demanded__item {
@@ -1234,7 +1245,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1.5rem;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .years__pagination-item {
@@ -1463,7 +1474,7 @@ section {
 }
 
 .consultation__agreement-link {
-  border-bottom: 0.5px solid #537791;
+  border-bottom: 1px solid #537791;
 }
 
 .consultation__btn-download-wrapper {
@@ -1750,7 +1761,7 @@ section {
   content: "";
   position: absolute;
   width: 6.5rem;
-  height: 0.5px;
+  height: 1px;
   background-color: #3E4A61;
   bottom: 0;
   left: 2.8rem;
@@ -2044,9 +2055,11 @@ section {
 }
 
 .swiper-interested {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: auto;
   margin-top: 3.2rem;
-  padding: 0 1.5rem;
-  overflow-x: auto;
   scrollbar-width: none;
 }
 .swiper-interested::-webkit-scrollbar {
@@ -2057,11 +2070,11 @@ section {
 .swiper-interested .swiper-slide {
   -ms-flex-negative: unset;
       flex-shrink: unset;
+  margin-right: 0.8rem;
 }
 
 .interested__card-link {
   display: block;
-  margin-right: 0.8rem;
 }
 
 .interested__card {
@@ -2148,7 +2161,7 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  overflow: scroll;
+  overflow: auto;
 }
 .swiper-catalog2lvl-nav::-webkit-scrollbar {
   width: 0;
@@ -2639,7 +2652,7 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  overflow: scroll;
+  overflow: auto;
 }
 .swiper-card-description::-webkit-scrollbar {
   width: 0;
@@ -2748,7 +2761,7 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  overflow: scroll;
+  overflow: auto;
 }
 .swiper-card-gallery::-webkit-scrollbar {
   width: 0;
@@ -3843,6 +3856,10 @@ section {
 
 /*конец стилей секции "Закажите эту линию гранулирования сейчас" 320*/
 /*начало стилей секции "Другие проекты" 320*/
+.other-project .other-projects__tiles-item {
+  margin-bottom: 0;
+}
+
 .swiper-other-project {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

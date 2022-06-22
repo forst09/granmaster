@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
@@ -81,7 +83,7 @@
                 <div class="header__item header__item-mobile">
                     <div class="header__item-phone">
                         <a href="tel:88314180190" class="phone" rel="nofollow">8 (831) 418-01-90</a>
-                        <a href="#" class="header__call-text">
+                        <a href="#makeCall" data-fancybox class="header__call-text">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -960,6 +962,40 @@
     </div>
     <!-- конец куков -->
 
+    <!-- pop-up Обратный звонок -->
+    <div id="makeCall" class="make-call pop-up-request">
+        <div class="pop-up-request__container">
+            <div class="pop-up-request__wrapper">
+                <h2 class="title">Обратный <span>звонок</span></h2>
+                <form class="consultation__form" action="#">
+                    <div class="consultation__form-wrapper">
+                        <div class="consultation__form-wrapper-item">
+                            <div class="consultation__input-wrapper">
+                                <input id="make-request-input-name" class="consultation__form-input" type="text"
+                                    placeholder="Фамилия Имя Отчество">
+                                <label class="consultation__label-name" for="make-request-input-name"></label>
+                            </div>
+                            <div class="consultation__input-wrapper">
+                                <input id="make-request-input-phone" class="consultation__form-input" type="text"
+                                    placeholder="+7 (900) 987-65-43">
+                                <label class="consultation__label-phone" for="make-request-input-phone"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="consultation__buttons">
+                        <div class="btn-wrapper">
+                            <button type="submit" class="btn">Отправить</button>
+                        </div>
+                        <div class="consultation__agreement">При отправке данных, вы даете согласие
+                            на обработку <a href="#" class="consultation__agreement-link">персональных
+                                данных</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- конец pop-up Оформить заявку -->
+
     <!-- нижняя менюшка на планшетах/телефонах -->
     <section class="buttom-menu">
         <div class="buttom-menu__wrapper">
@@ -1002,6 +1038,7 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="js/full-main.js"></script>
 </body>
 

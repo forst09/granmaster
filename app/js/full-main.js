@@ -1,33 +1,26 @@
 $(document).ready(function () {
     //развернуть текст 
-    // let texthide = $('.text-hide');
-    // let texthideNumber = texthide.length;
-    // console.log(texthideNumber);
+    let texthide = $('.text-hide');
 
-    // let texthideHeight, texthideInnerHeight;
+    let texthideHeight;
 
+    //убрать кнопку Показать полностью, если текст вмещается в блок
+    texthide.each(function (index, el) {
+        texthideHeight = $(this).height();
+        let elements = $(this).find('*');
+        let heightAll = 0;
+        elements.each(function () {
+            let elementsHeight = $(this).height();
+            heightAll = heightAll + elementsHeight;
+        });
 
-    // texthide.each(function () {
-    //     texthideHeight = $(this).height();
-    //     texthideInnerHeight = $(this).innerHeight();
-    //     console.log(texthideHeight, texthideInnerHeight);
-    //     if (texthideHeight < texthideInnerHeight) {
-    //         $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
-    //         console.log('delete button');
-    //     }
-    // });
+        if (heightAll <= texthideHeight) {
+            $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
+            console.log('delete button');
+        }
+    });
 
-
-    // for (let i = 0; i < texthideNumber; i++) {
-    //     texthideHeight = texthide.height();
-    //     texthideInnerHeight = texthide.innerHeight();
-    //     console.log(texthideHeight, texthideInnerHeight);
-    //     if (texthideHeight <= texthideInnerHeight) {
-    //         $('.show-btn__wrapper').hide();
-    //         console.log('delete button');
-    //     }
-    // }
-
+    // показать/скрыть текст
     $(document).on('click', ".show-btn", function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -70,10 +63,10 @@ $(document).ready(function () {
     });
 
     //градиент на свайпер карточки товара секции "Чертежи и 3D схемы" по наведению мыши
-    $(document).on('mouseenter', "#swiperCardDrawings", function () {
+    $(document).on('mouseenter', ".swiper-card-drawings", function () {
         $(this).addClass('active');
     });
-    $(document).on('mouseleave', "#swiperCardDrawings", function () {
+    $(document).on('mouseleave', ".swiper-card-drawings", function () {
         $(this).removeClass('active');
     });
 
@@ -406,6 +399,11 @@ $(document).ready(function () {
         };
     }
 
+    $('.fancybox').fancybox({
+        tpl: {
+            closeBtn: '<a class="close-btn-fancy">press</a>'
+        }
+    })
 
 });
 

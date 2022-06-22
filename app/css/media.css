@@ -538,7 +538,7 @@
   }
   .consultation__agreement-link:hover {
     color: #FF6D1A;
-    border-bottom: 0.5px solid #FF6D1A;
+    border-bottom: 1px solid #FF6D1A;
   }
 
   .consultation__btn-download-wrapper {
@@ -569,7 +569,7 @@
     content: "";
     position: absolute;
     width: 11.1rem;
-    height: 0.5px;
+    height: 1px;
     background-color: #3E4A61;
     bottom: -0.2rem;
     left: 2.3rem;
@@ -869,10 +869,6 @@
   }
   .interested .title-container-mini {
     margin-bottom: 1.6rem;
-  }
-
-  .swiper-interested {
-    padding: 0 2.4rem;
   }
 
   .interested__card {
@@ -1763,6 +1759,10 @@
 
   /*конец стилей секции "Закажите эту линию гранулирования сейчас" 668*/
   /*начало стилей секции "Другие проекты" 668*/
+  .other-project .projects__tiles-item:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+
   .other-projects__tiles-item {
     padding: 0.8rem 0.8rem 1.6rem 0.8rem;
   }
@@ -1784,6 +1784,11 @@
   /*##############################################################################################################################*/
   /*О компании*/
   /*начало стилей секции "О компании" 668*/
+  .about-company .text {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
   .about-company__video {
     margin: 3.2rem auto 5.6rem;
     width: 43.4rem;
@@ -1854,6 +1859,8 @@
     overflow-y: auto;
     display: block;
     max-height: 12.8rem;
+    scrollbar-color: #ECF2F9 transparent;
+    scrollbar-width: thin;
   }
   .thanks-letters__item-text::-webkit-scrollbar-thumb {
     background-color: #ECF2F9;
@@ -2368,6 +2375,7 @@
   .swiper-demanded {
     padding: 0 9.4rem;
     display: block;
+    overflow: hidden;
   }
   .swiper-demanded .swiper-slide {
     width: 100% !important;
@@ -2452,6 +2460,10 @@
   }
 
   /*конец стилей кастомизации свайпера */
+  .fancybox-button:hover svg path {
+    fill: #7EB8E2;
+  }
+
   /*начало стилей секции "Шапка" */
   .header {
     padding-top: 1.6rem;
@@ -2880,6 +2892,7 @@
     margin-bottom: 0.8rem;
   }
   .demanded .scroll {
+    margin-top: 4.8rem;
     padding: 0;
   }
 
@@ -3145,7 +3158,7 @@
     content: "";
     position: absolute;
     width: 0;
-    height: 0.5px;
+    height: 1px;
     bottom: -0.2rem;
     left: 0;
     background-color: #FF6D1A;
@@ -3375,7 +3388,7 @@
   }
 
   .interested__buttons {
-    margin: 3.2rem auto;
+    margin: 3.2rem auto 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3389,6 +3402,10 @@
     width: 4rem;
   }
 
+  .swiper-interested {
+    display: block;
+    overflow: hidden;
+  }
   .swiper-interested .swiper-slide {
     -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -3482,6 +3499,7 @@
   .swiper-catalog2lvl-nav {
     display: block;
     padding: 0 9.4rem;
+    overflow: hidden;
   }
   .swiper-catalog2lvl-nav .swiper-slide {
     width: 19.9rem !important;
@@ -3891,6 +3909,7 @@
     display: block;
     padding: 0 18.4rem 0 9.4rem;
     position: relative;
+    overflow: hidden;
   }
   .swiper-card-description .swiper-slide {
     width: 6.8rem !important;
@@ -4582,6 +4601,10 @@
   .about-company .title {
     margin-bottom: 4.8rem;
   }
+  .about-company .text {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
 
   .about-company__wrapper {
     margin-bottom: 6.4rem;
@@ -4615,6 +4638,15 @@
     height: 3.3rem;
     top: calc(50% - 1.65rem);
     left: 3rem;
+  }
+
+  .about-company__info .text {
+    margin: auto;
+    max-width: 67rem;
+  }
+
+  .about__wrapper {
+    margin-top: 4.8rem;
   }
 
   /*конец стилей секции "О компании" 1024*/
