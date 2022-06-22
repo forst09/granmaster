@@ -120,18 +120,6 @@
         text-align: left;
     }
 
-    // .scroll {
-    //     padding: 0;
-    //     overflow-x: unset;
-    // }
-
-    // .swiper-years,
-    // .swiper-years-thumbs,
-    // .swiper-demanded {
-    //     padding: 0;
-    //     padding-left: 2.4rem;
-    // }
-
     .swiper-slide-thumb-active {
         .years__pagination-image {
             position: relative;
@@ -180,12 +168,6 @@
         margin-left: 3.2rem;
     }
 
-    // .header__logo {
-    //     display: inline-block;
-    //     width: 8.4rem;
-    //     height: 2.4rem;
-    // }
-
     .header__logo-link {
         width: 7.7rem;
         height: 2.6rem;
@@ -214,6 +196,10 @@
         bottom: 0.4rem;
         width: 2rem;
         height: 2rem;
+    }
+
+    .header__mobile-menu-links {
+        margin-top: 9rem;
     }
 
     /*конец стилей секции "Шапка"*/
@@ -998,7 +984,7 @@
     }
 
     .products-tab {
-        display: none;
+        // display: none;
         animation: fadeEffect 1s;
     }
 
@@ -2059,13 +2045,14 @@
 
     /*начало стилей секции "Спасибо за заявку!" 668*/
     .thanks {
-        padding-top: 8.8rem;
+        padding: 4rem 0;
     }
 
     .thanks__wrapper {
         padding: 0 0 0 2.4rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .thanks__info {
@@ -2076,7 +2063,6 @@
     }
 
     .thanks__image {
-        margin-top: 7.5rem;
         display: block;
         width: 32.3rem;
         height: 25.5rem;
@@ -2112,6 +2098,76 @@
     }
 
     /*конец куков 668*/
+
+    /*##############################################################################################################################*/
+    /*Быстрый просмотр товара 668*/
+    .quick-view {
+        display: none;
+        padding: 4.8rem 3.2rem 3.2rem 3.2rem;
+        max-width: 62rem;
+        width: 100%;
+        border-radius: 1.6rem;
+
+        .characteristics__item {
+            flex: 0 44%;
+        }
+    }
+
+    .quick-view__wrapper {
+        margin: 2.4rem 0 5.1rem 0;
+        display: flex;
+        justify-content: space-between;
+
+
+        .products__tiles-item-image {
+            margin-bottom: 0;
+            width: 20.3rem;
+            height: 20.3rem;
+
+            img {
+                width: 20.3rem;
+                height: 20.3rem;
+            }
+        }
+
+        .cost-wrapper {
+            text-align: right;
+            margin: 4rem 0 2.4rem 0;
+        }
+
+        .btn-wrapper {
+            margin: 0;
+            text-align: right;
+        }
+
+        .btn-rect {
+            padding: 1rem 2.1rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    .quick-view__info {
+        max-width: 32rem;
+    }
+
+    /*конец Быстрый просмотр товара 668*/
+
+    /*##############################################################################################################################*/
+    /*Оформить заявку, Заказать звонок 668*/
+    .pop-up-request {
+        position: relative;
+        padding: 2.4rem;
+        width: 62rem;
+        height: auto;
+        border-radius: 1.6rem;
+
+        .btn-wrapper {
+            margin-top: 0;
+        }
+    }
+
+    /*Оформить заявку, Заказать звонок 668*/
+
 }
 
 @media(min-width:1024px) {
@@ -4324,7 +4380,7 @@
     /*начало стилей секции "Все характеристики" 1024*/
     .characteristics {
         .characteristics__item {
-            flex: 0 25.5%;
+            flex: 0 26%;
         }
     }
 
@@ -4873,7 +4929,7 @@
 
     /*начало стилей секции "Спасибо за заявку!" 1024*/
     .thanks {
-        padding-top: 12rem;
+        padding: 6.4rem 0;
     }
 
     .thanks__wrapper {
@@ -4905,9 +4961,99 @@
         max-width: 72rem;
         font-size: 1.2rem;
         line-height: 2.2rem;
+
+        a {
+            &:hover {
+                color: $orange;
+                border-bottom: 1px solid $orange;
+            }
+        }
+    }
+
+    .cookies__btn-close {
+
+        &:hover {
+
+            &::after,
+            &::before {
+                background-color: $blue;
+            }
+        }
+    }
+
+    .cookies__btn-accept {
+        &:hover {
+            &::before {
+                width: 0;
+            }
+        }
     }
 
     /*конец куков 1024*/
+
+    /*##############################################################################################################################*/
+    /*Быстрый просмотр товара 1024*/
+    .quick-view {
+        padding: 7.2rem 4rem 3.2rem;
+        max-width: 86rem;
+
+        .products__tiles-item-image {
+            width: 25rem;
+            height: 26.3rem;
+        }
+
+        .products__tiles-col-img {
+            height: 25rem;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        .characteristics__item {
+            flex: 0 31%;
+        }
+    }
+
+    .quick-view__wrapper {
+        margin: 3.2rem 0 4.8rem 0;
+
+        .cost-wrapper {
+            margin-top: 5.6rem;
+            justify-content: end;
+        }
+    }
+
+    .quick-view__info {
+        max-width: 46.6rem;
+    }
+
+    /*конец Быстрый просмотр товара 1024*/
+    .pop-up-request {
+
+        .consultation__form {
+            margin-top: 4rem;
+            max-width: 41.2rem;
+        }
+
+        .consultation__form-wrapper {
+            display: block;
+        }
+
+        .consultation__agreement {
+            margin: 0 0 0 3.7rem;
+        }
+
+        .consultation__buttons {
+            margin-top: 4.8rem;
+        }
+    }
+
+    /*##############################################################################################################################*/
+    /*Оформить заявку, Заказать звонок 668*/
+
+    /*конец Оформить заявку, Заказать звонок 668*/
 }
 
 @media(max-width: 1023px) {

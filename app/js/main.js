@@ -334,7 +334,7 @@ $(document).ready(function () {
 
     //изменение картинки при наведении у карточек каталога 2го уровня
     $(document).on('mouseenter', ".products__tiles-col-item", function () {
-        $(this).parents('.products__tiles-item').find(".products__tiles-col-item").removeClass('active');
+        $(this).parents('.products__tiles-item-image').find(".products__tiles-col-item").removeClass('active');
         $(this).addClass('active');
     });
 
@@ -347,13 +347,33 @@ $(document).ready(function () {
     //обернуть таблицы со страницы Дилерам в обертку для скролла
     $('.text-content table').wrap('<div class="scroll-table" />');
 
-    //клик для мобильных меню
+    //открытие мобильного меню кликом по бургеру
     $(document).on('click', '.header__burger-btn', function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
+            $('.header').removeClass('active');
+            $('.header__mobile-menu').removeClass('active');
+            // $('.header').removeClass('fixed');
         }
         else {
             $(this).addClass('active');
+            $('.header').addClass('active');
+            $('.header__mobile-menu').addClass('active');
+            $('.header').addClass('fixed');
+        }
+    });
+
+    //раскрытие подменю в мобильном меню по клику на стрелку 
+    $(document).on('click', '.header__mobile-menu-links-arrow', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('.header__mobile-menu-links-item').find('.header__mobile-menu-dropdown').removeClass('active');
+            $(this).parents('.header__mobile-menu-links-item').find('.header__mobile-menu-dropdown-link').removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).parents('.header__mobile-menu-links-item').find('.header__mobile-menu-dropdown').addClass('active');
+            $(this).parents('.header__mobile-menu-links-item').find('.header__mobile-menu-dropdown-link').addClass('active');
         }
     });
 
@@ -366,6 +386,26 @@ $(document).ready(function () {
     $(document).on('click', '.cookies__btn-accept', function () {
         $('.cookies').remove();
     });
+
+    //фиксировання шапка на скролле 
+    let header = document.querySelector('.header');
+    headerHeight = header.clientHeight;
+
+    if (pageWidth < 1024) {
+        document.onscroll = function () {
+            let scroll = window.scrollY;
+
+            if (scroll > headerHeight) {
+                header.classList.add('fixed');
+                document.body.style.paddingTop = headerHeight + 'px';
+            }
+            else {
+                header.classList.remove('fixed');
+                document.body.removeAttribute('style');
+            }
+        };
+    }
+
 
 });
 

@@ -466,15 +466,46 @@ section {
 
 /*конец стилей для кастомизации свайпера*/
 
+.fancybox-button svg path {
+    fill: $light-gray;
+}
+
+.fancybox-close-small {
+    opacity: 1;
+}
+
 /*начало стилей секции "Шапка"*/
 .header {
+    position: relative;
     padding-top: 0.9rem;
     padding-bottom: 0.7rem;
     border-radius: 0px 0px 1.2rem 1.2rem;
     box-shadow: 0px 0px 8px rgba(62, 74, 97, 0.05);
+    transition: all 0.3s ease;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.header.active {
+    position: relative;
+    z-index: 30;
+}
+
+.header.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.header.js-scroll {
+    position: fixed;
+    transform: translateY(100px);
+
 }
 
 .header__container {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -489,12 +520,32 @@ section {
     align-items: center;
 }
 
+.header__burger-btn.active {
+    .header__burger-wrapper {
+        &::before {
+            transform: rotate(45deg);
+            background-color: $light-gray;
+            top: auto;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            background-color: $light-gray;
+            bottom: auto;
+        }
+    }
+
+    .header__burger-span {
+        display: none;
+    }
+}
+
 .header__burger-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.2rem;
+    height: 2.2rem;
 
     &::before,
     &::after {
@@ -539,6 +590,121 @@ section {
 .header__item-search {
     margin-left: auto;
     margin-right: 1.6rem;
+}
+
+.header__mobile-menu {
+    position: absolute;
+    left: -100rem;
+
+    .contacts-socials__item {
+        svg {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+}
+
+.header__mobile-menu.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.header__mobile-menu-links {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__mobile-menu-links-item {
+    margin-bottom: 2.4rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: $gray;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.header__mobile-menu-links-dropdown {
+    position: relative;
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     right: 0.2rem;
+    //     border-top: 1px solid $gray;
+    //     border-right: 1px solid $gray;
+    //     width: 1rem;
+    //     height: 1rem;
+    //     transform: rotate(135deg);
+    //     top: calc(50% - 0.8rem);
+    // }
+}
+
+.header__mobile-menu-dropdown {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header__mobile-menu-dropdown.active {
+    margin-top: 1.6rem;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+}
+
+.header__mobile-socials {
+    margin-top: 8rem;
+}
+
+.header__mobile-menu-dropdown-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__mobile-menu-links-arrow {
+    margin-right: 0.2rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-top: 1px solid $gray;
+    border-right: 1px solid $gray;
+    transform: rotate(135deg);
+    transition: 0.3s ease;
+}
+
+.header__mobile-menu-links-arrow.active {
+    border-top: 1px solid $orange;
+    border-right: 1px solid $orange;
+    transform: rotate(-45deg);
+}
+
+.header__mobile-menu-dropdown-item {
+    margin-bottom: 1.6rem;
+    margin-left: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.header__mobile-menu-dropdown-link {
+    transition: 0.3s ease;
+}
+
+.header__mobile-menu-dropdown-link.active {
+    color: $orange;
 }
 
 .work {
@@ -4139,7 +4305,7 @@ section {
     }
 
     &::before {
-        background-image: url('../img/404/404-left.png');
+        background-image: url('../img/404/404-left.svg');
         height: 8.9rem;
         width: 29.7rem;
         background-size: 29.7rem 8.9rem;
@@ -4148,7 +4314,7 @@ section {
     }
 
     &::after {
-        background-image: url('../img/404/404-right.png');
+        background-image: url('../img/404/404-right.svg');
         height: 7.5rem;
         width: 25.6rem;
         background-size: 25.6rem 7.5rem;
@@ -4178,10 +4344,6 @@ section {
 
     .btn-wrapper {
         text-align: left;
-
-        .btn {
-            width: 12.6rem;
-        }
     }
 }
 
@@ -4208,6 +4370,7 @@ section {
     background-color: $light-blue;
     width: auto;
     border-radius: 1.6rem;
+    box-shadow: (0px 0px 8px rgba(62, 74, 97, 0.05));
 }
 
 .cookies__text {
@@ -4218,6 +4381,7 @@ section {
 
     a {
         border-bottom: 1px solid $light-gray;
+        transition: 0.3s ease;
     }
 }
 
@@ -4241,6 +4405,7 @@ section {
         width: 100%;
         height: 1px;
         background-color: $orange;
+        transition: 0.3s ease;
     }
 }
 
@@ -4252,23 +4417,76 @@ section {
     width: 1rem;
     height: 1rem;
 
-    span {
-        display: block;
-        width: 1.2rem;
+    &::after,
+    &::before {
+
+        content: '';
+        position: absolute;
+        width: 100%;
         height: 1px;
         background-color: $light-gray;
-
-        &:nth-of-type(1) {
-            transform: rotate(45deg) translateY(0.3rem) translateX(0.2rem);
-        }
-
-        &:nth-of-type(2) {
-            transform: rotate(-45deg) translateY(0.1rem) translateX(-0.25rem);
-        }
+        transition: 0.3s ease;
     }
+
+    &::after {
+        top: 0.45rem;
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        bottom: 0.45rem;
+        transform: rotate(-45deg);
+    }
+
 }
 
 /*конец куков 320*/
+
+/*##############################################################################################################################*/
+/*Оформить заявку, Заказать звонок 320*/
+.pop-up-request {
+    padding: 0 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+
+    .consultation__form {
+        margin-top: 3.2rem;
+    }
+
+    .consultation__agreement {
+        margin-bottom: 0;
+    }
+
+    .btn-wrapper {
+        margin-top: 3.6rem;
+    }
+
+    .consultation__input-wrapper {
+        margin-bottom: 1.7rem;
+    }
+}
+
+.pop-up-request__wrapper {
+    width: 100%;
+}
+
+.pop-up-request__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*конец Оформить заявку, Заказать звонок 320*/
 
 @keyframes fadeEffect {
     from {
