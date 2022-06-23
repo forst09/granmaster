@@ -1,4 +1,5 @@
 @import "variables.scss";
+/*начало общих стилей*/
 
 html {
     font-family: Formular;
@@ -11,6 +12,10 @@ body {
 
 section {
     padding: 3.6rem 0;
+}
+
+.hide-scroll {
+    overflow: hidden;
 }
 
 .section-padding-mini {
@@ -105,7 +110,7 @@ section {
     }
 
     h2 {
-        //заголовок с линией
+        /*заголовок с линией*/
         margin: 2.4rem 0 1.6rem;
         position: relative;
         padding-bottom: 0.4rem;
@@ -132,7 +137,7 @@ section {
     }
 
     h4 {
-        //Этапы изготовления гранул
+        /*Этапы изготовления гранул*/
         font-weight: 400;
         margin: 3.2rem 0 1.6rem;
         text-align: left;
@@ -150,7 +155,7 @@ section {
     }
 
     h6 {
-        //Реквизиты для безналичной оплаты:
+        /*Реквизиты для безналичной оплаты:*/
         margin: 2.4rem 0 0.8rem;
         font-size: 1rem;
     }
@@ -230,7 +235,6 @@ section {
             }
         }
 
-        // border-bottom: 1px solid $blue;
         &:nth-last-of-type(1) {
             td {
                 border-bottom: 0;
@@ -479,6 +483,8 @@ section {
     background-color: rgba(38, 38, 40, 0.4);
 }
 
+/*конец общих стилей*/
+
 /*начало стилей секции "Шапка"*/
 .header {
     position: relative;
@@ -489,6 +495,10 @@ section {
     transition: all 0.3s ease;
     background-color: #fff;
     z-index: 100;
+
+    .search__result {
+        display: none;
+    }
 }
 
 .header.active {
@@ -634,18 +644,6 @@ section {
 
 .header__mobile-menu-links-dropdown {
     position: relative;
-
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     right: 0.2rem;
-    //     border-top: 1px solid $gray;
-    //     border-right: 1px solid $gray;
-    //     width: 1rem;
-    //     height: 1rem;
-    //     transform: rotate(135deg);
-    //     top: calc(50% - 0.8rem);
-    // }
 }
 
 .header__mobile-menu-dropdown {
@@ -758,6 +756,11 @@ section {
     position: relative;
     width: 2.4rem;
     height: 2.4rem;
+
+    .header__input-reset,
+    .header__input-reset-label {
+        display: none;
+    }
 }
 
 .header__input-search {
@@ -768,6 +771,10 @@ section {
     display: inline-flex;
     width: 2.4rem;
     height: 2.4rem;
+    background-image: url('../img/search.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 2.4rem 2.4rem;
 }
 
 .header__item-phone {
@@ -814,7 +821,9 @@ section {
     }
 }
 
-/*начало стилей секции "Главная"*/
+
+
+/*начало стилей секции "Главная" на главной странице*/
 .main {
     padding-top: 2.4rem;
     padding-bottom: 3.6rem;
@@ -993,7 +1002,11 @@ section {
 .granulation__wrapper {
     margin-top: 2.4rem;
     padding: 0 1.5rem;
-    overflow: auto;
+    overflow-x: scroll;
+
+    // &::-webkit-scrollbar {
+    //     background: #FF5C00;
+    // }
 }
 
 .granulation__image {
@@ -1610,8 +1623,6 @@ section {
     display: none;
 }
 
-
-
 /*конец стилей секции "Контакты"*/
 
 /* начало стилей секции "Карта"*/
@@ -1902,6 +1913,28 @@ section {
     align-items: center;
     max-width: 8.2rem;
     text-align: center;
+}
+
+.buttom-menu__image {
+    width: 2rem;
+    height: 2rem;
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.buttom-menu__link.active {
+    svg {
+        path {
+            fill: $orange;
+        }
+
+        rect {
+            fill: $orange;
+        }
+    }
 }
 
 
@@ -4384,6 +4417,13 @@ section {
     width: auto;
     border-radius: 1.6rem;
     box-shadow: (0px 0px 8px rgba(62, 74, 97, 0.05));
+
+    .btn-close {
+        top: 1rem;
+        right: 1rem;
+        width: 1rem;
+        height: 1rem;
+    }
 }
 
 .cookies__text {
@@ -4422,13 +4462,13 @@ section {
     }
 }
 
-.cookies__btn-close {
+.btn-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.6rem;
+    right: 1.6rem;
     display: inline-block;
-    width: 1rem;
-    height: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
 
     &::after,
     &::before {
@@ -4439,15 +4479,16 @@ section {
         height: 1px;
         background-color: $light-gray;
         transition: 0.3s ease;
+        top: 1px;
+        bottom: 1px;
+        margin: auto;
     }
 
     &::after {
-        top: 0.45rem;
         transform: rotate(45deg);
     }
 
     &::before {
-        bottom: 0.45rem;
         transform: rotate(-45deg);
     }
 
@@ -4499,7 +4540,132 @@ section {
     height: 100%;
 }
 
+.make-call {
+    .consultation__input-wrapper {
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+}
+
 /*конец Оформить заявку, Заказать звонок 320*/
+
+/*##############################################################################################################################*/
+/*поиск в шапке 320*/
+.search {
+    display: none;
+    animation: fadeEffect 0.3s;
+
+    .btn-close {
+        right: 0;
+        top: 0;
+        width: 1.44rem;
+        height: 1.44rem;
+    }
+}
+
+.search.active {
+    padding: 1.6rem;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.search__wrapper {
+    padding: 0 0.8rem;
+    margin-top: 2.4rem;
+}
+
+.search__form-wrapper {
+    position: relative;
+}
+
+.search__input-text {
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+    border: none;
+    border-bottom: 1px solid rgba(126, 184, 226, 0.5);
+    width: 100%;
+    font-family: Formular;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: rgba(62, 74, 97, 0.8);
+}
+
+.search__input-reset {
+    display: none;
+}
+
+.search__input-label {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0.28rem;
+}
+
+.search__result {
+    margin-top: 1.6rem;
+
+    .key-btn__wrapper {
+        margin-top: 2.4rem;
+        text-align: center;
+    }
+}
+
+.search__result-item {
+    margin-bottom: 0.4rem;
+    padding: 0.4rem;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(236, 242, 249, 0.5);
+    border-radius: 0.4rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.search__result-item-image {
+    margin-right: 0.4rem;
+    width: 2.8rem;
+    height: 2.3rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.search__result-item-name {
+    line-height: 1.2rem;
+    color: $gray;
+    font-family: Formular-Medium;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+/*конец поиск в шапке 320*/
+
+
 
 @keyframes fadeEffect {
     from {

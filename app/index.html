@@ -37,10 +37,41 @@
                 <div class="header__item header__item-search">
                     <form action="#">
                         <div class="header__form-search-wrapper">
-                            <input class="header__input-search" type="text">
+                            <input class="header__input-search" type="text" required>
                             <input class="header__input-btn" id="header-search" type="submit"></input>
-                            <label class="header__input-label" for="header-search"><img src="img/search.svg"
-                                    alt=""></label>
+                            <label class="header__input-label" for="header-search"></label>
+                            <input type="reset" class="header__input-reset" id="headerInputReset">
+                            <label class="header__input-reset-label" for="headerInputReset"></label>
+                            <div class="search__result">
+                                <a class="search__result-item" href="javascript:void(0)">
+                                    <div class="search__result-item-image">
+                                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                                    </div>
+                                    <div class="search__result-item-name">Винтовой конвейер (шнековый) КВ-150</div>
+                                </a>
+                                <a class="search__result-item" href="javascript:void(0)">
+                                    <div class="search__result-item-image">
+                                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                                    </div>
+                                    <div class="search__result-item-name">Винтовой конвейер (шнековый) КВ-150</div>
+                                </a>
+                                <a class="search__result-item" href="javascript:void(0)">
+                                    <div class="search__result-item-image">
+                                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                                    </div>
+                                    <div class="search__result-item-name">Вертикальные смесители серии СКВ</div>
+                                </a>
+                                <a class="search__result-item" href="javascript:void(0)">
+                                    <div class="search__result-item-image">
+                                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                                    </div>
+                                    <div class="search__result-item-name">Вертикальные смесители серии СКВ</div>
+                                </a>
+                                <div class="key-btn__wrapper"><a class="key-btn" href="javascript:void(0)"><span
+                                            class="key-btn__span">Смотреть все
+                                            <span>15</span></span></a>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -83,7 +114,7 @@
                 <div class="header__item header__item-mobile">
                     <div class="header__item-phone">
                         <a href="tel:88314180190" class="phone" rel="nofollow">8 (831) 418-01-90</a>
-                        <a href="#makeCall" data-fancybox class="header__call-text">
+                        <a href="#makeCall" data-fancybox data-modal="true" class="header__call-text">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -957,7 +988,7 @@
                 <a href="javascript:void(0)" class="cookies__btn-accept">Принимаю</a>
             </div>
         </div>
-        <a href="javascript:void(0)" class="cookies__btn-close">
+        <a href="javascript:void(0)" class="btn-close">
         </a>
     </div>
     <!-- конец куков -->
@@ -992,6 +1023,8 @@
                     </div>
                 </form>
             </div>
+
+            <a href="javascript:void(0)" data-fancybox-close class="btn-close"></a>
         </div>
     </div>
     <!-- конец pop-up Оформить заявку -->
@@ -1000,9 +1033,13 @@
     <section class="buttom-menu">
         <div class="buttom-menu__wrapper">
             <div class="buttom-menu__item">
-                <a href="#" class="buttom-menu__link">
+                <a href="#" class="buttom-menu__link active">
                     <div class="buttom-menu__image">
-                        <img src="img/buttom-menu/home.svg" alt="">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.99984 0.666992L10.3252 0.287364C10.138 0.126868 9.86169 0.126868 9.67444 0.287364L9.99984 0.666992ZM0.666504 8.66699L0.341108 8.28736L0.166504 8.43702V8.66699H0.666504ZM7.33317 19.3337V19.8337C7.60931 19.8337 7.83317 19.6098 7.83317 19.3337H7.33317ZM12.6665 19.3337H12.1665C12.1665 19.6098 12.3904 19.8337 12.6665 19.8337V19.3337ZM19.3332 8.66699H19.8332V8.43702L19.6586 8.28736L19.3332 8.66699ZM1.99984 19.8337H7.33317V18.8337H1.99984V19.8337ZM19.6586 8.28736L10.3252 0.287364L9.67444 1.04662L19.0078 9.04662L19.6586 8.28736ZM9.67444 0.287364L0.341108 8.28736L0.9919 9.04662L10.3252 1.04662L9.67444 0.287364ZM7.83317 19.3337V15.3337H6.83317V19.3337H7.83317ZM12.1665 15.3337V19.3337H13.1665V15.3337H12.1665ZM12.6665 19.8337H17.9998V18.8337H12.6665V19.8337ZM19.8332 18.0003V8.66699H18.8332V18.0003H19.8332ZM0.166504 8.66699V18.0003H1.1665V8.66699H0.166504ZM9.99984 13.167C11.1965 13.167 12.1665 14.137 12.1665 15.3337H13.1665C13.1665 13.5848 11.7487 12.167 9.99984 12.167V13.167ZM9.99984 12.167C8.25094 12.167 6.83317 13.5848 6.83317 15.3337H7.83317C7.83317 14.137 8.80322 13.167 9.99984 13.167V12.167ZM17.9998 19.8337C19.0124 19.8337 19.8332 19.0128 19.8332 18.0003H18.8332C18.8332 18.4606 18.4601 18.8337 17.9998 18.8337V19.8337ZM1.99984 18.8337C1.5396 18.8337 1.1665 18.4606 1.1665 18.0003H0.166504C0.166504 19.0128 0.987315 19.8337 1.99984 19.8337V18.8337Z"
+                                fill="#537791" />
+                        </svg>
                     </div>
                     <span class="buttom-menu__span">Главная</span>
                 </a>
@@ -1010,7 +1047,18 @@
             <div class="buttom-menu__item">
                 <a href="#" class="buttom-menu__link">
                     <div class="buttom-menu__image">
-                        <img src="img/buttom-menu/catalog.svg" alt="">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_205_658)">
+                                <path
+                                    d="M11.5882 12.9412C11.5882 11.9178 12.4178 11.0882 13.4412 11.0882H18.1471C19.1704 11.0882 20 11.9178 20 12.9412V17.6471C20 18.6704 19.1704 19.5 18.1471 19.5H13.4412C12.4178 19.5 11.5882 18.6704 11.5882 17.6471V12.9412ZM11.5882 2.35294C11.5882 1.32959 12.4178 0.5 13.4412 0.5H18.1471C19.1704 0.5 20 1.32959 20 2.35294V7.05882C20 8.08218 19.1704 8.91177 18.1471 8.91177H13.4412C12.4178 8.91177 11.5882 8.08218 11.5882 7.05882V2.35294ZM1 2.35294C1 1.32959 1.82959 0.5 2.85294 0.5H7.55882C8.58218 0.5 9.41177 1.32959 9.41177 2.35294V7.05882C9.41177 8.08218 8.58218 8.91177 7.55882 8.91177H2.85294C1.82959 8.91177 1 8.08218 1 7.05882V2.35294ZM1 12.9412C1 11.9178 1.82959 11.0882 2.85294 11.0882H7.55882C8.58218 11.0882 9.41177 11.9178 9.41177 12.9412V17.6471C9.41177 18.6704 8.58218 19.5 7.55882 19.5H2.85294C1.82959 19.5 1 18.6704 1 17.6471V12.9412Z"
+                                    stroke="#537791" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_205_658">
+                                    <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
                     <span class="buttom-menu__span">Каталог</span>
                 </a>
@@ -1018,7 +1066,22 @@
             <div class="buttom-menu__item">
                 <a href="#" class="buttom-menu__link">
                     <div class="buttom-menu__image">
-                        <img src="img/buttom-menu/granulation.svg" alt="">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_214_696)">
+                                <path
+                                    d="M3.79032 2.45814L4.4247 2.71874L4.92495 8.16258L2.06521 6.96062C1.25872 6.62165 0.857485 5.69268 1.16413 4.87436L1.7339 3.35386C2.0454 2.52256 2.96844 2.12051 3.79032 2.45814ZM5.75227 8.50629L5.2512 3.05346L8.08656 4.19535L8.58764 9.64818L5.75227 8.50629ZM9.41396 9.98097L8.91288 4.52814L11.8781 5.72235L12.3792 11.1752L9.41396 9.98097ZM13.2055 11.508L12.7045 6.05513L15.5416 7.19773L16.0426 12.6506L13.2055 11.508ZM16.8681 12.974L16.3676 7.52779L18.8942 8.53415C19.7175 8.86209 20.134 9.80251 19.8232 10.6319L19.2388 12.1915C18.936 12.9993 18.0527 13.4059 17.2422 13.1104L16.8681 12.974Z"
+                                    stroke="#537791" stroke-width="0.8" stroke-linejoin="round" />
+                                <path d="M3.37289 17.0222H5.70149V10.3308L3.37289 9.45581V17.0222Z" stroke="#537791"
+                                    stroke-width="0.8" stroke-miterlimit="10" />
+                                <path d="M13.5114 17.1442H15.9939V14.4438L13.5235 13.5413L13.5114 17.1442Z"
+                                    stroke="#537791" stroke-width="0.8" stroke-miterlimit="10" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_214_696">
+                                    <rect width="20" height="20" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
                     <span class="buttom-menu__span">Линии
                         гранулирования</span>
@@ -1027,7 +1090,11 @@
             <div class="buttom-menu__item">
                 <a href="#" class="buttom-menu__link">
                     <div class="buttom-menu__image">
-                        <img src="img/buttom-menu/contacts.svg" alt="">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.83334 15.3334H7.33334V15.8334H7.83334V15.3334ZM14.5 15.3334V15.8334H15V15.3334H14.5ZM8.33334 15.3334V14.6666H7.33334V15.3334H8.33334ZM14 14.6667V15.3334H15V14.6667H14ZM14.5 14.8334H7.83334V15.8334H14.5V14.8334ZM11.1667 11.8334C12.7315 11.8334 14 13.1019 14 14.6667H15C15 12.5497 13.2838 10.8334 11.1667 10.8334V11.8334ZM8.33334 14.6666C8.33334 13.1018 9.60184 11.8334 11.1667 11.8334V10.8334C9.04962 10.8334 7.33334 12.5495 7.33334 14.6666H8.33334ZM11.1667 4.16675C9.78596 4.16675 8.66668 5.28604 8.66668 6.66675H9.66668C9.66668 5.83832 10.3382 5.16675 11.1667 5.16675V4.16675ZM13.6667 6.66675C13.6667 5.28604 12.5474 4.16675 11.1667 4.16675V5.16675C11.9951 5.16675 12.6667 5.83832 12.6667 6.66675H13.6667ZM11.1667 9.16675C12.5474 9.16675 13.6667 8.04746 13.6667 6.66675H12.6667C12.6667 7.49517 11.9951 8.16675 11.1667 8.16675V9.16675ZM11.1667 8.16675C10.3382 8.16675 9.66668 7.49517 9.66668 6.66675H8.66668C8.66668 8.04746 9.78596 9.16675 11.1667 9.16675V8.16675ZM5.16668 1.16675H17.1667V0.166748H5.16668V1.16675ZM18 2.00008V18.0001H19V2.00008H18ZM17.1667 18.8334H5.16668V19.8334H17.1667V18.8334ZM4.33334 18.0001V2.00008H3.33334V18.0001H4.33334ZM5.16668 18.8334C4.70644 18.8334 4.33334 18.4603 4.33334 18.0001H3.33334C3.33334 19.0126 4.15415 19.8334 5.16668 19.8334V18.8334ZM18 18.0001C18 18.4603 17.6269 18.8334 17.1667 18.8334V19.8334C18.1792 19.8334 19 19.0126 19 18.0001H18ZM17.1667 1.16675C17.6269 1.16675 18 1.53984 18 2.00008H19C19 0.987559 18.1792 0.166748 17.1667 0.166748V1.16675ZM5.16668 0.166748C4.15415 0.166748 3.33334 0.98756 3.33334 2.00008H4.33334C4.33334 1.53984 4.70644 1.16675 5.16668 1.16675V0.166748ZM5.83334 5.50008H1.83334V6.50008H5.83334V5.50008ZM5.83334 13.5001H1.83334V14.5001H5.83334V13.5001Z"
+                                fill="#537791" />
+                        </svg>
                     </div>
                     <span class="buttom-menu__span">Контакты</span>
                 </a>
@@ -1035,6 +1102,51 @@
         </div>
     </section>
     <!-- конец нижняя менюшка на планшетах/телефонах -->
+
+    <!-- поиск -->
+    <div class="search">
+        <a href="javascript:void(0)" class="navigation__back"><span class="navigation__back-span">Назад</span></a>
+        <div class="search__wrapper">
+            <form action="#">
+                <div class="search__form-wrapper">
+                    <input class="search__input-text" type="text">
+                    <input class="search__input-reset" id="searchReset" type="reset"></input>
+                    <label class="search__input-label" for="searchReset"><span class="btn-close"></span></label>
+                </div>
+            </form>
+            <div class="search__result">
+                <a class="search__result-item" href="javascript:void(0)">
+                    <div class="search__result-item-image">
+                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                    </div>
+                    <div class="search__result-item-name">Винтовой конвейер (шнековый) КВ-150</div>
+                </a>
+                <a class="search__result-item" href="javascript:void(0)">
+                    <div class="search__result-item-image">
+                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                    </div>
+                    <div class="search__result-item-name">Винтовой конвейер (шнековый) КВ-150</div>
+                </a>
+                <a class="search__result-item" href="javascript:void(0)">
+                    <div class="search__result-item-image">
+                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                    </div>
+                    <div class="search__result-item-name">Вертикальные смесители серии СКВ</div>
+                </a>
+                <a class="search__result-item" href="javascript:void(0)">
+                    <div class="search__result-item-image">
+                        <img src="img/catalog-2lvl/products-1.png" alt="">
+                    </div>
+                    <div class="search__result-item-name">Вертикальные смесители серии СКВ</div>
+                </a>
+                <div class="key-btn__wrapper"><a class="key-btn" href="javascript:void(0)"><span
+                            class="key-btn__span">Смотреть все
+                            <span>15</span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- конец поиска -->
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>

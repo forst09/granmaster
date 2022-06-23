@@ -140,6 +140,18 @@
     padding: 2rem 0;
     border-radius: 0px 0px 1.6rem 1.6rem;
   }
+  .header .work.active {
+    display: none;
+  }
+
+  .header.fixed .header__item-logo {
+    margin-left: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 
   .header__container {
     -webkit-box-align: end;
@@ -160,10 +172,15 @@
   .header__logo-link {
     width: 7.7rem;
     height: 2.6rem;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
 
   .header__item-search {
-    margin-right: 2.4rem;
+    margin-right: 1.6rem;
   }
 
   .header__form-search-wrapper {
@@ -171,20 +188,9 @@
     height: auto;
   }
 
-  .header__input-search {
-    display: block;
-    width: 25.3rem;
-    border: none;
-    border-bottom: 1px solid #7EB8E2;
-    opacity: 0.5;
-  }
-
   .header__input-label {
-    position: absolute;
-    right: 0;
-    bottom: 0.4rem;
-    width: 2rem;
-    height: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   .header__mobile-menu-links {
@@ -768,6 +774,22 @@
     box-orient: vertical;
   }
 
+  .buttom-menu__link.active {
+    position: relative;
+  }
+  .buttom-menu__link.active::after {
+    position: absolute;
+    content: "";
+    height: 0.4rem;
+    background-color: #FF6D1A;
+    width: 5rem;
+    top: 5.8rem;
+    border-radius: 0.6rem 0.6rem 0px 0px;
+  }
+  .buttom-menu__link.active .buttom-menu__span {
+    color: #FF6D1A;
+  }
+
   /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
   /*##############################################################################################################################*/
   /*каталог первого уровня*/
@@ -964,14 +986,14 @@
   }
 
   .products__tiles {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: -ms-grid;
+    display: grid;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-grid-columns: (4fr)[3];
+    grid-template-columns: repeat(3, 4fr);
+    grid-row-gap: 2.4rem;
   }
 
   .products__tiles-item {
@@ -2052,6 +2074,10 @@
     left: 2.4rem;
     right: 2.4rem;
   }
+  .cookies .btn-close {
+    top: 1.2rem;
+    right: 1.2rem;
+  }
 
   .cookies__wrapper {
     display: -webkit-box;
@@ -2106,6 +2132,8 @@
   .quick-view__wrapper .products__tiles-item-image img {
     width: 20.3rem;
     height: 20.3rem;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .quick-view__wrapper .cost-wrapper {
     text-align: right;
@@ -2139,6 +2167,33 @@
   }
 
   /*Оформить заявку, Заказать звонок 668*/
+  /*##############################################################################################################################*/
+  /*поиск в шапке 668*/
+  .search .key-btn__wrapper {
+    margin-top: 3.2rem;
+  }
+
+  .search.active {
+    padding: 2.4rem;
+  }
+  .search.active .navigation__back {
+    display: block;
+  }
+
+  .search__wrapper {
+    padding: 0;
+  }
+
+  .search__input-text {
+    padding-bottom: 0.7rem;
+    padding-left: 0.8rem;
+  }
+
+  .search__result {
+    margin-top: 2.4rem;
+  }
+
+  /*конец поиск в шапке 668*/
 }
 @media (min-width: 1024px) {
   .header__menu-catalog-burger {
@@ -2478,6 +2533,18 @@
   .header .socials__item:nth-last-of-type(1) {
     margin-right: 0;
   }
+  .header .search__result {
+    margin-top: 0.2rem;
+    -webkit-box-shadow: 0px 4px 9px rgba(38, 38, 40, 0.08);
+            box-shadow: 0px 4px 9px rgba(38, 38, 40, 0.08);
+    border-radius: 0.6rem;
+  }
+  .header .search__result.active {
+    display: block;
+  }
+  .header .key-btn__wrapper {
+    margin-top: 1.6rem;
+  }
 
   .header__container {
     -webkit-box-align: center;
@@ -2510,13 +2577,53 @@
     position: relative;
   }
 
+  .header__form-search-wrapper.active .header__input-label {
+    display: none;
+  }
+  .header__form-search-wrapper.active .header__input-reset-label {
+    display: block;
+  }
+
   .header__input-search {
+    display: block;
     width: 18.5rem;
+    border: none;
+    padding-bottom: 0.4rem;
+    padding-left: 0.8rem;
+    padding-right: 2rem;
+    border-bottom: 1px solid rgba(126, 184, 226, 0.5);
+    font-family: Formular;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: rgba(62, 74, 97, 0.8);
+  }
+
+  .header__input-search.active {
+    width: 37.3rem;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .header__input-label {
+    position: absolute;
+    right: 0;
+    bottom: 0.4rem;
     width: 1rem;
     height: 1rem;
+    background-size: 1rem 1rem;
+  }
+
+  .header__input-reset-label {
+    position: absolute;
+    right: 0;
+    bottom: 0.4rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-image: url("../img/close.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 0.6rem 0.6rem;
   }
 
   .header__item-search {
@@ -4785,7 +4892,11 @@
     border-bottom: 1px solid #FF6D1A;
   }
 
-  .cookies__btn-close:hover::after, .cookies__btn-close:hover::before {
+  .btn-close {
+    top: 2.4rem;
+    right: 2.4rem;
+  }
+  .btn-close:hover::after, .btn-close:hover::before {
     background-color: #7EB8E2;
   }
 
@@ -4832,6 +4943,8 @@
   }
 
   /*конец Быстрый просмотр товара 1024*/
+  /*##############################################################################################################################*/
+  /*Оформить заявку, Заказать звонок 1024*/
   .pop-up-request .consultation__form {
     margin-top: 4rem;
     max-width: 41.2rem;
@@ -4846,9 +4959,28 @@
     margin-top: 4.8rem;
   }
 
+  /*конец Оформить заявку, Заказать звонок 1024*/
   /*##############################################################################################################################*/
-  /*Оформить заявку, Заказать звонок 668*/
-  /*конец Оформить заявку, Заказать звонок 668*/
+  /*поиск в шапке 1024*/
+  .search__result {
+    display: none;
+    padding: 0.8rem 0.8rem 1.6rem 0.8rem;
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+  }
+
+  .search__result-item {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .search__result-item:hover {
+    background: rgba(126, 184, 226, 0.3);
+  }
+
+  /*конец поиск в шапке 1024*/
 }
 @media (max-width: 1023px) {
   .products__tiles-item .products__tiles-col-item:not(.active) {

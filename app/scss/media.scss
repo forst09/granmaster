@@ -154,6 +154,19 @@
     .header {
         padding: 2rem 0;
         border-radius: 0px 0px 1.6rem 1.6rem;
+
+        .work.active {
+            display: none;
+        }
+    }
+
+    .header.fixed {
+        .header__item-logo {
+            margin-left: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     .header__container {
@@ -171,10 +184,11 @@
     .header__logo-link {
         width: 7.7rem;
         height: 2.6rem;
+        transition: transform 0.3s ease;
     }
 
     .header__item-search {
-        margin-right: 2.4rem;
+        margin-right: 1.6rem;
     }
 
     .header__form-search-wrapper {
@@ -182,20 +196,10 @@
         height: auto;
     }
 
-    .header__input-search {
-        display: block;
-        width: 25.3rem;
-        border: none;
-        border-bottom: 1px solid $blue;
-        opacity: 0.5;
-    }
 
     .header__input-label {
-        position: absolute;
-        right: 0;
-        bottom: 0.4rem;
-        width: 2rem;
-        height: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
     }
 
     .header__mobile-menu-links {
@@ -781,6 +785,24 @@
         box-orient: vertical;
     }
 
+    .buttom-menu__link.active {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            height: 0.4rem;
+            background-color: $orange;
+            width: 5rem;
+            top: 5.8rem;
+            border-radius: 0.6rem 0.6rem 0px 0px;
+        }
+
+        .buttom-menu__span {
+            color: $orange;
+        }
+    }
+
 
     /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
 
@@ -993,9 +1015,13 @@
     }
 
     .products__tiles {
-        align-items: center;
+        // align-items: center;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        display: grid;
         justify-content: space-between;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(3, 4fr);
+        grid-row-gap: 2.4rem;
     }
 
     .products__tiles-item {
@@ -2097,6 +2123,11 @@
         padding-right: 5.6rem;
         left: 2.4rem;
         right: 2.4rem;
+
+        .btn-close {
+            top: 1.2rem;
+            right: 1.2rem;
+        }
     }
 
     .cookies__wrapper {
@@ -2143,6 +2174,7 @@
             img {
                 width: 20.3rem;
                 height: 20.3rem;
+                object-fit: cover;
             }
         }
 
@@ -2183,6 +2215,37 @@
     }
 
     /*Оформить заявку, Заказать звонок 668*/
+
+    /*##############################################################################################################################*/
+    /*поиск в шапке 668*/
+    .search {
+        .key-btn__wrapper {
+            margin-top: 3.2rem;
+        }
+    }
+
+    .search.active {
+        padding: 2.4rem;
+
+        .navigation__back {
+            display: block;
+        }
+    }
+
+    .search__wrapper {
+        padding: 0;
+    }
+
+    .search__input-text {
+        padding-bottom: 0.7rem;
+        padding-left: 0.8rem;
+    }
+
+    .search__result {
+        margin-top: 2.4rem;
+    }
+
+    /*конец поиск в шапке 668*/
 
 }
 
@@ -2544,6 +2607,20 @@
                 margin-right: 0;
             }
         }
+
+        .search__result {
+            margin-top: 0.2rem;
+            box-shadow: 0px 4px 9px rgba(38, 38, 40, 0.08);
+            border-radius: 0.6rem;
+        }
+
+        .search__result.active {
+            display: block;
+        }
+
+        .key-btn__wrapper {
+            margin-top: 1.6rem;
+        }
     }
 
 
@@ -2577,13 +2654,54 @@
         position: relative;
     }
 
+    .header__form-search-wrapper.active {
+        .header__input-label {
+            display: none;
+        }
+
+        .header__input-reset-label {
+            display: block;
+        }
+    }
+
     .header__input-search {
+        display: block;
         width: 18.5rem;
+        border: none;
+        padding-bottom: 0.4rem;
+        padding-left: 0.8rem;
+        padding-right: 2rem;
+        border-bottom: 1px solid rgba(126, 184, 226, 0.5);
+        font-family: Formular;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: rgba(62, 74, 97, 0.8);
+    }
+
+    .header__input-search.active {
+        width: 37.3rem;
+        transition: all 0.3s ease;
     }
 
     .header__input-label {
+        position: absolute;
+        right: 0;
+        bottom: 0.4rem;
         width: 1rem;
         height: 1rem;
+        background-size: 1rem 1rem;
+    }
+
+    .header__input-reset-label {
+        position: absolute;
+        right: 0;
+        bottom: 0.4rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        background-image: url('../img/close.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 0.6rem 0.6rem;
     }
 
     .header__item-search {
@@ -3247,8 +3365,6 @@
 
             .contacts__map-btn-span::before {
                 width: 100%;
-                // transition: 0.3s ease;
-                // border-bottom: 1px solid $orange;
             }
         }
     }
@@ -5015,7 +5131,9 @@
         }
     }
 
-    .cookies__btn-close {
+    .btn-close {
+        top: 2.4rem;
+        right: 2.4rem;
 
         &:hover {
 
@@ -5075,6 +5193,10 @@
     }
 
     /*конец Быстрый просмотр товара 1024*/
+
+
+    /*##############################################################################################################################*/
+    /*Оформить заявку, Заказать звонок 1024*/
     .pop-up-request {
 
         .consultation__form {
@@ -5095,10 +5217,29 @@
         }
     }
 
-    /*##############################################################################################################################*/
-    /*Оформить заявку, Заказать звонок 668*/
+    /*конец Оформить заявку, Заказать звонок 1024*/
 
-    /*конец Оформить заявку, Заказать звонок 668*/
+    /*##############################################################################################################################*/
+    /*поиск в шапке 1024*/
+    .search__result {
+        display: none;
+        padding: 0.8rem 0.8rem 1.6rem 0.8rem;
+        position: absolute;
+        z-index: 100;
+        background-color: #fff;
+    }
+
+    .search__result-item {
+        transition: 0.3s ease;
+    }
+
+    .search__result-item {
+        &:hover {
+            background: rgba(126, 184, 226, 0.3);
+        }
+    }
+
+    /*конец поиск в шапке 1024*/
 }
 
 @media(max-width: 1023px) {

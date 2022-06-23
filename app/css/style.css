@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*начало общих стилей*/
 html {
   font-family: Formular;
   font-size: 10px;
@@ -10,6 +11,10 @@ body {
 
 section {
   padding: 3.6rem 0;
+}
+
+.hide-scroll {
+  overflow: hidden;
 }
 
 .section-padding-mini {
@@ -110,6 +115,7 @@ section {
   font-weight: 500;
 }
 .text-content h2 {
+  /*заголовок с линией*/
   margin: 2.4rem 0 1.6rem;
   position: relative;
   padding-bottom: 0.4rem;
@@ -134,6 +140,7 @@ section {
   color: #262628;
 }
 .text-content h4 {
+  /*Этапы изготовления гранул*/
   font-weight: 400;
   margin: 3.2rem 0 1.6rem;
   text-align: left;
@@ -149,6 +156,7 @@ section {
   font-weight: 400;
 }
 .text-content h6 {
+  /*Реквизиты для безналичной оплаты:*/
   margin: 2.4rem 0 0.8rem;
   font-size: 1rem;
 }
@@ -435,6 +443,7 @@ section {
   background-color: rgba(38, 38, 40, 0.4);
 }
 
+/*конец общих стилей*/
 /*начало стилей секции "Шапка"*/
 .header {
   position: relative;
@@ -448,6 +457,9 @@ section {
   transition: all 0.3s ease;
   background-color: #fff;
   z-index: 100;
+}
+.header .search__result {
+  display: none;
 }
 
 .header.active {
@@ -726,6 +738,10 @@ section {
   width: 2.4rem;
   height: 2.4rem;
 }
+.header__form-search-wrapper .header__input-reset,
+.header__form-search-wrapper .header__input-reset-label {
+  display: none;
+}
 
 .header__input-search {
   display: none;
@@ -737,6 +753,10 @@ section {
   display: inline-flex;
   width: 2.4rem;
   height: 2.4rem;
+  background-image: url("../img/search.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 2.4rem 2.4rem;
 }
 
 .header__item-phone {
@@ -773,7 +793,7 @@ section {
   stroke: none;
 }
 
-/*начало стилей секции "Главная"*/
+/*начало стилей секции "Главная" на главной странице*/
 .main {
   padding-top: 2.4rem;
   padding-bottom: 3.6rem;
@@ -953,7 +973,7 @@ section {
 .granulation__wrapper {
   margin-top: 2.4rem;
   padding: 0 1.5rem;
-  overflow: auto;
+  overflow-x: scroll;
 }
 
 .granulation__image {
@@ -1908,6 +1928,22 @@ section {
           align-items: center;
   max-width: 8.2rem;
   text-align: center;
+}
+
+.buttom-menu__image {
+  width: 2rem;
+  height: 2rem;
+}
+.buttom-menu__image svg {
+  width: 100%;
+  height: auto;
+}
+
+.buttom-menu__link.active svg path {
+  fill: #FF6D1A;
+}
+.buttom-menu__link.active svg rect {
+  fill: #FF6D1A;
 }
 
 /*конец стилей секции "Нижнее меню на телефоны/планшеты" */
@@ -4387,6 +4423,12 @@ section {
   -webkit-box-shadow: 0px 0px 8px rgba(62, 74, 97, 0.05);
           box-shadow: 0px 0px 8px rgba(62, 74, 97, 0.05);
 }
+.cookies .btn-close {
+  top: 1rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
 
 .cookies__text {
   font-family: Formular-Light;
@@ -4426,15 +4468,15 @@ section {
   transition: 0.3s ease;
 }
 
-.cookies__btn-close {
+.btn-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.6rem;
+  right: 1.6rem;
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
-.cookies__btn-close::after, .cookies__btn-close::before {
+.btn-close::after, .btn-close::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -4443,15 +4485,16 @@ section {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  top: 1px;
+  bottom: 1px;
+  margin: auto;
 }
-.cookies__btn-close::after {
-  top: 0.45rem;
+.btn-close::after {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.cookies__btn-close::before {
-  bottom: 0.45rem;
+.btn-close::before {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -4508,7 +4551,127 @@ section {
   height: 100%;
 }
 
+.make-call .consultation__input-wrapper:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
 /*конец Оформить заявку, Заказать звонок 320*/
+/*##############################################################################################################################*/
+/*поиск в шапке 320*/
+.search {
+  display: none;
+  -webkit-animation: fadeEffect 0.3s;
+          animation: fadeEffect 0.3s;
+}
+.search .btn-close {
+  right: 0;
+  top: 0;
+  width: 1.44rem;
+  height: 1.44rem;
+}
+
+.search.active {
+  padding: 1.6rem;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.search__wrapper {
+  padding: 0 0.8rem;
+  margin-top: 2.4rem;
+}
+
+.search__form-wrapper {
+  position: relative;
+}
+
+.search__input-text {
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+  border: none;
+  border-bottom: 1px solid rgba(126, 184, 226, 0.5);
+  width: 100%;
+  font-family: Formular;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: rgba(62, 74, 97, 0.8);
+}
+
+.search__input-reset {
+  display: none;
+}
+
+.search__input-label {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0.28rem;
+}
+
+.search__result {
+  margin-top: 1.6rem;
+}
+.search__result .key-btn__wrapper {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.search__result-item {
+  margin-bottom: 0.4rem;
+  padding: 0.4rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(236, 242, 249, 0.5);
+  border-radius: 0.4rem;
+}
+.search__result-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.search__result-item-image {
+  margin-right: 0.4rem;
+  width: 2.8rem;
+  height: 2.3rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.search__result-item-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.search__result-item-name {
+  line-height: 1.2rem;
+  color: #3E4A61;
+  font-family: Formular-Medium;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+/*конец поиск в шапке 320*/
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;

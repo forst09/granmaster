@@ -16,7 +16,6 @@ $(document).ready(function () {
 
         if (heightAll <= texthideHeight) {
             $(this).parents('.js-hide').find('.show-btn__wrapper').hide();
-            console.log('delete button');
         }
     });
 
@@ -327,8 +326,9 @@ $(document).ready(function () {
 
     //изменение картинки при наведении у карточек каталога 2го уровня
     $(document).on('mouseenter', ".products__tiles-col-item", function () {
-        $(this).parents('.products__tiles-item-image').find(".products__tiles-col-item").removeClass('active');
-        $(this).addClass('active');
+        // $(this).parents('.products__tiles-item-image').find(".products__tiles-col-item").removeClass('active');
+        $(this).addClass('active').siblings().removeClass('active');
+
     });
 
     //изменение картинки при наведении у "карточка линии гранулирования" секция "другие линии гранулирования"
@@ -371,7 +371,7 @@ $(document).ready(function () {
     });
 
     //закрытие куков по крестику
-    $(document).on('click', '.cookies__btn-close', function () {
+    $(document).on('click', '.cookies .btn-close', function () {
         $('.cookies').remove();
     });
 
@@ -380,7 +380,7 @@ $(document).ready(function () {
         $('.cookies').remove();
     });
 
-    //фиксировання шапка на скролле 
+    //фиксированная шапка на скролле 
     let header = document.querySelector('.header');
     headerHeight = header.clientHeight;
 
@@ -391,19 +391,81 @@ $(document).ready(function () {
             if (scroll > headerHeight) {
                 header.classList.add('fixed');
                 document.body.style.paddingTop = headerHeight + 'px';
+                if (pageWidth >= 668) {
+                    document.querySelector('.header__logo-link').style.transform = 'scale(1.496)';
+                }
             }
             else {
                 header.classList.remove('fixed');
                 document.body.removeAttribute('style');
+                if (pageWidth >= 668) {
+                    document.querySelector('.header__logo-link').removeAttribute('style');
+                }
             }
         };
     }
 
-    $('.fancybox').fancybox({
-        tpl: {
-            closeBtn: '<a class="close-btn-fancy">press</a>'
+    //открыть поиск по клику на иконку поиска 
+    if (pageWidth < 1024) {
+        $(document).on('click', '.header__input-label', function () {
+            $('.search').addClass('active');
+            $('html').addClass('hide-scroll');
+
+        });
+    }
+
+    //закрытие поиска по кнопке "назад"
+    $(document).on('click', '.search .navigation__back', function () {
+        $('.search').removeClass('active');
+        $('html').removeClass('hide-scroll');
+
+    });
+
+    //поиск на 1024 в шапке
+    $(document).on('input', '.header__input-search', function () {
+        $(this).addClass('active');
+        $('.header .work').addClass('active');
+        $('.header .search__result').addClass('active');
+        $('.header__form-search-wrapper').addClass('active');
+    });
+
+    $(document).on('click', '.header__input-reset-label', function () {
+        $('.header__input-search').removeClass('active');
+        $('.header .work').removeClass('active');
+        $('.header .search__result').removeClass('active');
+        $('.header__form-search-wrapper').removeClass('active');
+    });
+
+
+    //открытие видео на странице о компании
+    $(document).on('click', '.about-company__video-link', function (e) {
+        e.preventDefault();
+        let firstString = 'https://www.youtube.com/embed/';
+        let link = $(this).attr('href');
+        let newLink;
+        if (link.indexOf('v=') !== -1) {
+            let arrayLinks = link.split('v=');
+            let secondString = arrayLinks[arrayLinks.length - 1];
+            newLink = firstString + secondString;
         }
-    })
+        else {
+            newLink = link;
+        }
+
+        $.fancybox.open({
+            src: newLink,
+            type: 'iframe'
+        });
+
+    });
+
+
+    //закрытие поиска по кнопке "назад"
+    $(document).on('click', '.header__input-label', function (e) {
+        e.preventDefault();
+    });
+    //https://www.youtube.com/watch?v=uHKfrz65KSU
+    //https://youtu.be/7nQB6dfzS5k
 
 });
 
