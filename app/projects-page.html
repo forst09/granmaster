@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
@@ -287,19 +289,22 @@
                 <div id="swiperCardDrawings2" class="swiper swiper-card-drawings">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="swiper-card-drawings__image">
+                            <a class="swiper-card-drawings__image" data-fancybox="card-drawings-gallery"
+                                href="img/card/draw-1.png">
                                 <img src="img/card/draw-1.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-card-drawings__image">
+                            <a class="swiper-card-drawings__image" data-fancybox="card-drawings-gallery"
+                                href="img/card/draw-2.png">
                                 <img src="img/card/draw-2.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-card-drawings__image swiper-card-drawings__image-zoom">
+                            <a class="swiper-card-drawings__image swiper-card-drawings__image-zoom"
+                                data-fancybox="card-drawings-gallery" href="img/card/draw-1.png">
                                 <img src="img/card/draw-1.png" alt="">
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-button-prev card-drawings-button-prev swiper-orange-button-prev"></div>
@@ -322,24 +327,30 @@
         </div>
         <div class="scroll">
             <div class="project-gallery__wrapper">
-                <div class="project-gallery__item">
+                <a class="project-gallery__item" data-fancybox="project-gallery"
+                    href="img/projects-page/projects-page-1.jpg">
                     <img src="img/projects-page/projects-page-1.jpg" alt="">
-                </div>
-                <div class="project-gallery__item">
+                </a>
+                <a class="project-gallery__item" data-fancybox="project-gallery"
+                    href="img/projects-page/projects-page-2.jpg">
                     <img src="img/projects-page/projects-page-2.jpg" alt="">
-                </div>
-                <div class="project-gallery__item">
+                </a>
+                <a class="project-gallery__item" data-fancybox="project-gallery"
+                    href="img/projects-page/projects-page-3.jpg">
                     <img src="img/projects-page/projects-page-3.jpg" alt="">
-                </div>
-                <div class="project-gallery__item">
+                </a>
+                <a class="project-gallery__item" data-fancybox="project-gallery"
+                    href="img/projects-page/projects-page-4.jpg">
                     <img src="img/projects-page/projects-page-4.jpg" alt="">
-                </div>
-                <div class="project-gallery__item">
+                </a>
+                <a class="project-gallery__item" data-fancybox="project-gallery"
+                    href="img/projects-page/projects-page-5.jpg">
                     <img src="img/projects-page/projects-page-5.jpg" alt="">
-                </div>
-                <div class="project-gallery__item">
+                </a>
+                <a class="project-gallery__item" data-fancybox="project-gallery"
+                    href="img/projects-page/projects-page-6.jpg">
                     <img src="img/projects-page/projects-page-6.jpg" alt="">
-                </div>
+                </a>
             </div>
         </div>
         <div class="btn-wrapper">
@@ -752,6 +763,7 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="js/full-main.js"></script>
 </body>
 

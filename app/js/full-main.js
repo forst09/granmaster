@@ -305,7 +305,7 @@ $(document).ready(function () {
         $(this).parents('.projects__selection').find('.projects__select-text').html($(this).attr('data-text'));
     });
 
-    //выпадашка с сортировкой в каталоге 2 уровня и поиске
+    //выпадашка с сортировкой в каталоге 2 уровня и странице поиска
     $(document).on('click', ".products__filters-list", function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -346,12 +346,13 @@ $(document).ready(function () {
             $(this).removeClass('active');
             $('.header').removeClass('active');
             $('.header__mobile-menu').removeClass('active');
-            // $('.header').removeClass('fixed');
+            $('html').removeClass('hide-scroll');
         }
         else {
             $(this).addClass('active');
             $('.header').addClass('active');
             $('.header__mobile-menu').addClass('active');
+            $('html').addClass('hide-scroll');
             $('.header').addClass('fixed');
         }
     });
@@ -436,6 +437,13 @@ $(document).ready(function () {
         $('.header__form-search-wrapper').removeClass('active');
     });
 
+    $(document).on('blur', '.header__input-search', function () {
+        $('.header__input-search').removeClass('active');
+        $('.header .work').removeClass('active');
+        $('.header .search__result').removeClass('active');
+        $('.header__form-search-wrapper').removeClass('active');
+    });
+
 
     //открытие видео на странице о компании
     $(document).on('click', '.about-company__video-link', function (e) {
@@ -463,6 +471,22 @@ $(document).ready(function () {
     //закрытие поиска по кнопке "назад"
     $(document).on('click', '.header__input-label', function (e) {
         e.preventDefault();
+    });
+
+    //скролл страницы наверх
+    $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+
+    $("#toTop").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
     });
     //https://www.youtube.com/watch?v=uHKfrz65KSU
     //https://youtu.be/7nQB6dfzS5k

@@ -1,6 +1,8 @@
 @import "variables.scss";
 
 @media(min-width:668px) {
+
+    /*начало общих стилей*/
     html {
         font-size: 1.497005988023952vw;
     }
@@ -110,6 +112,8 @@
         padding: 0 2.4rem;
     }
 
+    /* конец общих стилей*/
+
     /*начало стилей кастомизации свайпера*/
     .main__slide {
         padding: 0 2.4rem;
@@ -149,6 +153,17 @@
     }
 
     /*конец стилей кастомизации свайпера*/
+
+
+    /*стрелка прокрутки страницы вверх*/
+    .projects__arrow-top {
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    /*конец стрелка прокрутки страницы вверх*/
 
     /*начало стилей секции "Шапка"*/
     .header {
@@ -956,7 +971,7 @@
         padding-top: 0;
 
         .btn-wrapper {
-            margin-top: 2.4rem;
+            margin-top: 3.2rem;
         }
 
         .btn-rect {
@@ -1010,9 +1025,9 @@
         animation: fadeEffect 1s;
     }
 
-    .products-tab.active {
-        display: flex;
-    }
+    // .products-tab.active {
+    //     display: flex;
+    // }
 
     .products__tiles {
         // align-items: center;
@@ -1021,11 +1036,11 @@
         display: grid;
         justify-content: space-between;
         grid-template-columns: repeat(3, 4fr);
-        grid-row-gap: 2.4rem;
+        grid-row-gap: 0.8rem;
+        grid-column-gap: 0.5rem;
     }
 
     .products__tiles-item {
-        margin-bottom: 0.8rem;
         padding: 1.6rem;
         width: 20.333rem;
         height: 26.1rem;
@@ -1079,6 +1094,10 @@
         position: relative;
         max-width: none;
         width: 100%;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
     }
 
     .products__lines-image {
@@ -1477,18 +1496,15 @@
     /*начало стилей секции "Список акций" 668*/
 
     .stocks__wrapper {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        grid-column-gap: 1.2rem;
+        grid-row-gap: 0.8rem;
     }
 
     .stocks__item {
         max-width: 19.9rem;
-        margin-bottom: 0.8rem;
-
-        &:nth-last-of-type(1) {
-            margin-bottom: 0.8rem;
-        }
+        margin-bottom: 0rem;
     }
 
     .stocks__item-link {
@@ -1652,21 +1668,17 @@
 
     .projects__tiles {
         margin-top: 4rem;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        grid-column-gap: 1.2rem;
+        grid-row-gap: 1.6rem;
     }
 
     .projects__tiles-item {
-        margin-bottom: 2.4rem;
+        margin-bottom: 0;
         padding: 0.8rem 0.8rem 2rem 0.8rem;
         max-width: 19.9rem;
         width: 100%;
-
-        &:nth-last-of-type(1) {
-            margin-bottom: 2.4rem;
-        }
     }
 
     .projects__tiles-image {
@@ -1700,29 +1712,6 @@
     .projects__tiles-name {
         font-size: 1.2rem;
         line-height: 1.8rem;
-    }
-
-    .projects__arrow-top {
-        margin-top: -2.5rem;
-        margin-left: auto;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 4rem;
-        height: 4rem;
-        background: rgb(62, 74, 97);
-        opacity: 0.3;
-        border-radius: 1.1rem;
-
-        span {
-            margin-top: 0.7rem;
-            display: block;
-            width: 1.4rem;
-            height: 1.4rem;
-            border-top: 2px solid #FFFFFF;
-            border-right: 2px solid #FFFFFF;
-            transform: rotate(-45deg);
-        }
     }
 
     /*конец стилей секции "Реализованные проекты" 668*/
@@ -1906,7 +1895,7 @@
 
     .thanks-letters__item-image {
         margin-right: 3.2rem;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         width: 15rem;
         height: 21.8rem;
@@ -2690,6 +2679,7 @@
         width: 1rem;
         height: 1rem;
         background-size: 1rem 1rem;
+        cursor: default;
     }
 
     .header__input-reset-label {
@@ -3725,7 +3715,7 @@
         }
 
         .btn-wrapper {
-            margin-top: 3.2rem;
+            margin-top: 4.8rem;
         }
 
         .btn-rect {
@@ -3891,8 +3881,12 @@
         }
     }
 
+    .products__tiles {
+        grid-column-gap: 1.6rem;
+        grid-row-gap: 1.6rem;
+    }
+
     .products__tiles-item {
-        margin-bottom: 1.6rem;
         padding: 2.4rem;
         width: 26.8rem;
         height: 33.1rem;
@@ -4123,6 +4117,8 @@
 
     .characteristics-icon {
         margin-top: 3.7rem;
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
     }
 
     .characteristics__item {
@@ -4400,6 +4396,10 @@
     /*Список акций*/
     /*начало стилей секции "Список акций" 1024*/
 
+    .stocks__wrapper {
+        grid-column-gap: 1.3rem;
+    }
+
     .stocks__item {
         position: relative;
         max-width: 27rem;
@@ -4526,7 +4526,14 @@
     .characteristics {
         .characteristics__item {
             flex: 0 26%;
+            margin: 0;
         }
+    }
+
+    .characteristics__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        grid-row-gap: 0.8rem;
     }
 
     /*конец стилей секции "Все характеристики" 1024*/
@@ -4726,8 +4733,13 @@
         }
     }
 
+    .projects__tiles {
+        grid-column-gap: 1.3rem;
+        grid-row-gap: 2.4rem;
+    }
+
     .projects__tiles-item {
-        margin-bottom: 2.4rem;
+        margin-bottom: 0;
         padding: 0.8rem 0.8rem 2.4rem 0.8rem;
         position: relative;
         max-width: 27rem;
@@ -4768,17 +4780,6 @@
         line-height: 2.4rem;
     }
 
-    .projects__arrow-top {
-        position: absolute;
-        right: 9.4rem;
-        bottom: 9.9rem;
-        transition: 0.3s ease;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
     /*конец стилей секции "Реализованные проекты" 1024*/
 
     /*##############################################################################################################################*/
@@ -4817,9 +4818,9 @@
 
     .project-desc__icons {
         margin-top: 2.8rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        grid-column-gap: 3.9rem;
     }
 
     .project-desc__icons-item {
@@ -4830,21 +4831,23 @@
 
     /*начало стилей секции "Галерея" 1024*/
     .project-gallery {
+
         .btn-wrapper {
-            margin-top: 3.2rem;
+            margin-top: 4.8rem;
             display: block;
         }
     }
 
     .project-gallery__wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 4fr);
+        grid-column-gap: 1.6rem;
+        grid-row-gap: 1.6rem;
     }
 
     .project-gallery__item {
         margin-right: 0rem;
-        margin-bottom: 1.6rem;
+        margin-bottom: 0;
         width: 26.8rem;
         height: 17.8rem;
     }

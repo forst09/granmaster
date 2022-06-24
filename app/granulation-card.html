@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
@@ -337,8 +339,6 @@
         <div class="wrapper">
             <h2 class="title left title-medium">Описание</h2>
             <div class="text left text-hide description__text">
-                <p>ООО «ГранМастер» — п
-                </p>
                 <p>ООО «ГранМастер» — поставщик оборудования для производства рассыпного, гранулированного комбикорма и
                     гранулирования древесных отходов. Основным потребителем нашей продукции являются: частные
                     предприятия и фермерские хозяйства, а так же свинокомплексы и птицефабрики с большим объемом
@@ -504,19 +504,22 @@
                 <div id="swiperCardDrawings" class="swiper swiper-card-drawings">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="swiper-card-drawings__image">
+                            <a class="swiper-card-drawings__image" data-fancybox="card-drawings-gallery"
+                                href="img/card/draw-1.png">
                                 <img src="img/card/draw-1.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-card-drawings__image">
+                            <a class="swiper-card-drawings__image" data-fancybox="card-drawings-gallery"
+                                href="img/card/draw-2.png">
                                 <img src="img/card/draw-2.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="swiper-card-drawings__image swiper-card-drawings__image-zoom">
+                            <a class="swiper-card-drawings__image swiper-card-drawings__image-zoom"
+                                data-fancybox="card-drawings-gallery" href="img/card/draw-1.png">
                                 <img src="img/card/draw-1.png" alt="">
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-button-prev card-drawings-button-prev swiper-orange-button-prev"></div>
@@ -575,34 +578,34 @@
             <div id="swiperCardGallery" class="swiper swiper-card-gallery">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="swiper-card-gallery__image">
+                        <a class="swiper-card-gallery__image" data-fancybox="gallery-1" href="img/card/gallery-1.png">
                             <img src="img/card/gallery-1.png" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="swiper-card-gallery__image">
+                        <a class="swiper-card-gallery__image" data-fancybox="gallery-1" href="img/card/gallery-2.png">
                             <img src="img/card/gallery-2.png" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="swiper-card-gallery__image">
+                        <a class="swiper-card-gallery__image" data-fancybox="gallery-1" href="img/card/gallery-3.png">
                             <img src="img/card/gallery-3.png" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="swiper-card-gallery__image">
+                        <a class="swiper-card-gallery__image" data-fancybox="gallery-1" href="img/card/gallery-1.png">
                             <img src="img/card/gallery-1.png" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="swiper-card-gallery__image">
+                        <a class="swiper-card-gallery__image" data-fancybox="gallery-1" href="img/card/gallery-2.png">
                             <img src="img/card/gallery-2.png" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-slide">
-                        <div class="swiper-card-gallery__image">
+                        <a class="swiper-card-gallery__image" data-fancybox="gallery-1" href="img/card/gallery-3.png">
                             <img src="img/card/gallery-3.png" alt="">
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="swiper-button-prev card-gallery-button-prev swiper-orange-button-prev"></div>
@@ -1049,6 +1052,7 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="js/full-main.js"></script>
 </body>
 

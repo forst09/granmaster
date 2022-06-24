@@ -370,6 +370,46 @@ section {
   overflow-x: auto;
 }
 
+/*скролл страницы наверх*/
+.projects__arrow-top {
+  display: none;
+  position: fixed;
+  bottom: 10rem;
+  right: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: rgb(62, 74, 97);
+  opacity: 0.3;
+  border-radius: 1.1rem;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+.projects__arrow-top span {
+  position: absolute;
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-top: 2px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 1.65rem;
+  left: calc(50% - 0.7rem);
+}
+
+/*конец общих стилей*/
 /*начало стилей для кастомизации свайпера*/
 .swiper-years {
   padding: 0;
@@ -431,6 +471,7 @@ section {
 }
 
 /*конец стилей для кастомизации свайпера*/
+/*кастомизация фенсибокса*/
 .fancybox-button svg path {
   fill: #537791;
 }
@@ -443,7 +484,7 @@ section {
   background-color: rgba(38, 38, 40, 0.4);
 }
 
-/*конец общих стилей*/
+/*конец кастомизации фенсибокса*/
 /*начало стилей секции "Шапка"*/
 .header {
   position: relative;
@@ -465,6 +506,8 @@ section {
 .header.active {
   position: relative;
   z-index: 30;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .header.fixed {
@@ -585,7 +628,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 25;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -765,6 +808,12 @@ section {
 
 .header__mobile-phone-link {
   display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.header__mobile-phone-link img {
+  width: 100%;
+  height: auto;
 }
 
 .header__menu {
@@ -2362,6 +2411,7 @@ section {
 
 .products__lines-item {
   max-width: 29rem;
+  width: 100%;
   margin-bottom: 1.6rem;
   padding: 1rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(236, 242, 249, 0)), color-stop(73.53%, #ECF2F9)), #FFFFFF;
@@ -2768,6 +2818,7 @@ section {
 }
 
 .swiper-card-drawings__image {
+  display: inline-block;
   width: 13.9rem;
   height: 13.9rem;
 }
@@ -2811,6 +2862,7 @@ section {
 }
 
 .swiper-card-gallery__image {
+  display: inline-block;
   width: 6.3rem;
   height: 6.3rem;
   border-radius: 0.8rem;
@@ -3710,10 +3762,6 @@ section {
      object-fit: cover;
 }
 
-.projects__arrow-top {
-  display: none;
-}
-
 /*конец стилей секции "Реализованные проекты" 320*/
 /*##############################################################################################################################*/
 /*Карточка реализованного проекта*/
@@ -3813,6 +3861,7 @@ section {
 }
 
 .project-gallery__item {
+  display: inline-block;
   margin-right: 0.8rem;
   width: 13.9rem;
   height: 9.2rem;
