@@ -488,6 +488,13 @@ $(document).ready(function () {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
+
+    //маска на инпуты с телефоном
+    if ($(".consultation__form-input-phone").length !== 0) {
+        Inputmask("+7 (999) 999-99-99").mask(".consultation__form-input-phone");
+    }
+
+
     //https://www.youtube.com/watch?v=uHKfrz65KSU
     //https://youtu.be/7nQB6dfzS5k
 
