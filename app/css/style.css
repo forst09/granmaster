@@ -409,6 +409,32 @@ section {
   left: calc(50% - 0.7rem);
 }
 
+/*ошибка в инпутах*/
+.input-error {
+  border: 1px solid #E27E7E;
+  color: #E27E7E;
+}
+
+.label-error svg path {
+  stroke: #E27E7E;
+}
+
+.consultation__label-textarea.label-error svg path {
+  fill: #E27E7E;
+  stroke: none;
+}
+
+.input-error__span {
+  display: none;
+  position: absolute;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #E27E7E;
+  left: 1.6rem;
+  bottom: calc(100% + 0.4rem);
+}
+
+/*конец ошибки в инпутах*/
 /*конец общих стилей*/
 /*начало стилей для кастомизации свайпера*/
 .swiper-years {
@@ -1509,17 +1535,14 @@ section {
   background-repeat: no-repeat;
   left: 1.6rem;
 }
-
-.consultation__label-name {
-  background-image: url("../img/consultation/name.svg");
-}
-
-.consultation__label-phone {
-  background-image: url("../img/consultation/phone.svg");
+.consultation__label-name svg,
+.consultation__label-phone svg,
+.consultation__label-textarea svg {
+  width: 100%;
+  height: auto;
 }
 
 .consultation__label-textarea {
-  background-image: url("../img/consultation/comment.svg");
   top: 1.2rem;
 }
 
