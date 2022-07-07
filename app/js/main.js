@@ -147,7 +147,7 @@ $(document).ready(function () {
             breakpoints: {
                 1024: {
                     loop: true,
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 11,
                     speed: 700,
                     navigation: {
@@ -155,8 +155,7 @@ $(document).ready(function () {
                         prevEl: '.interested-button-prev',
                     },
                 }
-            }
-
+            },
         });
 
         // каталог 2го уровня секция "навигация"
@@ -465,6 +464,23 @@ $(document).ready(function () {
             type: 'iframe'
         });
 
+    });
+
+    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
+    $(document).click(function (e) {
+        if ($(e.target).is('.projects__select')) {
+            $('.projects__select').removeClass('active');
+            $('.projects__select-menu').removeClass('active');
+        }
+    });
+
+    $(document).on('mouseup', function (e) { // При нажатии на документ
+        let s = $('.projects__select.active'); // берём .block.-active
+        if (!s.is(e.target) && s.has(e.target).length === 0) {
+            // Если нажат не он и не его дочернии И сам он существует
+            s.removeClass('active'); // То удаляем у него класс .active
+            s.parents('.projects__selection').find('.projects__select-menu').removeClass('active');
+        }
     });
 
 
